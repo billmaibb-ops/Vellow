@@ -278,11 +278,11 @@ function cardHTML(p){
         : p.trending_score>0.85 ? '<span class="absolute bottom-2 left-2 bg-[#0C2340] text-white text-xs px-2 py-1 rounded">🔥 Selling fast</span>' : ''}
     </div>
     <div class="p-3 flex flex-col flex-1">
-      <div class="text-xs text-gray-500">${p.brand}</div>
+      ${p.brand ? `<div class="text-xs text-gray-500">${p.brand}</div>` : ''}
       <div class="text-sm font-medium line-clamp-2 flex-1">${p.title}</div>
-      <div class="flex items-center gap-1 text-xs text-[#BA7517] mt-1">
-        ★ ${p.rating} <span class="text-gray-400">(${p.review_count.toLocaleString()})</span>
-      </div>
+      ${p.rating ? `<div class="flex items-center gap-1 text-xs text-[#BA7517] mt-1">
+        ★ ${p.rating} <span class="text-gray-400">(${(p.review_count||0).toLocaleString()})</span>
+      </div>` : ''}
       <div class="mt-2">
         <span class="text-lg font-bold ${compare?'text-[#E24B4A]':'text-[#0C2340]'}">${money(p.retail_price)}</span>
         ${compare ? `<span class="text-sm text-gray-400 line-through ml-1">${money(p.compare_at_price)}</span>` : ''}

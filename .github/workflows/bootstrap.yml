@@ -1,0 +1,50 @@
+name: Bootstrap catalog from CJ
+
+# One-shot (manual) job: replaces the demo catalog with 500+ REAL CJ
+# products — real titles, photos, and costs — using the CJ_API_KEY secret.
+# Run it from the Actions tab -> "Bootstrap catalog from CJ" -> Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many products to pull"
+        default: "520"
+      country:
+        description: "Preferred warehouse country code (blank = global)"
+        default: "US"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cj-sync
+  cancel-in-progress: false
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Pull real products from CJ
+        env:
+          CJ_API_KEY: ${{ secrets.CJ_API_KEY }}
+        working-directory: backend
+        run: python bootstrap_catalog.py --count ${{ github.event.inputs.count }} --country "${{ github.event.inputs.country }}"
+
+      - name: Commit catalog
+        run: |
+          git config user.name "cj-sync-bot"
+          git config user.email "actions@github.com"
+          git add products.json backend/watchlist.json
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "bootstrap: real CJ catalog (${{ github.event.inputs.count }} products)"
+          git push

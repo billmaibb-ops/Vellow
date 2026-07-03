@@ -27,6 +27,7 @@ import json
 import os
 import sys
 import tempfile
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -110,10 +111,14 @@ def run_daily(cj: CJClient, catalog: dict) -> dict:
     cfg = PricingConfig.from_store(store)
     threshold = store.get("safety_stock_threshold", 5)
     watchlist = load_json(WATCHLIST, {"items": []})["items"]
+    # Skip placeholder entries so a template watchlist can't produce junk.
+    watchlist = [e for e in watchlist
+                 if e.get("pid") and not e["pid"].startswith(("REPLACE", "DEMO"))]
 
     products = []
     for entry in watchlist:
         pid = entry["pid"]
+        time.sleep(0.6)  # CJ rate-limits product endpoints (~1 req/s)
         try:
             detail = cj.get_product(pid)
         except CJError as e:
@@ -157,6 +162,14 @@ def run_daily(cj: CJClient, catalog: dict) -> dict:
             "trending_score": entry.get("trending_score", 0.5),
             "source_verified_at": now_iso(),
         })
+
+    # WIPE GUARD: if the deep sync produced nothing (empty/placeholder
+    # watchlist, CJ outage, auth failure), KEEP the existing catalog rather
+    # than replacing 500 live products with an empty page.
+    if not products:
+        print("[daily] 0 products synced — keeping existing catalog unchanged",
+              file=sys.stderr)
+        return catalog
 
     catalog["products"] = products
     store["last_full_sync"] = now_iso()
