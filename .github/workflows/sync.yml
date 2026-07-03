@@ -52,11 +52,14 @@ jobs:
           fi
 
       - name: Run sync
-        if: ${{ secrets.CJ_API_KEY != '' }}
         env:
           CJ_API_KEY: ${{ secrets.CJ_API_KEY }}
         working-directory: backend
-        run: python sync_engine.py --mode ${{ steps.mode.outputs.mode }}
+        run: |
+          if [ -z "$CJ_API_KEY" ]; then
+            echo "CJ_API_KEY not set — skipping sync"; exit 0
+          fi
+          python sync_engine.py --mode ${{ steps.mode.outputs.mode }}
 
       - name: Commit updated catalog
         run: |
