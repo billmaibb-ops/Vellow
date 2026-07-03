@@ -37,13 +37,15 @@ THROTTLE_S = 1.2          # CJ rate-limits ~1 req/s on product endpoints
 
 def parse_cost(row: dict) -> float:
     """sellPrice may be '3.99' or a range '3.99 -- 12.50'; price the high end."""
-    raw = str(row.get("sellPrice") or row.get("price") or "0")
+    raw = str(row.get("sellPrice") or row.get("price")
+              or row.get("nowPrice") or row.get("originalPrice") or "0")
     nums = [float(x) for x in re.findall(r"\d+(?:\.\d+)?", raw)]
     return max(nums) if nums else 0.0
 
 
 def parse_image(row: dict) -> str:
-    img = row.get("productImage") or row.get("bigImage") or ""
+    img = (row.get("productImage") or row.get("bigImage")
+           or row.get("image") or row.get("imgUrl") or "")
     if isinstance(img, list):
         return img[0] if img else ""
     img = str(img)
@@ -57,10 +59,11 @@ def parse_image(row: dict) -> str:
 
 
 def normalize(row: dict, cfg: PricingConfig, idx: int) -> dict | None:
-    pid = row.get("pid")
+    pid = row.get("pid") or row.get("id") or row.get("productId")
     cost = parse_cost(row)
     image = parse_image(row)
-    title = (row.get("productNameEn") or row.get("productName") or "").strip()
+    title = (row.get("productNameEn") or row.get("productName")
+             or row.get("nameEn") or row.get("name") or "").strip()
     if not pid or not title or not image or cost <= 0:
         return None
     listed = int(row.get("listedNum") or 0)
@@ -90,18 +93,32 @@ def probe_endpoints(cj: CJClient) -> str:
         try:
             raw = cj._get(path, {"pageNum": 1, "pageSize": 5})
             data = raw.get("data") or {}
-            rows = data.get("list") or data.get("content") or []
+            rows = flatten_rows(data.get("list") or data.get("content") or [])
             print(f"[probe] {path}: code={raw.get('code')} "
-                  f"result={raw.get('result')} rows={len(rows)} "
+                  f"result={raw.get('result')} products={len(rows)} "
                   f"message={raw.get('message')!r}")
             if not rows:
                 print(f"[probe] {path} raw: {str(raw)[:400]}")
             else:
-                print(f"[probe] {path} first row keys: {sorted(rows[0].keys())}")
+                print(f"[probe] {path} first product keys: {sorted(rows[0].keys())}")
+                print(f"[probe] first product sample: {str(rows[0])[:400]}")
                 return path
         except Exception as e:  # noqa: BLE001
             print(f"[probe] {path} failed: {e}", file=sys.stderr)
     return ""
+
+
+def flatten_rows(rows: list) -> list[dict]:
+    """CJ's listV2 now returns wrapper rows like
+    {keyWord, productList, relatedCategoryList} — the real products live in
+    productList. Older shapes return product rows directly. Handle both."""
+    out: list[dict] = []
+    for r in rows:
+        if isinstance(r, dict) and isinstance(r.get("productList"), list):
+            out.extend(x for x in r["productList"] if isinstance(x, dict))
+        elif isinstance(r, dict):
+            out.append(r)
+    return out
 
 
 def list_page(cj: CJClient, path: str, page: int, size: int,
@@ -111,7 +128,7 @@ def list_page(cj: CJClient, path: str, page: int, size: int,
         params["countryCode"] = country
     raw = cj._get(path, params)
     data = raw.get("data") or {}
-    return data.get("list") or data.get("content") or []
+    return flatten_rows(data.get("list") or data.get("content") or [])
 
 
 def fetch_pages(cj: CJClient, count: int, country: str | None) -> list[dict]:
@@ -134,10 +151,15 @@ def fetch_pages(cj: CJClient, count: int, country: str | None) -> list[dict]:
             if not rows:
                 print(f"[fetch] cc={cc or 'ALL'} page {page}: empty — stopping this pass")
                 break
+            before = len(got)
             for row in rows:
-                if row.get("pid") and row["pid"] not in got:
-                    got[row["pid"]] = row
+                key = row.get("pid") or row.get("id") or row.get("productId")
+                if key and key not in got:
+                    got[key] = row
             print(f"[fetch] cc={cc or 'ALL'} page {page}: total unique {len(got)}")
+            if len(got) == before:
+                print(f"[fetch] cc={cc or 'ALL'} page {page}: no new products — stopping this pass")
+                break
             page += 1
             time.sleep(THROTTLE_S)
         if len(got) >= count:
