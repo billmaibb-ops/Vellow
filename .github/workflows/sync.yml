@@ -1,0 +1,62 @@
+name: Sync CJ prices and stock
+
+# Hourly light sync + daily deep sync, committed back to the repo.
+# GitHub Pages then republishes products.json automatically, so the
+# storefront always shows fresh prices/stock with no server.
+#
+# Setup (one time):
+#   Repo -> Settings -> Secrets and variables -> Actions -> New secret
+#   Name: CJ_API_KEY   Value: your CJ key ("CJUserNum@api@xxxx")
+#
+# Without the secret, the sync steps are skipped (demo catalog stays put).
+
+on:
+  schedule:
+    - cron: "0 * * * *"     # hourly: price + stock poll
+    - cron: "30 3 * * *"    # daily 03:30 UTC: deep sync (images, titles)
+  workflow_dispatch: {}      # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cj-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Decide sync mode
+        id: mode
+        run: |
+          if [ "${{ github.event.schedule }}" = "30 3 * * *" ]; then
+            echo "mode=daily" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=hourly" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run sync
+        if: ${{ secrets.CJ_API_KEY != '' }}
+        env:
+          CJ_API_KEY: ${{ secrets.CJ_API_KEY }}
+        working-directory: backend
+        run: python sync_engine.py --mode ${{ steps.mode.outputs.mode }}
+
+      - name: Commit updated catalog
+        run: |
+          git config user.name "cj-sync-bot"
+          git config user.email "actions@github.com"
+          git add products.json
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "sync: ${{ steps.mode.outputs.mode }} price/stock update"
+          git push

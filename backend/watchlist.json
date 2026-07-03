@@ -1,0 +1,14 @@
+{
+  "_comment": "The products you have chosen to sell. Add CJ product IDs (pid) here. Find a pid by searching CJ (cj_client.search_products) or from a product's CJ URL. Run 'python sync_engine.py --mode daily' after editing to deep-sync images/description/price into ../products.json. Prefer items that show US-warehouse stock for fast shipping.",
+  "items": [
+    {
+      "sku": "SKU-1005",
+      "pid": "REPLACE_WITH_REAL_CJ_PID",
+      "vid": "REPLACE_WITH_REAL_CJ_VARIANT_ID",
+      "title": "360\u00b0 Adjustable Phone Ring Holder & Kickstand (2-Pack)",
+      "brand": "GripEase",
+      "category": "Accessories",
+      "trending_score": 0.88
+    }
+  ]
+}

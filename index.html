@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vellow — Trending Finds</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<style>
+  [x-cloak]{display:none}
+  .spin{animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased">
+
+<!-- ============ PROMO BAR ============ -->
+<!-- Keep this honest: only advertise offers you actually honor. -->
+<div class="bg-[#FF4500] text-white text-xs font-semibold text-center py-1.5 tracking-wide">
+  FREE US SHIPPING OVER $35 · NEW DROPS WEEKLY
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="bg-[#0C2340] text-white sticky top-0 z-40 shadow">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+    <div class="text-2xl font-black tracking-tight">VEL<span class="text-[#FF4500]">LOW</span></div>
+    <div class="flex-1">
+      <input id="search" type="text" placeholder="What are you looking for?"
+        class="w-full rounded-md px-4 py-2 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#FF4500]" />
+    </div>
+    <a href="catalog.html" class="hidden sm:block text-sm text-blue-200 hover:text-white whitespace-nowrap">Browse CJ catalog →</a>
+    <button id="cartBtn" class="relative flex items-center gap-2 bg-[#FF4500] hover:bg-[#e63e00] text-white font-semibold px-4 py-2 rounded-md">
+      Cart
+      <span id="cartCount" class="bg-white text-[#0C2340] text-xs font-bold rounded-full px-2 py-0.5">0</span>
+    </button>
+  </div>
+  <div class="bg-[#081a30] text-xs text-blue-200">
+    <div class="max-w-7xl mx-auto px-4 py-1.5 flex flex-wrap gap-x-6 gap-y-1">
+      <span id="syncStamp">Prices synced hourly</span>
+      <span>🔒 Secure checkout · You're only charged after stock is verified</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="border-b border-gray-200 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap justify-center gap-x-8 gap-y-1 text-xs text-gray-600">
+    <span><span class="text-[#185FA5]">🔒</span> Secure checkout</span>
+    <span><span class="text-[#3B6D11]">✓</span> 30-day money-back guarantee</span>
+    <span><span class="text-[#185FA5]">🚚</span> Ships in 5 days or refunded</span>
+  </div>
+</div>
+
+<!-- ============ PRODUCT GRID ============ -->
+<main class="max-w-7xl mx-auto px-4 py-6">
+  <div class="flex items-baseline justify-between flex-wrap gap-2 mb-3">
+    <h1 class="text-xl font-bold">Trending under $100</h1>
+    <span id="resultCount" class="text-sm text-gray-500"></span>
+  </div>
+  <div id="catPills" class="flex flex-wrap gap-2 mb-5"></div>
+  <div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- cards injected here -->
+  </div>
+  <p id="emptyState" class="hidden text-center text-gray-500 py-16">No products match your search.</p>
+  <div class="flex justify-center mt-6">
+    <button id="loadMore" class="hidden bg-[#0C2340] hover:bg-[#183a63] text-white font-semibold px-8 py-2.5 rounded-md text-sm">
+      Load more products
+    </button>
+  </div>
+</main>
+
+<!-- ============ FOOTER AD SLOT ============ -->
+<footer class="max-w-7xl mx-auto px-4 pb-10">
+  <div id="adSlot" class="hidden">
+    <div class="text-[10px] uppercase tracking-wide text-gray-400 mb-1 text-center">Advertisement</div>
+    <!-- Paste your ad-network snippet here (e.g. Google AdSense <ins class="adsbygoogle">).
+         Keep ads clearly labeled and away from the checkout button to stay within
+         AdSense policy and avoid hurting buyer trust. -->
+    <div id="adUnit" class="w-full min-h-[90px] bg-gray-200 rounded flex items-center justify-center text-gray-400 text-sm">
+      Ad unit (728×90) — configure slot in products.json → store.ads
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CHECKOUT DRAWER ============ -->
+<div id="overlay" class="fixed inset-0 bg-black/50 z-50 hidden"></div>
+<aside id="checkout" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl translate-x-full transition-transform duration-300 flex flex-col">
+  <div class="flex items-center justify-between p-4 border-b">
+    <h2 class="font-bold text-lg">Checkout</h2>
+    <button id="closeCheckout" class="text-gray-400 hover:text-gray-700 text-2xl leading-none">&times;</button>
+  </div>
+
+  <div class="flex-1 overflow-y-auto p-4 space-y-4">
+    <div id="cartLines" class="space-y-3"></div>
+
+    <div class="border-t pt-3 text-sm space-y-1">
+      <div class="flex justify-between"><span>Subtotal</span><span id="sumSubtotal">$0.00</span></div>
+      <div class="flex justify-between text-gray-500"><span>Est. tax &amp; shipping</span><span>calculated after verification</span></div>
+      <div class="flex justify-between font-bold text-base pt-1"><span>Authorization total</span><span id="sumTotal">$0.00</span></div>
+    </div>
+
+    <!-- Shipping / autofill -->
+    <div class="space-y-2">
+      <h3 class="font-semibold text-sm">Shipping details</h3>
+      <input id="f_name"  class="w-full border rounded px-3 py-2 text-sm" placeholder="Full name" />
+      <input id="f_email" class="w-full border rounded px-3 py-2 text-sm" placeholder="Email" />
+      <input id="f_addr"  class="w-full border rounded px-3 py-2 text-sm" placeholder="Street address" />
+      <div class="flex gap-2">
+        <input id="f_city"  class="w-1/2 border rounded px-3 py-2 text-sm" placeholder="City" />
+        <input id="f_state" class="w-1/4 border rounded px-3 py-2 text-sm" placeholder="State" />
+        <input id="f_zip"   class="w-1/4 border rounded px-3 py-2 text-sm" placeholder="ZIP" />
+      </div>
+    </div>
+
+    <!-- Payment (Stripe Elements — card never touches your server) -->
+    <div class="space-y-2">
+      <h3 class="font-semibold text-sm">Payment</h3>
+      <div id="card-element" class="border rounded px-3 py-3 bg-white"></div>
+      <div id="card-errors" class="text-xs text-red-600 min-h-4"></div>
+    </div>
+
+    <!-- Legal microcopy (FTC-aware) -->
+    <div class="bg-amber-50 border border-amber-200 rounded p-3 text-xs text-amber-900 leading-relaxed">
+      <strong>How your payment works:</strong> When you place this order we place a temporary
+      <em>authorization hold</em> on your card — no money is captured yet. We verify live supplier
+      stock within <strong>60 minutes</strong>. If the item is confirmed, we capture payment and ship.
+      If we cannot confirm stock, the hold is released in full and you are not charged.
+      Orders ship within <strong>5 business days</strong>; if we cannot ship in that window you may
+      cancel for a full refund. Estimated delivery dates are provided at fulfillment.
+    </div>
+  </div>
+
+  <div class="p-4 border-t">
+    <div class="flex justify-center gap-4 text-[11px] text-gray-500 mb-2">
+      <span><span class="text-[#185FA5]">🔒</span> Secure checkout</span>
+      <span><span class="text-[#3B6D11]">✓</span> 30-day money-back guarantee</span>
+    </div>
+    <button id="placeOrder" class="w-full bg-[#FF4500] hover:bg-[#e63e00] disabled:opacity-60 text-white font-bold py-3 rounded-md flex items-center justify-center gap-2">
+      <span id="placeLabel">Place order (authorize hold)</span>
+      <svg id="placeSpin" class="hidden spin w-5 h-5" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.3"/>
+        <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3"/>
+      </svg>
+    </button>
+    <p id="verifyStatus" class="text-center text-xs text-gray-500 mt-2 h-4"></p>
+  </div>
+</aside>
+
+<script>
+/* =========================================================
+   PRICING RULE — RISK-ADJUSTED ("profitable in aggregate")
+   The backend writes retail_price into products.json using this;
+   we mirror it here as a display sanity check.
+
+   retail = max(
+     // percentage path: profit target + pre-funded loss provision,
+     // grossed up for the gateway fee taken on the final price
+     cost * (1 + profit_target + loss_provision_rate) / (1 - gateway_fee),
+
+     // absolute floor: guarantees a DOLLAR cushion even on near-free
+     // items — this is what protects cheap-supplier products
+     (cost + min_profit_per_unit + chargeback_rate * chargeback_fee) / (1 - gateway_fee)
+   )
+
+   NOTE: This makes the STORE profitable across all orders. It does
+   NOT make any single chargeback impossible to lose on — nothing can.
+   Keep chargeback_rate low with fraud screening (e.g. Stripe Radar),
+   fast/tracked shipping, and clear delivery expectations.
+   ========================================================= */
+function riskRetail(cost, s){
+  const pct   = cost * (1 + s.profit_target + s.loss_provision_rate) / (1 - s.gateway_fee_rate);
+  const floor = (cost + s.min_profit_per_unit + s.expected_chargeback_rate * s.chargeback_fee) / (1 - s.gateway_fee_rate);
+  return +Math.max(pct, floor).toFixed(2);
+}
+/* Gross up any pass-through cost (e.g. shipping) so the gateway
+   fee on it doesn't come out of your pocket. */
+function grossUp(amount, gatewayFee){
+  return +(amount / (1 - gatewayFee)).toFixed(2);
+}
+
+/* ---- backend + Stripe config (fill these in) ---- */
+const CONFIG = {
+  // Where server.py runs. Override without redeploying via
+  // ?api=https://your-backend.example.com (persisted in localStorage).
+  BACKEND_URL: new URLSearchParams(location.search).get('api')
+               || localStorage.getItem('tv_api')
+               || 'http://localhost:8000',
+  STRIPE_PUBLISHABLE_KEY: 'pk_test_REPLACE_ME'    // Stripe -> Developers -> API keys
+};
+// Persist ?api= override so catalog.html and future visits use it too.
+{ const a = new URLSearchParams(location.search).get('api');
+  if (a) localStorage.setItem('tv_api', a); }
+
+let stripe = null, cardElement = null;
+
+function initStripe(){
+  if(!window.Stripe){ console.warn('Stripe.js not loaded'); return; }
+  stripe = Stripe(CONFIG.STRIPE_PUBLISHABLE_KEY);
+  const elements = stripe.elements();
+  cardElement = elements.create('card', {style:{base:{fontSize:'14px'}}});
+  cardElement.mount('#card-element');
+  cardElement.on('change', e=>{
+    document.getElementById('card-errors').textContent = e.error ? e.error.message : '';
+  });
+}
+
+async function api(path, body){
+  const r = await fetch(CONFIG.BACKEND_URL + path, {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(body)
+  });
+  return r.json();
+}
+
+const state = { store:null, products:[], cart:{}, filter:"", category:"All", shown:60 };
+const PAGE = 60;
+
+async function load(){
+  const res = await fetch('products.json?_=' + Date.now()); // cache-bust each hourly sync
+  const data = await res.json();
+  state.store = data.store;
+  state.products = data.products;
+  renderPills();
+  document.getElementById('syncStamp').textContent =
+    'Prices synced ' + new Date(data.store.last_price_sync).toLocaleString();
+  // Show the footer ad slot only if ads are enabled in config.
+  if(data.store.ads && data.store.ads.enabled){
+    document.getElementById('adSlot').classList.remove('hidden');
+    // TODO: inject your real ad-network script here using data.store.ads.slot_id
+  }
+  render();
+}
+
+function money(n){ return '$' + n.toFixed(2); }
+
+function categories(){
+  return ['All', ...new Set(state.products.map(p=>p.category))].filter(Boolean);
+}
+
+function renderPills(){
+  const active = 'bg-[#0C2340] text-white';
+  const idle   = 'bg-white text-gray-600 border border-gray-300 hover:border-[#0C2340]';
+  document.getElementById('catPills').innerHTML = categories().map(c=>`
+    <button data-cat="${c}" class="text-xs px-3.5 py-1.5 rounded-full ${c===state.category?active:idle}">
+      ${c}</button>`).join('');
+}
+
+function filtered(){
+  const q = state.filter.toLowerCase();
+  return state.products.filter(p =>
+    (state.category==='All' || p.category===state.category) &&
+    p.title.toLowerCase().includes(q));
+}
+
+function render(){
+  const items = filtered();
+  const grid = document.getElementById('grid');
+  document.getElementById('emptyState').classList.toggle('hidden', items.length>0);
+  grid.innerHTML = items.slice(0, state.shown).map(cardHTML).join('');
+  document.getElementById('resultCount').textContent =
+    items.length.toLocaleString() + ' products';
+  document.getElementById('loadMore').classList.toggle('hidden', items.length <= state.shown);
+}
+
+function cardHTML(p){
+  const oos = !p.in_stock;
+  // Honest urgency: badges come from REAL fields (stock count, trending score).
+  // If you add compare_at_price, it must be a genuine former/market price (FTC).
+  const lowStock = p.in_stock && p.stock > 0 && p.stock <= 20;
+  const compare = p.compare_at_price && p.compare_at_price > p.retail_price;
+  const pct = compare ? Math.round((1 - p.retail_price / p.compare_at_price) * 100) : 0;
+  return `
+  <div class="bg-white rounded-lg border border-gray-200 hover:shadow-md transition overflow-hidden flex flex-col">
+    <div class="aspect-square bg-gray-50 relative">
+      <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover ${oos?'opacity-40':''}" />
+      ${compare ? `<span class="absolute top-2 left-2 bg-[#E24B4A] text-white text-xs font-bold px-2 py-1 rounded">-${pct}%</span>` : ''}
+      ${oos ? '<span class="absolute top-2 right-2 bg-gray-900 text-white text-xs px-2 py-1 rounded">Out of stock</span>'
+        : lowStock ? `<span class="absolute bottom-2 left-2 bg-[#0C2340] text-white text-xs px-2 py-1 rounded">Only ${p.stock} left</span>`
+        : p.trending_score>0.85 ? '<span class="absolute bottom-2 left-2 bg-[#0C2340] text-white text-xs px-2 py-1 rounded">🔥 Selling fast</span>' : ''}
+    </div>
+    <div class="p-3 flex flex-col flex-1">
+      <div class="text-xs text-gray-500">${p.brand}</div>
+      <div class="text-sm font-medium line-clamp-2 flex-1">${p.title}</div>
+      <div class="flex items-center gap-1 text-xs text-[#BA7517] mt-1">
+        ★ ${p.rating} <span class="text-gray-400">(${p.review_count.toLocaleString()})</span>
+      </div>
+      <div class="mt-2">
+        <span class="text-lg font-bold ${compare?'text-[#E24B4A]':'text-[#0C2340]'}">${money(p.retail_price)}</span>
+        ${compare ? `<span class="text-sm text-gray-400 line-through ml-1">${money(p.compare_at_price)}</span>` : ''}
+      </div>
+      <button ${oos?'disabled':''} data-add="${p.id}"
+        class="mt-2 w-full text-sm font-bold py-2 rounded-md ${oos
+          ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+          : 'bg-[#FF4500] hover:bg-[#e63e00] text-white'}">
+        ${oos ? 'UNAVAILABLE' : 'ADD TO CART'}
+      </button>
+    </div>
+  </div>`;
+}
+
+/* ---------- cart ---------- */
+function addToCart(id){
+  state.cart[id] = (state.cart[id]||0) + 1;
+  updateCartUI();
+}
+function cartItems(){
+  return Object.entries(state.cart).map(([id,qty])=>{
+    const p = state.products.find(x=>x.id===id);
+    return {p, qty};
+  }).filter(x=>x.p);
+}
+function cartTotal(){ return cartItems().reduce((s,{p,qty})=>s+p.retail_price*qty,0); }
+
+function updateCartUI(){
+  const count = Object.values(state.cart).reduce((a,b)=>a+b,0);
+  document.getElementById('cartCount').textContent = count;
+  document.getElementById('cartLines').innerHTML = cartItems().map(({p,qty})=>`
+    <div class="flex gap-3 items-center">
+      <img src="${p.image}" class="w-14 h-14 object-cover rounded" />
+      <div class="flex-1 text-sm">
+        <div class="font-medium line-clamp-1">${p.title}</div>
+        <div class="text-gray-500">${money(p.retail_price)} × ${qty}</div>
+      </div>
+      <button data-remove="${p.id}" class="text-gray-400 hover:text-red-500 text-sm">Remove</button>
+    </div>`).join('') || '<p class="text-sm text-gray-400">Your cart is empty.</p>';
+  const total = cartTotal();
+  document.getElementById('sumSubtotal').textContent = money(total);
+  document.getElementById('sumTotal').textContent = money(total);
+}
+
+/* ---------- checkout drawer ---------- */
+function openCheckout(){
+  document.getElementById('overlay').classList.remove('hidden');
+  document.getElementById('checkout').classList.remove('translate-x-full');
+  autofill();
+}
+function closeCheckout(){
+  document.getElementById('overlay').classList.add('hidden');
+  document.getElementById('checkout').classList.add('translate-x-full');
+}
+
+/* Autofill demo — in production, prefill from the customer's saved
+   account/profile via your auth provider, never from guessed data. */
+function autofill(){
+  const saved = window.__customerProfile; // set this from your auth layer
+  if(!saved) return;
+  f_name.value=saved.name||''; f_email.value=saved.email||'';
+  f_addr.value=saved.addr||''; f_city.value=saved.city||'';
+  f_state.value=saved.state||''; f_zip.value=saved.zip||'';
+}
+
+/* ---------- status/label helpers ---------- */
+function setLabel(t){ document.getElementById('placeLabel').textContent=t; }
+function setStatus(msg,color){
+  const s=document.getElementById('verifyStatus');
+  s.textContent=msg;
+  const c = color==='green' ? 'text-green-600' : color==='red' ? 'text-red-600' : 'text-gray-500';
+  s.className='text-center text-xs mt-2 h-4 '+c;
+}
+function toggleBusy(busy){
+  document.getElementById('placeOrder').disabled=busy;
+  document.getElementById('placeSpin').classList.toggle('hidden',!busy);
+}
+
+/* ---------- place order: AUTHORIZE -> VERIFY -> CAPTURE ----------
+   1) backend creates a manual-capture PaymentIntent (auth-only hold)
+   2) Stripe.js authorizes the card against that hold (requires_capture)
+   3) backend re-checks live CJ stock, then captures + forwards to CJ,
+      or cancels the hold so the customer is never charged.            */
+async function placeOrder(){
+  const items = cartItems().map(({p,qty})=>({id:p.id, qty}));
+  if(items.length===0){ setStatus('Your cart is empty.','red'); return; }
+  if(!stripe || !cardElement){ setStatus('Payment not initialized — check Stripe key.','red'); return; }
+
+  const shipping = {
+    name:f_name.value.trim(), email:f_email.value.trim(), addr:f_addr.value.trim(),
+    city:f_city.value.trim(), state:f_state.value.trim(), zip:f_zip.value.trim(), country:'US'
+  };
+  if(!shipping.name || !shipping.addr || !shipping.zip){
+    setStatus('Please enter your name, address, and ZIP.','red'); return;
+  }
+
+  toggleBusy(true); setLabel('Authorizing…');
+  try{
+    // 1) authorization-only hold
+    setStatus('Placing temporary authorization hold…','gray');
+    const hold = await api('/api/create-hold', { items, est_shipping:6.99, shipping });
+    if(!hold.ok) throw new Error(hold.reason || 'Could not start checkout.');
+
+    // 2) authorize the card (manual capture => status becomes requires_capture)
+    setLabel('Confirming card…'); setStatus('Authorizing your card…','gray');
+    const { error, paymentIntent } = await stripe.confirmCardPayment(hold.client_secret, {
+      payment_method:{ card:cardElement, billing_details:{ name:shipping.name, email:shipping.email } }
+    });
+    if(error) throw new Error(error.message);
+
+    // 3) verify live stock, then capture + forward to supplier
+    setLabel('Verifying stock…'); setStatus('Confirming live supplier stock…','gray');
+    const cap = await api('/api/verify-and-capture', {
+      payment_intent: hold.payment_intent, items, shipping
+    });
+
+    if(cap.ok && cap.captured){
+      setLabel('Order placed ✔');
+      setStatus(cap.fulfilled ? 'Stock confirmed — payment captured, order sent to supplier ✔'
+                              : 'Payment captured — order queued for fulfillment ✔', 'green');
+      state.cart={}; updateCartUI();
+    }else{
+      setStatus(cap.reason || 'Could not confirm stock — hold released, you were not charged.','red');
+      setLabel('Place order (authorize hold)');
+    }
+  }catch(err){
+    setStatus((err.message||'Something went wrong')+' — no charge was captured.','red');
+    setLabel('Place order (authorize hold)');
+  }finally{
+    toggleBusy(false);
+  }
+}
+
+/* ---------- events ---------- */
+document.addEventListener('click', e=>{
+  const add=e.target.closest('[data-add]');
+  const rm=e.target.closest('[data-remove]');
+  if(add) addToCart(add.dataset.add);
+  if(rm){ delete state.cart[rm.dataset.remove]; updateCartUI(); }
+});
+document.getElementById('search').addEventListener('input', e=>{ state.filter=e.target.value; state.shown=PAGE; render(); });
+document.getElementById('catPills').addEventListener('click', e=>{
+  const b=e.target.closest('[data-cat]');
+  if(b){ state.category=b.dataset.cat; state.shown=PAGE; renderPills(); render(); }
+});
+document.getElementById('loadMore').addEventListener('click', ()=>{ state.shown+=PAGE; render(); });
+document.getElementById('cartBtn').addEventListener('click', openCheckout);
+document.getElementById('closeCheckout').addEventListener('click', closeCheckout);
+document.getElementById('overlay').addEventListener('click', closeCheckout);
+document.getElementById('placeOrder').addEventListener('click', placeOrder);
+
+initStripe();
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# secrets — never commit these
+backend/.env
+backend/.cj_token.json
+
+# python
+__pycache__/
+*.pyc
+backend/venv/
+
+# local deploy artifacts
+netlify-drop/
+netlify-drop.zip
+
+# macOS + strays
+.DS_Store
