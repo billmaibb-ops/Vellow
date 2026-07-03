@@ -100,7 +100,19 @@
       <input id="f_addr"  class="w-full border rounded px-3 py-2 text-sm" placeholder="Street address" />
       <div class="flex gap-2">
         <input id="f_city"  class="w-1/2 border rounded px-3 py-2 text-sm" placeholder="City" />
-        <input id="f_state" class="w-1/4 border rounded px-3 py-2 text-sm" placeholder="State" />
+        <select id="f_state" class="w-1/4 border rounded px-2 py-2 text-sm bg-white text-gray-700">
+          <option value="">State</option>
+          <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option>
+          <option>CO</option><option>CT</option><option>DE</option><option>DC</option><option>FL</option>
+          <option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option>
+          <option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option>
+          <option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+          <option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option>
+          <option>NJ</option><option>NM</option><option>NY</option><option>NC</option><option>ND</option>
+          <option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option>
+          <option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+          <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
+        </select>
         <input id="f_zip"   class="w-1/4 border rounded px-3 py-2 text-sm" placeholder="ZIP" />
       </div>
     </div>
@@ -435,8 +447,14 @@ async function runQuote(){
       quoteSpin(false, 'Total confirmed — price, stock & shipping checked live.');
     }
   }catch(err){
-    invalidateQuote();
-    quoteSpin(false, 'Could not reach checkout service. Try again.');
+    // Backend unreachable (e.g. static preview with no server yet): keep the
+    // instant client-side tax estimate, and show shipping as pending rather
+    // than blanking everything out.
+    quote = null;
+    instantTax();
+    document.getElementById('sumShipping').textContent = 'at checkout';
+    document.getElementById('shipNote').textContent = '· live rate';
+    quoteSpin(false, 'Live shipping is calculated at checkout. Tax shown is an estimate.');
   }
 }
 
@@ -546,6 +564,7 @@ document.addEventListener('click', e=>{
 });
 ['f_addr','f_city','f_state','f_zip'].forEach(id=>{
   document.getElementById(id).addEventListener('input', scheduleQuote);
+  document.getElementById(id).addEventListener('change', scheduleQuote);
 });
 document.getElementById('search').addEventListener('input', e=>{ state.filter=e.target.value; state.shown=PAGE; render(); });
 document.getElementById('catPills').addEventListener('click', e=>{
