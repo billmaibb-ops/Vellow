@@ -67,6 +67,16 @@ def normalize(row: dict, cfg: PricingConfig, idx: int) -> dict | None:
     if not pid or not title or not image or cost <= 0:
         return None
     listed = int(row.get("listedNum") or 0)
+    # CJ now exposes verified inventory in the list payload — use it so
+    # stock badges are honest instead of invented.
+    try:
+        inv = int(float(row.get("totalVerifiedInventory") or 0)) \
+              or int(float(row.get("warehouseInventoryNum") or 0))
+    except (TypeError, ValueError):
+        inv = 0
+    category = (row.get("oneCategoryName") or row.get("twoCategoryName")
+                or row.get("threeCategoryName") or row.get("categoryName")
+                or "General").strip()
     return {
         "id": f"CJ-{idx:04d}",
         "cj_pid": pid,
@@ -75,11 +85,11 @@ def normalize(row: dict, cfg: PricingConfig, idx: int) -> dict | None:
         "image": image,
         "images": [image],
         "description": "",                   # deep sync fills this
-        "category": (row.get("categoryName") or "General").strip(),
+        "category": category,
         # NOTE: no rating / review_count — we don't invent social proof.
         "source_cost": round(cost, 2),
         "retail_price": retail_price(cost, cfg),
-        "stock": None,                        # unknown until verified
+        "stock": inv if inv > 0 else None,    # None = unknown, no fake badge
         "in_stock": True,                     # checkout re-verifies before charge
         "trending_score": min(0.99, listed / 10000.0),
         "source_verified_at": None,           # set by first real sync
@@ -122,18 +132,54 @@ def flatten_rows(rows: list) -> list[dict]:
 
 
 def list_page(cj: CJClient, path: str, page: int, size: int,
-              country: str | None) -> list[dict]:
+              country: str | None, keyword: str | None = None) -> list[dict]:
     params: dict = {"pageNum": page, "pageSize": size}
     if country:
         params["countryCode"] = country
+    if keyword:
+        params["keyWord"] = keyword
     raw = cj._get(path, params)
     data = raw.get("data") or {}
     return flatten_rows(data.get("list") or data.get("content") or [])
 
 
+# CJ's list endpoint ignores pagination for blank queries (returns the same
+# ~10 recommendations per call), so we fan out across many search keywords
+# instead — each keyword surfaces a different slice of the catalog.
+KEYWORDS = [
+    "earbuds", "bluetooth speaker", "power bank", "phone case", "phone holder",
+    "usb hub", "webcam", "keyboard", "mouse", "charging cable", "smart watch",
+    "led strip", "night light", "desk lamp", "humidifier", "diffuser",
+    "shower head", "wall shelf", "storage box", "curtain", "rug", "blanket",
+    "pillow", "picture frame", "clock", "candle", "vase", "mirror",
+    "milk frother", "vegetable chopper", "knife set", "spice rack",
+    "kitchen scale", "cutting board", "water bottle", "coffee", "lunch box",
+    "food container", "apron", "measuring cup",
+    "laptop stand", "desk organizer", "monitor stand", "notebook", "pen",
+    "whiteboard", "mouse pad", "desk mat",
+    "makeup brush", "facial roller", "eyelash", "hair brush", "hair clip",
+    "nail", "makeup mirror", "makeup bag", "skincare",
+    "resistance band", "yoga mat", "jump rope", "massage gun", "dumbbell",
+    "posture corrector", "gym gloves", "sports bottle",
+    "dog toy", "cat toy", "pet brush", "dog harness", "pet bed", "litter mat",
+    "pet feeder", "dog leash",
+    "camping lantern", "flashlight", "hammock", "cooler bag", "picnic",
+    "hiking", "fishing", "umbrella",
+    "car phone mount", "car organizer", "car vacuum", "car charger",
+    "car cover", "seat cushion",
+    "building blocks", "puzzle", "fidget", "rc car", "plush toy",
+    "drawing", "board game", "kids craft",
+    "wallet", "sunglasses", "belt", "beanie", "scarf", "backpack",
+    "crossbody bag", "keychain", "watch band", "jewelry",
+    "baby bib", "baby bottle", "teething", "stroller organizer",
+    "baby monitor", "diaper bag", "baby blanket",
+    "dress", "t shirt", "leggings", "hoodie", "socks", "swimsuit",
+]
+
+
 def fetch_pages(cj: CJClient, count: int, country: str | None) -> list[dict]:
-    """Page the working list endpoint until we have `count` unique products.
-    US warehouse first, then fill from the global catalog if needed."""
+    """Fan out across many keyword queries (CJ ignores pagination on blank
+    queries). US warehouse pass first, then a global pass to fill up."""
     path = probe_endpoints(cj)
     if not path:
         print("[abort] no working product-list endpoint found", file=sys.stderr)
@@ -141,30 +187,32 @@ def fetch_pages(cj: CJClient, count: int, country: str | None) -> list[dict]:
     got: dict[str, dict] = {}
     passes = [country, None] if country else [None]
     for cc in passes:
-        page = 1
-        while len(got) < count and page <= 40:
-            try:
-                rows = list_page(cj, path, page, 100, cc)
-            except Exception as e:  # noqa: BLE001
-                print(f"[warn] list page {page} (cc={cc}) failed: {e}", file=sys.stderr)
-                break
-            if not rows:
-                print(f"[fetch] cc={cc or 'ALL'} page {page}: empty — stopping this pass")
-                break
-            before = len(got)
-            for row in rows:
-                key = row.get("pid") or row.get("id") or row.get("productId")
-                if key and key not in got:
-                    got[key] = row
-            print(f"[fetch] cc={cc or 'ALL'} page {page}: total unique {len(got)}")
-            if len(got) == before:
-                print(f"[fetch] cc={cc or 'ALL'} page {page}: no new products — stopping this pass")
-                break
-            page += 1
+        for kw in KEYWORDS:
+            page, added = 1, 0
+            while page <= 5:
+                try:
+                    rows = list_page(cj, path, page, 100, cc, kw)
+                except Exception as e:  # noqa: BLE001
+                    print(f"[warn] kw={kw!r} page {page} (cc={cc}) failed: {e}",
+                          file=sys.stderr)
+                    break
+                if not rows:
+                    break
+                before = len(got)
+                for row in rows:
+                    key = row.get("pid") or row.get("id") or row.get("productId")
+                    if key and key not in got:
+                        got[key] = row
+                added += len(got) - before
+                if len(got) == before:      # this keyword is exhausted
+                    break
+                page += 1
+                time.sleep(THROTTLE_S)
+            print(f"[fetch] cc={cc or 'ALL'} kw={kw!r}: +{added} (total {len(got)})")
+            if len(got) >= count:
+                return list(got.values())[: count + 100]
             time.sleep(THROTTLE_S)
-        if len(got) >= count:
-            break
-    return list(got.values())[: count + 50]   # small buffer before filtering
+    return list(got.values())[: count + 100]
 
 
 def main():
