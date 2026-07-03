@@ -1,0 +1,39 @@
+name: Check CJ shipping rate
+
+# Proof/test: quote real CJ shipping for one product to an address.
+# Actions → "Check CJ shipping rate" → Run workflow → enter a PID + address.
+
+on:
+  workflow_dispatch:
+    inputs:
+      pid:
+        description: "CJ product id (from products.json cj_pid)"
+        default: "1737398203613454336"
+      zip:
+        description: "Destination ZIP"
+        default: "90210"
+      state:
+        description: "Destination state code"
+        default: "CA"
+      qty:
+        description: "Quantity"
+        default: "1"
+
+jobs:
+  shipping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Query CJ shipping
+        env:
+          CJ_API_KEY: ${{ secrets.CJ_API_KEY }}
+        working-directory: backend
+        run: |
+          python check_shipping.py --pid "${{ github.event.inputs.pid }}" \
+            --zip "${{ github.event.inputs.zip }}" \
+            --state "${{ github.event.inputs.state }}" \
+            --qty "${{ github.event.inputs.qty }}"
