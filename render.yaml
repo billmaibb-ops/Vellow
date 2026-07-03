@@ -1,0 +1,20 @@
+# Render Blueprint — one-click deploy of the Vellow checkout backend.
+# In Render: New + → Blueprint → connect this repo → it reads this file.
+# You'll be prompted to paste the two secret values (they are NOT stored in git).
+services:
+  - type: web
+    name: vellow-backend
+    runtime: python
+    plan: free                     # free tier sleeps after 15 min idle; upgrade for always-on
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app
+    envVars:
+      - key: CJ_API_KEY
+        sync: false                # paste your CJ key in the Render dashboard
+      - key: STRIPE_SECRET_KEY
+        sync: false                # paste your Stripe secret key (sk_live_/sk_test_)
+      - key: STOREFRONT_ORIGIN
+        value: https://billmaibb-ops.github.io
+      - key: PYTHON_VERSION
+        value: "3.12.6"
