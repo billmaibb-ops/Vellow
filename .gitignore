@@ -13,3 +13,6 @@ netlify-drop.zip
 
 # macOS + strays
 .DS_Store
+
+# internal sourcing tool - not deployed publicly
+catalog.html
