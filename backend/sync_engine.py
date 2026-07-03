@@ -186,7 +186,7 @@ def run_daily(cj: CJClient, catalog: dict) -> dict:
         atomic_write(DETAILS_DIR / f"{sku}.json", {
             "id": sku,
             "description": sanitize_html(detail.get("description") or ""),
-            "images": images[:8],
+            "images": images,          # full set — matches the CJ product page
             "variants": variant_rows,
             "synced_at": now_iso(),
         })
@@ -197,7 +197,7 @@ def run_daily(cj: CJClient, catalog: dict) -> dict:
             "cj_vid": vid,
             "title": entry.get("title") or detail.get("productNameEn", "Untitled"),
             "image": images[0] if images else "https://placehold.co/600x600?text=No+Image",
-            "images": images[:6],
+            "images": images[:4],   # a few for the list card; full set is in the detail file
             "category": entry.get("category", detail.get("categoryName", "General")),
             "source_cost": round(cost, 2),
             "retail_price": retail_price(cost, cfg),

@@ -117,7 +117,7 @@ function renderGallery(images){
   setMain(uniq[0] || '');
   const wrap = $('thumbs'); wrap.innerHTML = '';
   if (uniq.length < 2) return;
-  uniq.slice(0, 8).forEach(src => {
+  uniq.forEach(src => {          // show every photo the product has, like the source page
     const b = document.createElement('button');
     b.className = 'w-16 h-16 rounded-md overflow-hidden border border-gray-200 hover:border-[#FF4500]';
     b.innerHTML = `<img src="${esc(src)}" class="w-full h-full object-cover" alt="">`;
