@@ -359,6 +359,29 @@ function updateCartUI(){
    checked. The TOTAL the customer pays = our live price + tax + CJ shipping. */
 let quote = null, quoteTimer = null;
 
+/* Destination sales-tax rates — mirrors the backend table so tax can show
+   INSTANTLY the moment a state is entered, before any server call. This is an
+   ESTIMATE (statewide base rate); the backend re-computes the authoritative
+   figure and, in production, a real tax engine (Stripe Tax) replaces both. */
+const STATE_TAX = {AL:.04,AZ:.056,AR:.065,CA:.0725,CO:.029,CT:.0635,FL:.06,GA:.04,
+ HI:.04,ID:.06,IL:.0625,IN:.07,IA:.06,KS:.065,KY:.06,LA:.0445,ME:.055,MD:.06,MA:.0625,
+ MI:.06,MN:.06875,MS:.07,MO:.04225,NE:.055,NV:.0685,NJ:.06625,NM:.05125,NY:.04,NC:.0475,
+ ND:.05,OH:.0575,OK:.045,PA:.06,RI:.07,SC:.06,SD:.045,TN:.07,TX:.0625,UT:.0485,VT:.06,
+ VA:.053,WA:.065,WV:.06,WI:.05,WY:.04,DC:.06,AK:0,DE:0,MT:0,NH:0,OR:0};
+
+function instantTax(){
+  const st = f_state.value.trim().toUpperCase();
+  if(!(st in STATE_TAX) || cartItems().length===0) return;
+  const rate = STATE_TAX[st];
+  const tax = +(cartTotal() * rate).toFixed(2);
+  document.getElementById('sumTax').textContent = money(tax);
+  document.getElementById('taxNote').textContent = '(est. ' + (rate*100).toFixed(2) + '%)';
+  // reflect estimate in the total until the live quote confirms it
+  if(!quote){
+    document.getElementById('sumTotal').textContent = money(+(cartTotal()+tax).toFixed(2)) + ' + shipping';
+  }
+}
+
 function shippingAddr(){
   return { name:f_name.value.trim(), email:f_email.value.trim(), addr:f_addr.value.trim(),
            city:f_city.value.trim(), state:f_state.value.trim(),
@@ -382,7 +405,14 @@ function scheduleQuote(){
   clearTimeout(quoteTimer);
   const a = shippingAddr();
   if(cartItems().length===0){ quoteSpin(false,'Your cart is empty.'); return; }
-  if(!addrReady(a)){ invalidateQuote(); quoteSpin(false,'Enter your address to calculate shipping & total.'); return; }
+  instantTax();  // show estimated tax the moment a state is present
+  if(!addrReady(a)){
+    quoteSpin(false, a.state && (a.state.toUpperCase() in STATE_TAX)
+      ? 'Add your full address for a live shipping rate.'
+      : 'Enter your address to calculate tax & shipping.');
+    return;
+  }
+  quoteSpin(true, 'Calculating tax & shipping to your address…');
   quoteTimer = setTimeout(runQuote, 500);
 }
 async function runQuote(){
