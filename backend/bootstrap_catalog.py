@@ -83,21 +83,56 @@ def normalize(row: dict, cfg: PricingConfig, idx: int) -> dict | None:
     }
 
 
+def probe_endpoints(cj: CJClient) -> str:
+    """CJ has moved list endpoints between versions. Find one that returns rows
+    and show raw responses so failures are debuggable from the Actions log."""
+    for path in ("/product/listV2", "/product/list", "/product/myProduct/list"):
+        try:
+            raw = cj._get(path, {"pageNum": 1, "pageSize": 5})
+            data = raw.get("data") or {}
+            rows = data.get("list") or data.get("content") or []
+            print(f"[probe] {path}: code={raw.get('code')} "
+                  f"result={raw.get('result')} rows={len(rows)} "
+                  f"message={raw.get('message')!r}")
+            if not rows:
+                print(f"[probe] {path} raw: {str(raw)[:400]}")
+            else:
+                print(f"[probe] {path} first row keys: {sorted(rows[0].keys())}")
+                return path
+        except Exception as e:  # noqa: BLE001
+            print(f"[probe] {path} failed: {e}", file=sys.stderr)
+    return ""
+
+
+def list_page(cj: CJClient, path: str, page: int, size: int,
+              country: str | None) -> list[dict]:
+    params: dict = {"pageNum": page, "pageSize": size}
+    if country:
+        params["countryCode"] = country
+    raw = cj._get(path, params)
+    data = raw.get("data") or {}
+    return data.get("list") or data.get("content") or []
+
+
 def fetch_pages(cj: CJClient, count: int, country: str | None) -> list[dict]:
-    """Page listV2 until we have `count` unique products. US warehouse first,
-    then fill from the global catalog if needed."""
+    """Page the working list endpoint until we have `count` unique products.
+    US warehouse first, then fill from the global catalog if needed."""
+    path = probe_endpoints(cj)
+    if not path:
+        print("[abort] no working product-list endpoint found", file=sys.stderr)
+        return []
     got: dict[str, dict] = {}
     passes = [country, None] if country else [None]
     for cc in passes:
         page = 1
         while len(got) < count and page <= 40:
             try:
-                data = cj.list_products(page=page, size=100, country_code=cc)
-            except CJError as e:
+                rows = list_page(cj, path, page, 100, cc)
+            except Exception as e:  # noqa: BLE001
                 print(f"[warn] list page {page} (cc={cc}) failed: {e}", file=sys.stderr)
                 break
-            rows = data["list"]
             if not rows:
+                print(f"[fetch] cc={cc or 'ALL'} page {page}: empty — stopping this pass")
                 break
             for row in rows:
                 if row.get("pid") and row["pid"] not in got:
