@@ -215,6 +215,7 @@ async function api(path, body){
 
 const state = { store:null, products:[], cart:{}, filter:"", category:"All", shown:60 };
 const PAGE = 60;
+state.cart = (function(){ try { return JSON.parse(localStorage.getItem('vellow_cart')||'{}'); } catch(_) { return {}; } })();
 
 async function load(){
   const res = await fetch('products.json?_=' + Date.now()); // cache-bust each hourly sync
@@ -222,6 +223,8 @@ async function load(){
   state.store = data.store;
   state.products = data.products;
   renderPills();
+  updateCartUI();
+  if (new URLSearchParams(location.search).get('cart') === '1') openCheckout();
   document.getElementById('syncStamp').textContent =
     'Prices synced ' + new Date(data.store.last_price_sync).toLocaleString();
   // Show the footer ad slot only if ads are enabled in config.
@@ -270,18 +273,19 @@ function cardHTML(p){
   const lowStock = p.in_stock && p.stock > 0 && p.stock <= 20;
   const compare = p.compare_at_price && p.compare_at_price > p.retail_price;
   const pct = compare ? Math.round((1 - p.retail_price / p.compare_at_price) * 100) : 0;
+  const url = 'product.html?id=' + encodeURIComponent(p.id);
   return `
   <div class="bg-white rounded-lg border border-gray-200 hover:shadow-md transition overflow-hidden flex flex-col">
-    <div class="aspect-square bg-gray-50 relative">
+    <a href="${url}" class="aspect-square bg-gray-50 relative block">
       <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover ${oos?'opacity-40':''}" />
       ${compare ? `<span class="absolute top-2 left-2 bg-[#E24B4A] text-white text-xs font-bold px-2 py-1 rounded">-${pct}%</span>` : ''}
       ${oos ? '<span class="absolute top-2 right-2 bg-gray-900 text-white text-xs px-2 py-1 rounded">Out of stock</span>'
         : lowStock ? `<span class="absolute bottom-2 left-2 bg-[#0C2340] text-white text-xs px-2 py-1 rounded">Only ${p.stock} left</span>`
         : p.trending_score>0.85 ? '<span class="absolute bottom-2 left-2 bg-[#0C2340] text-white text-xs px-2 py-1 rounded">🔥 Selling fast</span>' : ''}
-    </div>
+    </a>
     <div class="p-3 flex flex-col flex-1">
       ${p.brand ? `<div class="text-xs text-gray-500">${p.brand}</div>` : ''}
-      <div class="text-sm font-medium line-clamp-2 flex-1">${p.title}</div>
+      <a href="${url}" class="text-sm font-medium line-clamp-2 flex-1 hover:text-[#FF4500]">${p.title}</a>
       ${p.rating ? `<div class="flex items-center gap-1 text-xs text-[#BA7517] mt-1">
         ★ ${p.rating} <span class="text-gray-400">(${(p.review_count||0).toLocaleString()})</span>
       </div>` : ''}
@@ -299,30 +303,44 @@ function cardHTML(p){
   </div>`;
 }
 
-/* ---------- cart ---------- */
-function addToCart(id){
-  state.cart[id] = (state.cart[id]||0) + 1;
-  updateCartUI();
+/* ---------- cart (persisted in localStorage; shared with product pages) ----------
+   Entries are keyed by "productId|variantId" and carry the variant label and
+   the unit price captured at add time. The backend re-validates every price
+   against the live catalog before capturing payment, so a stale local price
+   can never result in an incorrect charge. */
+const CART_KEY = 'vellow_cart';
+function loadCart(){ try { return JSON.parse(localStorage.getItem(CART_KEY)||'{}'); } catch(_) { return {}; } }
+function saveCart(){ localStorage.setItem(CART_KEY, JSON.stringify(state.cart)); }
+
+function addToCart(id, vid='', variant=''){
+  const k = id + '|' + vid;
+  const p = state.products.find(x=>x.id===id);
+  const e = state.cart[k] || { id, vid, variant, price: p ? p.retail_price : 0, qty: 0 };
+  e.qty += 1;
+  state.cart[k] = e;
+  saveCart(); updateCartUI();
 }
 function cartItems(){
-  return Object.entries(state.cart).map(([id,qty])=>{
-    const p = state.products.find(x=>x.id===id);
-    return {p, qty};
+  return Object.entries(state.cart).map(([k,e])=>{
+    const p = state.products.find(x=>x.id===e.id);
+    return {k, e, p};
   }).filter(x=>x.p);
 }
-function cartTotal(){ return cartItems().reduce((s,{p,qty})=>s+p.retail_price*qty,0); }
+function lineUnit(x){ return x.e.price || x.p.retail_price; }
+function cartTotal(){ return cartItems().reduce((s,x)=>s+lineUnit(x)*x.e.qty,0); }
 
 function updateCartUI(){
-  const count = Object.values(state.cart).reduce((a,b)=>a+b,0);
+  const count = Object.values(state.cart).reduce((a,e)=>a+e.qty,0);
   document.getElementById('cartCount').textContent = count;
-  document.getElementById('cartLines').innerHTML = cartItems().map(({p,qty})=>`
+  document.getElementById('cartLines').innerHTML = cartItems().map(x=>`
     <div class="flex gap-3 items-center">
-      <img src="${p.image}" class="w-14 h-14 object-cover rounded" />
+      <img src="${x.p.image}" class="w-14 h-14 object-cover rounded" />
       <div class="flex-1 text-sm">
-        <div class="font-medium line-clamp-1">${p.title}</div>
-        <div class="text-gray-500">${money(p.retail_price)} × ${qty}</div>
+        <div class="font-medium line-clamp-1">${x.p.title}</div>
+        ${x.e.variant ? `<div class="text-xs text-gray-400">${x.e.variant}</div>` : ''}
+        <div class="text-gray-500">${money(lineUnit(x))} × ${x.e.qty}</div>
       </div>
-      <button data-remove="${p.id}" class="text-gray-400 hover:text-red-500 text-sm">Remove</button>
+      <button data-remove="${x.k}" class="text-gray-400 hover:text-red-500 text-sm">Remove</button>
     </div>`).join('') || '<p class="text-sm text-gray-400">Your cart is empty.</p>';
   const total = cartTotal();
   document.getElementById('sumSubtotal').textContent = money(total);
@@ -369,7 +387,7 @@ function toggleBusy(busy){
    3) backend re-checks live CJ stock, then captures + forwards to CJ,
       or cancels the hold so the customer is never charged.            */
 async function placeOrder(){
-  const items = cartItems().map(({p,qty})=>({id:p.id, qty}));
+  const items = cartItems().map(x=>({id:x.e.id, qty:x.e.qty, vid:x.e.vid||undefined}));
   if(items.length===0){ setStatus('Your cart is empty.','red'); return; }
   if(!stripe || !cardElement){ setStatus('Payment not initialized — check Stripe key.','red'); return; }
 
@@ -405,7 +423,7 @@ async function placeOrder(){
       setLabel('Order placed ✔');
       setStatus(cap.fulfilled ? 'Stock confirmed — payment captured, order sent to supplier ✔'
                               : 'Payment captured — order queued for fulfillment ✔', 'green');
-      state.cart={}; updateCartUI();
+      state.cart={}; saveCart(); updateCartUI();
     }else{
       setStatus(cap.reason || 'Could not confirm stock — hold released, you were not charged.','red');
       setLabel('Place order (authorize hold)');
@@ -423,7 +441,7 @@ document.addEventListener('click', e=>{
   const add=e.target.closest('[data-add]');
   const rm=e.target.closest('[data-remove]');
   if(add) addToCart(add.dataset.add);
-  if(rm){ delete state.cart[rm.dataset.remove]; updateCartUI(); }
+  if(rm){ delete state.cart[rm.dataset.remove]; saveCart(); updateCartUI(); }
 });
 document.getElementById('search').addEventListener('input', e=>{ state.filter=e.target.value; state.shown=PAGE; render(); });
 document.getElementById('catPills').addEventListener('click', e=>{

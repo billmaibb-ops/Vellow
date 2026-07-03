@@ -37,6 +37,20 @@ from pricing import PricingConfig, retail_price
 HERE = Path(__file__).resolve().parent
 PRODUCTS_JSON = HERE.parent / "products.json"      # the file the storefront reads
 WATCHLIST = HERE / "watchlist.json"                # CJ pids/vids we choose to sell
+DETAILS_DIR = HERE.parent / "products"             # per-product detail pages read these
+
+
+def sanitize_html(html: str) -> str:
+    """Strip active content from supplier-provided description HTML before it
+    is served to customers (script/style/iframe, on* handlers, js: urls)."""
+    if not html:
+        return ""
+    import re
+    html = re.sub(r"(?is)<(script|style|iframe|object|embed|form)[^>]*>.*?</\1>", "", html)
+    html = re.sub(r"(?is)<(script|style|iframe|object|embed|form|link|meta)[^>]*/?>", "", html)
+    html = re.sub(r"(?i)\son\w+\s*=\s*(\"[^\"]*\"|'[^']*'|[^\s>]+)", "", html)
+    html = re.sub(r"(?i)(href|src)\s*=\s*([\"']?)\s*javascript:[^\"'>\s]*", r"\1=\2#", html)
+    return html.strip()
 
 
 def now_iso() -> str:
@@ -115,6 +129,10 @@ def run_daily(cj: CJClient, catalog: dict) -> dict:
     watchlist = [e for e in watchlist
                  if e.get("pid") and not e["pid"].startswith(("REPLACE", "DEMO"))]
 
+    DETAILS_DIR.mkdir(exist_ok=True)
+    old_by_pid = {(p.get("cj_pid") or p.get("id")): p for p in catalog["products"]}
+    synced_pids = set()
+
     products = []
     for entry in watchlist:
         pid = entry["pid"]
@@ -125,7 +143,7 @@ def run_daily(cj: CJClient, catalog: dict) -> dict:
             print(f"[warn] deep sync failed for pid {pid}: {e}", file=sys.stderr)
             continue
 
-        # Pick the variant we sell (explicit vid, else the first/cheapest).
+        # Pick the variant we sell by default (explicit vid, else the first).
         variants = detail.get("variants") or []
         vid = entry.get("vid")
         variant = next((v for v in variants if v.get("vid") == vid), variants[0] if variants else {})
@@ -136,32 +154,79 @@ def run_daily(cj: CJClient, catalog: dict) -> dict:
             print(f"[warn] no cost for pid {pid}; skipping", file=sys.stderr)
             continue
 
-        stock = cj.get_variant_stock(vid) if vid else {"us_quantity": 0, "quantity": 0}
+        time.sleep(0.5)
+        try:
+            stock = cj.get_variant_stock(vid) if vid else {"us_quantity": 0, "quantity": 0}
+        except CJError:
+            stock = {"us_quantity": 0, "quantity": 0}
         eff, in_stock = safe_stock(stock["us_quantity"], stock["quantity"], threshold)
 
         images = detail.get("productImageSet") or detail.get("productImage") or []
         if isinstance(images, str):
             images = [images]
 
-        products.append({
-            "id": entry.get("sku") or f"CJ-{pid}",
+        sku = entry.get("sku") or f"CJ-{pid}"
+        # Per-variant options (color/size) with their own risk-adjusted retail.
+        variant_rows = []
+        for v in variants[:40]:
+            vcost = float(v.get("variantSellPrice") or 0)
+            if not v.get("vid") or vcost <= 0:
+                continue
+            variant_rows.append({
+                "vid": v["vid"],
+                "name": (v.get("variantNameEn") or v.get("variantKey")
+                         or v.get("variantName") or "").strip() or "Default",
+                "image": v.get("variantImage") or "",
+                "source_cost": round(vcost, 2),
+                "retail_price": retail_price(vcost, cfg),
+            })
+
+        # Write the detail file the product page fetches on demand. Kept out
+        # of products.json so the storefront list stays a fast, small fetch.
+        atomic_write(DETAILS_DIR / f"{sku}.json", {
+            "id": sku,
+            "description": sanitize_html(detail.get("description") or ""),
+            "images": images[:8],
+            "variants": variant_rows,
+            "synced_at": now_iso(),
+        })
+
+        prod = {
+            "id": sku,
             "cj_pid": pid,
             "cj_vid": vid,
             "title": entry.get("title") or detail.get("productNameEn", "Untitled"),
-            "brand": entry.get("brand", "CJ Supplier"),
             "image": images[0] if images else "https://placehold.co/600x600?text=No+Image",
             "images": images[:6],
-            "description": detail.get("description") or entry.get("description", ""),
             "category": entry.get("category", detail.get("categoryName", "General")),
-            "rating": entry.get("rating", 4.5),
-            "review_count": entry.get("review_count", 0),
             "source_cost": round(cost, 2),
             "retail_price": retail_price(cost, cfg),
             "stock": eff,
             "in_stock": in_stock,
             "trending_score": entry.get("trending_score", 0.5),
             "source_verified_at": now_iso(),
-        })
+            "has_detail": True,
+        }
+        # No fabricated social proof: rating/review_count only if truly known.
+        if entry.get("rating"):
+            prod["rating"] = entry["rating"]
+            prod["review_count"] = entry.get("review_count", 0)
+        if entry.get("brand"):
+            prod["brand"] = entry["brand"]
+        products.append(prod)
+        synced_pids.add(pid)
+        if len(products) % 100 == 0:
+            print(f"[daily] {len(products)} synced so far…")
+
+    # Keep any existing product whose sync failed this run (don't shrink the
+    # catalog because of transient CJ errors — next run retries them).
+    kept = 0
+    for opid, oldp in old_by_pid.items():
+        if opid not in synced_pids:
+            products.append(oldp)
+            kept += 1
+    if kept:
+        print(f"[daily] kept {kept} existing products whose sync failed/skipped")
 
     # WIPE GUARD: if the deep sync produced nothing (empty/placeholder
     # watchlist, CJ outage, auth failure), KEEP the existing catalog rather

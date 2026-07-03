@@ -14,7 +14,11 @@ on:
   schedule:
     - cron: "0 * * * *"     # hourly: price + stock poll
     - cron: "30 3 * * *"    # daily 03:30 UTC: deep sync (images, titles)
-  workflow_dispatch: {}      # manual "Run workflow" button
+  workflow_dispatch:         # manual "Run workflow" button
+    inputs:
+      mode:
+        description: "hourly (light price/stock) or daily (deep sync: descriptions, variants)"
+        default: "daily"
 
 permissions:
   contents: write
@@ -39,7 +43,9 @@ jobs:
       - name: Decide sync mode
         id: mode
         run: |
-          if [ "${{ github.event.schedule }}" = "30 3 * * *" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ github.event.inputs.mode || 'daily' }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "30 3 * * *" ]; then
             echo "mode=daily" >> "$GITHUB_OUTPUT"
           else
             echo "mode=hourly" >> "$GITHUB_OUTPUT"
@@ -57,6 +63,7 @@ jobs:
           git config user.name "cj-sync-bot"
           git config user.email "actions@github.com"
           git add products.json
+          [ -d products ] && git add products/
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "sync: ${{ steps.mode.outputs.mode }} price/stock update"
           git push

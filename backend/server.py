@@ -58,6 +58,25 @@ def find_product(catalog: dict, pid: str) -> dict | None:
     return next((p for p in catalog["products"] if p["id"] == pid), None)
 
 
+DETAILS_DIR = HERE.parent / "products"
+
+
+def line_price(p: dict, vid: str | None) -> float:
+    """Unit retail for a cart line. If a variant is chosen, use that
+    variant's own risk-adjusted retail from the product's detail file;
+    otherwise the product-level price. Server-side truth — the client's
+    displayed price is never trusted for the charge."""
+    if vid:
+        try:
+            detail = json.loads((DETAILS_DIR / f"{p['id']}.json").read_text())
+            for v in detail.get("variants", []):
+                if v.get("vid") == vid and v.get("retail_price"):
+                    return float(v["retail_price"])
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+    return float(p["retail_price"])
+
+
 # ---------------------------------------------------------------------------
 @app.post("/api/create-hold")
 def create_hold():
@@ -74,7 +93,7 @@ def create_hold():
         if not p or not p.get("in_stock"):
             return jsonify(ok=False, reason=f"Item unavailable: {item['id']}"), 409
         qty = int(item["qty"])
-        subtotal += p["retail_price"] * qty
+        subtotal += line_price(p, item.get("vid")) * qty
         lines.append({"product": p, "qty": qty})
 
     # Estimated shipping (grossed up). Refined at capture with the real quote.
@@ -115,7 +134,7 @@ def verify_and_capture():
             problems.append(f"Unknown item {item['id']}")
             continue
         qty = int(item["qty"])
-        vid = p.get("cj_vid")
+        vid = item.get("vid") or p.get("cj_vid")   # customer's chosen variant wins
         try:
             stock = cj.get_variant_stock(vid) if vid else {"us_quantity": 0, "quantity": 0}
         except CJError as e:
