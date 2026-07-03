@@ -41,13 +41,23 @@ from pricing import PricingConfig, retail_price, gross_up
 HERE = Path(__file__).resolve().parent
 PRODUCTS_JSON = HERE.parent / "products.json"
 
-stripe.api_key = os.environ["STRIPE_SECRET_KEY"]  # sk_test_... or sk_live_...
+# Payments are OPTIONAL at boot. The quote/shipping/stock endpoints don't need
+# Stripe, so the service comes up and serves them even before a Stripe key is
+# configured. Only the charge steps (create-hold / verify-and-capture) require it.
+stripe.api_key = os.environ.get("STRIPE_SECRET_KEY", "")
+PAYMENTS_ENABLED = bool(stripe.api_key)
 
 app = Flask(__name__)
 # Lock CORS to your storefront's domain in production.
 CORS(app, origins=os.environ.get("STOREFRONT_ORIGIN", "*"))
 
-cj = CJClient()
+# CJ client is needed for live price/stock/shipping. If the key is missing the
+# app still boots; those endpoints then report a clear config error.
+try:
+    cj = CJClient()
+except Exception as _e:  # noqa: BLE001
+    cj = None
+    print(f"[warn] CJ client not configured: {_e}")
 
 
 def load_catalog() -> dict:
@@ -196,6 +206,8 @@ def quote():
     """Live purchase-time quote: current price, stock, address shipping + tax.
     The storefront shows a loading state while this runs.
     Body: { items:[{id,qty,vid}], shipping:{country,zip,state} }"""
+    if cj is None:
+        return jsonify(ok=False, reason="Live pricing not configured (CJ_API_KEY missing)."), 503
     body = request.get_json(force=True)
     q = build_quote(load_catalog(), body.get("items", []), body.get("shipping", {}))
     return jsonify(ok=not q["problems"], **q)
@@ -207,6 +219,10 @@ def create_hold():
     """Authorization-only hold for the LIVE quoted total (price+tax+shipping).
     Recomputes the quote server-side so the hold can't be tampered with.
     Body: { items:[{id,qty,vid}], shipping:{country,zip,state} }"""
+    if not PAYMENTS_ENABLED:
+        return jsonify(ok=False, reason="Payments not configured yet (STRIPE_SECRET_KEY missing)."), 503
+    if cj is None:
+        return jsonify(ok=False, reason="Live pricing not configured (CJ_API_KEY missing)."), 503
     body = request.get_json(force=True)
     catalog = load_catalog()
 
@@ -232,6 +248,16 @@ def create_hold():
 
 # ---------------------------------------------------------------------------
 @app.post("/api/verify-and-capture")
+def verify_and_capture_guarded():
+    if not PAYMENTS_ENABLED:
+        return jsonify(ok=False, captured=False,
+                       reason="Payments not configured yet (STRIPE_SECRET_KEY missing)."), 503
+    if cj is None:
+        return jsonify(ok=False, captured=False,
+                       reason="Live pricing not configured (CJ_API_KEY missing)."), 503
+    return verify_and_capture()
+
+
 def verify_and_capture():
     """The critical gate. Re-check stock in real time, then capture or release.
     Body: { payment_intent, items:[{id,qty}], shipping:{name,addr,city,state,zip,country,email} }"""
