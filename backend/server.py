@@ -78,40 +78,156 @@ def line_price(p: dict, vid: str | None) -> float:
 
 
 # ---------------------------------------------------------------------------
+# Destination sales-tax rates. ESTIMATE FOR DISPLAY ONLY — before charging
+# real customers, replace with Stripe Tax / TaxJar, which handle local rates
+# and nexus. Override per-state in products.json -> store.tax_rates.
+DEFAULT_STATE_TAX = {
+    "AL": .04, "AZ": .056, "AR": .065, "CA": .0725, "CO": .029, "CT": .0635,
+    "FL": .06, "GA": .04, "HI": .04, "ID": .06, "IL": .0625, "IN": .07,
+    "IA": .06, "KS": .065, "KY": .06, "LA": .0445, "ME": .055, "MD": .06,
+    "MA": .0625, "MI": .06, "MN": .06875, "MS": .07, "MO": .04225, "NE": .055,
+    "NV": .0685, "NJ": .06625, "NM": .05125, "NY": .04, "NC": .0475, "ND": .05,
+    "OH": .0575, "OK": .045, "PA": .06, "RI": .07, "SC": .06, "SD": .045,
+    "TN": .07, "TX": .0625, "UT": .0485, "VT": .06, "VA": .053, "WA": .065,
+    "WV": .06, "WI": .05, "WY": .04, "DC": .06,
+    # no statewide sales tax:
+    "AK": 0.0, "DE": 0.0, "MT": 0.0, "NH": 0.0, "OR": 0.0,
+}
+
+
+def tax_rate_for(state: str, store: dict) -> float:
+    rates = {**DEFAULT_STATE_TAX, **(store.get("tax_rates") or {})}
+    return float(rates.get((state or "").upper(),
+                           store.get("default_tax_rate", 0.0)))
+
+
+def live_unit_price(cj_client, p: dict, vid: str | None, cfg) -> float:
+    """Re-price this line from CJ's CURRENT supplier cost (not the cached
+    products.json). Protects margin if CJ raised the cost since last sync."""
+    pid = p.get("cj_pid")
+    if not pid:
+        return line_price(p, vid)
+    try:
+        detail = cj_client.get_product(pid)
+    except CJError:
+        return line_price(p, vid)
+    variants = detail.get("variants") or []
+    v = next((x for x in variants if x.get("vid") == vid), None) if vid else None
+    cost = None
+    if v:
+        cost = float(v.get("variantSellPrice") or 0) or None
+    if not cost:
+        cost = float((variants[0].get("variantSellPrice") if variants else 0)
+                     or detail.get("sellPrice") or 0) or None
+    return retail_price(cost, cfg) if cost else line_price(p, vid)
+
+
+def build_quote(catalog: dict, items: list, shipping: dict) -> dict:
+    """The authoritative purchase-time check. For every line, hit CJ live for
+    current price + stock, then get the real CJ shipping cost to the address,
+    and add destination tax. Returns the full breakdown the customer pays:
+
+        total = sum(our live price x qty) + tax + CJ shipping
+
+    Any out-of-stock line is reported in `problems` (caller must not charge)."""
+    store = catalog["store"]
+    cfg = PricingConfig.from_store(store)
+    threshold = store.get("safety_stock_threshold", 5)
+    country = shipping.get("country", "US")
+    zip_code = shipping.get("zip", "")
+    state = shipping.get("state", "")
+
+    lines, problems, cj_products = [], [], []
+    subtotal = 0.0
+    for item in items:
+        p = find_product(catalog, item["id"])
+        if not p:
+            problems.append(f"Unknown item {item['id']}")
+            continue
+        qty = int(item["qty"])
+        vid = item.get("vid") or p.get("cj_vid")
+
+        unit = live_unit_price(cj, p, vid, cfg)   # up-to-date price
+        try:                                       # up-to-date stock
+            stock = cj.get_variant_stock(vid) if vid else {"us_quantity": 0, "quantity": 0}
+            eff = stock["us_quantity"] or stock["quantity"]
+        except CJError:
+            eff = 0
+        if eff < threshold or eff < qty:
+            problems.append(f"{p['title']} is out of stock")
+
+        subtotal += unit * qty
+        lines.append({"id": p["id"], "title": p["title"], "qty": qty,
+                      "unit_price": round(unit, 2),
+                      "line_total": round(unit * qty, 2), "available": eff})
+        if vid:
+            cj_products.append({"vid": vid, "quantity": qty})
+
+    # up-to-date shipping to this address (grossed up so the card fee on
+    # shipping isn't paid out of margin)
+    shipping_cost, ship_name, ship_days = None, "", ""
+    if country and zip_code and cj_products:
+        try:
+            q = cj.get_shipping_quote_multi(cj_products, country, zip_code, state)
+            shipping_cost = gross_up(q["cost"], cfg.gateway_fee_rate)
+            ship_name, ship_days = q["name"], q["days"]
+        except CJError:
+            shipping_cost = None
+    if shipping_cost is None:
+        shipping_cost = gross_up(float(store.get("fallback_shipping", 6.99)),
+                                 cfg.gateway_fee_rate)
+        ship_name = "Standard shipping (estimate)"
+
+    rate = tax_rate_for(state, store)
+    tax = round(subtotal * rate, 2)
+    total = round(subtotal + tax + shipping_cost, 2)
+    return {
+        "lines": lines, "problems": problems,
+        "subtotal": round(subtotal, 2),
+        "tax": tax, "tax_rate": rate,
+        "shipping": round(shipping_cost, 2),
+        "shipping_name": ship_name, "shipping_days": ship_days,
+        "total": total,
+    }
+
+
+@app.post("/api/quote")
+def quote():
+    """Live purchase-time quote: current price, stock, address shipping + tax.
+    The storefront shows a loading state while this runs.
+    Body: { items:[{id,qty,vid}], shipping:{country,zip,state} }"""
+    body = request.get_json(force=True)
+    q = build_quote(load_catalog(), body.get("items", []), body.get("shipping", {}))
+    return jsonify(ok=not q["problems"], **q)
+
+
+# ---------------------------------------------------------------------------
 @app.post("/api/create-hold")
 def create_hold():
-    """Place an authorization-only hold for the cart total (+ est. shipping).
-    Body: { items: [{id, qty}], shipping: {country, zip} }"""
+    """Authorization-only hold for the LIVE quoted total (price+tax+shipping).
+    Recomputes the quote server-side so the hold can't be tampered with.
+    Body: { items:[{id,qty,vid}], shipping:{country,zip,state} }"""
     body = request.get_json(force=True)
     catalog = load_catalog()
-    cfg = PricingConfig.from_store(catalog["store"])
 
-    subtotal = 0.0
-    lines = []
-    for item in body.get("items", []):
-        p = find_product(catalog, item["id"])
-        if not p or not p.get("in_stock"):
-            return jsonify(ok=False, reason=f"Item unavailable: {item['id']}"), 409
-        qty = int(item["qty"])
-        subtotal += line_price(p, item.get("vid")) * qty
-        lines.append({"product": p, "qty": qty})
+    q = build_quote(catalog, body.get("items", []), body.get("shipping", {}))
+    if q["problems"]:
+        return jsonify(ok=False, reason="; ".join(q["problems"])), 409
 
-    # Estimated shipping (grossed up). Refined at capture with the real quote.
-    est_shipping = gross_up(float(body.get("est_shipping", 6.99)),
-                            cfg.gateway_fee_rate)
-    amount = round((subtotal + est_shipping) * 100)  # Stripe uses integer cents
-
+    amount = round(q["total"] * 100)  # Stripe uses integer cents
     intent = stripe.PaymentIntent.create(
         amount=amount,
         currency=catalog["store"].get("currency", "usd").lower(),
         capture_method="manual",             # <-- AUTHORIZATION ONLY
         automatic_payment_methods={"enabled": True},
-        metadata={"cart": json.dumps([{"id": l["product"]["id"], "qty": l["qty"]}
-                                      for l in lines])},
+        metadata={"cart": json.dumps([{"id": i["id"], "qty": i["qty"],
+                                       "vid": i.get("vid", "")}
+                                      for i in body.get("items", [])])},
     )
     return jsonify(ok=True, client_secret=intent.client_secret,
                    payment_intent=intent.id, amount=amount / 100,
-                   subtotal=round(subtotal, 2), shipping=est_shipping)
+                   subtotal=q["subtotal"], tax=q["tax"],
+                   shipping=q["shipping"], total=q["total"])
 
 
 # ---------------------------------------------------------------------------

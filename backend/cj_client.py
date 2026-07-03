@@ -195,6 +195,46 @@ class CJClient:
         })
         return body.get("data") or {}
 
+    def get_shipping_quote_multi(self, products: list[dict], country: str,
+                                 zip_code: str, province: str = "") -> dict:
+        """Live CJ shipping cost for a whole cart to the customer's address.
+
+        `products` = [{"vid": ..., "quantity": ...}, ...]. Returns the
+        CHEAPEST available logistics option:
+            {"cost": float, "name": str, "days": str, "options": int}
+        Raises CJError if CJ returns nothing usable so the caller can fall
+        back rather than charge a wrong shipping amount.
+        """
+        body = self._post("/logistic/freightCalculate", {
+            "startCountryCode": "US",
+            "endCountryCode": country,
+            "zip": zip_code,
+            "province": province,
+            "products": products,
+        })
+        data = body.get("data") or []
+        rows = data if isinstance(data, list) else data.get("list", [data])
+        best = None
+        for r in rows:
+            raw = (r.get("logisticPrice") or r.get("freight")
+                   or r.get("price") or r.get("amount"))
+            try:
+                cost = float(raw)
+            except (TypeError, ValueError):
+                continue
+            if best is None or cost < best["cost"]:
+                best = {
+                    "cost": round(cost, 2),
+                    "name": r.get("logisticName") or r.get("logisticEnName")
+                            or r.get("name") or "Standard shipping",
+                    "days": str(r.get("logisticAging") or r.get("aging")
+                               or r.get("deliveryTime") or ""),
+                    "options": len(rows),
+                }
+        if best is None:
+            raise CJError(f"No shipping options returned for {country}/{zip_code}")
+        return best
+
 
 if __name__ == "__main__":
     # Smoke test (requires CJ_API_KEY in env). Prints the first search hit.

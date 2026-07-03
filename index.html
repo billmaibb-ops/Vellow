@@ -92,13 +92,7 @@
   <div class="flex-1 overflow-y-auto p-4 space-y-4">
     <div id="cartLines" class="space-y-3"></div>
 
-    <div class="border-t pt-3 text-sm space-y-1">
-      <div class="flex justify-between"><span>Subtotal</span><span id="sumSubtotal">$0.00</span></div>
-      <div class="flex justify-between text-gray-500"><span>Est. tax &amp; shipping</span><span>calculated after verification</span></div>
-      <div class="flex justify-between font-bold text-base pt-1"><span>Authorization total</span><span id="sumTotal">$0.00</span></div>
-    </div>
-
-    <!-- Shipping / autofill -->
+    <!-- Shipping address (drives the live quote) -->
     <div class="space-y-2">
       <h3 class="font-semibold text-sm">Shipping details</h3>
       <input id="f_name"  class="w-full border rounded px-3 py-2 text-sm" placeholder="Full name" />
@@ -108,6 +102,18 @@
         <input id="f_city"  class="w-1/2 border rounded px-3 py-2 text-sm" placeholder="City" />
         <input id="f_state" class="w-1/4 border rounded px-3 py-2 text-sm" placeholder="State" />
         <input id="f_zip"   class="w-1/4 border rounded px-3 py-2 text-sm" placeholder="ZIP" />
+      </div>
+    </div>
+
+    <!-- Live order total: price + tax + real CJ shipping to this address -->
+    <div class="border rounded-md p-3 text-sm space-y-1 bg-gray-50">
+      <div class="flex justify-between"><span>Subtotal</span><span id="sumSubtotal">$0.00</span></div>
+      <div class="flex justify-between text-gray-600"><span>Tax <span id="taxNote" class="text-gray-400"></span></span><span id="sumTax">—</span></div>
+      <div class="flex justify-between text-gray-600"><span>Shipping <span id="shipNote" class="text-gray-400 text-xs"></span></span><span id="sumShipping">—</span></div>
+      <div class="flex justify-between font-bold text-base pt-1 border-t mt-1"><span>Total</span><span id="sumTotal">$0.00</span></div>
+      <div id="quoteStatus" class="flex items-center gap-2 text-xs text-gray-500 pt-1">
+        <svg id="quoteSpin" class="hidden spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.3"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3"/></svg>
+        <span id="quoteMsg">Enter your address to calculate shipping &amp; total.</span>
       </div>
     </div>
 
@@ -137,7 +143,7 @@
       <span><span class="text-[#3B6D11]">✓</span> 30-day money-back guarantee</span>
     </div>
     <button id="placeOrder" class="w-full bg-[#FF4500] hover:bg-[#e63e00] disabled:opacity-60 text-white font-bold py-3 rounded-md flex items-center justify-center gap-2">
-      <span id="placeLabel">Place order (authorize hold)</span>
+      <span id="placeLabel">Place order</span>
       <svg id="placeSpin" class="hidden spin w-5 h-5" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.3"/>
         <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3"/>
@@ -342,9 +348,66 @@ function updateCartUI(){
       </div>
       <button data-remove="${x.k}" class="text-gray-400 hover:text-red-500 text-sm">Remove</button>
     </div>`).join('') || '<p class="text-sm text-gray-400">Your cart is empty.</p>';
-  const total = cartTotal();
-  document.getElementById('sumSubtotal').textContent = money(total);
-  document.getElementById('sumTotal').textContent = money(total);
+  const sub = cartTotal();
+  document.getElementById('sumSubtotal').textContent = money(sub);
+  // Cart changed → any prior quote is stale. Total waits for a fresh quote.
+  invalidateQuote();
+}
+
+/* ---------- live quote: current price + stock + address shipping + tax ----------
+   Runs the moment we have an address, showing a loading state while CJ is
+   checked. The TOTAL the customer pays = our live price + tax + CJ shipping. */
+let quote = null, quoteTimer = null;
+
+function shippingAddr(){
+  return { name:f_name.value.trim(), email:f_email.value.trim(), addr:f_addr.value.trim(),
+           city:f_city.value.trim(), state:f_state.value.trim(),
+           zip:f_zip.value.trim(), country:'US' };
+}
+function addrReady(a){ return a.addr && a.city && a.state && a.zip.length>=5; }
+
+function invalidateQuote(){
+  quote = null;
+  document.getElementById('sumTax').textContent = '—';
+  document.getElementById('sumShipping').textContent = '—';
+  document.getElementById('sumTotal').textContent = money(cartTotal());
+  document.getElementById('taxNote').textContent = '';
+  document.getElementById('shipNote').textContent = '';
+}
+function quoteSpin(on, msg){
+  document.getElementById('quoteSpin').classList.toggle('hidden', !on);
+  document.getElementById('quoteMsg').textContent = msg || '';
+}
+function scheduleQuote(){
+  clearTimeout(quoteTimer);
+  const a = shippingAddr();
+  if(cartItems().length===0){ quoteSpin(false,'Your cart is empty.'); return; }
+  if(!addrReady(a)){ invalidateQuote(); quoteSpin(false,'Enter your address to calculate shipping & total.'); return; }
+  quoteTimer = setTimeout(runQuote, 500);
+}
+async function runQuote(){
+  const a = shippingAddr();
+  if(!addrReady(a) || cartItems().length===0) return;
+  const items = cartItems().map(x=>({id:x.e.id, qty:x.e.qty, vid:x.e.vid||undefined}));
+  quoteSpin(true,'Checking live price, stock & shipping to your address…');
+  try{
+    const r = await api('/api/quote', { items, shipping:a });
+    quote = r;
+    document.getElementById('sumSubtotal').textContent = money(r.subtotal);
+    document.getElementById('sumTax').textContent = money(r.tax);
+    document.getElementById('taxNote').textContent = r.tax_rate ? '('+(r.tax_rate*100).toFixed(2)+'%)' : '';
+    document.getElementById('sumShipping').textContent = money(r.shipping);
+    document.getElementById('shipNote').textContent = r.shipping_name ? '· '+r.shipping_name : '';
+    document.getElementById('sumTotal').textContent = money(r.total);
+    if(r.problems && r.problems.length){
+      quoteSpin(false, r.problems.join('; ')); quote.blocked = true;
+    } else {
+      quoteSpin(false, 'Total confirmed — price, stock & shipping checked live.');
+    }
+  }catch(err){
+    invalidateQuote();
+    quoteSpin(false, 'Could not reach checkout service. Try again.');
+  }
 }
 
 /* ---------- checkout drawer ---------- */
@@ -395,15 +458,23 @@ async function placeOrder(){
     name:f_name.value.trim(), email:f_email.value.trim(), addr:f_addr.value.trim(),
     city:f_city.value.trim(), state:f_state.value.trim(), zip:f_zip.value.trim(), country:'US'
   };
-  if(!shipping.name || !shipping.addr || !shipping.zip){
-    setStatus('Please enter your name, address, and ZIP.','red'); return;
+  if(!shipping.name || !shipping.addr || !shipping.city || !shipping.state || !shipping.zip){
+    setStatus('Please complete your full shipping address.','red'); return;
   }
 
-  toggleBusy(true); setLabel('Authorizing…');
+  toggleBusy(true); setLabel('Checking price & shipping…');
   try{
-    // 1) authorization-only hold
-    setStatus('Placing temporary authorization hold…','gray');
-    const hold = await api('/api/create-hold', { items, est_shipping:6.99, shipping });
+    // 0) fresh live quote (price + stock + shipping to this address) so the
+    //    customer is charged exactly what's shown, verified moments before.
+    setStatus('Checking live price, stock & shipping…','gray');
+    await runQuote();
+    if(!quote) throw new Error('Could not calculate your total. Please retry.');
+    if(quote.blocked || (quote.problems && quote.problems.length))
+      throw new Error(quote.problems.join('; ') || 'An item is unavailable.');
+
+    // 1) authorization-only hold for the quoted total (server re-quotes to confirm)
+    setLabel('Authorizing…'); setStatus('Placing temporary authorization hold…','gray');
+    const hold = await api('/api/create-hold', { items, shipping });
     if(!hold.ok) throw new Error(hold.reason || 'Could not start checkout.');
 
     // 2) authorize the card (manual capture => status becomes requires_capture)
@@ -426,11 +497,11 @@ async function placeOrder(){
       state.cart={}; saveCart(); updateCartUI();
     }else{
       setStatus(cap.reason || 'Could not confirm stock — hold released, you were not charged.','red');
-      setLabel('Place order (authorize hold)');
+      setLabel('Place order');
     }
   }catch(err){
     setStatus((err.message||'Something went wrong')+' — no charge was captured.','red');
-    setLabel('Place order (authorize hold)');
+    setLabel('Place order');
   }finally{
     toggleBusy(false);
   }
@@ -442,6 +513,9 @@ document.addEventListener('click', e=>{
   const rm=e.target.closest('[data-remove]');
   if(add) addToCart(add.dataset.add);
   if(rm){ delete state.cart[rm.dataset.remove]; saveCart(); updateCartUI(); }
+});
+['f_addr','f_city','f_state','f_zip'].forEach(id=>{
+  document.getElementById(id).addEventListener('input', scheduleQuote);
 });
 document.getElementById('search').addEventListener('input', e=>{ state.filter=e.target.value; state.shown=PAGE; render(); });
 document.getElementById('catPills').addEventListener('click', e=>{
