@@ -131,10 +131,13 @@ Configured in `products.json → store.order_policy`:
   and the customer is refunded the **same percentage CJ approves for us**
   (`refund_contingent_on_cj_approval`, `refund_matches_cj_percentage`).
 - **Shipping non-refundable** (`refund_excludes_shipping: true`).
-- **Return fee** (`return_fee`, `return_fee_applies_to: change_of_mind_only`)
-  is charged **only** on change-of-mind returns — never when an item arrives
-  damaged, defective, wrong, or undelivered. Disputes must go through CJ's
-  Dispute Center — off-platform disputes can get the CJ account blocked.
+- **Return fee** (`return_fee_applies_to: change_of_mind_only`) is charged
+  **only** on change-of-mind returns — never when an item arrives damaged,
+  defective, wrong, or undelivered. The fee **amount** is computed
+  **server-side only** and never written to `products.json` or shown to
+  customers; the rate is set via the private `RETURN_FEE_MARGIN_RATE` env var
+  on the backend. Disputes must go through CJ's Dispute Center — off-platform
+  disputes can get the CJ account blocked.
 - **Margin:** `profit_target: 1.20` (120%) sitewide, with the $10 absolute
   floor still protecting very cheap items.
 

@@ -111,6 +111,21 @@ def tax_rate_for(state: str, store: dict) -> float:
                            store.get("default_tax_rate", 0.0)))
 
 
+# --- INTERNAL change-of-mind return fee -----------------------------------
+# NEVER returned to the storefront or written to products.json. The rate is
+# read from a private env var (default 0.20) so the structure isn't in the
+# public repo. Fee = rate x unit profit margin + any extra fees CJ charges on
+# the return. Only applies to change-of-mind returns, never to defective/
+# undelivered items.
+RETURN_FEE_MARGIN_RATE = float(os.environ.get("RETURN_FEE_MARGIN_RATE", "0.20"))
+
+
+def compute_return_fee(retail_price: float, source_cost: float,
+                       cj_extra_fees: float = 0.0) -> float:
+    margin = max(0.0, float(retail_price) - float(source_cost))
+    return round(RETURN_FEE_MARGIN_RATE * margin + float(cj_extra_fees or 0.0), 2)
+
+
 def live_unit_price(cj_client, p: dict, vid: str | None, cfg) -> float:
     """Re-price this line from CJ's CURRENT supplier cost (not the cached
     products.json). Protects margin if CJ raised the cost since last sync."""
