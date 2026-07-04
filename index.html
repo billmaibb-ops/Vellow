@@ -265,7 +265,9 @@ function filtered(){
   const q = state.filter.toLowerCase();
   return state.products.filter(p =>
     (state.category==='All' || p.category===state.category) &&
-    p.title.toLowerCase().includes(q));
+    p.title.toLowerCase().includes(q))
+    // Keep in-stock items first; push out-of-stock to the bottom.
+    .sort((a,b) => (a.in_stock === b.in_stock) ? 0 : (a.in_stock ? -1 : 1));
 }
 
 function render(){
