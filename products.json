@@ -11,7 +11,7 @@
   "expected_chargeback_rate": 0.01,
   "chargeback_fee": 20.0,
   "_pricing_note": "retail = max( cost*(1+profit_target+loss_provision_rate)/(1-gateway_fee_rate),  (cost + min_profit_per_unit + expected_chargeback_rate*chargeback_fee)/(1-gateway_fee_rate) ). The percentage path targets profit AND pre-funds returns/chargebacks; the absolute floor guarantees a dollar cushion even on near-free items. This makes the store profitable IN AGGREGATE. It cannot make any single chargeback impossible to lose on - use fraud screening (e.g. Stripe Radar) to keep chargeback_rate low.",
-  "safety_stock_threshold": 5,
+  "safety_stock_threshold": 10,
   "verification_window_minutes": 60,
   "ads": {
    "enabled": true,
@@ -318,7 +318,7 @@
    "source_cost": 31.36,
    "retail_price": 54.32,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0033,
    "source_verified_at": null
   },
@@ -426,7 +426,7 @@
    "source_cost": 1.85,
    "retail_price": 12.43,
    "stock": 6,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.2333,
    "source_verified_at": null
   },
@@ -822,7 +822,7 @@
    "source_cost": 2.45,
    "retail_price": 13.05,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0497,
    "source_verified_at": null
   },
@@ -1668,7 +1668,7 @@
    "source_cost": 1.0,
    "retail_price": 11.55,
    "stock": 9,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.004,
    "source_verified_at": null
   },
@@ -2478,7 +2478,7 @@
    "source_cost": 7.53,
    "retail_price": 18.28,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1807,
    "source_verified_at": null
   },
@@ -2514,7 +2514,7 @@
    "source_cost": 48.38,
    "retail_price": 83.8,
    "stock": 9,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.6988,
    "source_verified_at": null
   },
@@ -2604,7 +2604,7 @@
    "source_cost": 10.39,
    "retail_price": 21.23,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.015,
    "source_verified_at": null
   },
@@ -2622,7 +2622,7 @@
    "source_cost": 3.0,
    "retail_price": 13.61,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0315,
    "source_verified_at": null
   },
@@ -3126,7 +3126,7 @@
    "source_cost": 3.15,
    "retail_price": 13.77,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0323,
    "source_verified_at": null
   },
@@ -3144,7 +3144,7 @@
    "source_cost": 3.23,
    "retail_price": 13.85,
    "stock": 8,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0147,
    "source_verified_at": null
   },
@@ -3162,7 +3162,7 @@
    "source_cost": 6.0,
    "retail_price": 16.71,
    "stock": 6,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0233,
    "source_verified_at": null
   },
@@ -3378,7 +3378,7 @@
    "source_cost": 21.99,
    "retail_price": 38.09,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0214,
    "source_verified_at": null
   },
@@ -4170,7 +4170,7 @@
    "source_cost": 6.79,
    "retail_price": 17.52,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0431,
    "source_verified_at": null
   },
@@ -4224,7 +4224,7 @@
    "source_cost": 10.9,
    "retail_price": 21.76,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.5183,
    "source_verified_at": null
   },
@@ -4260,7 +4260,7 @@
    "source_cost": 4.77,
    "retail_price": 15.44,
    "stock": 6,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.299,
    "source_verified_at": null
   },
@@ -5340,7 +5340,7 @@
    "source_cost": 28.35,
    "retail_price": 49.11,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0015,
    "source_verified_at": null
   },
@@ -5574,7 +5574,7 @@
    "source_cost": 3.3,
    "retail_price": 13.92,
    "stock": 6,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1008,
    "source_verified_at": null
   },
@@ -6240,7 +6240,7 @@
    "source_cost": 1.69,
    "retail_price": 12.26,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0064,
    "source_verified_at": null
   },
@@ -6672,7 +6672,7 @@
    "source_cost": 3.5,
    "retail_price": 14.13,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0169,
    "source_verified_at": null
   },
@@ -6726,7 +6726,7 @@
    "source_cost": 58.42,
    "retail_price": 101.19,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0272,
    "source_verified_at": null
   },
@@ -6978,7 +6978,7 @@
    "source_cost": 4.19,
    "retail_price": 14.84,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0379,
    "source_verified_at": null
   },
@@ -7050,7 +7050,7 @@
    "source_cost": 0.53,
    "retail_price": 11.07,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0327,
    "source_verified_at": null
   },
@@ -7068,7 +7068,7 @@
    "source_cost": 0.83,
    "retail_price": 11.38,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0456,
    "source_verified_at": null
   },
@@ -7140,7 +7140,7 @@
    "source_cost": 2.9,
    "retail_price": 13.51,
    "stock": 8,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.073,
    "source_verified_at": null
   },
@@ -7374,7 +7374,7 @@
    "source_cost": 1.45,
    "retail_price": 12.02,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1204,
    "source_verified_at": null
   },
@@ -7464,7 +7464,7 @@
    "source_cost": 7.09,
    "retail_price": 17.83,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1041,
    "source_verified_at": null
   },
@@ -7608,7 +7608,7 @@
    "source_cost": 3.16,
    "retail_price": 13.78,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0325,
    "source_verified_at": null
   },
@@ -7662,7 +7662,7 @@
    "source_cost": 20.7,
    "retail_price": 35.86,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1586,
    "source_verified_at": null
   },
@@ -7806,7 +7806,7 @@
    "source_cost": 1.83,
    "retail_price": 12.41,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1387,
    "source_verified_at": null
   },
@@ -7878,7 +7878,7 @@
    "source_cost": 14.93,
    "retail_price": 25.91,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.022,
    "source_verified_at": null
   },
@@ -8184,7 +8184,7 @@
    "source_cost": 17.28,
    "retail_price": 29.93,
    "stock": 8,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1381,
    "source_verified_at": null
   },
@@ -8490,7 +8490,7 @@
    "source_cost": 10.95,
    "retail_price": 21.81,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0173,
    "source_verified_at": null
   },
@@ -8958,7 +8958,7 @@
    "source_cost": 16.42,
    "retail_price": 28.44,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0454,
    "source_verified_at": null
   },
@@ -9372,7 +9372,7 @@
    "source_cost": 1.79,
    "retail_price": 12.37,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1448,
    "source_verified_at": null
   },
@@ -9858,7 +9858,7 @@
    "source_cost": 11.32,
    "retail_price": 22.19,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1172,
    "source_verified_at": null
   },
@@ -10164,7 +10164,7 @@
    "source_cost": 32.5,
    "retail_price": 56.29,
    "stock": 6,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.028,
    "source_verified_at": null
   },
@@ -10416,7 +10416,7 @@
    "source_cost": 2.79,
    "retail_price": 13.4,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0323,
    "source_verified_at": null
   },
@@ -10470,7 +10470,7 @@
    "source_cost": 2.1,
    "retail_price": 12.69,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1652,
    "source_verified_at": null
   },
@@ -10488,7 +10488,7 @@
    "source_cost": 19.73,
    "retail_price": 34.18,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0394,
    "source_verified_at": null
   },
@@ -10542,7 +10542,7 @@
    "source_cost": 4.53,
    "retail_price": 15.19,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0071,
    "source_verified_at": null
   },
@@ -10560,7 +10560,7 @@
    "source_cost": 7.46,
    "retail_price": 18.21,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0088,
    "source_verified_at": null
   },
@@ -10578,7 +10578,7 @@
    "source_cost": 10.95,
    "retail_price": 21.81,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0236,
    "source_verified_at": null
   },
@@ -10632,7 +10632,7 @@
    "source_cost": 6.47,
    "retail_price": 17.19,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0257,
    "source_verified_at": null
   },
@@ -10920,7 +10920,7 @@
    "source_cost": 1.63,
    "retail_price": 12.2,
    "stock": 8,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.03,
    "source_verified_at": null
   },
@@ -10938,7 +10938,7 @@
    "source_cost": 4.54,
    "retail_price": 15.2,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0362,
    "source_verified_at": null
   },
@@ -11406,7 +11406,7 @@
    "source_cost": 14.99,
    "retail_price": 25.97,
    "stock": 8,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.002,
    "source_verified_at": null
   },
@@ -11478,7 +11478,7 @@
    "source_cost": 14.99,
    "retail_price": 25.97,
    "stock": 9,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0018,
    "source_verified_at": null
   },
@@ -11514,7 +11514,7 @@
    "source_cost": 8.13,
    "retail_price": 18.9,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0388,
    "source_verified_at": null
   },
@@ -11532,7 +11532,7 @@
    "source_cost": 8.17,
    "retail_price": 18.94,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1328,
    "source_verified_at": null
   },
@@ -11550,7 +11550,7 @@
    "source_cost": 5.97,
    "retail_price": 16.68,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0671,
    "source_verified_at": null
   },
@@ -11586,7 +11586,7 @@
    "source_cost": 55.24,
    "retail_price": 95.68,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0368,
    "source_verified_at": null
   },
@@ -11622,7 +11622,7 @@
    "source_cost": 5.8,
    "retail_price": 16.5,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0045,
    "source_verified_at": null
   },
@@ -11640,7 +11640,7 @@
    "source_cost": 5.38,
    "retail_price": 16.07,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0073,
    "source_verified_at": null
   },
@@ -11676,7 +11676,7 @@
    "source_cost": 2.61,
    "retail_price": 13.21,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0107,
    "source_verified_at": null
   },
@@ -11748,7 +11748,7 @@
    "source_cost": 29.2,
    "retail_price": 50.58,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0391,
    "source_verified_at": null
   },
@@ -11766,7 +11766,7 @@
    "source_cost": 4.86,
    "retail_price": 15.53,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0161,
    "source_verified_at": null
   },
@@ -11784,7 +11784,7 @@
    "source_cost": 7.3,
    "retail_price": 18.05,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0179,
    "source_verified_at": null
   },
@@ -11964,7 +11964,7 @@
    "source_cost": 1.8,
    "retail_price": 12.38,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.012,
    "source_verified_at": null
   },
@@ -12036,7 +12036,7 @@
    "source_cost": 7.96,
    "retail_price": 18.73,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0036,
    "source_verified_at": null
   },
@@ -12054,7 +12054,7 @@
    "source_cost": 4.19,
    "retail_price": 14.84,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0412,
    "source_verified_at": null
   },
@@ -12072,7 +12072,7 @@
    "source_cost": 7.63,
    "retail_price": 18.39,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0221,
    "source_verified_at": null
   },
@@ -12090,7 +12090,7 @@
    "source_cost": 6.47,
    "retail_price": 17.19,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0306,
    "source_verified_at": null
   },
@@ -12126,7 +12126,7 @@
    "source_cost": 7.13,
    "retail_price": 17.87,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0135,
    "source_verified_at": null
   },
@@ -12162,7 +12162,7 @@
    "source_cost": 11.28,
    "retail_price": 22.15,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0192,
    "source_verified_at": null
   },
@@ -12216,7 +12216,7 @@
    "source_cost": 1.18,
    "retail_price": 11.74,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0411,
    "source_verified_at": null
   },
@@ -12720,7 +12720,7 @@
    "source_cost": 5.47,
    "retail_price": 16.16,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0216,
    "source_verified_at": null
   },
@@ -12864,7 +12864,7 @@
    "source_cost": 2.38,
    "retail_price": 12.97,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0829,
    "source_verified_at": null
   },
@@ -13008,7 +13008,7 @@
    "source_cost": 3.4,
    "retail_price": 14.03,
    "stock": 8,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.382,
    "source_verified_at": null
   },
@@ -13026,7 +13026,7 @@
    "source_cost": 9.3,
    "retail_price": 20.11,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.023,
    "source_verified_at": null
   },
@@ -13566,7 +13566,7 @@
    "source_cost": 3.23,
    "retail_price": 13.85,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.2988,
    "source_verified_at": null
   },
@@ -13890,7 +13890,7 @@
    "source_cost": 14.93,
    "retail_price": 25.91,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0109,
    "source_verified_at": null
   },
@@ -14052,7 +14052,7 @@
    "source_cost": 4.7,
    "retail_price": 15.37,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1252,
    "source_verified_at": null
   },
@@ -14088,7 +14088,7 @@
    "source_cost": 5.97,
    "retail_price": 16.68,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0029,
    "source_verified_at": null
   },
@@ -14376,7 +14376,7 @@
    "source_cost": 12.94,
    "retail_price": 23.86,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.2524,
    "source_verified_at": null
   },
@@ -14484,7 +14484,7 @@
    "source_cost": 5.3,
    "retail_price": 15.98,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.6312,
    "source_verified_at": null
   },
@@ -14628,7 +14628,7 @@
    "source_cost": 3.64,
    "retail_price": 14.27,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0695,
    "source_verified_at": null
   },
@@ -14646,7 +14646,7 @@
    "source_cost": 4.19,
    "retail_price": 14.84,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.367,
    "source_verified_at": null
   },
@@ -14700,7 +14700,7 @@
    "source_cost": 9.12,
    "retail_price": 19.92,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1157,
    "source_verified_at": null
   },
@@ -15204,7 +15204,7 @@
    "source_cost": 19.57,
    "retail_price": 33.9,
    "stock": 9,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0189,
    "source_verified_at": null
   },
@@ -15384,7 +15384,7 @@
    "source_cost": 7.68,
    "retail_price": 18.44,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0639,
    "source_verified_at": null
   },
@@ -15438,7 +15438,7 @@
    "source_cost": 4.02,
    "retail_price": 14.66,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.01,
    "source_verified_at": null
   },
@@ -15546,7 +15546,7 @@
    "source_cost": 7.0,
    "retail_price": 17.74,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0131,
    "source_verified_at": null
   },
@@ -15564,7 +15564,7 @@
    "source_cost": 71.68,
    "retail_price": 124.15,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.3277,
    "source_verified_at": null
   },
@@ -15672,7 +15672,7 @@
    "source_cost": 4.92,
    "retail_price": 15.59,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0621,
    "source_verified_at": null
   },
@@ -16104,7 +16104,7 @@
    "source_cost": 18.91,
    "retail_price": 32.76,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0054,
    "source_verified_at": null
   },
@@ -16356,7 +16356,7 @@
    "source_cost": 14.8,
    "retail_price": 25.78,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.039,
    "source_verified_at": null
   },
@@ -16626,7 +16626,7 @@
    "source_cost": 10.72,
    "retail_price": 21.57,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0036,
    "source_verified_at": null
   },
@@ -16896,7 +16896,7 @@
    "source_cost": 4.78,
    "retail_price": 15.45,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0513,
    "source_verified_at": null
   },
@@ -16914,7 +16914,7 @@
    "source_cost": 9.11,
    "retail_price": 19.91,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0592,
    "source_verified_at": null
   },
@@ -17022,7 +17022,7 @@
    "source_cost": 3.28,
    "retail_price": 13.9,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1519,
    "source_verified_at": null
   },
@@ -17040,7 +17040,7 @@
    "source_cost": 11.07,
    "retail_price": 21.93,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.2234,
    "source_verified_at": null
   },
@@ -17202,7 +17202,7 @@
    "source_cost": 4.53,
    "retail_price": 15.19,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0767,
    "source_verified_at": null
   },
@@ -17346,7 +17346,7 @@
    "source_cost": 8.26,
    "retail_price": 19.04,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0294,
    "source_verified_at": null
   },
@@ -17436,7 +17436,7 @@
    "source_cost": 15.23,
    "retail_price": 26.38,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0266,
    "source_verified_at": null
   },
@@ -17454,7 +17454,7 @@
    "source_cost": 4.7,
    "retail_price": 15.37,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0054,
    "source_verified_at": null
   },
@@ -17544,7 +17544,7 @@
    "source_cost": 20.97,
    "retail_price": 36.32,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.3592,
    "source_verified_at": null
   },
@@ -17724,7 +17724,7 @@
    "source_cost": 4.51,
    "retail_price": 15.17,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0025,
    "source_verified_at": null
   },
@@ -18012,7 +18012,7 @@
    "source_cost": 4.07,
    "retail_price": 14.72,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0042,
    "source_verified_at": null
   },
@@ -18462,7 +18462,7 @@
    "source_cost": 0.13,
    "retail_price": 10.65,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0297,
    "source_verified_at": null
   },
@@ -18714,7 +18714,7 @@
    "source_cost": 1.14,
    "retail_price": 11.7,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0156,
    "source_verified_at": null
   },
@@ -19110,7 +19110,7 @@
    "source_cost": 6.3,
    "retail_price": 17.02,
    "stock": 6,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.343,
    "source_verified_at": null
   },
@@ -19326,7 +19326,7 @@
    "source_cost": 0.64,
    "retail_price": 11.18,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0433,
    "source_verified_at": null
   },
@@ -19344,7 +19344,7 @@
    "source_cost": 0.68,
    "retail_price": 11.22,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0205,
    "source_verified_at": null
   },
@@ -19524,7 +19524,7 @@
    "source_cost": 1.53,
    "retail_price": 12.1,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0031,
    "source_verified_at": null
   },
@@ -19920,7 +19920,7 @@
    "source_cost": 7.71,
    "retail_price": 18.47,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0061,
    "source_verified_at": null
   },
@@ -20100,7 +20100,7 @@
    "source_cost": 2.81,
    "retail_price": 13.42,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0077,
    "source_verified_at": null
   },
@@ -20244,7 +20244,7 @@
    "source_cost": 0.95,
    "retail_price": 11.5,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0492,
    "source_verified_at": null
   },
@@ -20496,7 +20496,7 @@
    "source_cost": 0.6,
    "retail_price": 11.14,
    "stock": 8,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0027,
    "source_verified_at": null
   },
@@ -20532,7 +20532,7 @@
    "source_cost": 0.76,
    "retail_price": 11.3,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0646,
    "source_verified_at": null
   },
@@ -20658,7 +20658,7 @@
    "source_cost": 44.15,
    "retail_price": 76.47,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1849,
    "source_verified_at": null
   },
@@ -20766,7 +20766,7 @@
    "source_cost": 19.9,
    "retail_price": 34.47,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0086,
    "source_verified_at": null
   },
@@ -21090,7 +21090,7 @@
    "source_cost": 3.61,
    "retail_price": 14.24,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0017,
    "source_verified_at": null
   },
@@ -21504,7 +21504,7 @@
    "source_cost": 2.93,
    "retail_price": 13.54,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0228,
    "source_verified_at": null
   },
@@ -21612,7 +21612,7 @@
    "source_cost": 0.81,
    "retail_price": 11.36,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1018,
    "source_verified_at": null
   },
@@ -21666,7 +21666,7 @@
    "source_cost": 2.14,
    "retail_price": 12.73,
    "stock": 6,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0367,
    "source_verified_at": null
   },
@@ -21684,7 +21684,7 @@
    "source_cost": 0.8,
    "retail_price": 11.35,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.009,
    "source_verified_at": null
   },
@@ -21702,7 +21702,7 @@
    "source_cost": 14.76,
    "retail_price": 25.74,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.331,
    "source_verified_at": null
   },
@@ -21738,7 +21738,7 @@
    "source_cost": 5.79,
    "retail_price": 16.49,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.118,
    "source_verified_at": null
   },
@@ -21774,7 +21774,7 @@
    "source_cost": 4.53,
    "retail_price": 15.19,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0015,
    "source_verified_at": null
   },
@@ -21828,7 +21828,7 @@
    "source_cost": 72.59,
    "retail_price": 125.73,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1361,
    "source_verified_at": null
   },
@@ -21864,7 +21864,7 @@
    "source_cost": 0.84,
    "retail_price": 11.39,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0113,
    "source_verified_at": null
   },
@@ -22026,7 +22026,7 @@
    "source_cost": 4.71,
    "retail_price": 15.38,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0931,
    "source_verified_at": null
   },
@@ -22044,7 +22044,7 @@
    "source_cost": 3.86,
    "retail_price": 14.5,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0132,
    "source_verified_at": null
   },
@@ -22098,7 +22098,7 @@
    "source_cost": 18.84,
    "retail_price": 32.64,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.3512,
    "source_verified_at": null
   },
@@ -22170,7 +22170,7 @@
    "source_cost": 18.9,
    "retail_price": 32.74,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0255,
    "source_verified_at": null
   },
@@ -22260,7 +22260,7 @@
    "source_cost": 8.3,
    "retail_price": 19.08,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0337,
    "source_verified_at": null
   },
@@ -22368,7 +22368,7 @@
    "source_cost": 0.95,
    "retail_price": 11.5,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0207,
    "source_verified_at": null
   },
@@ -22764,7 +22764,7 @@
    "source_cost": 1.6,
    "retail_price": 12.17,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0263,
    "source_verified_at": null
   },
@@ -22908,7 +22908,7 @@
    "source_cost": 7.18,
    "retail_price": 17.92,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1431,
    "source_verified_at": null
   },
@@ -22962,7 +22962,7 @@
    "source_cost": 6.9,
    "retail_price": 17.63,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0173,
    "source_verified_at": null
   },
@@ -22998,7 +22998,7 @@
    "source_cost": 23.05,
    "retail_price": 39.93,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0071,
    "source_verified_at": null
   },
@@ -23196,7 +23196,7 @@
    "source_cost": 11.29,
    "retail_price": 22.16,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0061,
    "source_verified_at": null
   },
@@ -23700,7 +23700,7 @@
    "source_cost": 2.62,
    "retail_price": 13.22,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0064,
    "source_verified_at": null
   },
@@ -23862,7 +23862,7 @@
    "source_cost": 18.91,
    "retail_price": 32.76,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1955,
    "source_verified_at": null
   },
@@ -24114,7 +24114,7 @@
    "source_cost": 1.0,
    "retail_price": 11.55,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0192,
    "source_verified_at": null
   },
@@ -24132,7 +24132,7 @@
    "source_cost": 6.14,
    "retail_price": 16.85,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0288,
    "source_verified_at": null
   },
@@ -24888,7 +24888,7 @@
    "source_cost": 3.35,
    "retail_price": 13.97,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0518,
    "source_verified_at": null
   },
@@ -24942,7 +24942,7 @@
    "source_cost": 1.31,
    "retail_price": 11.87,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0093,
    "source_verified_at": null
   },
@@ -24978,7 +24978,7 @@
    "source_cost": 0.8,
    "retail_price": 11.35,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0458,
    "source_verified_at": null
   },
@@ -25014,7 +25014,7 @@
    "source_cost": 4.99,
    "retail_price": 15.66,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1014,
    "source_verified_at": null
   },
@@ -25122,7 +25122,7 @@
    "source_cost": 10.87,
    "retail_price": 21.73,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0098,
    "source_verified_at": null
   },
@@ -25140,7 +25140,7 @@
    "source_cost": 5.45,
    "retail_price": 16.14,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0825,
    "source_verified_at": null
   },
@@ -25176,7 +25176,7 @@
    "source_cost": 1.41,
    "retail_price": 11.97,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0861,
    "source_verified_at": null
   },
@@ -25194,7 +25194,7 @@
    "source_cost": 21.81,
    "retail_price": 37.78,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1545,
    "source_verified_at": null
   },
@@ -25248,7 +25248,7 @@
    "source_cost": 6.86,
    "retail_price": 17.59,
    "stock": 5,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0037,
    "source_verified_at": null
   },
@@ -25464,7 +25464,7 @@
    "source_cost": 2.56,
    "retail_price": 13.16,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0028,
    "source_verified_at": null
   },
@@ -26112,7 +26112,7 @@
    "source_cost": 0.32,
    "retail_price": 10.85,
    "stock": 7,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.095,
    "source_verified_at": null
   },
@@ -26166,7 +26166,7 @@
    "source_cost": 0.4,
    "retail_price": 10.93,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0115,
    "source_verified_at": null
   },
@@ -26346,7 +26346,7 @@
    "source_cost": 2.82,
    "retail_price": 13.43,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0059,
    "source_verified_at": null
   },
@@ -26616,7 +26616,7 @@
    "source_cost": 1.05,
    "retail_price": 11.6,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0098,
    "source_verified_at": null
   },
@@ -26706,7 +26706,7 @@
    "source_cost": 63.2,
    "retail_price": 109.46,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0201,
    "source_verified_at": null
   },
@@ -26922,7 +26922,7 @@
    "source_cost": 3.75,
    "retail_price": 14.39,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0175,
    "source_verified_at": null
   },
@@ -27174,7 +27174,7 @@
    "source_cost": 8.96,
    "retail_price": 19.76,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0065,
    "source_verified_at": null
   },
@@ -27264,7 +27264,7 @@
    "source_cost": 4.19,
    "retail_price": 14.84,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0117,
    "source_verified_at": null
   },
@@ -27552,7 +27552,7 @@
    "source_cost": 1.41,
    "retail_price": 11.97,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0094,
    "source_verified_at": null
   },
@@ -27624,7 +27624,7 @@
    "source_cost": 4.36,
    "retail_price": 15.02,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0006,
    "source_verified_at": null
   },
@@ -27732,7 +27732,7 @@
    "source_cost": 3.19,
    "retail_price": 13.81,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0175,
    "source_verified_at": null
   },
@@ -27786,7 +27786,7 @@
    "source_cost": 1.51,
    "retail_price": 12.08,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.2384,
    "source_verified_at": null
   },
@@ -27822,7 +27822,7 @@
    "source_cost": 11.23,
    "retail_price": 22.1,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.4709,
    "source_verified_at": null
   },
@@ -27966,7 +27966,7 @@
    "source_cost": 62.18,
    "retail_price": 107.7,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0016,
    "source_verified_at": null
   },
@@ -28434,7 +28434,7 @@
    "source_cost": 17.91,
    "retail_price": 31.02,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0224,
    "source_verified_at": null
   },
@@ -28470,7 +28470,7 @@
    "source_cost": 10.04,
    "retail_price": 20.87,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0098,
    "source_verified_at": null
   },
@@ -28506,7 +28506,7 @@
    "source_cost": 4.7,
    "retail_price": 15.37,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.6437,
    "source_verified_at": null
   },
@@ -28524,7 +28524,7 @@
    "source_cost": 1.59,
    "retail_price": 12.16,
    "stock": 3,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.3071,
    "source_verified_at": null
   },
@@ -28632,7 +28632,7 @@
    "source_cost": 12.59,
    "retail_price": 23.5,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0035,
    "source_verified_at": null
   },
@@ -28722,7 +28722,7 @@
    "source_cost": 3.19,
    "retail_price": 13.81,
    "stock": 2,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0944,
    "source_verified_at": null
   },
@@ -28740,7 +28740,7 @@
    "source_cost": 6.52,
    "retail_price": 17.24,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.3742,
    "source_verified_at": null
   },
@@ -28812,7 +28812,7 @@
    "source_cost": 5.21,
    "retail_price": 15.89,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0411,
    "source_verified_at": null
   },
@@ -28884,7 +28884,7 @@
    "source_cost": 6.2,
    "retail_price": 16.91,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1451,
    "source_verified_at": null
   },
@@ -29100,7 +29100,7 @@
    "source_cost": 2.37,
    "retail_price": 12.96,
    "stock": 4,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.0431,
    "source_verified_at": null
   },
@@ -29118,7 +29118,7 @@
    "source_cost": 5.6,
    "retail_price": 16.29,
    "stock": 1,
-   "in_stock": true,
+   "in_stock": false,
    "trending_score": 0.1856,
    "source_verified_at": null
   },
