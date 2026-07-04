@@ -440,9 +440,10 @@ def verify_and_capture():
             "dest": f"{ship.get('city','')}, {ship.get('state','')} {ship.get('zip','')}"}
     try:
         cj_result = cj.create_order(cj_order)
-    except CJError as e:
+    except Exception as e:  # noqa: BLE001 — any CJ failure must not 500 after capture
         # Payment captured but CJ order failed — flag for manual handling,
-        # do NOT silently drop it. In production: enqueue a retry + alert.
+        # do NOT silently drop it and do NOT crash. In production: enqueue a
+        # retry + alert. The order shows in the admin dashboard as "failed to CJ".
         log_order({**base, "status": "paid_cj_failed", "reason": str(e)})
         return jsonify(ok=True, captured=True, fulfilled=False,
                        reason=f"Paid, but CJ order needs manual retry: {e}",

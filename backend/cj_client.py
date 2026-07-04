@@ -105,7 +105,15 @@ class CJClient:
                 time.sleep(min(wait, 30))
                 backoff = min(backoff * 2, 30)
                 continue
-            r.raise_for_status()
+            # Non-2xx: surface CJ's actual error body as a CJError (callers
+            # catch CJError) instead of a raw HTTPError that would 500 the app.
+            if r.status_code >= 400:
+                try:
+                    eb = r.json()
+                    detail = eb.get("message") or eb
+                except Exception:
+                    detail = r.text[:300]
+                raise CJError(f"CJ {r.status_code} on {path}: {detail}")
             body = r.json()
             # CJ signals its own rate limit in-body too ("Too Many Requests").
             msg = str(body.get("message") or "")
