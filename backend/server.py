@@ -444,6 +444,7 @@ def verify_and_capture():
         # Payment captured but CJ order failed — flag for manual handling,
         # do NOT silently drop it and do NOT crash. In production: enqueue a
         # retry + alert. The order shows in the admin dashboard as "failed to CJ".
+        print(f"[cj-order-failed] {e}")  # surface CJ's reason in the logs
         log_order({**base, "status": "paid_cj_failed", "reason": str(e)})
         return jsonify(ok=True, captured=True, fulfilled=False,
                        reason=f"Paid, but CJ order needs manual retry: {e}",
