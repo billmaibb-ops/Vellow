@@ -119,6 +119,11 @@ def tax_rate_for(state: str, store: dict) -> float:
 # undelivered items.
 RETURN_FEE_MARGIN_RATE = float(os.environ.get("RETURN_FEE_MARGIN_RATE", "0.20"))
 
+# Shipping markup — CJ's real shipping cost is multiplied by this before being
+# shown as the "Shipping" line, so shipping is a profit center. Server-side
+# only (private env var); the multiplier is never exposed to the storefront.
+SHIPPING_MARKUP = float(os.environ.get("SHIPPING_MARKUP", "1.20"))  # +20%
+
 
 def compute_return_fee(retail_price: float, source_cost: float,
                        cj_extra_fees: float = 0.0) -> float:
@@ -194,12 +199,14 @@ def build_quote(catalog: dict, items: list, shipping: dict) -> dict:
     if country and zip_code and cj_products:
         try:
             q = cj.get_shipping_quote_multi(cj_products, country, zip_code, state)
-            shipping_cost = gross_up(q["cost"], cfg.gateway_fee_rate)
+            # Shipping is a profit line: CJ's real cost x markup, then grossed
+            # up for the card fee. Markup is server-side only (SHIPPING_MARKUP).
+            shipping_cost = gross_up(q["cost"] * SHIPPING_MARKUP, cfg.gateway_fee_rate)
             ship_name, ship_days = q["name"], q["days"]
         except CJError:
             shipping_cost = None
     if shipping_cost is None:
-        shipping_cost = gross_up(float(store.get("fallback_shipping", 6.99)),
+        shipping_cost = gross_up(float(store.get("fallback_shipping", 6.99)) * SHIPPING_MARKUP,
                                  cfg.gateway_fee_rate)
         ship_name = "Standard shipping (estimate)"
 
