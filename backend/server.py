@@ -177,7 +177,26 @@ def build_quote(catalog: dict, items: list, shipping: dict) -> dict:
         qty = int(item["qty"])
         vid = item.get("vid") or p.get("cj_vid")
 
-        unit = live_unit_price(cj, p, vid, cfg)   # up-to-date price
+        # ONE live CJ call per line: fetch current cost AND, if this product
+        # has no stored variant id yet (deep sync not done), resolve the default
+        # variant on the fly. This makes checkout work before the deep sync
+        # finishes — no product is falsely "out of stock" for lack of a vid.
+        unit = float(p["retail_price"])
+        if p.get("cj_pid"):
+            try:
+                detail = cj.get_product(p["cj_pid"])
+                variants = detail.get("variants") or []
+                v = next((x for x in variants if x.get("vid") == vid), None) if vid else None
+                if v is None and variants:
+                    v = variants[0]
+                    vid = v.get("vid") or vid
+                cost = float((v or {}).get("variantSellPrice")
+                             or detail.get("sellPrice") or 0) or None
+                if cost:
+                    unit = retail_price(cost, cfg)
+            except CJError:
+                pass
+
         try:                                       # up-to-date stock
             stock = cj.get_variant_stock(vid) if vid else {"us_quantity": 0, "quantity": 0}
             eff = stock["us_quantity"] or stock["quantity"]
