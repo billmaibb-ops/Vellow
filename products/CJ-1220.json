@@ -1,0 +1,56 @@
+{
+  "id": "CJ-1220",
+  "description": "<p><b>Product information:</b><br/></p><p>Material: Cloth<br/>Style: simple and stylish<br/>Features: Shade<br/>Colour: A: Cross style tent, B: Parallel style tent, C: No tent style</p><p><br/></p><p><b>Packing list:</b></p><p>Pet tent*1</p><p><br/></p><p><b>Product Image:</b></p><p><img src=\"https://oss-cf.cjdropshipping.com/product/2026/06/10/06/24d37425-3684-43ec-8171-615898bcec2c.jpeg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p><p><img src=\"https://cf.cjdropshipping.com/0d2f37ee-c860-457e-b52f-ba40a23c27c3.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/ea93f193-64a3-4b0a-b524-4f24868eb863.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/e97f77da-0d81-49e1-bd51-9f598a8e5cef.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/873b968f-7356-48e5-90e9-920610bf704d.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/6ff051b7-b9c6-4caf-81ac-065c36023e9a.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/db334135-ae94-494d-9201-8a4d1fddb124.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/3d485506-f869-4509-9081-59f24f6396a8.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/727d19c5-b285-4a45-9d6b-b3f9abed028a.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/05829334-d7c0-4215-a55b-e52a776c8204.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/53cfa61e-a4a4-4c80-af1f-2b54e7879c55.jpg\" style=\"max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/64431cb3-0f52-4863-b8fe-c7890b6bdced.jpg",
+    "https://cf.cjdropshipping.com/aedbf7ab-6105-45e2-b94c-96dc7c47f076.jpg",
+    "https://cf.cjdropshipping.com/b3fe67e0-d50e-4d3f-9a0b-a9e10d2ce294.jpg",
+    "https://cf.cjdropshipping.com/eb5b088f-a67f-49c2-bd9d-4581d05609e0.jpg",
+    "https://cf.cjdropshipping.com/0eb77040-6d86-4a02-8efa-0c34bb5b869c.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1455074493788721152",
+      "name": "Pet Outdoor Supplies Covered Loft Bed Camp Bed Sunshade Tent A 60x45x16cm",
+      "image": "https://cf.cjdropshipping.com/64431cb3-0f52-4863-b8fe-c7890b6bdced.jpg",
+      "source_cost": 7.95,
+      "retail_price": 18.72
+    },
+    {
+      "vid": "1455074493792915456",
+      "name": "Pet Outdoor Supplies Covered Loft Bed Camp Bed Sunshade Tent B 60x45x16cm",
+      "image": "https://cf.cjdropshipping.com/b3fe67e0-d50e-4d3f-9a0b-a9e10d2ce294.jpg",
+      "source_cost": 7.95,
+      "retail_price": 18.72
+    },
+    {
+      "vid": "1455074493797109760",
+      "name": "Pet Outdoor Supplies Covered Loft Bed Camp Bed Sunshade Tent C 60x45x16cm",
+      "image": "https://cf.cjdropshipping.com/aedbf7ab-6105-45e2-b94c-96dc7c47f076.jpg",
+      "source_cost": 6.62,
+      "retail_price": 17.35
+    },
+    {
+      "vid": "2606100700431625600",
+      "name": "Pet Outdoor Supplies Covered Loft Bed Camp Bed Sunshade Tent A M",
+      "image": "https://cf.cjdropshipping.com/64431cb3-0f52-4863-b8fe-c7890b6bdced.jpg",
+      "source_cost": 13.39,
+      "retail_price": 24.32
+    },
+    {
+      "vid": "2606100700431626100",
+      "name": "Pet Outdoor Supplies Covered Loft Bed Camp Bed Sunshade Tent A L",
+      "image": "https://cf.cjdropshipping.com/64431cb3-0f52-4863-b8fe-c7890b6bdced.jpg",
+      "source_cost": 17.33,
+      "retail_price": 30.02
+    },
+    {
+      "vid": "2606100700431626600",
+      "name": "Pet Outdoor Supplies Covered Loft Bed Camp Bed Sunshade Tent A XL",
+      "image": "https://cf.cjdropshipping.com/64431cb3-0f52-4863-b8fe-c7890b6bdced.jpg",
+      "source_cost": 21.27,
+      "retail_price": 36.84
+    }
+  ],
+  "synced_at": "2026-07-04T07:28:34Z"
+}

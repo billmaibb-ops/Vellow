@@ -1,0 +1,28 @@
+{
+  "id": "CJ-1392",
+  "description": "<p>Tent structure: single-layer tent<br/>Support material: iron pipe<br/></p><p>Base material: Oxford cloth<img src=\"https://cf.cjdropshipping.com/15e7dac5-fee1-4678-bab0-dd7a818dbea7.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/2c2c2f02-d8e2-4e86-83bd-8d6e0969fb4a.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/9c74581f-b163-47ef-bdfc-df4ad2d16202.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/47e4a27a-a04c-4bc9-8e76-f046dfff78f9.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/7ee8b0f6-f2ff-4fce-8102-3961911dc17f.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200808/2110037707264.jpg",
+    "https://cf.cjdropshipping.com/20200808/504383950650.jpg",
+    "https://cf.cjdropshipping.com/20200808/568601984015.jpg",
+    "https://cf.cjdropshipping.com/20200808/2354410471951.jpg",
+    "https://cf.cjdropshipping.com/20200808/1976066989370.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "52C4118A-2891-43D2-9664-F907F7F88E25",
+      "name": "Car side awning ArmyGreen 300x150cm",
+      "image": "https://cf.cjdropshipping.com/20200808/2354410471951.jpg",
+      "source_cost": 8.19,
+      "retail_price": 18.96
+    },
+    {
+      "vid": "E9F102D5-7840-435E-A9B0-5383BFF0B942",
+      "name": "Car side awning ArmyGreen 300x200cm",
+      "image": "https://cf.cjdropshipping.com/20200808/2354410471951.jpg",
+      "source_cost": 9.14,
+      "retail_price": 19.94
+    }
+  ],
+  "synced_at": "2026-07-04T07:36:10Z"
+}

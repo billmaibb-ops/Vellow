@@ -1,0 +1,35 @@
+{
+  "id": "CJ-1213",
+  "description": "<p><b>Product information:</b><br/>Color: random fabric color pattern<br/> Material: Coral fleece<br/> Applicable object: Dog<br/></p>\n<br/>\n<b>Packing list: </b>\n<br/> Blanket x1\n<br/>\n\n<b>Product Image:</b>\n<br/>\n<img src=\"https://oss-cf.cjdropshipping.com/product/2025/04/25/07/702d2246-fcb7-4d5e-9b2a-acb4de4dfc6b_trans.jpeg\"/>\n<img src=\"https://oss-cf.cjdropshipping.com/product/2025/04/25/07/2d1448c5-f0f7-4dab-8386-fb9f8584a160_trans.jpeg\"/>\n<img src=\"https://oss-cf.cjdropshipping.com/product/2025/04/25/07/96d48ea7-338d-4a67-a4f8-d593561ebdd1_trans.jpeg\"/>\n<img src=\"https://oss-cf.cjdropshipping.com/product/2025/04/25/07/c2c0eb55-7aab-46c5-abfb-402d7981c84a_trans.jpeg\"/>\n<img src=\"https://oss-cf.cjdropshipping.com/product/2025/04/25/07/860421f8-f7da-4e99-bc6f-cd13f290d34a_trans.jpeg\"/>\n<img src=\"https://oss-cf.cjdropshipping.com/product/2025/04/25/07/d12170b2-c00d-4da1-9814-5ee165c2ff41_trans.jpeg\"/>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2025/04/25/07/66e2db63-a95c-447b-883f-2f9920712a32_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2025/04/25/07/ff0d4d01-cd27-4eec-97ef-c688bc9ae255_fine.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2025/04/25/07/59b3d75b-a0ce-43cc-8acb-2278b7d8cf38_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2025/04/25/07/0644aabb-defd-416f-b7da-76e6edd42401_trans.jpeg",
+    "https://cf.cjdropshipping.com/quick/product/2560e2bd-7c6a-4065-b5bc-329fa7ca8147.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2504250801081602900",
+      "name": "Pet Blanket Sleep Warm Dog Pet Bed Random Fabric Color 35x50CM",
+      "image": "https://cf.cjdropshipping.com/quick/product/2560e2bd-7c6a-4065-b5bc-329fa7ca8147.jpg",
+      "source_cost": 0.4,
+      "retail_price": 10.93
+    },
+    {
+      "vid": "2504250801081603100",
+      "name": "Pet Blanket Sleep Warm Dog Pet Bed Random Fabric Color 50x70CM",
+      "image": "https://cf.cjdropshipping.com/quick/product/2560e2bd-7c6a-4065-b5bc-329fa7ca8147.jpg",
+      "source_cost": 0.53,
+      "retail_price": 11.07
+    },
+    {
+      "vid": "2504250801081603700",
+      "name": "Pet Blanket Sleep Warm Dog Pet Bed Random Fabric Color 70x100CM",
+      "image": "https://cf.cjdropshipping.com/quick/product/2560e2bd-7c6a-4065-b5bc-329fa7ca8147.jpg",
+      "source_cost": 0.84,
+      "retail_price": 11.39
+    }
+  ],
+  "synced_at": "2026-07-04T07:28:15Z"
+}

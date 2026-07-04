@@ -1,0 +1,267 @@
+{
+  "id": "CJ-1241",
+  "description": "<p><b>Product information:</b></p><p>Material: nylon<br>Product category: traction belt<br>Color: black, red, orange, lake blue, pink, grass green<br>Specification (length * width): 0.8 thick * 1.5m, 1.0 thick * 1.5m, 1.2 thick * 1.5m, 0.8 thick * 1.8m, 1.0 thick * 1.8m, 1.2 thick * 1.8m</p><p><br></p><p><b>Packing list:</b></p><p>Traction belt * 1</p><p><br></p><p><img src=\"https://cf.cjdropshipping.com/f20508b6-bc76-48f2-b136-2f8a5b2e04b7.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/a736a1f1-530d-4f23-b9ff-d8be999cab37.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/e2e37c5c-f500-40dd-be4e-95ad175c0a84.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/3390c3ac-2f9e-4a17-bbfe-48bda6b81b2a.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/50c6c3fd-83b8-4e49-8403-4eb562629a41.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/d19e948d-91d2-4419-a162-7e9f9d85a185.jpg\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/31ae4536-5740-4cf4-b01a-90e6413a3b95.jpg",
+    "https://cf.cjdropshipping.com/e1d1c983-070e-4871-99ec-ed800c1b4bd8.jpg",
+    "https://cf.cjdropshipping.com/cf757dc8-e499-4179-a24c-55b694b2f364.jpg",
+    "https://cf.cjdropshipping.com/51600546-1956-466c-8e6e-d64b5627590f.jpg",
+    "https://cf.cjdropshipping.com/463fb24c-b498-4d49-b2a7-dfeb322e7015.jpg",
+    "https://cf.cjdropshipping.com/4e232e23-cd03-43e2-b5e0-126144878473.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1582910912653176832",
+      "name": "Durable Dog Reflective Rope Leash Orange 0.8x1.5m",
+      "image": "https://cf.cjdropshipping.com/4e232e23-cd03-43e2-b5e0-126144878473.jpg",
+      "source_cost": 0.67,
+      "retail_price": 11.21
+    },
+    {
+      "vid": "1582910912653176833",
+      "name": "Durable Dog Reflective Rope Leash Orange 1x1.5m",
+      "image": "https://cf.cjdropshipping.com/4e232e23-cd03-43e2-b5e0-126144878473.jpg",
+      "source_cost": 0.75,
+      "retail_price": 11.29
+    },
+    {
+      "vid": "1582910912657371136",
+      "name": "Durable Dog Reflective Rope Leash Orange 1.2x1.5m",
+      "image": "https://cf.cjdropshipping.com/4e232e23-cd03-43e2-b5e0-126144878473.jpg",
+      "source_cost": 0.86,
+      "retail_price": 11.41
+    },
+    {
+      "vid": "1582910912657371137",
+      "name": "Durable Dog Reflective Rope Leash Orange 0.8x1.8m",
+      "image": "https://cf.cjdropshipping.com/4e232e23-cd03-43e2-b5e0-126144878473.jpg",
+      "source_cost": 0.71,
+      "retail_price": 11.25
+    },
+    {
+      "vid": "1582910912657371138",
+      "name": "Durable Dog Reflective Rope Leash Orange 1x1.8m",
+      "image": "https://cf.cjdropshipping.com/4e232e23-cd03-43e2-b5e0-126144878473.jpg",
+      "source_cost": 0.82,
+      "retail_price": 11.37
+    },
+    {
+      "vid": "1582910912657371139",
+      "name": "Durable Dog Reflective Rope Leash Orange 1.2x1.8m",
+      "image": "https://cf.cjdropshipping.com/4e232e23-cd03-43e2-b5e0-126144878473.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    },
+    {
+      "vid": "1582910912661565440",
+      "name": "Durable Dog Reflective Rope Leash Black 0.8x1.5m",
+      "image": "https://cf.cjdropshipping.com/51600546-1956-466c-8e6e-d64b5627590f.jpg",
+      "source_cost": 0.67,
+      "retail_price": 11.21
+    },
+    {
+      "vid": "1582910912661565441",
+      "name": "Durable Dog Reflective Rope Leash Black 1x1.5m",
+      "image": "https://cf.cjdropshipping.com/51600546-1956-466c-8e6e-d64b5627590f.jpg",
+      "source_cost": 0.75,
+      "retail_price": 11.29
+    },
+    {
+      "vid": "1582910912661565442",
+      "name": "Durable Dog Reflective Rope Leash Black 1.2x1.5m",
+      "image": "https://cf.cjdropshipping.com/51600546-1956-466c-8e6e-d64b5627590f.jpg",
+      "source_cost": 0.86,
+      "retail_price": 11.41
+    },
+    {
+      "vid": "1582910912665759744",
+      "name": "Durable Dog Reflective Rope Leash Black 0.8x1.8m",
+      "image": "https://cf.cjdropshipping.com/51600546-1956-466c-8e6e-d64b5627590f.jpg",
+      "source_cost": 0.71,
+      "retail_price": 11.25
+    },
+    {
+      "vid": "1582910912665759745",
+      "name": "Durable Dog Reflective Rope Leash Black 1x1.8m",
+      "image": "https://cf.cjdropshipping.com/51600546-1956-466c-8e6e-d64b5627590f.jpg",
+      "source_cost": 0.82,
+      "retail_price": 11.37
+    },
+    {
+      "vid": "1582910912665759746",
+      "name": "Durable Dog Reflective Rope Leash Black 1.2x1.8m",
+      "image": "https://cf.cjdropshipping.com/51600546-1956-466c-8e6e-d64b5627590f.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    },
+    {
+      "vid": "1582910912665759747",
+      "name": "Durable Dog Reflective Rope Leash Red 0.8x1.5m",
+      "image": "https://cf.cjdropshipping.com/31ae4536-5740-4cf4-b01a-90e6413a3b95.jpg",
+      "source_cost": 0.67,
+      "retail_price": 11.21
+    },
+    {
+      "vid": "1582910912669954048",
+      "name": "Durable Dog Reflective Rope Leash Red 1x1.5m",
+      "image": "https://cf.cjdropshipping.com/31ae4536-5740-4cf4-b01a-90e6413a3b95.jpg",
+      "source_cost": 0.75,
+      "retail_price": 11.29
+    },
+    {
+      "vid": "1582910912669954049",
+      "name": "Durable Dog Reflective Rope Leash Red 1.2x1.5m",
+      "image": "https://cf.cjdropshipping.com/31ae4536-5740-4cf4-b01a-90e6413a3b95.jpg",
+      "source_cost": 0.86,
+      "retail_price": 11.41
+    },
+    {
+      "vid": "1582910912669954050",
+      "name": "Durable Dog Reflective Rope Leash Red 0.8x1.8m",
+      "image": "https://cf.cjdropshipping.com/31ae4536-5740-4cf4-b01a-90e6413a3b95.jpg",
+      "source_cost": 0.71,
+      "retail_price": 11.25
+    },
+    {
+      "vid": "1582910912669954051",
+      "name": "Durable Dog Reflective Rope Leash Red 1x1.8m",
+      "image": "https://cf.cjdropshipping.com/31ae4536-5740-4cf4-b01a-90e6413a3b95.jpg",
+      "source_cost": 0.82,
+      "retail_price": 11.37
+    },
+    {
+      "vid": "1582910912674148352",
+      "name": "Durable Dog Reflective Rope Leash Red 1.2x1.8m",
+      "image": "https://cf.cjdropshipping.com/31ae4536-5740-4cf4-b01a-90e6413a3b95.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    },
+    {
+      "vid": "1582910912674148353",
+      "name": "Durable Dog Reflective Rope Leash Blue 0.8x1.5m",
+      "image": "https://cf.cjdropshipping.com/e1d1c983-070e-4871-99ec-ed800c1b4bd8.jpg",
+      "source_cost": 0.67,
+      "retail_price": 11.21
+    },
+    {
+      "vid": "1582910912674148354",
+      "name": "Durable Dog Reflective Rope Leash Blue 1x1.5m",
+      "image": "https://cf.cjdropshipping.com/e1d1c983-070e-4871-99ec-ed800c1b4bd8.jpg",
+      "source_cost": 0.75,
+      "retail_price": 11.29
+    },
+    {
+      "vid": "1582910912674148355",
+      "name": "Durable Dog Reflective Rope Leash Blue 1.2x1.5m",
+      "image": "https://cf.cjdropshipping.com/e1d1c983-070e-4871-99ec-ed800c1b4bd8.jpg",
+      "source_cost": 0.86,
+      "retail_price": 11.41
+    },
+    {
+      "vid": "1582910912678342656",
+      "name": "Durable Dog Reflective Rope Leash Blue 0.8x1.8m",
+      "image": "https://cf.cjdropshipping.com/e1d1c983-070e-4871-99ec-ed800c1b4bd8.jpg",
+      "source_cost": 0.71,
+      "retail_price": 11.25
+    },
+    {
+      "vid": "1582910912678342657",
+      "name": "Durable Dog Reflective Rope Leash Blue 1x1.8m",
+      "image": "https://cf.cjdropshipping.com/e1d1c983-070e-4871-99ec-ed800c1b4bd8.jpg",
+      "source_cost": 0.82,
+      "retail_price": 11.37
+    },
+    {
+      "vid": "1582910912678342658",
+      "name": "Durable Dog Reflective Rope Leash Blue 1.2x1.8m",
+      "image": "https://cf.cjdropshipping.com/e1d1c983-070e-4871-99ec-ed800c1b4bd8.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    },
+    {
+      "vid": "1582910912682536960",
+      "name": "Durable Dog Reflective Rope Leash Pink 0.8x1.5m",
+      "image": "https://cf.cjdropshipping.com/cf757dc8-e499-4179-a24c-55b694b2f364.jpg",
+      "source_cost": 0.67,
+      "retail_price": 11.21
+    },
+    {
+      "vid": "1582910912682536961",
+      "name": "Durable Dog Reflective Rope Leash Pink 1x1.5m",
+      "image": "https://cf.cjdropshipping.com/cf757dc8-e499-4179-a24c-55b694b2f364.jpg",
+      "source_cost": 0.75,
+      "retail_price": 11.29
+    },
+    {
+      "vid": "1582910912682536962",
+      "name": "Durable Dog Reflective Rope Leash Pink 1.2x1.5m",
+      "image": "https://cf.cjdropshipping.com/cf757dc8-e499-4179-a24c-55b694b2f364.jpg",
+      "source_cost": 0.86,
+      "retail_price": 11.41
+    },
+    {
+      "vid": "1582910912682536963",
+      "name": "Durable Dog Reflective Rope Leash Pink 0.8x1.8m",
+      "image": "https://cf.cjdropshipping.com/cf757dc8-e499-4179-a24c-55b694b2f364.jpg",
+      "source_cost": 0.71,
+      "retail_price": 11.25
+    },
+    {
+      "vid": "1582910912686731264",
+      "name": "Durable Dog Reflective Rope Leash Pink 1x1.8m",
+      "image": "https://cf.cjdropshipping.com/cf757dc8-e499-4179-a24c-55b694b2f364.jpg",
+      "source_cost": 0.82,
+      "retail_price": 11.37
+    },
+    {
+      "vid": "1582910912686731265",
+      "name": "Durable Dog Reflective Rope Leash Pink 1.2x1.8m",
+      "image": "https://cf.cjdropshipping.com/cf757dc8-e499-4179-a24c-55b694b2f364.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    },
+    {
+      "vid": "1582910912686731266",
+      "name": "Durable Dog Reflective Rope Leash Green 0.8x1.5m",
+      "image": "https://cf.cjdropshipping.com/463fb24c-b498-4d49-b2a7-dfeb322e7015.jpg",
+      "source_cost": 0.67,
+      "retail_price": 11.21
+    },
+    {
+      "vid": "1582910912686731267",
+      "name": "Durable Dog Reflective Rope Leash Green 1x1.5m",
+      "image": "https://cf.cjdropshipping.com/463fb24c-b498-4d49-b2a7-dfeb322e7015.jpg",
+      "source_cost": 0.75,
+      "retail_price": 11.29
+    },
+    {
+      "vid": "1582910912690925568",
+      "name": "Durable Dog Reflective Rope Leash Green 1.2x1.5m",
+      "image": "https://cf.cjdropshipping.com/463fb24c-b498-4d49-b2a7-dfeb322e7015.jpg",
+      "source_cost": 0.86,
+      "retail_price": 11.41
+    },
+    {
+      "vid": "1582910912690925569",
+      "name": "Durable Dog Reflective Rope Leash Green 0.8x1.8m",
+      "image": "https://cf.cjdropshipping.com/463fb24c-b498-4d49-b2a7-dfeb322e7015.jpg",
+      "source_cost": 0.71,
+      "retail_price": 11.25
+    },
+    {
+      "vid": "1582910912690925570",
+      "name": "Durable Dog Reflective Rope Leash Green 1x1.8m",
+      "image": "https://cf.cjdropshipping.com/463fb24c-b498-4d49-b2a7-dfeb322e7015.jpg",
+      "source_cost": 0.82,
+      "retail_price": 11.37
+    },
+    {
+      "vid": "1582910912690925571",
+      "name": "Durable Dog Reflective Rope Leash Green 1.2x1.8m",
+      "image": "https://cf.cjdropshipping.com/463fb24c-b498-4d49-b2a7-dfeb322e7015.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    }
+  ],
+  "synced_at": "2026-07-04T07:29:29Z"
+}

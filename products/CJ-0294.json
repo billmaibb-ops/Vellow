@@ -1,0 +1,24 @@
+{
+  "id": "CJ-0294",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/abaa1509-5063-4b12-9013-de4dd1540dfc.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/57eb7740-7fb4-4fb0-8859-b59d3e3a9ba3.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/9145fc68-ce4d-4ac2-a309-419e1243d858.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/22a78794-cc88-4ccf-9b0f-73caedbf1544.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/0e9a22d7-0cbe-4ffe-a145-c37c8452837b.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/4b307f1a-bdb2-42c1-85a7-f68112f0746b.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/a68a4b4e-c1fc-4062-bfb4-c88f262cad5b.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3221a860-7fa6-41e8-bf7e-d8b0b1e65e17.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/222e072e-5e9a-4812-85ba-42278e6d1737.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/4da417b1-efd0-430b-831b-b7990b4a1743.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/51d806bf-4713-45ea-ab7b-b665632d5028.jpg",
+    "https://cf.cjdropshipping.com/4b79f311-bfd1-40f7-8344-45b33fe9707d.jpg",
+    "https://cf.cjdropshipping.com/3daca921-df53-4375-8703-de20325ccf31.jpg",
+    "https://cf.cjdropshipping.com/586cb280-9b8f-489d-a15e-8b3c5e8dd565.jpg",
+    "https://cf.cjdropshipping.com/6c3e8cf9-6888-49ca-97f2-9871660661a9.jpg",
+    "https://cf.cjdropshipping.com/4275052c-5b79-42c9-9ff1-ce7d673a7046.jpg",
+    "https://cf.cjdropshipping.com/1b94825f-3c60-4034-8f5f-f2d1affa22de.jpg",
+    "https://cf.cjdropshipping.com/75311331-c7c4-4a94-a950-e5652b512815.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1902555180177977346",
+      "name": "Black",
+      "image": "https://cf.cjdropshipping.com/6c3e8cf9-6888-49ca-97f2-9871660661a9.jpg",
+      "source_cost": 186.92,
+      "retail_price": 323.74
+    }
+  ],
+  "synced_at": "2026-07-04T06:46:50Z"
+}

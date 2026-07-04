@@ -1,0 +1,291 @@
+{
+  "id": "CJ-0707",
+  "description": "<p>Style: back cover<br>Material: tpu<br>Style: fashion<br>Popular elements: broken flowers, fruits, gold foil, glue<br>Process: Gold Foil Epoxy</p><ul><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/1536866276020.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/1536866276020.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/762027165774.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/762027165774.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/444983306703.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/444983306703.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/572588739942.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/572588739942.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/1918733616360.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/1918733616360.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/36490471532023.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/36490471532023.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/2180827985639.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/2180827985639.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/3326346143110.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/3326346143110.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/2185994241875.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/2185994241875.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/1440442665308.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/1440442665308.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/404803098025.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/404803098025.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200828/266257911553.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200828/266257911553.jpg\"></div></li></ul>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200828/3326346143110.jpg",
+    "https://cf.cjdropshipping.com/20200828/1536866276020.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "01902B33-2DE9-4714-90B9-19A5E3DD3AA0",
+      "name": "Flower phone case 5 Style IPhone11Pro",
+      "image": "https://cf.cjdropshipping.com/20200828/444983306703.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "01D92CF4-0651-48A2-B2B4-3656C6701660",
+      "name": "Flower phone case 2 Style iPhone6",
+      "image": "https://cf.cjdropshipping.com/20200828/266257911553.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "0ACC6331-50D2-4C11-9707-E9F9D78918C8",
+      "name": "Flower phone case 3 Style IPhoneXsMax",
+      "image": "https://cf.cjdropshipping.com/20200828/1440442665308.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "0B3070A1-8898-4EF2-AFA2-F16E49A9F9FA",
+      "name": "Flower phone case 3 Style iPhone6",
+      "image": "https://cf.cjdropshipping.com/20200828/1440442665308.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "0E7CC668-F511-4ED7-AA6C-F297501FA43F",
+      "name": "Flower phone case 4 Style IPhone11",
+      "image": "https://cf.cjdropshipping.com/20200828/2185994241875.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "1188298C-7586-4C9C-B4B4-566244CBC9B1",
+      "name": "Flower phone case 9 Style IPhone11",
+      "image": "https://cf.cjdropshipping.com/20200828/2180827985639.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "12E26FFB-212B-4B5F-8A00-73F22315737D",
+      "name": "Flower phone case 2 Style IPhone11Pro Max",
+      "image": "https://cf.cjdropshipping.com/20200828/266257911553.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "1426A681-BC79-494A-957C-B89C962DD038",
+      "name": "Flower phone case 5 Style IPhone8",
+      "image": "https://cf.cjdropshipping.com/20200828/444983306703.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "15623AE0-AF96-4FEA-A9A8-73A97A3B593F",
+      "name": "Flower phone case 4 Style IPhone8",
+      "image": "https://cf.cjdropshipping.com/20200828/2185994241875.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "167C1524-5406-4DEB-8FF6-691714B78B46",
+      "name": "Flower phone case 6 Style IPhone8Plus",
+      "image": "https://cf.cjdropshipping.com/20200828/404803098025.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "1A41A819-4C0B-4E99-B11B-78A9C2DFB2C0",
+      "name": "Flower phone case 4 Style IPhone11Pro Max",
+      "image": "https://cf.cjdropshipping.com/20200828/2185994241875.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "1B3A3B3E-F1FA-447D-8C63-78941DCF2BAE",
+      "name": "Flower phone case 8 Style iPhoneX",
+      "image": "https://cf.cjdropshipping.com/20200828/572588739942.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "1B98309C-3C92-4304-B498-E287F2FDAC55",
+      "name": "Flower phone case 2 Style IPhone8",
+      "image": "https://cf.cjdropshipping.com/20200828/266257911553.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "1BB0F5B1-0084-4D75-B3A1-BBD8A239B746",
+      "name": "Flower phone case 9 Style IPhoneXsMax",
+      "image": "https://cf.cjdropshipping.com/20200828/2180827985639.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "3250B89D-1025-4B79-B47B-7577E27841A3",
+      "name": "Flower phone case 10 Style IPhone8Plus",
+      "image": "https://cf.cjdropshipping.com/20200828/36490471532023.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "3565ACF7-CEC7-4C4F-BA27-62553B44BAC3",
+      "name": "Flower phone case 3 Style iPhoneX",
+      "image": "https://cf.cjdropshipping.com/20200828/1440442665308.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "37B80F7F-2706-40CB-9210-20774B76970A",
+      "name": "Flower phone case 5 Style IPhone11",
+      "image": "https://cf.cjdropshipping.com/20200828/444983306703.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "3AC37EAF-3D16-4CC1-8465-9633C3F51CDE",
+      "name": "Flower phone case 7 Style IPhone8Plus",
+      "image": "https://cf.cjdropshipping.com/20200828/1918733616360.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "3FD63511-946A-4DD9-AB0D-B39F074166ED",
+      "name": "Flower phone case 10 Style IPhone8",
+      "image": "https://cf.cjdropshipping.com/20200828/36490471532023.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "40D231C6-DD1E-4D53-A7AF-6B08AAA0CAE6",
+      "name": "Flower phone case 5 Style IPhoneXsMax",
+      "image": "https://cf.cjdropshipping.com/20200828/444983306703.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "41156612-CDF9-4461-A8D3-56A677A080C3",
+      "name": "Flower phone case 7 Style IPhone11Pro Max",
+      "image": "https://cf.cjdropshipping.com/20200828/1918733616360.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "43578CCA-921D-4CD6-A7A8-2238C778104D",
+      "name": "Flower phone case 6 Style IPhone11",
+      "image": "https://cf.cjdropshipping.com/20200828/404803098025.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "44B03BB6-776C-4C34-BA63-43D37C712339",
+      "name": "Flower phone case 10 Style IPhone11",
+      "image": "https://cf.cjdropshipping.com/20200828/36490471532023.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "452D952D-4E6E-4ADE-A72A-165FA3B57B34",
+      "name": "Flower phone case 7 Style IPhone11Pro",
+      "image": "https://cf.cjdropshipping.com/20200828/1918733616360.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "46AD4346-2F6B-4CBB-B2E5-89D3CA712CEB",
+      "name": "Flower phone case 9 Style iPhoneX",
+      "image": "https://cf.cjdropshipping.com/20200828/2180827985639.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "47AF0C34-842A-4D9E-9AB6-C716A0CA39C1",
+      "name": "Flower phone case 8 Style IPhone8",
+      "image": "https://cf.cjdropshipping.com/20200828/572588739942.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "481731F3-539A-4C50-8B96-905588EBD468",
+      "name": "Flower phone case 4 Style iPhoneX",
+      "image": "https://cf.cjdropshipping.com/20200828/2185994241875.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "4849A498-94AB-4447-897A-1C7ACEE07A62",
+      "name": "Flower phone case 6 Style IPhone11Pro Max",
+      "image": "https://cf.cjdropshipping.com/20200828/404803098025.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "48CA2A56-D0BB-4CC4-8379-9C758655C623",
+      "name": "Flower phone case 1 Style iPhoneX",
+      "image": "https://cf.cjdropshipping.com/20200828/762027165774.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "4B30879D-B0E8-477F-B94D-D5E04FF8BC35",
+      "name": "Flower phone case 8 Style IPhoneXR",
+      "image": "https://cf.cjdropshipping.com/20200828/572588739942.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "5128E8E6-F0A6-431F-91EF-9EAE9699D44D",
+      "name": "Flower phone case 3 Style IPhone8",
+      "image": "https://cf.cjdropshipping.com/20200828/1440442665308.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "513227AC-B01A-4461-89FC-617032F33C76",
+      "name": "Flower phone case 1 Style IPhoneXsMax",
+      "image": "https://cf.cjdropshipping.com/20200828/762027165774.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "5157C4B0-FCF0-4D91-9A5E-6B029A48769E",
+      "name": "Flower phone case 2 Style IPhone8Plus",
+      "image": "https://cf.cjdropshipping.com/20200828/266257911553.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "5461B516-AE8A-4CD2-8783-C06F5E946649",
+      "name": "Flower phone case 2 Style IPhone11Pro",
+      "image": "https://cf.cjdropshipping.com/20200828/266257911553.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "5F23D50C-51C3-441A-8445-739EC5D3FFF3",
+      "name": "Flower phone case 5 Style IPhone8Plus",
+      "image": "https://cf.cjdropshipping.com/20200828/444983306703.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "64A1F295-5B54-4A35-B1E3-64C147D9C886",
+      "name": "Flower phone case 8 Style IPhoneXsMax",
+      "image": "https://cf.cjdropshipping.com/20200828/572588739942.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "6A25DF57-DC5A-41D1-AFE5-F89EBE2627CE",
+      "name": "Flower phone case 7 Style IPhoneXsMax",
+      "image": "https://cf.cjdropshipping.com/20200828/1918733616360.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "6CADD51E-59F8-40D8-B7D7-283AF0635CF2",
+      "name": "Flower phone case 2 Style iPhoneX",
+      "image": "https://cf.cjdropshipping.com/20200828/266257911553.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "6E817F1C-6417-4B9A-8FCC-8657883D7B64",
+      "name": "Flower phone case 4 Style iPhone6 plus",
+      "image": "https://cf.cjdropshipping.com/20200828/2185994241875.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    },
+    {
+      "vid": "6F251026-479C-4180-84CD-CA34CF832B72",
+      "name": "Flower phone case 6 Style iPhone6 plus",
+      "image": "https://cf.cjdropshipping.com/20200828/404803098025.jpg",
+      "source_cost": 1.3,
+      "retail_price": 11.86
+    }
+  ],
+  "synced_at": "2026-07-04T07:05:38Z"
+}

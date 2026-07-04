@@ -1,0 +1,46 @@
+{
+  "id": "CJ-0457",
+  "description": "<p><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/12/08/af8d0d8f-4581-4e19-b0e9-744fb06ceea0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/12/08/7d6acfa2-1462-4b46-af5e-6ac76d857b98.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><br/><img src=\"https://oss-cf.cjdropshipping.com/product/2025/01/16/10/4f6f11d7-444e-4b32-9592-7e10b87b64c2.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/12/08/9c65c1df-7cbc-4dd5-a335-fe563d552ea0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/12/08/cf58723f-2dae-41dc-9b64-4081212867b1.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/12/08/97a72698-2591-4a48-a310-06e71c4f22c1.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/75f449b7-1355-4f98-86ae-c11447504768.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2025/04/23/01/4dd37834-2566-455b-9752-5a64bc5b883d_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/9749305d-5d39-40ff-83be-c014b85fd107.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/da5842ba-81ec-4539-b3b3-53322333cb4a.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/a76ddcc1-4497-4765-93d7-27f50b9c7ae5.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/9148cca4-d6c0-46e9-a94b-67efcf338efa.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/55aa9f4d-77ee-48a4-8f2c-1e62cd6d9bc0.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/b9bb22b0-2782-49e0-b48d-4a2ad3eac71d.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2025/04/23/01/f014e23b-458c-469f-8671-71cb2098523c_trans.jpeg"
+  ],
+  "variants": [
+    {
+      "vid": "2408120824441625500",
+      "name": "Pet Water Dispenser A",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/a76ddcc1-4497-4765-93d7-27f50b9c7ae5.jpg",
+      "source_cost": 15.26,
+      "retail_price": 26.43
+    },
+    {
+      "vid": "2408120824441625600",
+      "name": "Pet Water Dispenser B",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/08/12/08/9148cca4-d6c0-46e9-a94b-67efcf338efa.jpg",
+      "source_cost": 15.26,
+      "retail_price": 26.43
+    },
+    {
+      "vid": "2504230137201616600",
+      "name": "Pet Water Dispenser Water pump",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/04/23/01/4dd37834-2566-455b-9752-5a64bc5b883d_trans.jpeg",
+      "source_cost": 2.63,
+      "retail_price": 13.23
+    },
+    {
+      "vid": "2504230137201616800",
+      "name": "Pet Water Dispenser Filter element",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/04/23/01/f014e23b-458c-469f-8671-71cb2098523c_trans.jpeg",
+      "source_cost": 0.96,
+      "retail_price": 11.51
+    }
+  ],
+  "synced_at": "2026-07-04T06:54:05Z"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "CJ-0331",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package size<br/><br/>Length (cm): 19<br/><br/>Width (cm): 6.6<br/><br/>Height (cm): 3.1<br/><br/>Weight (kg): 0.1</p>\n <p><img src=\"https://cf.cjdropshipping.com/fc103fda-0f96-46a5-8541-b17f37546acc.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b441979d-1ea5-4eea-8dc2-33b52cb4b571.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/0bc63218-f27d-441b-b8da-f24cba77f149.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/ecf9cb05-08c9-4dcb-b3b7-13806d024a33.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/6d12fd62-305a-47e4-9c87-3659bdb2b12c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/69305690-4444-4df6-856d-aff73fb2d8bc.png",
+    "https://cf.cjdropshipping.com/f34c9da7-c3a6-4951-bb75-eaf4a5cfc828.jpg",
+    "https://cf.cjdropshipping.com/b031b3b5-3144-44b4-b0b0-ab0e4f92c9ab.jpg",
+    "https://cf.cjdropshipping.com/6d55d314-9eaf-4b53-9a83-88e7bec03fcc.jpg",
+    "https://cf.cjdropshipping.com/fb6a2676-1b07-4470-8953-8235f79dda13.png",
+    "https://cf.cjdropshipping.com/b83c1332-07f9-4b9b-9094-3b04fe20c840.jpg",
+    "https://cf.cjdropshipping.com/e7adc459-c435-4f44-9b04-1eb7ed781952.jpg",
+    "https://cf.cjdropshipping.com/0e421556-3406-4b14-b065-e98c8a951578.png"
+  ],
+  "variants": [
+    {
+      "vid": "1897236695522115586",
+      "name": "Bule",
+      "image": "https://cf.cjdropshipping.com/69305690-4444-4df6-856d-aff73fb2d8bc.png",
+      "source_cost": 7.72,
+      "retail_price": 18.48
+    },
+    {
+      "vid": "1897236695522115587",
+      "name": "Green",
+      "image": "https://cf.cjdropshipping.com/fb6a2676-1b07-4470-8953-8235f79dda13.png",
+      "source_cost": 7.72,
+      "retail_price": 18.48
+    },
+    {
+      "vid": "1897236695522115588",
+      "name": "Gray",
+      "image": "https://cf.cjdropshipping.com/0e421556-3406-4b14-b065-e98c8a951578.png",
+      "source_cost": 7.72,
+      "retail_price": 18.48
+    }
+  ],
+  "synced_at": "2026-07-04T06:48:29Z"
+}

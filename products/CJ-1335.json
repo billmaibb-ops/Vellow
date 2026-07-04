@@ -1,0 +1,28 @@
+{
+  "id": "CJ-1335",
+  "description": "<p><b>Product information:</b><br/>Material: ABS<br/>Input voltage: 9-16 (V)<br/>Output voltage: 5 (V)<br/>Output current: 2 (mA)<br/>Working temperature: -30 degrees +80 (\u2103)<br/>Output interface: universal<br/>Product size: 21*21*6.1CM<br/>Model: A/GLC full range of car chargers, B/15~20 Mercedes-Benz C-class car chargers<br/><br/><b>Packing list:</b><br/>Car charger*1</p><p><br/></p><p><img src=\"https://cf.cjdropshipping.com/1619085727456.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/1619085727445.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1619085727421.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1619085799350.png\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1619085799351.png\" style=\"max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/1619085820513.jpg",
+    "https://cf.cjdropshipping.com/1619085820517.jpg",
+    "https://cf.cjdropshipping.com/1619085867041.png",
+    "https://cf.cjdropshipping.com/1619085850235.png",
+    "https://cf.cjdropshipping.com/1619085820559.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1385191083096543232",
+      "name": "Car Wireless Charging Board Car Charger Black A",
+      "image": "https://cf.cjdropshipping.com/1619085820517.jpg",
+      "source_cost": 63.77,
+      "retail_price": 110.45
+    },
+    {
+      "vid": "1385191083109126144",
+      "name": "Car Wireless Charging Board Car Charger Black B",
+      "image": "https://cf.cjdropshipping.com/1619085820513.jpg",
+      "source_cost": 63.77,
+      "retail_price": 110.45
+    }
+  ],
+  "synced_at": "2026-07-04T07:33:40Z"
+}

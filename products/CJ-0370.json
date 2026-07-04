@@ -1,0 +1,24 @@
+{
+  "id": "CJ-0370",
+  "description": "<p>Handheld Bag</p>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2023/12/06/08/480d32d7-4c7c-4211-a7cb-9325c0662bb0.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1732323792757731328",
+      "name": "Handheld Bag Black 13inch",
+      "image": "https://oss-cf.cjdropshipping.com/product/2023/12/06/08/480d32d7-4c7c-4211-a7cb-9325c0662bb0.jpg",
+      "source_cost": 1.47,
+      "retail_price": 12.04
+    },
+    {
+      "vid": "1734415867116523520",
+      "name": "Handheld Bag Black 15inch",
+      "image": "https://oss-cf.cjdropshipping.com/product/2023/12/06/08/480d32d7-4c7c-4211-a7cb-9325c0662bb0.jpg",
+      "source_cost": 1.59,
+      "retail_price": 12.16
+    }
+  ],
+  "synced_at": "2026-07-04T06:50:12Z"
+}

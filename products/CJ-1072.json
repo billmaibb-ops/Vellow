@@ -1,0 +1,28 @@
+{
+  "id": "CJ-1072",
+  "description": "<p>Category: Local<br/>Style; plating eyelash curler<br/>Color classification; rose gold</p><p><!--[if !mso]>\n\n<![endif]-->\n\n\n\n\n</p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"215\" height=\"38\">\n <colgroup><col width=\"71\">\n <col width=\"72\" span=\"2\">\n </colgroup><tbody><tr height=\"19\">\n  <td height=\"19\" width=\"71\"></td>\n  <td width=\"72\" x:str=\"\">size</td>\n  <td class=\"et2\" width=\"72\"></td>\n </tr>\n <tr height=\"19\">\n  <td height=\"19\"></td>\n  <td class=\"et2\" x:str=\"\">10.3x3.6cm</td>\n  <td class=\"et2\"></td>\n </tr>\n</tbody></table>",
+  "images": [
+    "https://cf.cjdropshipping.com/1621322169920.jpg",
+    "https://cf.cjdropshipping.com/20190723/2222388715285.png",
+    "https://cf.cjdropshipping.com/20190723/10358129523927.png",
+    "https://cf.cjdropshipping.com/20190723/1053273176439.png",
+    "https://cf.cjdropshipping.com/20190723/1305032639344.png"
+  ],
+  "variants": [
+    {
+      "vid": "1394553108440420352",
+      "name": "Local eyelash curler Nickel plated 3xrubber strip",
+      "image": "https://cf.cjdropshipping.com/1621322169920.jpg",
+      "source_cost": 0.6,
+      "retail_price": 11.14
+    },
+    {
+      "vid": "412F1C66-16A0-4693-8C92-24AAB7C724F3",
+      "name": "Local eyelash curler Rose Gold",
+      "image": "https://cf.cjdropshipping.com/20190723/1053273176439.png",
+      "source_cost": 0.64,
+      "retail_price": 11.18
+    }
+  ],
+  "synced_at": "2026-07-04T07:21:56Z"
+}

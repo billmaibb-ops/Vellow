@@ -1,0 +1,82 @@
+{
+  "id": "CJ-1337",
+  "description": "<p><b>Product information:</b><br/>Color: Black<br/> Operating temperature: 50(\u2103)<br/> Product Size: 38*21 * 21mm<br/> Material: zinc alloy<br/> Output interface: USB</p><br/><b>Packing list: </b><br/>Car charger + charging cable X1/ Car charger X1<br/><b>Product Image:</b><br/><img src=\"https://cf.cjdropshipping.com/16991424/1721083379602034688.jpg\"/><img src=\"https://cf.cjdropshipping.com/16991424/1721083379765612544.jpg\"/><img src=\"https://cf.cjdropshipping.com/16991424/1721083380017270784.jpg\"/><img src=\"https://cf.cjdropshipping.com/16991424/1721083380281511936.jpg\"/><img src=\"https://cf.cjdropshipping.com/16991424/1721083380533170176.jpg\"/>",
+  "images": [
+    "https://cf.cjdropshipping.com/f84e1716-db41-4551-b00e-5104a26fa2a2_trans.jpeg",
+    "https://cf.cjdropshipping.com/b8ac4c85-f399-485c-8544-a008dfe088a2_trans.jpeg",
+    "https://cf.cjdropshipping.com/ff33abfe-a192-42ab-9fc5-5102b70d2618_trans.jpeg",
+    "https://cf.cjdropshipping.com/913ffb79-5d7a-42e0-beb4-26ff9a8f7c4b_trans.jpeg",
+    "https://cf.cjdropshipping.com/87a24fdd-73c6-445e-8ea9-9b1b9d7fc4ba_trans.jpeg",
+    "https://cf.cjdropshipping.com/25ac96ab-ced6-496b-90c6-622e831c7f2e_trans.jpeg",
+    "https://cf.cjdropshipping.com/cac46a89-c0b5-43b1-9b64-d9cc9c41eac7_trans.jpeg",
+    "https://cf.cjdropshipping.com/8112a8ad-865a-4ee8-97e5-b36a1443f45c_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2023/11/04/08/bdbdd3ab-c5dd-4452-8d5d-27b178912e8c.jpg",
+    "https://cf.cjdropshipping.com/5bf08811-fb02-4565-80d2-1b8e87fd7247_trans.jpeg"
+  ],
+  "variants": [
+    {
+      "vid": "1720725036069294080",
+      "name": "Car Charger 200W Super Multifunctional Mini Black 200W Fast Charge And 100W Line",
+      "image": "https://cf.cjdropshipping.com/b8ac4c85-f399-485c-8544-a008dfe088a2_trans.jpeg",
+      "source_cost": 5.03,
+      "retail_price": 15.71
+    },
+    {
+      "vid": "1720725036094459904",
+      "name": "Car Charger 200W Super Multifunctional Mini Black 200W Fast Charge 5A Cable",
+      "image": "https://cf.cjdropshipping.com/87a24fdd-73c6-445e-8ea9-9b1b9d7fc4ba_trans.jpeg",
+      "source_cost": 4.4,
+      "retail_price": 15.06
+    },
+    {
+      "vid": "1720725036115431424",
+      "name": "Car Charger 200W Super Multifunctional Mini Black 200W Super Fast Charge",
+      "image": "https://cf.cjdropshipping.com/cac46a89-c0b5-43b1-9b64-d9cc9c41eac7_trans.jpeg",
+      "source_cost": 3.85,
+      "retail_price": 14.49
+    },
+    {
+      "vid": "1720725036136402944",
+      "name": "Car Charger 200W Super Multifunctional Mini Black 60W Fast Charge 5A Cable",
+      "image": "https://cf.cjdropshipping.com/f84e1716-db41-4551-b00e-5104a26fa2a2_trans.jpeg",
+      "source_cost": 3.7,
+      "retail_price": 14.33
+    },
+    {
+      "vid": "1720725036157374464",
+      "name": "Car Charger 200W Super Multifunctional Mini Black 60w Super Fast Charge",
+      "image": "https://cf.cjdropshipping.com/ff33abfe-a192-42ab-9fc5-5102b70d2618_trans.jpeg",
+      "source_cost": 3.08,
+      "retail_price": 13.7
+    },
+    {
+      "vid": "1720725036182540288",
+      "name": "Car Charger 200W Super Multifunctional Mini Black 225W Super Fast Charge",
+      "image": "https://cf.cjdropshipping.com/913ffb79-5d7a-42e0-beb4-26ff9a8f7c4b_trans.jpeg",
+      "source_cost": 2.59,
+      "retail_price": 13.19
+    },
+    {
+      "vid": "1720725036203511808",
+      "name": "Car Charger 200W Super Multifunctional Mini Black 120W Quick Charge Translucent",
+      "image": "https://cf.cjdropshipping.com/5bf08811-fb02-4565-80d2-1b8e87fd7247_trans.jpeg",
+      "source_cost": 2.42,
+      "retail_price": 13.02
+    },
+    {
+      "vid": "1720725036224483328",
+      "name": "Car Charger 200W Super Multifunctional Mini Black 60W Quick Charge Translucent",
+      "image": "https://cf.cjdropshipping.com/25ac96ab-ced6-496b-90c6-622e831c7f2e_trans.jpeg",
+      "source_cost": 2.1,
+      "retail_price": 12.69
+    },
+    {
+      "vid": "1720725036245454848",
+      "name": "Car Charger 200W Super Multifunctional Mini Black Mini 100W Super Fast Charge",
+      "image": "https://cf.cjdropshipping.com/8112a8ad-865a-4ee8-97e5-b36a1443f45c_trans.jpeg",
+      "source_cost": 2.1,
+      "retail_price": 12.69
+    }
+  ],
+  "synced_at": "2026-07-04T07:33:45Z"
+}

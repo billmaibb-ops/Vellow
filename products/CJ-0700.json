@@ -1,0 +1,44 @@
+{
+  "id": "CJ-0700",
+  "description": "<p><b>Product information<br/></b>Battery type: polymer lithium ion battery<br/>Shell material: plastic<br/>Color: pink, green, black, white<br/>Additional function: multi-U port output<br/>Conversion rate: 90 (%)<br/><br/><b>Size Information<br/></b>10000 mA<br/><br/><b>      Package:<br/></b>Plastic mobile power *1</p><p><img src=\"https://cf.cjdropshipping.com/7fee7026-5944-4b93-9e7d-6f59d8d0237c.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/2f0461ca-9a57-4f0b-97de-10e3a836efaf.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/eec57123-0308-46ca-8124-fa8080304608.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/b56501fe-e735-4e07-b9f3-bdefb45c05bb.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/4c1afa6e-f946-4723-a36e-be4ce6d0ef21.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/80861673-7170-4426-b590-570780ad60e5.jpg\" style=\"max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/01eba1bc-d48a-4ff1-b576-bed5d468d814.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2025/07/21/06/ba4d72b6-1a78-464c-8503-29f2e7bef32d.jpg",
+    "https://cf.cjdropshipping.com/3e67e9c4-0a50-4c2f-a9ed-a711499c9eb0.jpg",
+    "https://cf.cjdropshipping.com/63162b65-b966-4fde-b4a0-86dbcbce4c05.jpg",
+    "https://cf.cjdropshipping.com/fe364f92-7b83-4946-a023-468e12922645.jpg",
+    "https://cf.cjdropshipping.com/d9ba0ba8-ceb5-47d0-a754-731ea80dc8b5.jpg",
+    "https://cf.cjdropshipping.com/219e7ca9-cdf8-4398-a927-cd76a2c80642.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1438434380925243392",
+      "name": "Comes With Three-wire Power Bank Pink 10000mah",
+      "image": "https://cf.cjdropshipping.com/fe364f92-7b83-4946-a023-468e12922645.jpg",
+      "source_cost": 5.17,
+      "retail_price": 15.85
+    },
+    {
+      "vid": "1438434380933632000",
+      "name": "Comes With Three-wire Power Bank Green 10000mah",
+      "image": "https://cf.cjdropshipping.com/d9ba0ba8-ceb5-47d0-a754-731ea80dc8b5.jpg",
+      "source_cost": 5.17,
+      "retail_price": 15.85
+    },
+    {
+      "vid": "1438434380942020608",
+      "name": "Comes With Three-wire Power Bank Black 10000mah",
+      "image": "https://cf.cjdropshipping.com/01eba1bc-d48a-4ff1-b576-bed5d468d814.jpg",
+      "source_cost": 5.17,
+      "retail_price": 15.85
+    },
+    {
+      "vid": "1438434380950409216",
+      "name": "Comes With Three-wire Power Bank White 10000mah",
+      "image": "https://cf.cjdropshipping.com/63162b65-b966-4fde-b4a0-86dbcbce4c05.jpg",
+      "source_cost": 5.17,
+      "retail_price": 15.85
+    }
+  ],
+  "synced_at": "2026-07-04T07:05:19Z"
+}

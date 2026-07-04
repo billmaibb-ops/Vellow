@@ -1,0 +1,21 @@
+{
+  "id": "CJ-0531",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/f93599af-ce64-49bc-86e3-eacbcf0930c3.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1fd211fe-c650-447c-9c34-9cc2c4abc778.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/757ef4d9-7627-4eb3-aa5f-537f499e7524.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/07eeca37-950d-4663-8666-26b4167b8742.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3804d738-baa9-4386-900f-66fe80885483.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/431140ef-0b56-4c33-97bd-07c41a36b060.jpg",
+    "https://cf.cjdropshipping.com/14aebdbc-7058-4884-9db8-e978e88c850b.jpg",
+    "https://cf.cjdropshipping.com/ddaaf5c6-e237-4f44-ada0-5d8a96d3328c.jpg",
+    "https://cf.cjdropshipping.com/77a26be1-8771-4459-a1ac-ba030dc129eb.jpg",
+    "https://cf.cjdropshipping.com/bc77a88b-9674-46fc-8c4b-02c401c63b5d.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1895322443625172993",
+      "name": "Transparent",
+      "image": "https://cf.cjdropshipping.com/77a26be1-8771-4459-a1ac-ba030dc129eb.jpg",
+      "source_cost": 18.62,
+      "retail_price": 32.25
+    }
+  ],
+  "synced_at": "2026-07-04T06:57:17Z"
+}

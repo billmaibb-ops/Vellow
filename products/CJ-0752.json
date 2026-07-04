@@ -1,0 +1,58 @@
+{
+  "id": "CJ-0752",
+  "description": "<p><b>Product information:</b><br/>Interface: USB, 30PIN, Micro USB, TYPE-C<br/>Length: 20cm/22.5cm<br/>Applicable models: general<br/>Number of branch connectors: single head</p><p><br/></p><p>A:Black flat wire (Apple interface) small<br/>A:Black flat line (Apple interface) large<br/>B:Black flat wire (Android interface) small<br/>B:Black flat line (Android interface) large<br/>C:Black flat wire (type-c interface) small</p><p>C:Black flat line (type-c interface) large</p><p><img src=\"https://cf.cjdropshipping.com/1617173780895.jpg\" style=\"font-size: 1em; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1617173780894.jpg\" style=\"font-size: 1em; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1617173780897.jpg\" style=\"font-size: 1em; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1617173780901.jpg\" style=\"font-size: 1em; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1617173780891.jpg\" style=\"font-size: 1em; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1617173780980.jpg\" style=\"font-size: 1em; max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/1617173924161.jpg",
+    "https://cf.cjdropshipping.com/1617173924149.jpg",
+    "https://cf.cjdropshipping.com/1617173924164.jpg",
+    "https://cf.cjdropshipping.com/1617173924158.jpg",
+    "https://cf.cjdropshipping.com/df9c33b6-ff45-451f-8aff-cbe69663e953.jpg",
+    "https://cf.cjdropshipping.com/0b69c0c1-7dcf-470e-ae00-22645b3283b5.jpg",
+    "https://cf.cjdropshipping.com/bd0b5955-73cf-4307-b896-e15525b7af17.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1377154072494346240",
+      "name": "Creative Bracelet Data Cable Bracelet Charging Cable A Small",
+      "image": "https://cf.cjdropshipping.com/1617173924161.jpg",
+      "source_cost": 1.09,
+      "retail_price": 11.64
+    },
+    {
+      "vid": "1377154072561455104",
+      "name": "Creative Bracelet Data Cable Bracelet Charging Cable A Large",
+      "image": "https://cf.cjdropshipping.com/1617173924164.jpg",
+      "source_cost": 1.09,
+      "retail_price": 11.64
+    },
+    {
+      "vid": "1377154072624369664",
+      "name": "Creative Bracelet Data Cable Bracelet Charging Cable B Small",
+      "image": "https://cf.cjdropshipping.com/1617173924158.jpg",
+      "source_cost": 1.09,
+      "retail_price": 11.64
+    },
+    {
+      "vid": "1377154072687284224",
+      "name": "Creative Bracelet Data Cable Bracelet Charging Cable B Large",
+      "image": "https://cf.cjdropshipping.com/1617173924149.jpg",
+      "source_cost": 1.09,
+      "retail_price": 11.64
+    },
+    {
+      "vid": "1377154072750198784",
+      "name": "Creative Bracelet Data Cable Bracelet Charging Cable C Small",
+      "image": "https://cf.cjdropshipping.com/0b69c0c1-7dcf-470e-ae00-22645b3283b5.jpg",
+      "source_cost": 1.09,
+      "retail_price": 11.64
+    },
+    {
+      "vid": "1377154072813113344",
+      "name": "Creative Bracelet Data Cable Bracelet Charging Cable C Large",
+      "image": "https://cf.cjdropshipping.com/bd0b5955-73cf-4307-b896-e15525b7af17.jpg",
+      "source_cost": 1.09,
+      "retail_price": 11.64
+    }
+  ],
+  "synced_at": "2026-07-04T07:07:37Z"
+}

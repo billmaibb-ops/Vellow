@@ -1,0 +1,24 @@
+{
+  "id": "CJ-0075",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/c881accc-359f-443c-b07b-8e4261d5a7dd.png\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3261bf87-f8be-4038-a4f3-2e70196ea476.png\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/01ca01a8-3015-48ed-818b-b069aa314f89.png\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/d471a55f-6b8b-47e6-a703-1f9c1406404b.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/326bf3b8-96b6-4e10-88b3-d636fdcbe9ec.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/c433bcda-6a65-46bf-874f-d7b4a7f55cdc.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/c7bf3030-6485-40fd-95b0-b8fc56439fe2.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/436c215d-ecf7-49a0-8da3-fc0e215fe730.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/f0840a87-91dd-455e-86af-6e08151367b8.jpg",
+    "https://cf.cjdropshipping.com/3cb5dea0-dbc6-4e00-a30d-5cf8c646343e.jpg",
+    "https://cf.cjdropshipping.com/a7893391-d9b9-4eb1-9547-0397d06f9507.jpg",
+    "https://cf.cjdropshipping.com/53e3fb08-5396-4846-a243-b07710fd9444.png",
+    "https://cf.cjdropshipping.com/b3eac7a5-0d91-4081-99d8-54a700124ddd.png",
+    "https://cf.cjdropshipping.com/0052343e-b8ea-41d9-aee0-31b2f56b01de.png",
+    "https://cf.cjdropshipping.com/d78628b0-6a64-41b0-991c-0cb9663f173d.jpg",
+    "https://cf.cjdropshipping.com/aa8a8dac-09b2-476a-9541-b823a7cec8b0.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1942487520612941826",
+      "name": "Green",
+      "image": "https://cf.cjdropshipping.com/53e3fb08-5396-4846-a243-b07710fd9444.png",
+      "source_cost": 66.61,
+      "retail_price": 115.36
+    }
+  ],
+  "synced_at": "2026-07-04T06:37:15Z"
+}

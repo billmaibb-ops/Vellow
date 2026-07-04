@@ -1,0 +1,36 @@
+{
+  "id": "CJ-1523",
+  "description": "<p>[Color]: Silver<br/>[Material: Alloy<br/></p><p>Size: Circumference: 36cm; Middle Height: 3cm<img src=\"https://cf.cjdropshipping.com/863a92f0-94fa-41da-8a55-e01827eb3f6d.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/206c5ed2-0946-4847-ae53-6a7b25f21cea.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/9b7821d8-e947-43f9-ac9b-aa2b43bbc323.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/f2ddfce5-b32d-42fe-a19b-9d5630439a3a.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/78a4016b-1894-4423-bfd8-cd2f7ed8b7ec.jpg\" style=\"font-size: 14px; max-width: 100%;\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/15144768/3655603068_115394883.jpg",
+    "https://cf.cjdropshipping.com/20200813/2277354888943.jpg",
+    "https://cf.cjdropshipping.com/15144768/3654356807_115394883.jpg",
+    "https://cf.cjdropshipping.com/15144768/3232131923_115394883.400x400.jpg",
+    "https://cf.cjdropshipping.com/20200813/862524423406.jpg",
+    "https://cf.cjdropshipping.com/20200813/1264264318668.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "69C1352C-8CBC-4C83-8F5B-456FF25EB7F0",
+      "name": "Wedding jewelry set Set of chains",
+      "image": "https://cf.cjdropshipping.com/20200813/2277354888943.jpg",
+      "source_cost": 4.61,
+      "retail_price": 15.27
+    },
+    {
+      "vid": "7579F5C0-36AF-4A6F-90F2-92767C506117",
+      "name": "Wedding jewelry set Set",
+      "image": "https://cf.cjdropshipping.com/15144768/3232131923_115394883.400x400.jpg",
+      "source_cost": 7.25,
+      "retail_price": 17.99
+    },
+    {
+      "vid": "DACB860B-F632-416D-87AD-1144C5F19D06",
+      "name": "Wedding jewelry set Crown",
+      "image": "https://cf.cjdropshipping.com/20200813/1264264318668.jpg",
+      "source_cost": 4.14,
+      "retail_price": 14.79
+    }
+  ],
+  "synced_at": "2026-07-04T07:41:59Z"
+}

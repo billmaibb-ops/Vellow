@@ -1,0 +1,25 @@
+{
+  "id": "CJ-0257",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/17204832/2407090236040324100.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2024/07/05/09/0c53ffd1-61fb-43d5-bdc8-425ab0898169.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2025/01/17/09/ae716095-ffb2-4bf8-b3e9-eb0d6b30dcb2.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2407070543301624300",
+      "name": "BLIND BOX HOT SALE Random groups of 7 or 10 piece",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/07/05/09/0c53ffd1-61fb-43d5-bdc8-425ab0898169.jpg",
+      "source_cost": 18.31,
+      "retail_price": 31.72
+    },
+    {
+      "vid": "2501170957441629600",
+      "name": "BLIND BOX HOT SALE Random groups of 3 piece",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/01/17/09/ae716095-ffb2-4bf8-b3e9-eb0d6b30dcb2.jpg",
+      "source_cost": 7.78,
+      "retail_price": 18.54
+    }
+  ],
+  "synced_at": "2026-07-04T06:45:10Z"
+}

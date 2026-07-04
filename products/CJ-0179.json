@@ -1,0 +1,23 @@
+{
+  "id": "CJ-0179",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span><br/><img src=\"https://cf.cjdropshipping.com/0a8c3fb5-fb55-4de7-9cc0-19cf7e0fc783.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/41f87ede-953c-4ac2-9da2-eb279730e2f9.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/a056b91c-92db-44f0-945e-143d833c92a0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b2096429-303e-404e-8a44-fe77260df714.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b0462b9b-b3dd-4dd7-9a4f-173d307c9cd3.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/6ecd1c5b-3c18-460e-9d64-097d6977f71d.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/d4375d80-185b-4c04-95bf-504422708b48.jpg",
+    "https://cf.cjdropshipping.com/d37bcb7e-e6cb-4a59-87c5-54f3a62df81d.jpg",
+    "https://cf.cjdropshipping.com/56d52886-9211-47f8-af72-8d9f93c80c7b.jpg",
+    "https://cf.cjdropshipping.com/195e6868-0af5-465c-8bae-0615b238ac52.jpg",
+    "https://cf.cjdropshipping.com/2ab49060-a479-4dc8-9ed0-b8431bf7ae69.jpg",
+    "https://cf.cjdropshipping.com/1cde401f-2048-48d6-a44c-a4d94e3509a7.jpg",
+    "https://cf.cjdropshipping.com/cb65d5d3-96a7-47cd-8c4d-ffcedc06f44b.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1859803469109415936",
+      "name": "Black",
+      "image": "https://cf.cjdropshipping.com/d37bcb7e-e6cb-4a59-87c5-54f3a62df81d.jpg",
+      "source_cost": 16.36,
+      "retail_price": 28.34
+    }
+  ],
+  "synced_at": "2026-07-04T06:41:46Z"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "CJ-0464",
+  "description": "<p>Dog Ramp</p>",
+  "images": [
+    "https://cf.cjdropshipping.com/2a5a7d27-2b8f-4334-923e-ccd3ef27d644.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1623859708056580096",
+      "name": "Dog Ramp Black",
+      "image": "https://cf.cjdropshipping.com/2a5a7d27-2b8f-4334-923e-ccd3ef27d644.jpg",
+      "source_cost": 10.28,
+      "retail_price": 21.12
+    }
+  ],
+  "synced_at": "2026-07-04T06:54:22Z"
+}

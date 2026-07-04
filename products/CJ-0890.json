@@ -1,0 +1,42 @@
+{
+  "id": "CJ-0890",
+  "description": "<p><b>Product information</b></p><p>Material: Ceramic<br>Surface technology: glazing<br>Craft: Color glaze</p><p>Size: A:17*12*6CM, B:15.5*11.5*6CM, C:14*11.5*7CM, D:18.5*10*9.5CM</p><p><br></p><p><b>Package:</b><br>Vase*1</p><p><img src=\"https://cf.cjdropshipping.com/9618efee-b8aa-4dd2-8ac0-a7ab7cf672ec.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/434137db-b443-43bd-95fe-23f04ef29168.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/156efcb7-4991-4500-b8c2-eda5d94b0685.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/005c997e-93c1-4da2-95b3-a88ae2a6ceba.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/3dc332cf-234d-46f2-840c-24169be3781e.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/ebeef2b7-405c-423b-844b-b40816a2697d.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/d75dc752-900f-4811-aa6c-df16a828685c.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/81f62fcd-bdbe-4e15-818e-7a1a2c0c562b.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/d2b1a835-3cce-456c-8a98-2f4282dec4bd.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/91f0d558-3522-4286-b021-ffb47781b576.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/b955a7cc-1df2-4a75-afd2-3aabb922a61a.jpg\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/49decefb-db96-4408-9d7d-343cfee0ddff.jpg",
+    "https://cf.cjdropshipping.com/2331b664-1a4e-43b5-8378-b622eb23c456.jpg",
+    "https://cf.cjdropshipping.com/7385aef7-632c-483e-9610-47acaae91ea0.jpg",
+    "https://cf.cjdropshipping.com/e4476a0c-e5ab-4da2-ad08-fdb335f03873.jpg",
+    "https://cf.cjdropshipping.com/39f935c9-f042-40d8-a2e9-340ee1b8d02e.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1417018459149176832",
+      "name": "Human Body Shape Ceramic Vase A",
+      "image": "https://cf.cjdropshipping.com/7385aef7-632c-483e-9610-47acaae91ea0.jpg",
+      "source_cost": 3.87,
+      "retail_price": 14.51
+    },
+    {
+      "vid": "1417018459157565440",
+      "name": "Human Body Shape Ceramic Vase B",
+      "image": "https://cf.cjdropshipping.com/e4476a0c-e5ab-4da2-ad08-fdb335f03873.jpg",
+      "source_cost": 3.87,
+      "retail_price": 14.51
+    },
+    {
+      "vid": "1417018459165954048",
+      "name": "Human Body Shape Ceramic Vase C",
+      "image": "https://cf.cjdropshipping.com/39f935c9-f042-40d8-a2e9-340ee1b8d02e.jpg",
+      "source_cost": 3.87,
+      "retail_price": 14.51
+    },
+    {
+      "vid": "1417018459178536960",
+      "name": "Human Body Shape Ceramic Vase D",
+      "image": "https://cf.cjdropshipping.com/2331b664-1a4e-43b5-8378-b622eb23c456.jpg",
+      "source_cost": 5.16,
+      "retail_price": 15.84
+    }
+  ],
+  "synced_at": "2026-07-04T07:13:43Z"
+}

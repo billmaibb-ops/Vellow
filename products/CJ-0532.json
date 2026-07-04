@@ -1,0 +1,22 @@
+{
+  "id": "CJ-0532",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/8a41ac4a-26af-42d8-8433-26052173af10.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3199c653-26c9-4f0c-ab0e-868645c48770.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/ee314945-8c3b-4350-82c0-67e54b1730d0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/7456efb7-a3d6-4c9e-862d-58a2c0f038b5.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/fb8abad6-2008-43d6-bd50-65a7329840ca.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/8f92f077-6550-45f8-bee2-59a59cc48551.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/062e8c4d-b454-4eec-95b2-8c60b823b1b7.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/9209fef6-e77c-4f53-bf58-76e15fa60a2d.jpg",
+    "https://cf.cjdropshipping.com/db417f35-891c-4405-96a6-02917c029493.jpg",
+    "https://cf.cjdropshipping.com/49b75995-9d48-42ea-86a6-abeb617c8a85.jpg",
+    "https://cf.cjdropshipping.com/80c02b12-71d1-4e1e-ad83-34b2afe2e1f1.jpg",
+    "https://cf.cjdropshipping.com/2f3bce40-c4bd-4d45-9329-814172c53e05.jpg",
+    "https://cf.cjdropshipping.com/f96b2714-0604-4137-86f6-9e1debc6b41c.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1952655872249528321",
+      "name": "90Kpa 130W",
+      "image": "https://cf.cjdropshipping.com/49b75995-9d48-42ea-86a6-abeb617c8a85.jpg",
+      "source_cost": 76.42,
+      "retail_price": 132.36
+    }
+  ],
+  "synced_at": "2026-07-04T06:57:20Z"
+}

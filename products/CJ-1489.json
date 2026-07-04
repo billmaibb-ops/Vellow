@@ -1,0 +1,38 @@
+{
+  "id": "CJ-1489",
+  "description": "<body>\n <p><b>Product information:</b><br>Color: Black, Milky White, Orange<br> Hardness: soft<br> Material: Nylon<br> Suitcase shape: Shell<br> Popular elements: sewing thread<br> Number of shoulder straps: Single</p>\n <p><br></p>\n <p><br></p>\n <b>Packing list: </b>\n <br>Crossbody bag X1\n <p><br></p>\n <p><br></p>\n <b>Product Image:</b>\n <div>\n  <b><br></b>\n </div>\n <div>\n  <b><br></b>\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237280322900.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237280326100.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237280329500.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237290321200.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237290324600.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237290326600.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237300320000.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237300323400.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17186688/2406180237300329200.jpg\">\n </div>\n</body>",
+  "images": [
+    "https://cf.cjdropshipping.com/quick/product/67ca1347-89b5-433a-b895-b917fa971ac6.jpg",
+    "https://cf.cjdropshipping.com/quick/product/33dc3400-e037-41b0-aa2f-0fee2c2237b6.jpg",
+    "https://cf.cjdropshipping.com/quick/product/f09c3577-ba5d-445b-a972-5f2ef2b88a59.jpg",
+    "https://cf.cjdropshipping.com/quick/product/fd24fdb0-9eae-44cb-a35f-432f071257ce.jpg",
+    "https://cf.cjdropshipping.com/quick/product/1f75f615-0401-467d-a435-313064e02960.jpg",
+    "https://cf.cjdropshipping.com/quick/product/11b11ed9-0c4e-42df-954c-85c677435a3a.jpg",
+    "https://cf.cjdropshipping.com/quick/product/0e207b9d-6465-48b8-980e-b5ec38709b90.jpg",
+    "https://cf.cjdropshipping.com/quick/product/4bc6c65e-5455-492e-9d4b-beac93ab6e66.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2406180147451624100",
+      "name": "Women's Crossbody Canvas Shell Bag Black",
+      "image": "https://cf.cjdropshipping.com/quick/product/67ca1347-89b5-433a-b895-b917fa971ac6.jpg",
+      "source_cost": 3.85,
+      "retail_price": 14.49
+    },
+    {
+      "vid": "2406180147451624300",
+      "name": "Women's Crossbody Canvas Shell Bag OFF White",
+      "image": "https://cf.cjdropshipping.com/quick/product/11b11ed9-0c4e-42df-954c-85c677435a3a.jpg",
+      "source_cost": 3.85,
+      "retail_price": 14.49
+    },
+    {
+      "vid": "2406180147451624500",
+      "name": "Women's Crossbody Canvas Shell Bag Orange",
+      "image": "https://cf.cjdropshipping.com/quick/product/fd24fdb0-9eae-44cb-a35f-432f071257ce.jpg",
+      "source_cost": 3.85,
+      "retail_price": 14.49
+    }
+  ],
+  "synced_at": "2026-07-04T07:40:29Z"
+}

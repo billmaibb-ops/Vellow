@@ -1,0 +1,27 @@
+{
+  "id": "CJ-0242",
+  "description": "<p><b>Product information:</b><br/>Type: Mushroom coffee<br/> Specification: 180 g/bag</p><br/><b>Packing list: </b><br/>A bag of mushroom coffee\n<br/><b>Product Image:</b><br/><img src=\"https://cf.cjdropshipping.com/17501184/1934779335743639552.jpg\"/>",
+  "images": [
+    "https://cf.cjdropshipping.com/17501184/1934779331415117824.jpg",
+    "https://cf.cjdropshipping.com/358bc095-9f84-4c7d-b980-90ec4163da37.jpg",
+    "https://cf.cjdropshipping.com/17501184/1934779336301481984.jpg",
+    "https://cf.cjdropshipping.com/17501184/1934779336557334528.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2039889244549042177",
+      "name": "180g 2pcs",
+      "image": "https://cf.cjdropshipping.com/358bc095-9f84-4c7d-b980-90ec4163da37.jpg",
+      "source_cost": 8.0,
+      "retail_price": 18.77
+    },
+    {
+      "vid": "2504080911411601500",
+      "name": "Mushroom Coffee 180g",
+      "image": "https://cf.cjdropshipping.com/17501184/1934779331415117824.jpg",
+      "source_cost": 4.0,
+      "retail_price": 14.64
+    }
+  ],
+  "synced_at": "2026-07-04T06:44:31Z"
+}

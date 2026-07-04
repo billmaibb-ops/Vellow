@@ -1,0 +1,24 @@
+{
+  "id": "CJ-0013",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package Size</p>\n <p>Length\uff08cm\uff09\uff1a16.4</p>\n <p>Width\uff08cm\uff09\uff1a9.6</p>\n <p>Height\uff08cm\uff09\uff1a1.1</p>\n <p>Weight\uff08kg\uff09\uff1a0.147</p>\n <p><img src=\"https://cf.cjdropshipping.com/397170ed-5baa-40d1-aa3e-56a5b11ee9b2.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/381efe8d-c8eb-4cd6-8049-7aff9757c7d1.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/be9d8b52-e1cf-45f7-8145-6831469738b4.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/6120bf70-78a3-4ca3-99b6-65ad7f79f709.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/e4089a4f-a230-4750-b113-013009f04b0c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/09936d37-6f1f-4e56-b341-33a5849901f6.jpg",
+    "https://cf.cjdropshipping.com/e4429120-b5ad-40b4-a1de-579acc0a2b5a.jpg",
+    "https://cf.cjdropshipping.com/18a11902-73f6-42a7-a0e6-563f9feeb2ab.jpg",
+    "https://cf.cjdropshipping.com/0b243b90-3258-42aa-85d1-375d28257473.jpg",
+    "https://cf.cjdropshipping.com/4dcc8f77-0dd6-4cdf-a9e9-c6c53c718c98.jpg",
+    "https://cf.cjdropshipping.com/0280bd19-1485-4db3-bb48-85e5df11582a.jpg",
+    "https://cf.cjdropshipping.com/03d55a0e-0b49-4358-ab57-9c54b66cd1b8.png",
+    "https://cf.cjdropshipping.com/6610f931-2fc9-46eb-91b4-d9a016e37584.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1888050832044244994",
+      "name": "Pink",
+      "image": "https://cf.cjdropshipping.com/09936d37-6f1f-4e56-b341-33a5849901f6.jpg",
+      "source_cost": 20.27,
+      "retail_price": 35.11
+    }
+  ],
+  "synced_at": "2026-07-04T06:34:28Z"
+}

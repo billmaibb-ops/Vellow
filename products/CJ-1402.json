@@ -1,0 +1,28 @@
+{
+  "id": "CJ-1402",
+  "description": "<p><b>Product information:</b><br/>Color: red, white<br/> Applicable holiday: Halloween<br/> Category: Props</p><br/><b>Packing list: </b><br/>1* Plush Toy<br/><b>Product Image:</b><br/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/01/10/6c2e87b7-4aee-4879-88a0-0d235aee01cd.jpg\"/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/01/10/9edbad8f-c1e3-4fba-8a34-f84ed4ae01a0.jpg\"/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/01/10/a081f072-cf3c-4bf8-add2-56a2298df127.jpg\"/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/01/10/e3f1e7d0-3caa-4db9-9fcd-8801d0f5aec7.jpg\"/><img src=\"https://oss-cf.cjdropshipping.com/product/2024/08/01/10/67a3132d-45e4-4c3e-ae43-e5e4ecf5c574.jpg\"/>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2024/08/01/10/6173b138-e7dd-42b5-b8a7-8d45ad4bf8ae.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/01/10/ae7bf2bc-6070-4138-846d-fe8cfbf16eb6.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/01/10/a382efc9-b363-455b-ae44-d3ef8f13f6ea.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/01/10/3950dde9-0517-40e5-88c8-0423c6fe8e66.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/08/01/10/31f0ed0c-75fd-4df9-b13f-20ec84522d5b.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2408011047001604500",
+      "name": "GUS THE GHOST WISH PUMPKIN GHOST Plush Toy Red",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/08/01/10/31f0ed0c-75fd-4df9-b13f-20ec84522d5b.jpg",
+      "source_cost": 3.7,
+      "retail_price": 14.33
+    },
+    {
+      "vid": "2408011047001604600",
+      "name": "GUS THE GHOST WISH PUMPKIN GHOST Plush Toy White",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/08/01/10/3950dde9-0517-40e5-88c8-0423c6fe8e66.jpg",
+      "source_cost": 3.7,
+      "retail_price": 14.33
+    }
+  ],
+  "synced_at": "2026-07-04T07:36:38Z"
+}

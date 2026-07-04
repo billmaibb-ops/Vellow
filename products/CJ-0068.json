@@ -1,0 +1,33 @@
+{
+  "id": "CJ-0068",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package size<br/><br/>Length (cm): 10<br/><br/>Width (cm): 15<br/><br/>Height (cm): 3<br/><br/>Weight (kg): 0.035<br/><br/>attribute<br/><br/>Country of origin: China<br/><br/>Composition: Non-woven fabric<br/><br/>Maker: Wan Quan</p>",
+  "images": [
+    "https://cf.cjdropshipping.com/3ca0e7df-3148-4e8c-b350-24274bcf0da3.jpg",
+    "https://cf.cjdropshipping.com/04ef7f10-4cea-409d-ae37-91b48e4cd253.jpg",
+    "https://cf.cjdropshipping.com/9bf5e9bc-6691-4ec4-9527-ca9e30dd50f6.jpg",
+    "https://cf.cjdropshipping.com/ddaafad4-6c6c-4b07-b5cb-8f56ed8069c5.jpg",
+    "https://cf.cjdropshipping.com/842a39c5-5f11-451d-a255-64c51928f2be.jpg",
+    "https://cf.cjdropshipping.com/04859bf9-8762-4987-91c3-3d15e21cfe60.jpg",
+    "https://cf.cjdropshipping.com/50c38894-1295-45ec-ad7a-4a802437b427.jpg",
+    "https://cf.cjdropshipping.com/23d2f958-2f63-4dd1-a25f-6940cf395086.jpg",
+    "https://cf.cjdropshipping.com/c7b395b8-84a5-471e-8f0c-4df1a4222de0.jpg",
+    "https://cf.cjdropshipping.com/9cfe2ebe-28e9-4479-a0f5-9a081b506acf.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1897217873725521921",
+      "name": "Black",
+      "image": "https://cf.cjdropshipping.com/50c38894-1295-45ec-ad7a-4a802437b427.jpg",
+      "source_cost": 9.3,
+      "retail_price": 20.11
+    },
+    {
+      "vid": "1897217873725521922",
+      "name": "Pink",
+      "image": "https://cf.cjdropshipping.com/23d2f958-2f63-4dd1-a25f-6940cf395086.jpg",
+      "source_cost": 9.3,
+      "retail_price": 20.11
+    }
+  ],
+  "synced_at": "2026-07-04T06:36:56Z"
+}

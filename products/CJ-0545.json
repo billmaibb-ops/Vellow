@@ -1,0 +1,20 @@
+{
+  "id": "CJ-0545",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/c45046ee-f502-4caa-abd4-929fea2e5169.png\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/657c349f-3290-4af5-a2a3-505eaa351db2.png\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/80b9dc69-ced6-4908-892f-683c1e57ef10.png\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/8d4b24f2-9f1f-4fbc-be37-b9baedf88c51.png\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/2f885e08-2bd7-4234-a2be-08ebbde101fa.png",
+    "https://cf.cjdropshipping.com/8b339405-bbf4-4ed5-8038-e30a2c1daf27.png",
+    "https://cf.cjdropshipping.com/8c33051d-0953-4793-bdba-ca99f93ec177.png",
+    "https://cf.cjdropshipping.com/c23c3a57-3b64-4b30-a4f0-b9798e00552a.png"
+  ],
+  "variants": [
+    {
+      "vid": "1978693146026373121",
+      "name": "Style1",
+      "image": "https://cf.cjdropshipping.com/c23c3a57-3b64-4b30-a4f0-b9798e00552a.png",
+      "source_cost": 27.68,
+      "retail_price": 47.95
+    }
+  ],
+  "synced_at": "2026-07-04T06:57:52Z"
+}

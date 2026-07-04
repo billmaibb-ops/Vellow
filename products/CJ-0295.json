@@ -1,0 +1,33 @@
+{
+  "id": "CJ-0295",
+  "description": "<p><b>Product information:<br/></b>USB plug-in: tpcy-c interface<br/>Battery capacity: 5000mAh<br/><br/><br/><b>Packing list:<br/></b>Shoulder pad 1</p><p><img src=\"https://oss-cf.cjdropshipping.com/product/2024/11/20/08/01b9a067-f723-41aa-8dd4-914bc2348338.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2025/12/12/02/1f2636d2-c62c-4c7b-b362-c182d24dd4f5.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2025/12/12/02/bb72fc29-29fa-472a-bd13-044a8530e26f.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/11/20/08/bf0f258a-0953-40e4-81bf-760cc35f7056.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2411200818231604200",
+      "name": "Shoulder Pad Black 1PCS",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/11/20/08/bf0f258a-0953-40e4-81bf-760cc35f7056.jpg",
+      "source_cost": 9.45,
+      "retail_price": 20.26
+    },
+    {
+      "vid": "2512120222471618900",
+      "name": "Shoulder Pad Black 2PCS",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/12/12/02/bb72fc29-29fa-472a-bd13-044a8530e26f.jpg",
+      "source_cost": 18.9,
+      "retail_price": 32.74
+    },
+    {
+      "vid": "2512120222471619100",
+      "name": "Shoulder Pad Black 3PCS",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/12/12/02/1f2636d2-c62c-4c7b-b362-c182d24dd4f5.jpg",
+      "source_cost": 28.35,
+      "retail_price": 49.11
+    }
+  ],
+  "synced_at": "2026-07-04T06:46:53Z"
+}

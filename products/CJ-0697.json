@@ -1,0 +1,35 @@
+{
+  "id": "CJ-0697",
+  "description": "<p><b>Product&nbsp;information:&nbsp;</b><br/></p><p>Model: Magnetic<br/>Battery type: Lithium polymer battery<br/>Size: 87x60x10mm<br/>Battery capacity: 8400mah<br/>Whether to support wireless charging: Yes</p><p><img src=\"https://cf.cjdropshipping.com/1612508745139.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/1612508745141.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1612508745145.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1612508745147.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1612508745148.jpg\" style=\"max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/1612508751632.jpg",
+    "https://cf.cjdropshipping.com/1612508751624.jpg",
+    "https://cf.cjdropshipping.com/1612508751630.jpg",
+    "https://cf.cjdropshipping.com/1612508751631.jpg",
+    "https://cf.cjdropshipping.com/1612508751623.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1357587010029752320",
+      "name": "Magnetic Wireless Portable Power Bank Green",
+      "image": "https://cf.cjdropshipping.com/1612508751623.jpg",
+      "source_cost": 12.95,
+      "retail_price": 23.87
+    },
+    {
+      "vid": "1357587010029752321",
+      "name": "Magnetic Wireless Portable Power Bank Blue",
+      "image": "https://cf.cjdropshipping.com/1612508751632.jpg",
+      "source_cost": 12.95,
+      "retail_price": 23.87
+    },
+    {
+      "vid": "1357587010029752322",
+      "name": "Magnetic Wireless Portable Power Bank Grey",
+      "image": "https://cf.cjdropshipping.com/1612508751631.jpg",
+      "source_cost": 12.95,
+      "retail_price": 23.87
+    }
+  ],
+  "synced_at": "2026-07-04T07:05:09Z"
+}

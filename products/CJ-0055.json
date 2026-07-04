@@ -1,0 +1,30 @@
+{
+  "id": "CJ-0055",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/3c9e77c3-bb9a-4782-a327-4ad232d47c04.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/43dfa530-c1af-49ba-b2c1-5a03a317d4c0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/f81fb189-d5f2-4209-aa89-d5eda2f1a7b2.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b2e8a90c-0d03-4eac-9219-d6fb8135c956.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1c645c3e-5660-4d13-8a0b-7d6158eb51bd.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/be5d7d71-5f27-4a57-a34d-e4a8b112c609.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/cb049a95-b247-4584-8d00-7820da03050c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/2e96a745-a59a-4e9a-8fc8-4a0caa9dfc4f.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/16eeb912-a8be-413a-b45e-8469fc0f5ae2.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/10288662-1bd2-4682-a7bf-3870c0a99002.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/77e3e235-b8a5-4678-bcfc-4c151b45d9bc.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/35ce5f3c-23ce-4431-9b19-045627302348.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/45a4e151-85f2-45e2-9cf0-9c6f50d9fc95.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/414b407a-1d0c-4679-b559-bfec2bcd0a9e.jpg",
+    "https://cf.cjdropshipping.com/30b9f9ea-f469-4026-845a-d355ea8992a2.png",
+    "https://cf.cjdropshipping.com/a836c739-e67c-4c1f-998a-801f4b848c45.jpg",
+    "https://cf.cjdropshipping.com/c1d5cd9c-a0c4-4c6f-a051-860e4e2a0843.png",
+    "https://cf.cjdropshipping.com/5b2ae9bf-81d5-47b3-ac66-5f000351b191.png",
+    "https://cf.cjdropshipping.com/6fff1e7d-41d3-46bc-84a0-38044bca35e5.png",
+    "https://cf.cjdropshipping.com/c0d98e6f-0eee-4b19-be9e-63708bbe68d0.png"
+  ],
+  "variants": [
+    {
+      "vid": "1835604623814971392",
+      "name": "Black",
+      "image": "https://cf.cjdropshipping.com/a836c739-e67c-4c1f-998a-801f4b848c45.jpg",
+      "source_cost": 20.85,
+      "retail_price": 36.12
+    },
+    {
+      "vid": "1835604623814971393",
+      "name": "Pink",
+      "image": "https://cf.cjdropshipping.com/414b407a-1d0c-4679-b559-bfec2bcd0a9e.jpg",
+      "source_cost": 20.85,
+      "retail_price": 36.12
+    }
+  ],
+  "synced_at": "2026-07-04T06:36:22Z"
+}

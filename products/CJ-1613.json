@@ -1,0 +1,45 @@
+{
+  "id": "CJ-1613",
+  "description": "<p>Japanese men's socks, women's socks, two toe socks, toe socks, wooden socks&nbsp;</p>",
+  "images": [
+    "https://cf.cjdropshipping.com/2048/2558055141984.png",
+    "https://cf.cjdropshipping.com/2048/1196772564500.png",
+    "https://cf.cjdropshipping.com/2048/3117333862336.png",
+    "https://cf.cjdropshipping.com/2048/1076168083235.png",
+    "https://cf.cjdropshipping.com/2048/1526640801694.png",
+    "https://cf.cjdropshipping.com/15424704/74976200052.jpg",
+    "https://cf.cjdropshipping.com/2048/814522363241.png",
+    "https://cf.cjdropshipping.com/2048/74519282176.png"
+  ],
+  "variants": [
+    {
+      "vid": "2409220547101604700",
+      "name": "Japanese men's socks, women's socks, two toe socks, toe socks, wooden socks Set",
+      "image": "https://cf.cjdropshipping.com/2048/74519282176.png",
+      "source_cost": 1.54,
+      "retail_price": 12.11
+    },
+    {
+      "vid": "455134CF-B286-4646-BBA9-A91B8BDB5A64",
+      "name": "Japanese men's socks, women's socks, two toe socks, toe socks, wooden socks Gray",
+      "image": "https://cf.cjdropshipping.com/2048/1196772564500.png",
+      "source_cost": 0.52,
+      "retail_price": 11.06
+    },
+    {
+      "vid": "7BF6CEC7-73F1-4C22-9578-5DB34F31E6BA",
+      "name": "Japanese men's socks, women's socks, two toe socks, toe socks, wooden socks Black",
+      "image": "https://cf.cjdropshipping.com/2048/814522363241.png",
+      "source_cost": 0.52,
+      "retail_price": 11.06
+    },
+    {
+      "vid": "A2EF0458-2E81-4C59-9485-E60D627E6D00",
+      "name": "Japanese men's socks, women's socks, two toe socks, toe socks, wooden socks White",
+      "image": "https://cf.cjdropshipping.com/2048/2558055141984.png",
+      "source_cost": 0.5,
+      "retail_price": 11.04
+    }
+  ],
+  "synced_at": "2026-07-04T07:46:02Z"
+}

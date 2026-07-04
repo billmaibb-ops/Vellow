@@ -1,0 +1,25 @@
+{
+  "id": "CJ-0860",
+  "description": "<p><b>Specifications:</b></p><p>Material: Wood</p><p>Lighted photo frame<br/>Original wood frame + double-sided UV printing<br/>Black frame + double-sided UV printing</p><p><b>Packing list:&nbsp;</b></p><p>Photo frame*1</p><p><img src=\"https://cf.cjdropshipping.com/17213472/2407190849000323600.jpg\"/><img src=\"https://cf.cjdropshipping.com/17213472/2407190849000326600.jpg\"/><img src=\"https://cf.cjdropshipping.com/17213472/2407190849000329800.jpg\"/><img src=\"https://cf.cjdropshipping.com/17213472/2407190849010321100.jpg\"/><img src=\"https://cf.cjdropshipping.com/17213472/2407190849010322600.jpg\"/></p>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2025/02/28/06/286d616b-cc8e-4e32-aea8-853885daa61a.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2025/02/28/06/d6a4ca9c-5a9b-4a1d-8bf1-19f593cfa335.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2502180712061624300",
+      "name": "Picture Frame Black frame With light",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/02/28/06/286d616b-cc8e-4e32-aea8-853885daa61a.jpg",
+      "source_cost": 7.74,
+      "retail_price": 18.5
+    },
+    {
+      "vid": "2502180712061624500",
+      "name": "Picture Frame Log frame With light",
+      "image": "https://oss-cf.cjdropshipping.com/product/2025/02/28/06/d6a4ca9c-5a9b-4a1d-8bf1-19f593cfa335.jpg",
+      "source_cost": 7.74,
+      "retail_price": 18.5
+    }
+  ],
+  "synced_at": "2026-07-04T07:12:24Z"
+}

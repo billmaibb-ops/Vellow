@@ -1,0 +1,22 @@
+{
+  "id": "CJ-1144",
+  "description": "<p>Multifunctional extended traction rope<br>Material: Nylon<br>S: (2 meters long / 1.5 meters wide)</p><ul><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200614/2916387271908.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200614/2916387271908.jpg\"><div><div><a href=\"#\" ng-click=\"previewPic($event)\">\u9884\u89c8</a><a href=\"#\" ng-click=\"deletePic(item.pid)\">\u5220\u9664</a></div></div></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200614/2379807724166.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200614/2379807724166.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200614/1921128416476.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200614/1921128416476.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200614/1695266983294.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200614/1695266983294.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200614/1042893996181.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200614/1042893996181.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200614/16642460760371.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200614/16642460760371.jpg\"></div></li></ul>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200614/2916387271908.jpg",
+    "https://cf.cjdropshipping.com/20200614/2379807724166.jpg",
+    "https://cf.cjdropshipping.com/20200614/1921128416476.jpg",
+    "https://cf.cjdropshipping.com/20200614/1695266983294.jpg",
+    "https://cf.cjdropshipping.com/20200614/1042893996181.jpg",
+    "https://cf.cjdropshipping.com/20200614/16642460760371.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "0444F194-0AE9-4FF9-8AFE-4B62667FD9C9",
+      "name": "Multifunctional extended traction rope Black",
+      "image": "https://cf.cjdropshipping.com/20200614/2916387271908.jpg",
+      "source_cost": 2.22,
+      "retail_price": 12.81
+    }
+  ],
+  "synced_at": "2026-07-04T07:25:06Z"
+}

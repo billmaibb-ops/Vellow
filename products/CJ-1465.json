@@ -1,0 +1,49 @@
+{
+  "id": "CJ-1465",
+  "description": "<p><b>Product Details:</b><br>Product Category: Knitted Hat<br>Cap style: dome<br>Brim style: no brim<br>Color: khaki, black, wine red, gray, navy blue<br>Main fabric component content: 81% (inclusive) -95% (inclusive)<br><br><b>Size Information:</b><br>Size: one size<br><img src=\"https://cf.cjdropshipping.com/2941a555-080f-4458-aae8-f3bd09b2d80e.jpg\" style=\"max-width:100%;\"><br><br><b>Package Contents:</b><br>Hat X1</p><p><br></p><p><img src=\"https://cf.cjdropshipping.com/2f1b7145-3c5f-4f56-9ef1-06ed13c799ba.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/94c9c28f-2e76-4131-b510-a8c1c6c36dcf.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/ace252fc-aee6-4c71-a29d-b6f3afaaad42.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/731acded-6868-42dc-8e54-21a6bfcb0820.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/7c370912-f35c-450f-95b4-5b54080cbe6b.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/743f0a88-9efb-48e3-aec6-397ac65c7233.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/6d26bfea-53c3-4858-bda3-933175bd34d7.jpg\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/f2b5c3ec-ff32-4047-9ef4-accc89aa0e2f.jpg",
+    "https://cf.cjdropshipping.com/2d139505-9599-4ca3-987a-6848a7138b97.jpg",
+    "https://cf.cjdropshipping.com/113cd688-580f-49fe-aca3-b0684a7175f3.jpg",
+    "https://cf.cjdropshipping.com/1868a308-e62d-4c36-8210-17bae45c44cf.jpg",
+    "https://cf.cjdropshipping.com/3a618771-7f38-4e68-a3f6-96a819c2bbae.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1642412081163014144",
+      "name": "Women's Fleece Cloth Label Letter Beanie Khaki One size",
+      "image": "https://cf.cjdropshipping.com/113cd688-580f-49fe-aca3-b0684a7175f3.jpg",
+      "source_cost": 1.71,
+      "retail_price": 12.28
+    },
+    {
+      "vid": "1642412081183985664",
+      "name": "Women's Fleece Cloth Label Letter Beanie Black One size",
+      "image": "https://cf.cjdropshipping.com/3a618771-7f38-4e68-a3f6-96a819c2bbae.jpg",
+      "source_cost": 1.71,
+      "retail_price": 12.28
+    },
+    {
+      "vid": "1642412081204957184",
+      "name": "Women's Fleece Cloth Label Letter Beanie Red One size",
+      "image": "https://cf.cjdropshipping.com/f2b5c3ec-ff32-4047-9ef4-accc89aa0e2f.jpg",
+      "source_cost": 1.71,
+      "retail_price": 12.28
+    },
+    {
+      "vid": "1642412081225928704",
+      "name": "Women's Fleece Cloth Label Letter Beanie Grey One size",
+      "image": "https://cf.cjdropshipping.com/2d139505-9599-4ca3-987a-6848a7138b97.jpg",
+      "source_cost": 1.71,
+      "retail_price": 12.28
+    },
+    {
+      "vid": "1642412081242705920",
+      "name": "Women's Fleece Cloth Label Letter Beanie Navy Blue One size",
+      "image": "https://cf.cjdropshipping.com/1868a308-e62d-4c36-8210-17bae45c44cf.jpg",
+      "source_cost": 1.71,
+      "retail_price": 12.28
+    }
+  ],
+  "synced_at": "2026-07-04T07:39:23Z"
+}

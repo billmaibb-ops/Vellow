@@ -1,0 +1,25 @@
+{
+  "id": "CJ-1498",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/fd3168ea-00a6-4d2b-ae37-07bead2e6875.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/6c59fc29-9185-4af3-a204-da0795558be6.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/80a28cb5-ea3d-40e2-ac2c-023d59b4c701.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/f1f5488a-9fac-4e7e-a393-6e03078dd61c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/856631cf-cb8e-41ce-8bc4-312094656b20.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/06ed4517-5551-4502-887f-48b3a9aa7c66.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/061b3737-af17-4eb1-a0cb-c57600b9a761.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/d0dcd264-e93a-4599-92cf-4cd8cdd84c55.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/115d2f2c-ac4c-41aa-8228-de58c31177be.jpg",
+    "https://cf.cjdropshipping.com/de1718cf-2ff8-4c85-8009-d2171c88d19d.jpg",
+    "https://cf.cjdropshipping.com/cbcb3736-9b54-4752-83d6-b0a34be2c303.jpg",
+    "https://cf.cjdropshipping.com/0fd79ac2-c9d3-4395-9e94-5b9147c0145f.jpg",
+    "https://cf.cjdropshipping.com/4d3976c2-9c14-4730-a6ea-68eeb01752ac.jpg",
+    "https://cf.cjdropshipping.com/a0037f09-a6db-440b-bd64-1822a3769a57.jpg",
+    "https://cf.cjdropshipping.com/6df5fd2b-1b18-4d2e-85f1-470a1d623b7b.jpg",
+    "https://cf.cjdropshipping.com/e160e81e-a3a1-4dc4-a5c7-1789121900ba.jpg",
+    "https://cf.cjdropshipping.com/377bd084-fc30-4140-86a1-de81aaaa0776.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2035991998646087681",
+      "name": "Style1",
+      "image": "https://cf.cjdropshipping.com/377bd084-fc30-4140-86a1-de81aaaa0776.jpg",
+      "source_cost": 10.8,
+      "retail_price": 21.65
+    }
+  ],
+  "synced_at": "2026-07-04T07:40:53Z"
+}

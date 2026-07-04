@@ -1,0 +1,43 @@
+{
+  "id": "CJ-1484",
+  "description": "<div id=\"offer-template-0\"></div><div><span style=\"font-size: 16px;\">Material: Nylon</span><img src=\"https://cf.cjdropshipping.com/16367616/1636804863671.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804863718.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804863918.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804863963.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804864026.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804864407.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804864803.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804864856.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804864913.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804864983.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804865047.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804865114.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804865470.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804865565.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804865897.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804866298.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804866694.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804866750.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804866853.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804867104.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804867160.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804867205.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804867245.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804867416.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804867562.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804867654.jpg\"><img src=\"https://cf.cjdropshipping.com/16367616/1636804867724.jpg\"><br></div>",
+  "images": [
+    "https://cf.cjdropshipping.com/15740928/128679317844.jpg",
+    "https://cf.cjdropshipping.com/15740928/487223582388.jpg",
+    "https://cf.cjdropshipping.com/15740928/50662925273670.jpg",
+    "https://cf.cjdropshipping.com/15740928/6703491022250.jpg",
+    "https://cf.cjdropshipping.com/15740928/2401445831202.jpg",
+    "https://cf.cjdropshipping.com/15740928/39885358520.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "74FDAA1E-80A3-4A4E-9321-3410A9EED93F",
+      "name": "Nylon backpack Black S",
+      "image": "https://cf.cjdropshipping.com/2049/2455812061073.jpg",
+      "source_cost": 6.41,
+      "retail_price": 17.13
+    },
+    {
+      "vid": "9A2C45D7-C60B-45EC-A4C6-E6268605A051",
+      "name": "Nylon backpack Light grey S",
+      "image": "https://cf.cjdropshipping.com/2049/2890153876648.jpg",
+      "source_cost": 6.41,
+      "retail_price": 17.13
+    },
+    {
+      "vid": "B5673872-F928-4160-94C9-C6A77DB10A8A",
+      "name": "Nylon backpack Black L",
+      "image": "https://cf.cjdropshipping.com/2049/3429286072156.jpg",
+      "source_cost": 6.68,
+      "retail_price": 17.41
+    },
+    {
+      "vid": "E4E823DD-E42B-4505-A9D0-846162E8C6DD",
+      "name": "Nylon backpack Light grey L",
+      "image": "https://cf.cjdropshipping.com/2049/3960413343452.jpg",
+      "source_cost": 6.68,
+      "retail_price": 17.41
+    }
+  ],
+  "synced_at": "2026-07-04T07:40:16Z"
+}

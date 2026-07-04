@@ -1,0 +1,43 @@
+{
+  "id": "CJ-1597",
+  "description": "<p>size</p><p><img src=\"https://cf.cjdropshipping.com/20190108/1704240925267.png\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20190108/1619514806125.png",
+    "https://cf.cjdropshipping.com/20190108/20059585321793.png",
+    "https://cf.cjdropshipping.com/20190108/88629295155.png",
+    "https://cf.cjdropshipping.com/20190108/7680191345862.png",
+    "https://cf.cjdropshipping.com/20190108/1704240925267.png",
+    "https://cf.cjdropshipping.com/20190108/944665259313.png"
+  ],
+  "variants": [
+    {
+      "vid": "35A30331-6249-4881-9FA9-063588D72F85",
+      "name": "3D Wings Digital Print Yoga Leggings Blue S",
+      "image": "https://cf.cjdropshipping.com/20190108/20059585321793.png",
+      "source_cost": 3.28,
+      "retail_price": 13.9
+    },
+    {
+      "vid": "9ECE9B9C-BE12-4904-B2A5-AEA5E3A4238E",
+      "name": "3D Wings Digital Print Yoga Leggings Blue M",
+      "image": "https://cf.cjdropshipping.com/20190108/20059585321793.png",
+      "source_cost": 3.28,
+      "retail_price": 13.9
+    },
+    {
+      "vid": "D1951921-C0A0-40D7-96DD-612E0475282E",
+      "name": "3D Wings Digital Print Yoga Leggings Blue L",
+      "image": "https://cf.cjdropshipping.com/20190108/20059585321793.png",
+      "source_cost": 3.28,
+      "retail_price": 13.9
+    },
+    {
+      "vid": "E011B3F5-CEC2-4DAC-A925-82A8BA44F9A7",
+      "name": "3D Wings Digital Print Yoga Leggings Blue XL",
+      "image": "https://cf.cjdropshipping.com/20190108/20059585321793.png",
+      "source_cost": 3.28,
+      "retail_price": 13.9
+    }
+  ],
+  "synced_at": "2026-07-04T07:45:15Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "CJ-0002",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package Size</p>\n <p>Length\uff08cm\uff09\uff1a8</p>\n <p>Width\uff08cm\uff09\uff1a21</p>\n <p>Height\uff08cm\uff09\uff1a5.7</p>\n <p>Weight\uff08kg\uff09\uff1a0.24</p>\n <p><img src=\"https://cf.cjdropshipping.com/ccf1904a-92ee-4978-8fe4-2d6ab1d8e83a.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1c1bd889-70bc-4a05-b4a6-a18db2a9c2bd.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1128f803-43f0-48ac-9a8d-cc8ac65bb361.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/f0284090-2e41-4fa5-8726-323c78e41174.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1cdff76d-3291-4dbe-9e4b-1e79d1877f06.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/256ad106-82a3-4946-bd61-2088063adf05.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b00e24f7-4bad-464d-a6a9-4990ee4909a3.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/564fb514-c9b9-4147-8b97-3301c390186b.jpg",
+    "https://cf.cjdropshipping.com/7f131e12-c620-4439-a400-2d1ccefac657.jpg",
+    "https://cf.cjdropshipping.com/f6e19782-fe56-42a6-a44b-18f9396af97f.jpg",
+    "https://cf.cjdropshipping.com/c7bc1afe-6f7d-4876-9d98-0ab0a35d2577.jpg",
+    "https://cf.cjdropshipping.com/57a22a5e-8105-404a-bbe2-53df53e5174f.jpg",
+    "https://cf.cjdropshipping.com/fc61c2c4-a875-40a3-8ffd-150d06ad6376.jpg",
+    "https://cf.cjdropshipping.com/8d7caf1c-981e-4913-a749-bf50553588b5.jpg",
+    "https://cf.cjdropshipping.com/d751b5a8-938a-41c3-8731-dc53668391f9.jpg",
+    "https://cf.cjdropshipping.com/6f2b4ddb-701f-4c78-bf9a-739c6403bdd0.jpg",
+    "https://cf.cjdropshipping.com/a1e12f17-83dd-46db-a071-83a45fc48ac3.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1888045953316941827",
+      "name": "Blue",
+      "image": "https://cf.cjdropshipping.com/f6e19782-fe56-42a6-a44b-18f9396af97f.jpg",
+      "source_cost": 11.08,
+      "retail_price": 21.94
+    }
+  ],
+  "synced_at": "2026-07-04T06:33:58Z"
+}

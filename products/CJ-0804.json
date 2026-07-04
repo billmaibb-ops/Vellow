@@ -1,0 +1,28 @@
+{
+  "id": "CJ-0804",
+  "description": "<p>Function: oxygenation<br/>Water tank capacity: 1 liter or less<br/>Number of fog outlets: 2<br/>Operation mode: mechanical<br/>Timing function: no timing<br/>Water shortage and power failure protection: support<br/>Shape: round</p><p><img src=\"https://cf.cjdropshipping.com/17165088/2405240117410320100.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/17165088/2405240117410321400.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17165088/2405240117410322400.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17165088/2405240117410324000.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17165088/2405240117410324800.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17165088/2405240117410325800.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17165088/2405240117410327200.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/16020864/203019200480.jpg",
+    "https://cf.cjdropshipping.com/16020864/2221596063398.jpg",
+    "https://cf.cjdropshipping.com/16020864/1418466063586.jpg",
+    "https://cf.cjdropshipping.com/16020864/584766016898.jpg",
+    "https://cf.cjdropshipping.com/16020864/4194142136680.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "7BDC2EFC-4E7A-4F55-BF07-8D87D08835B9",
+      "name": "Double nozzle humidifier White Small",
+      "image": "https://cf.cjdropshipping.com/16020864/2221596063398.jpg",
+      "source_cost": 5.65,
+      "retail_price": 16.35
+    },
+    {
+      "vid": "BB70AF81-5A19-4C85-BDFC-D983C95E22AA",
+      "name": "Double nozzle humidifier Pink Small",
+      "image": "https://cf.cjdropshipping.com/16020864/1418466063586.jpg",
+      "source_cost": 5.65,
+      "retail_price": 16.35
+    }
+  ],
+  "synced_at": "2026-07-04T07:09:55Z"
+}

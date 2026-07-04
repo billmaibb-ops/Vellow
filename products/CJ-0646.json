@@ -1,0 +1,66 @@
+{
+  "id": "CJ-0646",
+  "description": "<p><b>Product&nbsp;Introduction:<br/></b></p><p>Color: Black<br/>Sleeve length: short sleeved<br/>Size: S, M ,L, XL, XXL, 3XL ,4XL ,5XL</p><p><b><br/>Packing&nbsp;list:&nbsp;</b><br/></p><p>1* T-shirt</p><p><br/></p><p><img src=\"https://cf.cjdropshipping.com/0282b6a9-4829-479a-b01d-67bde078486d.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1835566579544117248",
+      "name": "Black-S",
+      "image": "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg",
+      "source_cost": 2.61,
+      "retail_price": 13.21
+    },
+    {
+      "vid": "1835566579544117249",
+      "name": "Black-M",
+      "image": "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg",
+      "source_cost": 2.61,
+      "retail_price": 13.21
+    },
+    {
+      "vid": "1835566579544117250",
+      "name": "Black-L",
+      "image": "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg",
+      "source_cost": 2.61,
+      "retail_price": 13.21
+    },
+    {
+      "vid": "1835566579544117251",
+      "name": "Black-XL",
+      "image": "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg",
+      "source_cost": 2.61,
+      "retail_price": 13.21
+    },
+    {
+      "vid": "1835566579544117252",
+      "name": "Black-XXL",
+      "image": "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg",
+      "source_cost": 2.61,
+      "retail_price": 13.21
+    },
+    {
+      "vid": "1835566579544117253",
+      "name": "Black-3XL",
+      "image": "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg",
+      "source_cost": 2.61,
+      "retail_price": 13.21
+    },
+    {
+      "vid": "1835566579544117254",
+      "name": "Black-4XL",
+      "image": "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg",
+      "source_cost": 2.61,
+      "retail_price": 13.21
+    },
+    {
+      "vid": "1835566579544117255",
+      "name": "Black-5XL",
+      "image": "https://cf.cjdropshipping.com/e5245dc8-4861-491e-8077-92b3d09f52fd.jpg",
+      "source_cost": 2.61,
+      "retail_price": 13.21
+    }
+  ],
+  "synced_at": "2026-07-04T07:02:35Z"
+}

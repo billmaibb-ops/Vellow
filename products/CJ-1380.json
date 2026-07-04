@@ -1,0 +1,20 @@
+{
+  "id": "CJ-1380",
+  "description": "<p>&nbsp;Product Category: Missing Toys</p><p>material: plastic<br/>Weight: 100g</p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20190601/1489886577063.png",
+    "https://cf.cjdropshipping.com/20190601/2196469499375.png",
+    "https://cf.cjdropshipping.com/20190601/2936658675037.png",
+    "https://oss-cf.cjdropshipping.com/product/2025/06/08/09/ffe9aae2-93ae-4454-a07e-4e8f5f2a37a6.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "3C52B10F-7538-44C8-8141-F4AB096F92BD",
+      "name": "Pet Casino Treasure Hunt Puzzle Food Spill Toy Blue",
+      "image": "https://cf.cjdropshipping.com/20190601/1489886577063.png",
+      "source_cost": 10.12,
+      "retail_price": 20.95
+    }
+  ],
+  "synced_at": "2026-07-04T07:35:38Z"
+}

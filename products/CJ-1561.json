@@ -1,0 +1,44 @@
+{
+  "id": "CJ-1561",
+  "description": "<p><b>P<span style=\"font-size: 1em;\">roduct information</span></b><br/></p><p>Fabric texture: canvas<br/>Lining texture: polyester<br/>Style: women's backpack<br/>Strap root number: double root<br/>Bag size: large<br/>pattern: plain<br/>Color: cyan, green, black, gray<br/><br/><b>Packing list</b><br/>Bag x1<br/><br/><b>Product Image</b></p><p><img src=\"https://cf.cjdropshipping.com/1615430219853.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/1615430219854.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1615430219859.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1615430219855.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1615430219858.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1615430219942.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1615430220135.jpg\" style=\"max-width: 100%;\"/><b><br/></b></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/1615430231062.jpg",
+    "https://cf.cjdropshipping.com/1615430230814.jpg",
+    "https://cf.cjdropshipping.com/1615430230805.jpg",
+    "https://cf.cjdropshipping.com/1615430230803.jpg",
+    "https://cf.cjdropshipping.com/1615430230790.jpg",
+    "https://cf.cjdropshipping.com/1615430230812.jpg",
+    "https://cf.cjdropshipping.com/1615430230780.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1369840814901039104",
+      "name": "Diaper Bag Large Capacity Baby Travel Backpack cyan",
+      "image": "https://cf.cjdropshipping.com/1615430230812.jpg",
+      "source_cost": 14.83,
+      "retail_price": 25.81
+    },
+    {
+      "vid": "1369840814947176448",
+      "name": "Diaper Bag Large Capacity Baby Travel Backpack Green",
+      "image": "https://cf.cjdropshipping.com/1615430230803.jpg",
+      "source_cost": 20.37,
+      "retail_price": 35.28
+    },
+    {
+      "vid": "1369840814989119488",
+      "name": "Diaper Bag Large Capacity Baby Travel Backpack Black",
+      "image": "https://cf.cjdropshipping.com/1615430230805.jpg",
+      "source_cost": 16.42,
+      "retail_price": 28.44
+    },
+    {
+      "vid": "1369840815031062528",
+      "name": "Diaper Bag Large Capacity Baby Travel Backpack Grey",
+      "image": "https://cf.cjdropshipping.com/1615430230780.jpg",
+      "source_cost": 14.83,
+      "retail_price": 25.81
+    }
+  ],
+  "synced_at": "2026-07-04T07:43:37Z"
+}

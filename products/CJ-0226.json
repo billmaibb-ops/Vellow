@@ -1,0 +1,22 @@
+{
+  "id": "CJ-0226",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/83be4b5e-4b09-4501-87ee-efd46fa2354a.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b51e404b-bc31-4692-b03d-4a78201a4357.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/fcb86c68-a86d-4fc4-bca3-c6e5bd3dfbb7.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/8c00965f-4215-44b4-b09f-0ce1d12b9a34.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/f560bed4-08b7-474d-a725-7400280c841f.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/d7958d30-558e-4605-8d12-8af4b4addef4.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/7129b1f8-5555-4ca8-8f56-274ca7996092.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/bfafcd02-1c76-4a21-8f78-af125e5b49ec.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1c177a1e-c41a-449c-ab4d-321ce7152fca.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/65d48a88-b19f-47dc-9d81-2bc4480bbb7e.jpg",
+    "https://cf.cjdropshipping.com/dd122cbd-ac69-413d-aab4-8ac058de6a49.jpg",
+    "https://cf.cjdropshipping.com/56cdda29-08b9-455e-905c-94b9d91e5111.jpg",
+    "https://cf.cjdropshipping.com/3f0d6ed4-b8f5-4810-aaaa-d46b824e6821.jpg",
+    "https://cf.cjdropshipping.com/5f5e1527-2779-432e-984e-76be0a20ec77.jpg",
+    "https://cf.cjdropshipping.com/29d487ff-ff4b-4ea3-89be-d8191f59ef7a.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1874710571596275713",
+      "name": "24X18 Inches",
+      "image": "https://cf.cjdropshipping.com/3f0d6ed4-b8f5-4810-aaaa-d46b824e6821.jpg",
+      "source_cost": 16.92,
+      "retail_price": 29.31
+    }
+  ],
+  "synced_at": "2026-07-04T06:43:50Z"
+}

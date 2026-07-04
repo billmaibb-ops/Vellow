@@ -1,0 +1,17 @@
+{
+  "id": "CJ-1486",
+  "description": "<p>Transparent Backpack</p>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2023/12/06/08/3783d9e0-8170-49f1-927e-17aad9872889.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1732320936738693120",
+      "name": "Transparent Backpack White",
+      "image": "https://oss-cf.cjdropshipping.com/product/2023/12/06/08/3783d9e0-8170-49f1-927e-17aad9872889.jpg",
+      "source_cost": 0.7,
+      "retail_price": 11.24
+    }
+  ],
+  "synced_at": "2026-07-04T07:40:21Z"
+}

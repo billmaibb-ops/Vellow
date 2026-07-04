@@ -1,0 +1,38 @@
+{
+  "id": "CJ-1256",
+  "description": "<p>The flashlight with unique appearance and exquisiteness features auto-charging, full automatic power-off, strong LED brightness, stable operation, and durability. It requires no manual maintenance and has a long-term use cost.&nbsp;&nbsp;<br></p><p>It has four styles, including the sliver, red, black and mix color.</p><p><br></p><p><img src=\"https://cf.cjdropshipping.com/e45555df-9885-4513-9589-db5afb01a83b.png\" style=\"max-width:100%;\"><br></p><p><img src=\"https://cf.cjdropshipping.com/ea6c5e01-97c0-4d70-9df2-d762ce6481f9.png\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/6a8171f9-542b-4963-8eff-1fb2e84f5b19.png\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/81d08625-c451-4360-9ab8-bbaaec1d1ff3.png\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/8b896f31-3ef5-4df9-bdcc-28c79602163d.png\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/00bc5fb8-c12d-4aa6-a367-a7be351cdf64.png\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/e0648edc-9aaf-4e0d-be4a-eb6ee9e88e62.png\" style=\"font-size: 14px; max-width: 100%;\"></p><p><img src=\"https://cf.cjdropshipping.com/4eb16b4a-4b33-4b41-8b9f-a8f80741a93f.png\" style=\"max-width:100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200223/16018565634.png"
+  ],
+  "variants": [
+    {
+      "vid": "1CE9B8F9-E842-477A-8061-AB5391415E62",
+      "name": "Emergency flashlight Mix",
+      "image": "https://cf.cjdropshipping.com/20200223/1507184848040.png",
+      "source_cost": 5.43,
+      "retail_price": 16.12
+    },
+    {
+      "vid": "32471DB8-E15A-4443-9841-0F85D9DBF7A0",
+      "name": "Emergency flashlight Sliver",
+      "image": "https://cf.cjdropshipping.com/20200223/16018565634.png",
+      "source_cost": 4.49,
+      "retail_price": 15.15
+    },
+    {
+      "vid": "C9A39FE6-40E7-4229-BEC4-CB92678841BF",
+      "name": "Emergency flashlight Black",
+      "image": "https://cf.cjdropshipping.com/20200223/181730005688.png",
+      "source_cost": 4.49,
+      "retail_price": 15.15
+    },
+    {
+      "vid": "CCDE4413-F065-404D-99EB-BB55594EC8EB",
+      "name": "Emergency flashlight Red",
+      "image": "https://cf.cjdropshipping.com/20200223/45403595287506.png",
+      "source_cost": 4.49,
+      "retail_price": 15.15
+    }
+  ],
+  "synced_at": "2026-07-04T07:30:08Z"
+}

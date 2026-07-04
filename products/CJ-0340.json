@@ -1,0 +1,21 @@
+{
+  "id": "CJ-0340",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.</span><br/><br/><span style=\"background-color: rgb(194, 79, 74);\">&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span><br/><img src=\"https://cf.cjdropshipping.com/30b7b2c1-cd94-483a-bd59-1ed3ba5f4c67.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/dcc9c2fd-ed2d-4d46-ba59-c3be79e33368.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3383d84b-bcad-4ad1-a837-e183197da66c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/d75a24a5-350b-41c7-a91e-c8821f13b0c6.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/32d906c3-7eff-41ff-93b1-ce43d3cdeb37.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/618d80ef-1768-4f37-b283-520999b82de2.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/0bcb85cd-24ac-46b0-afd7-a616db996956.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/8caabdf1-ba10-472f-9095-45dfa4730809.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/eeebb4a9-1683-4c07-ba95-3165336482db.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b9d0d940-23b2-44d2-8374-89fcdec133f0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/9faea670-c358-46c1-a0de-0b103783a49c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/d0319466-cef1-4dc5-82ea-6e15612bb786.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/da7942bc-2e33-4e22-a041-75bec50b01f5.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/a191cda1-9c0c-41ae-9653-d04f6d518bfb.png",
+    "https://cf.cjdropshipping.com/3c5e2b37-39a0-4476-943f-7a4aea8e3966.png",
+    "https://cf.cjdropshipping.com/33f480d7-8ee3-44a6-98a2-2ff1fd6d6bbc.png",
+    "https://cf.cjdropshipping.com/64c9e2c4-62e7-4433-8cae-63512d75c0f8.png",
+    "https://cf.cjdropshipping.com/9b6b3f66-9852-4c67-930f-df4c04b58329.png"
+  ],
+  "variants": [
+    {
+      "vid": "1859852274999644160",
+      "name": "Hair accessory set",
+      "image": "https://cf.cjdropshipping.com/64c9e2c4-62e7-4433-8cae-63512d75c0f8.png",
+      "source_cost": 11.81,
+      "retail_price": 22.7
+    }
+  ],
+  "synced_at": "2026-07-04T06:48:53Z"
+}

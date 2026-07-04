@@ -1,0 +1,262 @@
+{
+  "id": "CJ-1221",
+  "description": "<!--[if gte mso 9]><xml><w:LatentStyles DefLockedState=\"false\"  DefUnhideWhenUsed=\"true\"  DefSemiHidden=\"true\"  DefQFormat=\"false\"  DefPriority=\"99\"  LatentStyleCount=\"260\" >\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Normal\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 7\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 8\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"heading 9\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 7\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 8\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index 9\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 7\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 8\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toc 9\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Normal Indent\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"footnote text\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"annotation text\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"header\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"footer\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"index heading\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"caption\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"table of figures\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"envelope address\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"envelope return\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"footnote reference\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"annotation reference\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"line number\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"page number\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"endnote reference\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"endnote text\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"table of authorities\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"macro\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"toa heading\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Bullet\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Number\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Bullet 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Bullet 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Bullet 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Bullet 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Number 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Number 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Number 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Number 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Title\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Closing\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Signature\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Default Paragraph Font\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Body Text\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Body Text Indent\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Continue\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Continue 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Continue 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Continue 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Continue 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Message Header\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Subtitle\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Salutation\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Date\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Body Text First Indent\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Body Text First Indent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Note Heading\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Body Text 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Body Text 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Body Text Indent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Body Text Indent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Block Text\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Hyperlink\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"FollowedHyperlink\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Strong\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Emphasis\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Document Map\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Plain Text\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"E-mail Signature\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Normal (Web)\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Acronym\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Address\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Cite\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Code\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Definition\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Keyboard\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Preformatted\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Sample\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Typewriter\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"HTML Variable\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Normal Table\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"annotation subject\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"No List\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"1 / a / i\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"1 / 1.1 / 1.1.1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Article / Section\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Simple 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Simple 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Simple 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Classic 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Classic 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Classic 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Classic 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Colorful 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Colorful 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Colorful 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Columns 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Columns 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Columns 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Columns 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Columns 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid 7\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid 8\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table List 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table List 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table List 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table List 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table List 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table List 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table List 7\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table List 8\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table 3D effects 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table 3D effects 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table 3D effects 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Contemporary\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Elegant\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Professional\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Subtle 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Subtle 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Web 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Web 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Web 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Balloon Text\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Grid\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Table Theme\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Placeholder Text\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"No Spacing\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Shading\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light List\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Grid\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Dark List\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Shading\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful List\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Grid\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Shading Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light List Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Grid Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 1 Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 2 Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 1 Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"List Paragraph\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Quote\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Intense Quote\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 2 Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 1 Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 2 Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 3 Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Dark List Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Shading Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful List Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Grid Accent 1\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Shading Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light List Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Grid Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 1 Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 2 Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 1 Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 2 Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 1 Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 2 Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 3 Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Dark List Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Shading Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful List Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Grid Accent 2\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Shading Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light List Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Grid Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 1 Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 2 Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 1 Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 2 Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 1 Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 2 Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 3 Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Dark List Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Shading Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful List Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Grid Accent 3\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Shading Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light List Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Grid Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 1 Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 2 Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 1 Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 2 Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 1 Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 2 Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 3 Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Dark List Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Shading Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful List Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Grid Accent 4\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Shading Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light List Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Grid Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 1 Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 2 Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 1 Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 2 Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 1 Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 2 Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 3 Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Dark List Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Shading Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful List Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Grid Accent 5\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Shading Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light List Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Light Grid Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 1 Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Shading 2 Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 1 Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium List 2 Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 1 Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 2 Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Medium Grid 3 Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Dark List Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Shading Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful List Accent 6\" ></w:LsdException>\n<w:LsdException Locked=\"false\"  Priority=\"99\"  SemiHidden=\"false\"  Name=\"Colorful Grid Accent 6\" ></w:LsdException>\n</w:LatentStyles></xml><![endif]--><p><b>Overview:</b><br>1. High quality, clean claws<br>2. One-step cleaning<br>3. Scan less<br>4. Trapped garbage and reuse<br>5. Cat's new toy<br>6. Waterproof layer<br><br><b>Purchase notice:</b><br>Foldable black and Foldable gray can be folded<br>black and gray are not foldable and can only be tiled<br>XS2PC= contains 2 pieces of XS size<br>XS3PC=3 pieces of XS size included<br>XS and S = one piece of XS size + one piece of S size<br>XS and M = one piece of XS size + one piece of M size<br>XS and L = one piece of XS size + one piece of L size<br>S 2PC = 2 pieces of S size included<br>S3PC = 3 pieces of S size included<br>M 2PC = 2 pieces of M size included<br>M3PC = 3 pieces of M size included<br>L 2PC = 2 pieces of L size included<br>L3PC = 3 pieces of L size included<br>Product information:<br>Product: Cat litter pad<br>Size: S/M/L<br>Color: black/grey<br>Style: Tile/Fold<br>Material: EVA<br>Outer packaging: conventional PP bag packaging<br>Features: easy to clean, very convenient to use, waterproof, recyclable cat litter<br><b><br>Package Content :</b><br>1*Cat litter pad<br><br><br><br><br></p><p><br></p><p><b>Size Chart:</b></p><p><img src=\"https://cf.cjdropshipping.com/dbf47368-c8db-49f1-a0f3-ec01ff10d452.png\" style=\"max-width:100%;\"><br></p><p><br></p><p><br></p><p><img src=\"https://cf.cjdropshipping.com/a309dfda-b154-4e8e-9e1f-8fe3ca2464dd.png\" style=\"max-width:100%;\"><br></p><p><img src=\"https://cf.cjdropshipping.com/f2565ba0-4b18-4b70-8ad4-ea2cbec0121f.png\" style=\"max-width:100%;\"><br></p><p><img src=\"https://cf.cjdropshipping.com/d9fd02d3-903f-4b66-ac9d-18bd1b2465a9.jpg\" style=\"max-width:100%;\"><br></p><p><img src=\"https://cf.cjdropshipping.com/63a855b9-9b2e-48b8-a10b-b6c5351fd4b7.JPG\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/6541c699-0aab-456c-a811-9d50bf4f6096.png\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/5bb78f5b-6039-4fdd-89a9-365824ff3cec.png\" style=\"max-width: 100%;\"><br></p><p><img src=\"https://cf.cjdropshipping.com/49c39544-c989-4532-8f06-6ccd45867b55.png\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/c02325af-665f-4fec-9c3b-e01f7bedff0b.png\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/15431616/526254821460.jpg",
+    "https://cf.cjdropshipping.com/2058/2059387630504.jpg",
+    "https://cf.cjdropshipping.com/15199488/18835415109552.png",
+    "https://cf.cjdropshipping.com/f8dc5a9b-909c-4389-adc4-564fbd004aa6.jpg",
+    "https://cf.cjdropshipping.com/2058/5513307250023.jpg",
+    "https://cf.cjdropshipping.com/2058/715148447050.jpg",
+    "https://cf.cjdropshipping.com/2058/64986023803539.jpg",
+    "https://cf.cjdropshipping.com/2058/6528978437184.jpg",
+    "https://cf.cjdropshipping.com/2058/729957072454.jpg",
+    "https://cf.cjdropshipping.com/2052/6767640627774.png",
+    "https://cf.cjdropshipping.com/2058/1326743423737.jpg",
+    "https://cf.cjdropshipping.com/2058/1602025449924.jpg",
+    "https://cf.cjdropshipping.com/2058/469894720905.jpg",
+    "https://cf.cjdropshipping.com/2058/622287774729.jpg",
+    "https://cf.cjdropshipping.com/2058/1741169799881.jpg",
+    "https://cf.cjdropshipping.com/15199488/714382599735.png",
+    "https://cf.cjdropshipping.com/2058/1791169804422.jpg",
+    "https://cf.cjdropshipping.com/2058/2611992838957.jpg",
+    "https://cf.cjdropshipping.com/2058/982704187693.jpg",
+    "https://cf.cjdropshipping.com/2058/2076199347501.jpg",
+    "https://cf.cjdropshipping.com/2058/1454141288610.jpg",
+    "https://cf.cjdropshipping.com/2058/230778071801.jpg",
+    "https://cf.cjdropshipping.com/2058/1030703867639.jpg",
+    "https://cf.cjdropshipping.com/2058/24277001063.jpg",
+    "https://cf.cjdropshipping.com/2058/4432277259000.jpg",
+    "https://cf.cjdropshipping.com/2058/16432440500116.jpg",
+    "https://cf.cjdropshipping.com/2058/215247817587.jpg",
+    "https://cf.cjdropshipping.com/2058/1343652597940.jpg",
+    "https://cf.cjdropshipping.com/2058/10126528832411.jpg",
+    "https://cf.cjdropshipping.com/15199488/2186336712685.png",
+    "https://cf.cjdropshipping.com/15199488/7197858413289.png",
+    "https://cf.cjdropshipping.com/2058/1592820340602.jpg",
+    "https://cf.cjdropshipping.com/15199488/460294374276.png",
+    "https://cf.cjdropshipping.com/15199488/347947069572.png",
+    "https://cf.cjdropshipping.com/2058/11403569006744.jpg",
+    "https://cf.cjdropshipping.com/2058/2584570645353.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "0232008B-D8B0-461E-B3B1-EBA3AC65DE97",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS and M Black",
+      "image": "https://cf.cjdropshipping.com/2058/1741169799881.jpg",
+      "source_cost": 9.24,
+      "retail_price": 20.05
+    },
+    {
+      "vid": "0A92EB67-CBCC-480C-B612-992F27801708",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat M Black",
+      "image": "https://cf.cjdropshipping.com/15199488/7197858413289.png",
+      "source_cost": 5.92,
+      "retail_price": 16.62
+    },
+    {
+      "vid": "0A98C583-D534-4755-BFB6-B826E1DF154D",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat S 2PC Black",
+      "image": "https://cf.cjdropshipping.com/2058/622287774729.jpg",
+      "source_cost": 9.33,
+      "retail_price": 20.14
+    },
+    {
+      "vid": "1405147822063489024",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat 46x60cm Foldable black",
+      "image": "https://cf.cjdropshipping.com/15199488/347947069572.png",
+      "source_cost": 4.83,
+      "retail_price": 15.5
+    },
+    {
+      "vid": "1405147822080266240",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat 55x70cm Foldable black",
+      "image": "https://cf.cjdropshipping.com/15199488/347947069572.png",
+      "source_cost": 5.17,
+      "retail_price": 15.85
+    },
+    {
+      "vid": "1405147822088654848",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat 46x60cm Foldable gray",
+      "image": "https://cf.cjdropshipping.com/2052/6767640627774.png",
+      "source_cost": 4.68,
+      "retail_price": 15.35
+    },
+    {
+      "vid": "1405147822097043456",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat 55x70cm Foldable gray",
+      "image": "https://cf.cjdropshipping.com/2052/6767640627774.png",
+      "source_cost": 5.01,
+      "retail_price": 15.69
+    },
+    {
+      "vid": "24BBD790-846D-43AE-BF85-8543BC2BA641",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat L Grey",
+      "image": "https://cf.cjdropshipping.com/2058/982704187693.jpg",
+      "source_cost": 7.35,
+      "retail_price": 18.1
+    },
+    {
+      "vid": "3577753B-43BB-496C-8362-06121C29A760",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat M3PC Grey",
+      "image": "https://cf.cjdropshipping.com/2058/2611992838957.jpg",
+      "source_cost": 15.5,
+      "retail_price": 26.85
+    },
+    {
+      "vid": "35E7FB46-44D1-40F5-AC11-7F754826ADC9",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat S3PC Black",
+      "image": "https://cf.cjdropshipping.com/2058/1791169804422.jpg",
+      "source_cost": 14.0,
+      "retail_price": 24.95
+    },
+    {
+      "vid": "3EE3788D-EF53-43DB-95B7-DF13AFED451D",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS Black",
+      "image": "https://cf.cjdropshipping.com/2058/215247817587.jpg",
+      "source_cost": 3.61,
+      "retail_price": 14.24
+    },
+    {
+      "vid": "3F88E33B-904F-4748-9C6F-1AB28030473E",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS and L Black",
+      "image": "https://cf.cjdropshipping.com/2058/64986023803539.jpg",
+      "source_cost": 10.98,
+      "retail_price": 21.84
+    },
+    {
+      "vid": "492D7856-A4A6-49AB-A664-C0187CFB39E2",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat S 2PC Grey",
+      "image": "https://cf.cjdropshipping.com/2058/2076199347501.jpg",
+      "source_cost": 8.33,
+      "retail_price": 19.11
+    },
+    {
+      "vid": "49DBF4D5-6529-4AC2-9A3D-873EB6D22680",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat S Grey",
+      "image": "https://cf.cjdropshipping.com/2058/230778071801.jpg",
+      "source_cost": 4.35,
+      "retail_price": 15.0
+    },
+    {
+      "vid": "4A757876-52C2-4855-BBA0-B14C55350DB5",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat L3PC Grey",
+      "image": "https://cf.cjdropshipping.com/2058/1602025449924.jpg",
+      "source_cost": 20.5,
+      "retail_price": 35.51
+    },
+    {
+      "vid": "4DA6FD77-001D-4742-BB89-BAEEB9B0DD1B",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat M3PC Black",
+      "image": "https://cf.cjdropshipping.com/2058/16432440500116.jpg",
+      "source_cost": 16.5,
+      "retail_price": 28.58
+    },
+    {
+      "vid": "4E6BE49F-26FC-42E7-B04A-477E2E5E81F6",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat S Black",
+      "image": "https://cf.cjdropshipping.com/15199488/18835415109552.png",
+      "source_cost": 5.02,
+      "retail_price": 15.7
+    },
+    {
+      "vid": "56D4277C-CF51-49F2-9050-23301D64877F",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat S3PC Grey",
+      "image": "https://cf.cjdropshipping.com/2058/11403569006744.jpg",
+      "source_cost": 12.5,
+      "retail_price": 23.41
+    },
+    {
+      "vid": "5D4C9370-56AF-4362-8470-C58363620DF4",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat L 2PC Black",
+      "image": "https://cf.cjdropshipping.com/2058/2584570645353.jpg",
+      "source_cost": 14.33,
+      "retail_price": 25.29
+    },
+    {
+      "vid": "606E22AC-B916-4C70-AA51-22D2EEA4416A",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS Grey",
+      "image": "https://cf.cjdropshipping.com/2058/715148447050.jpg",
+      "source_cost": 3.61,
+      "retail_price": 14.24
+    },
+    {
+      "vid": "82621F46-74E9-41AB-B0A9-0C448024A26D",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat M 2PC Black",
+      "image": "https://cf.cjdropshipping.com/2058/1454141288610.jpg",
+      "source_cost": 11.0,
+      "retail_price": 21.86
+    },
+    {
+      "vid": "869DE8D1-A553-4251-9219-E4762EC44E1D",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS3PC Black",
+      "image": "https://cf.cjdropshipping.com/2058/10126528832411.jpg",
+      "source_cost": 8.91,
+      "retail_price": 19.71
+    },
+    {
+      "vid": "92E4466F-9555-4ACE-A88F-BF60A196C18F",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat M Grey",
+      "image": "https://cf.cjdropshipping.com/2058/1326743423737.jpg",
+      "source_cost": 5.56,
+      "retail_price": 16.25
+    },
+    {
+      "vid": "93B14179-B62A-4547-BA24-66622CD9780C",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat L Black",
+      "image": "https://cf.cjdropshipping.com/15199488/2186336712685.png",
+      "source_cost": 7.48,
+      "retail_price": 18.23
+    },
+    {
+      "vid": "ABA91041-732C-4499-A36F-CFFC351E9409",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS2PC Black",
+      "image": "https://cf.cjdropshipping.com/2058/6528978437184.jpg",
+      "source_cost": 5.94,
+      "retail_price": 16.64
+    },
+    {
+      "vid": "B37EE152-B06B-4C6D-A424-8DC6F76DEFD5",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat M 2PC Grey",
+      "image": "https://cf.cjdropshipping.com/2058/469894720905.jpg",
+      "source_cost": 11.0,
+      "retail_price": 21.86
+    },
+    {
+      "vid": "C7FCFA47-C562-4FB4-97C3-17B3AF67357E",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS and S Black",
+      "image": "https://cf.cjdropshipping.com/2058/1592820340602.jpg",
+      "source_cost": 8.37,
+      "retail_price": 19.15
+    },
+    {
+      "vid": "CB3B8913-A514-48D2-801B-9E38B7C3ED2D",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat L 2PC Grey",
+      "image": "https://cf.cjdropshipping.com/2058/982704187693.jpg",
+      "source_cost": 14.09,
+      "retail_price": 25.05
+    },
+    {
+      "vid": "D2E581A6-B4E3-4E65-AD3B-73E4B915B142",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS2PC Grey",
+      "image": "https://cf.cjdropshipping.com/2058/1343652597940.jpg",
+      "source_cost": 5.94,
+      "retail_price": 16.64
+    },
+    {
+      "vid": "D5B9FC51-A60F-45BC-9A7A-DEBF3536695D",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat L3PC Black",
+      "image": "https://cf.cjdropshipping.com/2058/4432277259000.jpg",
+      "source_cost": 21.5,
+      "retail_price": 37.24
+    },
+    {
+      "vid": "F3790BC0-8455-470B-B779-C76010847C5E",
+      "name": "Double Layer Litter Cat Bed Pads Pet Cat Litter Mat Trapping Pets Litter Box Mat Pet Product Bed For Cats House Clean Mat XS3PC Grey",
+      "image": "https://cf.cjdropshipping.com/2058/1030703867639.jpg",
+      "source_cost": 8.91,
+      "retail_price": 19.71
+    }
+  ],
+  "synced_at": "2026-07-04T07:28:36Z"
+}

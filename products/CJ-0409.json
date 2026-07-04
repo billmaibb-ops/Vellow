@@ -1,0 +1,37 @@
+{
+  "id": "CJ-0409",
+  "description": "<p><b>DHL Shipping for single product purchasing. Multiple pack would be fedex shipping, for reference only,the actual shipping carrier would be depended by the location, address, package dimension, product category, geographic location.</b></p>\n <p><b>*Features*:</b></p>\n <ul>\n  <li><strong>*STYLISH WINTER GLOVES*:</strong>Made of quality PU leather and warm napped fabric lining,features classical black design,which make our winter gloves stylish and functional,versatile for driving,office and business,etc.</li>\n  <li><strong>*WARM &amp; SKIN-FRIENDLY*:</strong>Adoption of premium napped fabric lining which features softness of touch,warm and lasting comfort,excellent to keep your hands warm during winter and bring your comfortable wearing experience.</li>\n  <li><strong>*WINDPROOF &amp; WATERPROOF*:</strong>Due to the quality PU leather for out layer,our winter gloves can resist snow,wind,rain and water in some extent;Moreover,it's also breathable.</li>\n  <li><strong>*3 SIZES OPTIONAL*:</strong>There are 3 sizes(M-size;L-size;XL-size) for your option,which make it suitable for both man and women.</li>\n  <li><strong>*EXCELLENT GIFTS*:</strong>With classical black and stylish look,our winter gloves will be a surprise gift for her or him;A sweet gift to protect hands from cold weather while having outdoor activities.</li>\n </ul>\n <p><b>*Specifications*:</b></p>\n <ul>\n  <li>Material: 50% PVC + 50% PU Leather</li>\n  <li>&nbsp;Lining: 100% Napped Fabric</li>\n  <li>&nbsp;Color: Black</li>\n  <li>&nbsp;3 Sizes Optional: M/ X/ XL</li>\n  <li>&nbsp;Palm (M): 11cm/4.3in</li>\n  <li>&nbsp;Gloves Length (M): 23cm/9.1in</li>\n  <li>&nbsp;Product Weight (M): 0.173lbs</li>\n  <li>&nbsp;Package Size (M): 10.6 x 5.9 x 1in (L x W x H)</li>\n  <li>&nbsp;Package Weight (M): 0.173lbs</li>\n  <li>&nbsp;Palm (L): 11.5cm/4.5in</li>\n  <li>&nbsp;Gloves Length (L): 24cm/9.4in</li>\n  <li>&nbsp;Product Weight (L): 0.173lbs</li>\n  <li>&nbsp;Package Size (L): 10.6 x 5.9 x 1in (L x W x H)</li>\n  <li>&nbsp;Package Weight (L): 0.173lbs</li>\n  <li>&nbsp;Palm (XL): 12cm/4.7in</li>\n  <li>&nbsp;Gloves Length (XL): 25cm/9.8in</li>\n  <li>&nbsp;Product Weight (XL): 0.173lbs</li>\n  <li>&nbsp;Package Size (XL): 10.6 x 5.9 x 1in (L x W x H)</li>\n  <li>&nbsp;Package Weight (XL): 0.173lbs</li>\n </ul>\n <p><b>*Package Lists*:</b></p>\n <ul>\n  <li>1 x Pair of Winter Gloves</li>\n </ul><p><br/></p><p><b>Product Image:</b></p><p><img src=\"https://cf.cjdropshipping.com/1cb996f2-94fc-424e-aa50-149eb8b81f2e.png\" data-src=\"https://cf.cjdropshipping.com/150eba7a-31c3-4db9-b140-0158fa08bc74.jpg\" data-key=\"1\" data-uploadossfail=\"false\"/><b></b></p><p><img src=\"https://cf.cjdropshipping.com/58dac3ee-f402-4421-94cf-7353cb4be299.png\" data-src=\"https://cf.cjdropshipping.com/0908f6e8-7a56-4258-a38d-519ab90dadb0.jpg\" data-key=\"2\" data-uploadossfail=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/54986322-545c-4319-ad1f-f6e3a158d801.jpg",
+    "https://cf.cjdropshipping.com/4a10e098-d01c-4ff7-9afd-47d09dedc4cc.jpg",
+    "https://cf.cjdropshipping.com/8ef0a984-135e-4579-b264-86dbdadbd23a.jpg",
+    "https://cf.cjdropshipping.com/150eba7a-31c3-4db9-b140-0158fa08bc74.jpg",
+    "https://cf.cjdropshipping.com/7543961d-fbb9-4e0e-826e-045eefc54920.jpg",
+    "https://cf.cjdropshipping.com/0908f6e8-7a56-4258-a38d-519ab90dadb0.jpg",
+    "https://cf.cjdropshipping.com/7881a097-81f2-4939-9635-a02ecf9a8c59.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1976122580857937921",
+      "name": "M",
+      "image": "https://cf.cjdropshipping.com/150eba7a-31c3-4db9-b140-0158fa08bc74.jpg",
+      "source_cost": 5.86,
+      "retail_price": 16.56
+    },
+    {
+      "vid": "1976122580857937922",
+      "name": "L",
+      "image": "https://cf.cjdropshipping.com/150eba7a-31c3-4db9-b140-0158fa08bc74.jpg",
+      "source_cost": 9.99,
+      "retail_price": 20.82
+    },
+    {
+      "vid": "1976122580857937923",
+      "name": "XL",
+      "image": "https://cf.cjdropshipping.com/150eba7a-31c3-4db9-b140-0158fa08bc74.jpg",
+      "source_cost": 9.99,
+      "retail_price": 20.82
+    }
+  ],
+  "synced_at": "2026-07-04T06:51:57Z"
+}

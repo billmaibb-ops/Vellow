@@ -1,0 +1,35 @@
+{
+  "id": "CJ-1363",
+  "description": "<p><b>Product information:</b></p><p>Material: Aluminum alloy<br>Style: simple and stylish<br>Features: solid color<br>Colour: black</p><p><b>Packing list:</b></p><p>Cushion screws*1</p><p><b>Product Image:</b></p><p><img src=\"https://cf.cjdropshipping.com/f05c946a-d83f-4b9f-99fb-cba703afc502.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/116f455e-dab3-47c6-960c-9b3b6dd93aa8.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/5ba4efa1-1e77-4017-963c-2d94a5750809.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/18215a85-4166-4775-99e5-421030e8159f.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1c4d3895-9dfd-4a54-b67a-39c57c6a2a10.jpg\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/401b09a6-811a-4014-9804-5f974ea685ed.jpg",
+    "https://cf.cjdropshipping.com/2ebf074a-4bed-4da0-9051-b286ec13a964.jpg",
+    "https://cf.cjdropshipping.com/cf552b80-e6ee-4ad6-adc6-fc5dce581ef2.jpg",
+    "https://cf.cjdropshipping.com/eb4322ea-d84c-4460-808d-990e400c2c9f.jpg",
+    "https://cf.cjdropshipping.com/1dc3991c-85e0-4402-9f57-f7149d8a7539.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1429332260141797376",
+      "name": "Screw Cap Cover Seat Cushion Seat Pack Nut B 6MM",
+      "image": "https://cf.cjdropshipping.com/1dc3991c-85e0-4402-9f57-f7149d8a7539.jpg",
+      "source_cost": 0.81,
+      "retail_price": 11.36
+    },
+    {
+      "vid": "1429332260150185984",
+      "name": "Screw Cap Cover Seat Cushion Seat Pack Nut C 6MM",
+      "image": "https://cf.cjdropshipping.com/cf552b80-e6ee-4ad6-adc6-fc5dce581ef2.jpg",
+      "source_cost": 0.81,
+      "retail_price": 11.36
+    },
+    {
+      "vid": "1429332260158574592",
+      "name": "Screw Cap Cover Seat Cushion Seat Pack Nut D 6MM",
+      "image": "https://cf.cjdropshipping.com/401b09a6-811a-4014-9804-5f974ea685ed.jpg",
+      "source_cost": 0.81,
+      "retail_price": 11.36
+    }
+  ],
+  "synced_at": "2026-07-04T07:34:53Z"
+}

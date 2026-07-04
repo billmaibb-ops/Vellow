@@ -1,0 +1,26 @@
+{
+  "id": "CJ-0184",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package Size</p>\n <p>Length\uff08cm\uff09\uff1a24.2</p>\n <p>Width\uff08cm\uff09\uff1a10.5</p>\n <p>Height\uff08cm\uff09\uff1a31.7</p>\n <p>Weight\uff08kg\uff09\uff1a1.165</p>\n <p><img src=\"https://cf.cjdropshipping.com/7d983020-e661-4a2c-a76c-1fc556db23a0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/84887126-53dc-4639-a3c6-f370659d87b0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/8edb30d9-ac68-45b1-a296-ef4ea7e7947b.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/51259182-7e9a-455c-bad5-56cd4b3aaab5.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/68874ea7-63ef-447a-a574-ca622eaed6ab.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/938e0296-5b85-409f-b191-f6e5a352312e.jpg",
+    "https://cf.cjdropshipping.com/33e102eb-88cf-490b-9bee-50bd7a006f21.jpg",
+    "https://cf.cjdropshipping.com/d2d7d874-ec66-441a-9dde-f0a9bb0ad368.jpg",
+    "https://cf.cjdropshipping.com/302d6871-f26d-4c17-b99c-5fa6ab707592.jpg",
+    "https://cf.cjdropshipping.com/5428880b-49dc-43da-a40e-0fdf3826f9b8.jpg",
+    "https://cf.cjdropshipping.com/011495bd-2b34-4a37-b520-0e93fbae83d6.jpg",
+    "https://cf.cjdropshipping.com/f9d76c19-c108-48b4-a71b-8f2e3c9e568b.jpg",
+    "https://cf.cjdropshipping.com/8fd3ee89-9fbc-4f4a-b2a6-cbdfb4586ead.jpg",
+    "https://cf.cjdropshipping.com/36598a86-91a9-425f-a2d3-d94a00b52b3c.jpg",
+    "https://cf.cjdropshipping.com/600e58a4-7767-469c-8625-b55be24f2213.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1887762842595926017",
+      "name": "Oval chopper",
+      "image": "https://cf.cjdropshipping.com/5428880b-49dc-43da-a40e-0fdf3826f9b8.jpg",
+      "source_cost": 22.09,
+      "retail_price": 38.26
+    }
+  ],
+  "synced_at": "2026-07-04T06:41:59Z"
+}

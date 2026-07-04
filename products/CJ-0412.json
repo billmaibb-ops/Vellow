@@ -1,0 +1,44 @@
+{
+  "id": "CJ-0412",
+  "description": "<p><b>Specification:</b><br>Product name: Bath towel<br>Size: All size<br>Product material: Stretchable mesh material-polyethylene (pe)<br>Product efficacy: Soft texture, close-fitting silky, soft skin<br></p><p><br></p><p><br></p><p><img src=\"https://cf.cjdropshipping.com/1616636270027.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/1616636270023.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1616636270042.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1616636270032.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1616636270025.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1616636270029.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1616636270325.jpg\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/1616636278598.jpg",
+    "https://cf.cjdropshipping.com/1616636278592.jpg",
+    "https://cf.cjdropshipping.com/1616636278615.jpg",
+    "https://cf.cjdropshipping.com/1616636278590.jpg",
+    "https://cf.cjdropshipping.com/1616636278612.jpg",
+    "https://cf.cjdropshipping.com/1616636278884.jpg",
+    "https://cf.cjdropshipping.com/1616636278610.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1374898776866689024",
+      "name": "General Bath Towel For Adult Bathing And Scrubbing Gloves Coffee",
+      "image": "https://cf.cjdropshipping.com/1616636278884.jpg",
+      "source_cost": 0.93,
+      "retail_price": 11.48
+    },
+    {
+      "vid": "1374898776908632064",
+      "name": "General Bath Towel For Adult Bathing And Scrubbing Gloves Pink",
+      "image": "https://cf.cjdropshipping.com/1616636278612.jpg",
+      "source_cost": 0.93,
+      "retail_price": 11.48
+    },
+    {
+      "vid": "1374898776946380800",
+      "name": "General Bath Towel For Adult Bathing And Scrubbing Gloves Beige",
+      "image": "https://cf.cjdropshipping.com/1616636278615.jpg",
+      "source_cost": 0.93,
+      "retail_price": 11.48
+    },
+    {
+      "vid": "1374898776984129536",
+      "name": "General Bath Towel For Adult Bathing And Scrubbing Gloves Green",
+      "image": "https://cf.cjdropshipping.com/1616636278610.jpg",
+      "source_cost": 0.93,
+      "retail_price": 11.48
+    }
+  ],
+  "synced_at": "2026-07-04T06:52:06Z"
+}

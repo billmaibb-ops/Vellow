@@ -1,0 +1,58 @@
+{
+  "id": "CJ-1047",
+  "description": "<p>Material: leather<br/>Applicable models: General<br/>Specifications: light brown, black, gray, dark brown, beige, dark red<img src=\"https://cf.cjdropshipping.com/15613056/539400951970.png\" style=\"font-size: 14px; max-width: 100%;\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/15613056/5527420347117.jpg",
+    "https://cf.cjdropshipping.com/20190624/6369068697914.png",
+    "https://cf.cjdropshipping.com/20190624/2089827142662.png",
+    "https://cf.cjdropshipping.com/15613056/1982509704677.jpg",
+    "https://cf.cjdropshipping.com/20190624/625307204595.png",
+    "https://cf.cjdropshipping.com/15613056/2014213925600.jpg",
+    "https://cf.cjdropshipping.com/15613056/11422623171.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "4B8B44CC-A63C-437F-B04F-DF02AE196FE0",
+      "name": "Car mat Dull red",
+      "image": "https://cf.cjdropshipping.com/15613056/1982509704677.jpg",
+      "source_cost": 3.66,
+      "retail_price": 14.29
+    },
+    {
+      "vid": "4B9F1068-9EA1-4D86-A89C-3AB30FAA54DD",
+      "name": "Car mat Gray",
+      "image": "https://cf.cjdropshipping.com/15613056/5527420347117.jpg",
+      "source_cost": 3.66,
+      "retail_price": 14.29
+    },
+    {
+      "vid": "89209722-C671-4321-8B7F-BD953D9A4232",
+      "name": "Car mat Light brown",
+      "image": "https://cf.cjdropshipping.com/15613056/2014213925600.jpg",
+      "source_cost": 3.66,
+      "retail_price": 14.29
+    },
+    {
+      "vid": "B38002F3-A94C-4885-B33C-ED5A37C7352E",
+      "name": "Car mat Black",
+      "image": "https://cf.cjdropshipping.com/15613056/11422623171.jpg",
+      "source_cost": 3.66,
+      "retail_price": 14.29
+    },
+    {
+      "vid": "BA998A2D-366B-4367-A587-DFD85EB771AD",
+      "name": "Car mat Dark brown",
+      "image": "https://cf.cjdropshipping.com/20190624/6369068697914.png",
+      "source_cost": 3.66,
+      "retail_price": 14.29
+    },
+    {
+      "vid": "CFA8C691-E4DF-4CC1-B32E-7DCC4C537DF6",
+      "name": "Car mat Beige",
+      "image": "https://cf.cjdropshipping.com/20190624/625307204595.png",
+      "source_cost": 3.66,
+      "retail_price": 14.29
+    }
+  ],
+  "synced_at": "2026-07-04T07:20:51Z"
+}

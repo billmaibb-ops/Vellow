@@ -1,0 +1,33 @@
+{
+  "id": "CJ-0563",
+  "description": "<p>Type: Precision gauge Measurement range:<br><br>Precision as shown: as shown<br><br>Processing customization: Applicable scope:<br><br>Drawing, art, gift, circle drawing, homework circle drawing<br><br>Material: stainless steel<br><br>Dimensions: as shown in the figure<br><br>Shape: Round</p><ul><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/525755328042.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/525755328042.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/2193743958833.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/2193743958833.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/1008609309133.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/1008609309133.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/1001766087025.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/1001766087025.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/246385713779.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/246385713779.jpg\"></div></li></ul>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200702/525755328042.jpg",
+    "https://cf.cjdropshipping.com/20200702/1008609309133.jpg",
+    "https://cf.cjdropshipping.com/20200702/1001766087025.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1575FFA7-7DA9-468D-BD7A-D003509F1D3F",
+      "name": "Circular drawing tool 125mm 2pcs",
+      "image": "https://cf.cjdropshipping.com/20200702/246385713779.jpg",
+      "source_cost": 21.67,
+      "retail_price": 37.54
+    },
+    {
+      "vid": "1634A735-151B-4528-B688-366BE70BD36D",
+      "name": "Circular drawing tool 125mm 3pcs",
+      "image": "https://cf.cjdropshipping.com/20200702/2193743958833.jpg",
+      "source_cost": 32.5,
+      "retail_price": 56.29
+    },
+    {
+      "vid": "B2E24EE4-AC93-403A-A869-EF18CE9835CD",
+      "name": "Circular drawing tool 125mm",
+      "image": "https://cf.cjdropshipping.com/20200702/2193743958833.jpg",
+      "source_cost": 10.81,
+      "retail_price": 21.66
+    }
+  ],
+  "synced_at": "2026-07-04T06:58:38Z"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "CJ-0701",
+  "description": "<div class=\"detailmodule_dynamic\"><kse:widget data-widget-type=\"relatedProduct\" id=\"35156316\" title=\"\" type=\"relation\"></kse:widget></div>\n<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><div><div><div dir=\"ltr\"><div></div></div></div></div><p>Battery type: polymer lithium ion battery<br/>Applicable type: general purpose<br/>Shell material: plastic<br/>Additional function: multi-U port output<br/>Size: 90*63*22&nbsp;mm<br/>Power capacity: &nbsp;10,000mAh<br/>Conversion rate: 85 (%)</p><p style=\"text-align: center;\"><img alt=\"4\" src=\"https://cf.cjdropshipping.com/17155584/2405130925310328500.jpg\" style=\"font-size: 20px;\"/><img alt=\"5\" src=\"https://cf.cjdropshipping.com/17155584/2405130925320320300.jpg\" style=\"font-size: 20px;\"/><img alt=\"6\" src=\"https://cf.cjdropshipping.com/17155584/2405130925320322200.jpg\" style=\"font-size: 20px;\"/><img alt=\"7\" src=\"https://cf.cjdropshipping.com/17155584/2405130925320325000.jpg\" style=\"font-size: 20px;\"/><img alt=\"8\" src=\"https://cf.cjdropshipping.com/17155584/2405130925320327400.jpg\" style=\"font-size: 20px;\"/><img alt=\"8 (2)\" src=\"https://cf.cjdropshipping.com/17155584/2405130925330320600.jpg\" style=\"font-size: 20px;\"/><img alt=\"I0139 (2)\" src=\"https://cf.cjdropshipping.com/17155584/2405130925330323000.jpg\" style=\"font-size: 20px;\"/><br/></p>\n<div>\n\t<span style=\"font-size: 20px;\"><span style=\"font-family: &quot;times new roman&quot;, times, serif;\"><img alt=\"I0139 (1)\" src=\"https://cf.cjdropshipping.com/17155584/2405130925330324500.jpg\"/><img alt=\"I0139 (3)\" src=\"https://cf.cjdropshipping.com/17155584/2405130925330326000.jpg\"/></span></span>\n</div>\n<div>\n\t&nbsp;\n</div>\n</div></div>",
+  "images": [
+    "https://cf.cjdropshipping.com/16029504/1640916242952.jpg",
+    "https://cf.cjdropshipping.com/16029504/605647292581.jpg",
+    "https://cf.cjdropshipping.com/16029504/1154162375136.jpg",
+    "https://cf.cjdropshipping.com/16029504/55424513704.jpg",
+    "https://cf.cjdropshipping.com/16029504/22164425583216.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2026/04/21/03/8b3e4250-d332-4657-9d3b-7d3538fb9044_trans.jpeg",
+    "https://cf.cjdropshipping.com/16029504/3967467290980.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2604210327561639500",
+      "name": "Large capacity ultra-thin power bank Black 20000mAh",
+      "image": "https://cf.cjdropshipping.com/16029504/605647292581.jpg",
+      "source_cost": 3.86,
+      "retail_price": 14.5
+    },
+    {
+      "vid": "78FD81F5-F299-4340-8A51-3ADED6464969",
+      "name": "Large capacity ultra-thin power bank Black",
+      "image": "https://oss-cf.cjdropshipping.com/product/2026/04/21/03/8b3e4250-d332-4657-9d3b-7d3538fb9044_trans.jpeg",
+      "source_cost": 3.19,
+      "retail_price": 13.81
+    },
+    {
+      "vid": "BE3A79A2-028A-4704-88D4-D3EE83D334A5",
+      "name": "Large capacity ultra-thin power bank White",
+      "image": "https://cf.cjdropshipping.com/16029504/55424513704.jpg",
+      "source_cost": 3.19,
+      "retail_price": 13.81
+    }
+  ],
+  "synced_at": "2026-07-04T07:05:22Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "CJ-0534",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/c8ace1eb-00fd-417d-8e8f-f8c15b0d3710.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/923c015a-5a87-4fb7-b70b-861b3edfb017.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/2ffc4374-8f16-48e3-9afe-6df599a9ee51.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b16cd853-68e1-4df8-a204-1701f2deb50b.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/6c69ed03-7f54-42ae-b62f-41d9ffc67952.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1f23ce46-5c13-47f0-97fc-e9b48ef582e9.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/24688ecf-1d6c-4999-b3c3-4b7d36ec12c9.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/a733104b-d869-4bae-817f-563ddba00cac.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/4b6a0756-a0ba-40b3-94f2-339d5b6f174f.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/9d9510d5-f497-4771-8d23-50083c42e33a.jpg",
+    "https://cf.cjdropshipping.com/466daa2c-965c-45ff-8b14-1b34aff20021.jpg",
+    "https://cf.cjdropshipping.com/d652e2c7-20e7-48d8-bde0-24f1b98e1557.jpg",
+    "https://cf.cjdropshipping.com/cea90919-76f8-411b-bdbf-8aa2bcd7b840.jpg",
+    "https://cf.cjdropshipping.com/c5f43dfb-0ad0-4a26-9172-4b6f839764db.jpg",
+    "https://cf.cjdropshipping.com/d1d3bf35-e4b1-4960-a9d6-a7e50b21ff3b.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1896799610390114305",
+      "name": "Black",
+      "image": "https://cf.cjdropshipping.com/d1d3bf35-e4b1-4960-a9d6-a7e50b21ff3b.jpg",
+      "source_cost": 67.07,
+      "retail_price": 116.17
+    }
+  ],
+  "synced_at": "2026-07-04T06:57:25Z"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "CJ-1024",
+  "description": "<p><b>Product information:</b><br></p><p>Name: Eco-friendly paper tube pen<br>Model: QH-6030<br>Size: Pen length 15.5cm<br>Color: Kraft paper<br>Refill color: blue, black<br>Pen head: Bullet 1.0<br></p><p>Ink properties: oily</p><p><b>Packing list:&nbsp;</b></p><p>1x pen<br></p><p><br></p><p><img src=\"https://cf.cjdropshipping.com/32f529b9-f7ae-4af1-9c7d-2f094168f85a.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/e841e596-5b2b-49fe-a837-7de21748c5ff.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/6922ccb1-37f7-44e7-ab9b-5e9ec3af04b7.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/16022bcd-0585-4f67-a18d-3a8690d27a2e.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/04c3a570-21b5-414e-a05a-9e0a83d1fe5f.jpg\" style=\"font-size: 14px; max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200812/1747155616229.jpg",
+    "https://cf.cjdropshipping.com/20200812/724873269083.jpg",
+    "https://cf.cjdropshipping.com/20200812/1096529226033.jpg",
+    "https://cf.cjdropshipping.com/4b876b2e-4ace-4a74-9b3e-a59db8d0f87e.jpg",
+    "https://cf.cjdropshipping.com/20200812/1322237413643.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "5CB64F67-4ACE-458D-806F-244BA7F05E2C",
+      "name": "Eco-friendly paper tube pen Black",
+      "image": "https://cf.cjdropshipping.com/4b876b2e-4ace-4a74-9b3e-a59db8d0f87e.jpg",
+      "source_cost": 0.13,
+      "retail_price": 10.65
+    },
+    {
+      "vid": "7B28DD02-E698-48EF-B33A-0A5C6BB068D5",
+      "name": "Eco-friendly paper tube pen Blue",
+      "image": "https://cf.cjdropshipping.com/4b876b2e-4ace-4a74-9b3e-a59db8d0f87e.jpg",
+      "source_cost": 0.13,
+      "retail_price": 10.65
+    }
+  ],
+  "synced_at": "2026-07-04T07:19:46Z"
+}

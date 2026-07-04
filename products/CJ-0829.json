@@ -1,0 +1,30 @@
+{
+  "id": "CJ-0829",
+  "description": "<p>material: plastic</p><p>size:<br/>13.5X 13X24.7CM<img src=\"https://cf.cjdropshipping.com/60b7099a-37e9-4b95-adfa-adef4fe6de3e.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/86565ad3-9284-4e7f-96f7-3fefb787489f.png\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1b738b4e-ea3f-4e23-8486-a4e13b367d20.png\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/2c77e88b-460b-487f-aa74-bb8be1cca890.jpg\" style=\"font-size: 14px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/bacf4932-883e-4259-ae97-cb38b6046fe6.jpg\" style=\"font-size: 14px; max-width: 100%;\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200321/2738341571761.png",
+    "https://cf.cjdropshipping.com/20200321/3147191253628.jpg",
+    "https://cf.cjdropshipping.com/20200321/3794570107586.png",
+    "https://cf.cjdropshipping.com/15846336/212902778190.jpg",
+    "https://cf.cjdropshipping.com/20200321/3730066567411.jpg",
+    "https://cf.cjdropshipping.com/20200321/3813196679593.png",
+    "https://cf.cjdropshipping.com/20200321/4531554972707.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "35DBD91D-A17C-4CB9-A0C9-73438A27BBC6",
+      "name": "Acrylic Cosmetic Storage Box White",
+      "image": "https://cf.cjdropshipping.com/15846336/212902778190.jpg",
+      "source_cost": 3.86,
+      "retail_price": 14.5
+    },
+    {
+      "vid": "951081C0-50F5-45A9-9E78-ACDAC0E2F8A6",
+      "name": "Acrylic Cosmetic Storage Box Black",
+      "image": "https://cf.cjdropshipping.com/20200321/3147191253628.jpg",
+      "source_cost": 5.7,
+      "retail_price": 16.4
+    }
+  ],
+  "synced_at": "2026-07-04T07:11:00Z"
+}

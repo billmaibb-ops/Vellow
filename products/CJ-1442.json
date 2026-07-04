@@ -1,0 +1,35 @@
+{
+  "id": "CJ-1442",
+  "description": "<p><b>Product information:</b><br></p><p>Fabric: Head layer cowhide<br>Specification: 11cmx7.5cmx1.2cm<br>Capacity: Mini<br>Model: M-2<br>Internal structure: paper money bag, card slot<br>Style: Mini wallet</p><p><img src=\"https://cf.cjdropshipping.com/1617076374152.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1617076374150.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1617076374148.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1617076374151.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1617076374145.jpg\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/1617076573970.jpg",
+    "https://cf.cjdropshipping.com/1617076573986.jpg",
+    "https://cf.cjdropshipping.com/1617076573954.jpg",
+    "https://cf.cjdropshipping.com/1617076573991.jpg",
+    "https://cf.cjdropshipping.com/1617076573953.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1376763017106165760",
+      "name": "European and American RFID Men's Leather Wallet Brown",
+      "image": "https://cf.cjdropshipping.com/1617076573991.jpg",
+      "source_cost": 3.87,
+      "retail_price": 14.51
+    },
+    {
+      "vid": "1376763017169080320",
+      "name": "European and American RFID Men's Leather Wallet earthy yellow",
+      "image": "https://cf.cjdropshipping.com/1617076573986.jpg",
+      "source_cost": 3.87,
+      "retail_price": 14.51
+    },
+    {
+      "vid": "1376763017240383488",
+      "name": "European and American RFID Men's Leather Wallet Light Yellow",
+      "image": "https://cf.cjdropshipping.com/1617076573970.jpg",
+      "source_cost": 3.87,
+      "retail_price": 14.51
+    }
+  ],
+  "synced_at": "2026-07-04T07:38:22Z"
+}

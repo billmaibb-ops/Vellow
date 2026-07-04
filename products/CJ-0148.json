@@ -1,0 +1,30 @@
+{
+  "id": "CJ-0148",
+  "description": "<p>One package per item, does not support combining multiple packages for shipment</p> \n <p>Length * width * height: 24.00 x 13.00 x 5.00 inch length * width * height (package): 6.50 x 6.50 x 14.00 inch<br/>Weight: 2.50 LB weight: 3.00 LB<br/>Product No.: zhumi-yxz-m01-q-gy specification: Grey<br/>Length * width * height: 24.00 x 13.00 x 5.00 inch length * width * height (package): 6.50 x 6.50 x 14.00 inch<br/>Weight: 2.50 LB weight: 3.00 LB<br/>Product No.: zhumi-yxz-m01-q-wt specification: white<br/>Description:</p> \n <ul> \n  <li>This cervical pillow offers two different heights for you to choose from. Our king size pillow is designed for different sleeping positions and can be a supine, prone or side sleeper pillow. It has a wider range of contact with your head and shoulders, so no matter how much you roll over in your sleep, you won't feel stiffness in your neck.</li> \n  <li>The memory foam cervical pillow's ergonomic contours are designed to conform to the body's natural curves, relieving fatigue and discomfort during sleep. It supports your back, head and neck correctly, allowing you to feel drowsy soon after lying down and quickly fall into a deep sleep.</li> \n  <li>This neck support pillow is made of premium resilient memory foam. Premium firm but not soft, it gives you maximum comfort while lying on your back or side and greatly relaxes your head, neck, shoulder and back muscles.</li> \n </ul> \n <p><img src=\"https://cf.cjdropshipping.com/80c7739a-1c63-4feb-a2d8-e7891a34a717.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3623053a-c0cb-45ce-bcfa-e27a7157ad3c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3071f218-2f95-4224-a81d-e178c88214b5.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1eadedc4-d806-442c-a13d-95aa56060fcc.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/8f7c81f7-355f-463b-9813-9eb0207cc3a4.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><br/><br/>&nbsp;</p>",
+  "images": [
+    "https://cf.cjdropshipping.com/6d65dd66-d3ea-4785-a650-83a737db1c4a.jpg",
+    "https://cf.cjdropshipping.com/530172b3-3763-47e0-9924-fa89df850da0.jpg",
+    "https://cf.cjdropshipping.com/00a686aa-aa98-4ddb-aab1-3115a0e7e9f9.jpg",
+    "https://cf.cjdropshipping.com/25f31ba6-5f1b-47b2-aeff-f0687101f190.jpg",
+    "https://cf.cjdropshipping.com/a4447b6d-3a2f-4163-a673-9990122d7d8a.jpg",
+    "https://cf.cjdropshipping.com/4d9642d2-1571-4c63-8e09-dcf8b92c4224.jpg",
+    "https://cf.cjdropshipping.com/d59d48f6-9002-4a23-bab9-a5d24332f706.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1873635761382158338",
+      "name": "Grey",
+      "image": "https://cf.cjdropshipping.com/25f31ba6-5f1b-47b2-aeff-f0687101f190.jpg",
+      "source_cost": 24.42,
+      "retail_price": 42.3
+    },
+    {
+      "vid": "1873635761382158339",
+      "name": "White",
+      "image": "https://cf.cjdropshipping.com/530172b3-3763-47e0-9924-fa89df850da0.jpg",
+      "source_cost": 24.47,
+      "retail_price": 42.39
+    }
+  ],
+  "synced_at": "2026-07-04T06:40:25Z"
+}

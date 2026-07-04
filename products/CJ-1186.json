@@ -1,0 +1,43 @@
+{
+  "id": "CJ-1186",
+  "description": "<p><b>Product information:</b><br/>Color: red, yellow, black, brown, personal items are not returned<br/>material: plastic<br/>Applicable object: Dog<br/>Specification: 11cm<br/>style: Casual<br/><b>Package:</b><br/>Toy glasses x1</p><p><img src=\"https://cf.cjdropshipping.com/4ee578a6-221b-46b2-8bcc-101012c90ef6.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/9e449ba1-5d78-4ef7-91a9-ef9b40fb4ebe.jpg\" style=\"max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/e7f90944-36a2-4269-934c-cc7733e46cd3.jpg",
+    "https://cf.cjdropshipping.com/3ca514af-cbc1-4a55-9cee-cf956b0e9337.jpg",
+    "https://cf.cjdropshipping.com/0cd79c9d-f122-4d2b-a05b-f4b1aeeab585.jpg",
+    "https://cf.cjdropshipping.com/5d0e732c-e23a-4a0f-8837-532a596448a8.jpg",
+    "https://cf.cjdropshipping.com/fea986a6-5975-49d0-82c6-27cfe5e86fa0.jpg",
+    "https://cf.cjdropshipping.com/dd9ba250-f47d-4de6-801a-29e6e19379c1.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1410853446596300800",
+      "name": "Medium And Large Dog Glasses Toy Red 11cm",
+      "image": "https://cf.cjdropshipping.com/e7f90944-36a2-4269-934c-cc7733e46cd3.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    },
+    {
+      "vid": "1410853446621466624",
+      "name": "Medium And Large Dog Glasses Toy Yellow 11cm",
+      "image": "https://cf.cjdropshipping.com/0cd79c9d-f122-4d2b-a05b-f4b1aeeab585.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    },
+    {
+      "vid": "1410853446634049536",
+      "name": "Medium And Large Dog Glasses Toy Black 11cm",
+      "image": "https://cf.cjdropshipping.com/5d0e732c-e23a-4a0f-8837-532a596448a8.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    },
+    {
+      "vid": "1410853446646632448",
+      "name": "Medium And Large Dog Glasses Toy Brown 11cm",
+      "image": "https://cf.cjdropshipping.com/3ca514af-cbc1-4a55-9cee-cf956b0e9337.jpg",
+      "source_cost": 0.95,
+      "retail_price": 11.5
+    }
+  ],
+  "synced_at": "2026-07-04T07:27:02Z"
+}

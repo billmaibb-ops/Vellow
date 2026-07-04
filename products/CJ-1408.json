@@ -1,0 +1,22 @@
+{
+  "id": "CJ-1408",
+  "description": "<p>Drawing Tool Set</p>",
+  "images": [
+    "https://cf.cjdropshipping.com/fb8513ce-ff22-444c-b8ab-4863f881ed57.png",
+    "https://cf.cjdropshipping.com/bc505cd4-2446-4e1c-8bce-b6d9089cad13.png",
+    "https://cf.cjdropshipping.com/fede2334-2a16-4a9f-98af-26385e6ce71d.png",
+    "https://cf.cjdropshipping.com/89113d01-7a4a-46bf-a08f-40341984c4ea.png",
+    "https://cf.cjdropshipping.com/fa9b1d5b-c816-4630-a2df-31a35a0be9c0.png",
+    "https://cf.cjdropshipping.com/b9507b1c-0835-4539-9253-d9cfa275e28f.png"
+  ],
+  "variants": [
+    {
+      "vid": "1496401716252381184",
+      "name": "Drawing Tool Set Default",
+      "image": "https://cf.cjdropshipping.com/fa9b1d5b-c816-4630-a2df-31a35a0be9c0.png",
+      "source_cost": 5.53,
+      "retail_price": 16.22
+    }
+  ],
+  "synced_at": "2026-07-04T07:36:54Z"
+}

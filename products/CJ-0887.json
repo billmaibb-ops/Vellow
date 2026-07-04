@@ -1,0 +1,42 @@
+{
+  "id": "CJ-0887",
+  "description": "<p>Hanging form: Decoration<br>Production method: semi manual and semi mechanical<br>Style: Modern and simple<br>Modeling: Abstract</p><p><img src=\"https://cf.cjdropshipping.com/68c8a2fa-083d-4514-a46c-edb30ecfafa7.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/98e7e446-4580-4117-b003-8c4c65e45680.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/e1b15ad2-c6ab-4577-b2e5-36b92efb9fe9.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/fcf7df00-0961-44e1-844f-6bb9e24ddb4d.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/18c7c9c5-e3b1-49e1-8040-a3afa513c0de.jpg\" style=\"font-size: 14px; max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200926/1941276623226.jpg",
+    "https://cf.cjdropshipping.com/20200926/2035031337540.jpg",
+    "https://cf.cjdropshipping.com/20200926/529726964920.jpg",
+    "https://cf.cjdropshipping.com/20200926/2788946010205.jpg",
+    "https://cf.cjdropshipping.com/20200926/677605394232.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "10670BCB-6D32-4FC0-8386-5041F4D9260A",
+      "name": "Water drop ceramic vase ornaments White M",
+      "image": "https://cf.cjdropshipping.com/20200926/2035031337540.jpg",
+      "source_cost": 2.13,
+      "retail_price": 12.72
+    },
+    {
+      "vid": "118D1290-E446-4076-907B-560DB2CD48E0",
+      "name": "Water drop ceramic vase ornaments White S",
+      "image": "https://cf.cjdropshipping.com/20200926/2788946010205.jpg",
+      "source_cost": 1.44,
+      "retail_price": 12.0
+    },
+    {
+      "vid": "AE541762-CB4F-4708-9E71-31F94B45B7AA",
+      "name": "Water drop ceramic vase ornaments White Set",
+      "image": "https://cf.cjdropshipping.com/20200926/677605394232.jpg",
+      "source_cost": 7.01,
+      "retail_price": 17.75
+    },
+    {
+      "vid": "E60BFC3D-61E9-4E1C-B35A-9376CCEC8A43",
+      "name": "Water drop ceramic vase ornaments White L",
+      "image": "https://cf.cjdropshipping.com/20200926/529726964920.jpg",
+      "source_cost": 3.89,
+      "retail_price": 14.53
+    }
+  ],
+  "synced_at": "2026-07-04T07:13:36Z"
+}

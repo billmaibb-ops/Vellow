@@ -1,0 +1,40 @@
+{
+  "id": "CJ-0692",
+  "description": "<p>Brand model: BT506<br>Battery type: polymer lithium battery<br>Bluetooth version: Bluetooth5.0<br>Battery capacity: 3.7v 1600mAh, 7.4wH<br>Support protocol: A2DP, AVRCP, HFP, HSP<br>Charging interface: Micro USB, DC5V===2A<br>Card slot: MicroSD card/TF card (maximum support 32G) Connection distance: about 10 meters (accessible)<br>Audio interface: 3.5mm audio<br>Support call: yes</p><p><img src=\"https://cf.cjdropshipping.com/3e396a62-9502-4f3f-8817-0867400b0c9b.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/4ba63db3-752e-431b-80b7-e1c3b0608832.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/79df9891-78fa-4f3e-b90f-695ecc6d8998.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1b25e169-de55-4fa2-aea2-d0ef6bb15e82.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/52b1b16b-7f6c-4377-8808-a364ade677bf.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/91687677-0174-44da-b9f6-074531631ce7.jpg\" style=\"font-size: 14px; max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200701/3900790210891.jpg",
+    "https://cf.cjdropshipping.com/20200701/46636208640.jpg",
+    "https://cf.cjdropshipping.com/20200701/2930922704203.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "07820A81-E12E-447A-990C-1F31B934A82E",
+      "name": "Alarm clock bluetooth speaker Black",
+      "image": "https://cf.cjdropshipping.com/20200701/621541677786.jpg",
+      "source_cost": 5.51,
+      "retail_price": 16.2
+    },
+    {
+      "vid": "3ADD1783-B8B9-4AE9-9FED-1947C4F3C981",
+      "name": "Alarm clock bluetooth speaker Red",
+      "image": "https://cf.cjdropshipping.com/20200701/47978683443858.jpg",
+      "source_cost": 5.51,
+      "retail_price": 16.2
+    },
+    {
+      "vid": "98062286-63C0-430D-AACA-163F4A475C7B",
+      "name": "Alarm clock bluetooth speaker Pink",
+      "image": "https://cf.cjdropshipping.com/20200701/3127055613520.jpg",
+      "source_cost": 5.51,
+      "retail_price": 16.2
+    },
+    {
+      "vid": "9942C3A5-EEE4-4969-90EF-469FD19F2428",
+      "name": "Alarm clock bluetooth speaker Blue",
+      "image": "https://cf.cjdropshipping.com/20200701/46636208640.jpg",
+      "source_cost": 5.51,
+      "retail_price": 16.2
+    }
+  ],
+  "synced_at": "2026-07-04T07:04:55Z"
+}

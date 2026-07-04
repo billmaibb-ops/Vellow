@@ -1,0 +1,83 @@
+{
+  "id": "CJ-1007",
+  "description": "<p><br/><br/><br/><img src=\"https://cf.cjdropshipping.com/b4d1f0de-3090-412d-9b47-6726784baf11.png\" style=\"max-width:100%;\" contenteditable=\"false\" data-src=\"https://cf.cjdropshipping.com/17210016/1812691965977038848.jpg\" data-key=\"1\" data-uploadossfail=\"false\"/><img src=\"https://cf.cjdropshipping.com/82709e7a-0f74-4746-92cd-eaddd820e217.png\" style=\"max-width:100%;\" contenteditable=\"false\" data-src=\"https://cf.cjdropshipping.com/17210016/1812691966530686976.jpg\" data-key=\"2\" data-uploadossfail=\"false\"/><br/><img src=\"https://cf.cjdropshipping.com/0f0f171b-52f4-47ee-96c8-41c3cb594cd3.png\" style=\"max-width:100%;\" contenteditable=\"false\" data-src=\"https://cf.cjdropshipping.com/17210016/1812691967008837632.jpg\" data-key=\"3\" data-uploadossfail=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/17210016/1812693377314197504.jpg",
+    "https://cf.cjdropshipping.com/32341961-ab1f-4078-85a2-e2400ed4049a.jpg",
+    "https://cf.cjdropshipping.com/3af0381f-33eb-4a7d-b089-1ca479bfdfa5.jpg",
+    "https://cf.cjdropshipping.com/57a93f8e-6966-4ff7-b2d4-ae34b76a5e9f.jpg",
+    "https://cf.cjdropshipping.com/17210016/1812691970007764992.jpg",
+    "https://cf.cjdropshipping.com/17210016/1812691969479282688.jpg",
+    "https://cf.cjdropshipping.com/17210016/1812691968686559232.jpg",
+    "https://cf.cjdropshipping.com/17210016/1812691969034686464.jpg",
+    "https://cf.cjdropshipping.com/0ccb12b4-ccaf-4712-ae47-45d327218b69.jpg",
+    "https://cf.cjdropshipping.com/17210016/1812691968166465536.jpg",
+    "https://cf.cjdropshipping.com/88980af9-928c-4da7-89f4-22519ee23877.jpg",
+    "https://cf.cjdropshipping.com/17210016/1812691967772200960.jpg",
+    "https://cf.cjdropshipping.com/6d2207cb-cfe9-422a-9b1b-6fdc3cdf9a27.jpg",
+    "https://cf.cjdropshipping.com/a91d00ec-2d23-4c0d-897a-912b8643fbc5.jpg",
+    "https://cf.cjdropshipping.com/00f142a1-dcaf-46cd-9fe7-c8261478f71e.jpg",
+    "https://cf.cjdropshipping.com/ed6ee34c-c5b7-4665-b4c0-bdde65e451a2.jpg",
+    "https://cf.cjdropshipping.com/21ab8418-dc66-47b0-b14e-635127464e56.jpg",
+    "https://cf.cjdropshipping.com/5867c1d7-79ce-4d46-aece-f8417adfa760.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1803978693975887872",
+      "name": "Black-Driver Seat",
+      "image": "https://cf.cjdropshipping.com/6d2207cb-cfe9-422a-9b1b-6fdc3cdf9a27.jpg",
+      "source_cost": 4.34,
+      "retail_price": 14.99
+    },
+    {
+      "vid": "1803978693975887873",
+      "name": "Black-Passenger seat",
+      "image": "https://cf.cjdropshipping.com/3af0381f-33eb-4a7d-b089-1ca479bfdfa5.jpg",
+      "source_cost": 4.34,
+      "retail_price": 14.99
+    },
+    {
+      "vid": "1812691153184509952",
+      "name": "Red-Driver Seat",
+      "image": "https://cf.cjdropshipping.com/0ccb12b4-ccaf-4712-ae47-45d327218b69.jpg",
+      "source_cost": 4.34,
+      "retail_price": 14.99
+    },
+    {
+      "vid": "1812691153184509953",
+      "name": "Red-Passenger seat",
+      "image": "https://cf.cjdropshipping.com/a91d00ec-2d23-4c0d-897a-912b8643fbc5.jpg",
+      "source_cost": 4.34,
+      "retail_price": 14.99
+    },
+    {
+      "vid": "1812691153184509954",
+      "name": "White-Driver Seat",
+      "image": "https://cf.cjdropshipping.com/21ab8418-dc66-47b0-b14e-635127464e56.jpg",
+      "source_cost": 4.34,
+      "retail_price": 14.99
+    },
+    {
+      "vid": "1812691153184509955",
+      "name": "White-Passenger seat",
+      "image": "https://cf.cjdropshipping.com/ed6ee34c-c5b7-4665-b4c0-bdde65e451a2.jpg",
+      "source_cost": 4.34,
+      "retail_price": 14.99
+    },
+    {
+      "vid": "1812691153184509956",
+      "name": "Brown-Driver Seat",
+      "image": "https://cf.cjdropshipping.com/57a93f8e-6966-4ff7-b2d4-ae34b76a5e9f.jpg",
+      "source_cost": 4.34,
+      "retail_price": 14.99
+    },
+    {
+      "vid": "1812691153184509957",
+      "name": "Brown-Passenger seat",
+      "image": "https://cf.cjdropshipping.com/5867c1d7-79ce-4d46-aece-f8417adfa760.jpg",
+      "source_cost": 4.34,
+      "retail_price": 14.99
+    }
+  ],
+  "synced_at": "2026-07-04T07:19:00Z"
+}

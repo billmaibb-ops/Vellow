@@ -1,0 +1,23 @@
+{
+  "id": "CJ-0164",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package Size</p><p>Length\uff08cm\uff09\uff1a12.9</p><p>Width\uff08cm\uff09\uff1a9.4</p><p>Height\uff08cm\uff09\uff1a11.4</p><p>Weight\uff08kg\uff09\uff1a0.198</p><p><img src=\"https://cf.cjdropshipping.com/d1b19c98-b449-4a5a-9e79-cca277988ec5.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/40a779d0-a147-4f27-8d37-11a8df845381.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/af4ce85d-d945-4729-9e31-f04a8afa8547.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b7e55bd4-af2a-4966-8464-4450388c290f.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/67945cb1-7fd0-4bdc-8ece-e6d5d8992c1a.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/cebe9b38-5d56-47c5-b360-6e411780bbde.jpg",
+    "https://cf.cjdropshipping.com/305650d5-f45b-4412-8db1-dcee8286ef45.jpg",
+    "https://cf.cjdropshipping.com/301854c8-7f90-43e0-996f-cc21033d9dfc.png",
+    "https://cf.cjdropshipping.com/fe83852e-86ac-4aa4-ba4a-64bbf2de3615.jpg",
+    "https://cf.cjdropshipping.com/5210003b-fda4-47dd-941d-fd37db94bb37.jpg",
+    "https://cf.cjdropshipping.com/4462da78-c3c6-445a-ae0c-d12afcb092e0.jpg",
+    "https://cf.cjdropshipping.com/3adc4525-301b-4ba2-9e57-8229755a263d.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1860164994814857216",
+      "name": "White",
+      "image": "https://cf.cjdropshipping.com/301854c8-7f90-43e0-996f-cc21033d9dfc.png",
+      "source_cost": 10.07,
+      "retail_price": 20.9
+    }
+  ],
+  "synced_at": "2026-07-04T06:41:07Z"
+}

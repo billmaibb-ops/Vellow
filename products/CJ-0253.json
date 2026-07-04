@@ -1,0 +1,42 @@
+{
+  "id": "CJ-0253",
+  "description": "<p>Our ore blind box contains ore. It can be as beautiful and fun as a gift box, perfect for holiday gifts. The way to use it is very simple: randomly open any blind box according to personal preference, and enjoy the surprise fun of drawing the blind box. After the collection is complete, the gems can be kept in their original boxes, like a gem display case that can be decorated in the home.<img src=\"https://cf.cjdropshipping.com/1dde9029-18dd-41ab-adf9-2baa0029b4e8.gif\" contenteditable=\"false\" style=\"font-size: 13px; max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/cd9378e9-9718-4750-b942-a5290c9357f6.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3b7871da-4688-4c79-ae46-a34f4c0007fa.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/398fe588-45db-48c6-84fa-36fbfe8de415.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/561f8f9e-30f8-4838-832b-5e445c0319eb.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/4156862d-7293-46c0-89f3-7821d7b0c36e.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/09bb8eb8-32f3-4b85-ac38-3a6e92039eec.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/003a200f-a155-460c-9dc5-7d70e6bf78c1.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/594fb120-b4ef-4de2-9401-7019830145a4.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/ef828106-2bc6-4ec3-9e0d-f2c0e0b4de34.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/ab80ffe4-47f1-4396-9c42-a8c939204ae5.png",
+    "https://cf.cjdropshipping.com/93cda1f8-9864-4adf-b8ea-7bec26a1a577.png",
+    "https://cf.cjdropshipping.com/adb5ed4f-833a-4146-b651-8aa63d7b025c.png",
+    "https://cf.cjdropshipping.com/19781c27-0f45-40ef-bc38-19730bab613d.png",
+    "https://cf.cjdropshipping.com/96110156-d21f-4bbb-8dbe-8e0a5190196a.png"
+  ],
+  "variants": [
+    {
+      "vid": "1851178292112936960",
+      "name": "Boxed-1PCS",
+      "image": "https://cf.cjdropshipping.com/ab80ffe4-47f1-4396-9c42-a8c939204ae5.png",
+      "source_cost": 9.99,
+      "retail_price": 20.82
+    },
+    {
+      "vid": "1851178292112936961",
+      "name": "Boxed-2PCS",
+      "image": "https://cf.cjdropshipping.com/ab80ffe4-47f1-4396-9c42-a8c939204ae5.png",
+      "source_cost": 13.98,
+      "retail_price": 24.93
+    },
+    {
+      "vid": "1851178292112936962",
+      "name": "Boxed-3PCS",
+      "image": "https://cf.cjdropshipping.com/ab80ffe4-47f1-4396-9c42-a8c939204ae5.png",
+      "source_cost": 17.97,
+      "retail_price": 31.13
+    },
+    {
+      "vid": "1851178292112936963",
+      "name": "Boxed-4PCS",
+      "image": "https://cf.cjdropshipping.com/ab80ffe4-47f1-4396-9c42-a8c939204ae5.png",
+      "source_cost": 17.97,
+      "retail_price": 31.13
+    }
+  ],
+  "synced_at": "2026-07-04T06:44:59Z"
+}

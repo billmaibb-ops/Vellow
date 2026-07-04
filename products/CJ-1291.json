@@ -1,0 +1,37 @@
+{
+  "id": "CJ-1291",
+  "description": "<body>\n <p><b>Product information:</b><br>Applicable scenario: Kitchen<br> Color: khaki, Army Green, Gray<br> Function: Multi-Purpose<br> Material: canvas<br> Style: modern simplicity<br> Shape: handbag type</p>\n <p><br></p>\n <p><br></p>\n <b>Packing list: </b>\n <br>Bag *1\n <p><br></p>\n <p><br></p>\n <b>Product Image:</b>\n <div>\n  <b><br></b>\n </div>\n <div>\n  <b><br></b>\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608230323300.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608230325800.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608230328700.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608240323800.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608240326200.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608240329800.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608250322000.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608250324200.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608250326000.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608250329100.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608260322300.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608260325900.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608260327700.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608270320100.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608270324200.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608270327300.jpg\">\n  <img src=\"https://cf.cjdropshipping.com/17176320/2406060608280320700.jpg\">\n </div>\n</body>",
+  "images": [
+    "https://cf.cjdropshipping.com/quick/product/7e4ab696-f99c-4f2f-8c7c-e19cf1c650ff.jpg",
+    "https://cf.cjdropshipping.com/quick/product/f5bdda5e-d8d2-460e-aa18-352eeeaa2fa0.jpg",
+    "https://cf.cjdropshipping.com/quick/product/b999f7f0-9909-45ae-82d3-1c94d1da1133.jpg",
+    "https://cf.cjdropshipping.com/quick/product/166e1a29-6dd5-4dd6-bc2d-72813de09b10.jpg",
+    "https://cf.cjdropshipping.com/quick/product/cf177022-c043-4890-a27f-6308e01a1f68.jpg",
+    "https://cf.cjdropshipping.com/quick/product/ffe06255-9518-4d0b-8353-1344e5fb81b0.jpg",
+    "https://cf.cjdropshipping.com/quick/product/246c1e25-125c-4d40-8baf-d005c6fc93d9.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1798527799989510144",
+      "name": "Outdoor Camping Picnic Portable Bag Of Knife Khaki",
+      "image": "https://cf.cjdropshipping.com/quick/product/b999f7f0-9909-45ae-82d3-1c94d1da1133.jpg",
+      "source_cost": 2.71,
+      "retail_price": 13.31
+    },
+    {
+      "vid": "1798527800136310784",
+      "name": "Outdoor Camping Picnic Portable Bag Of Knife Army Green",
+      "image": "https://cf.cjdropshipping.com/quick/product/246c1e25-125c-4d40-8baf-d005c6fc93d9.jpg",
+      "source_cost": 2.71,
+      "retail_price": 13.31
+    },
+    {
+      "vid": "1798527800245362688",
+      "name": "Outdoor Camping Picnic Portable Bag Of Knife Gray",
+      "image": "https://cf.cjdropshipping.com/quick/product/f5bdda5e-d8d2-460e-aa18-352eeeaa2fa0.jpg",
+      "source_cost": 2.71,
+      "retail_price": 13.31
+    }
+  ],
+  "synced_at": "2026-07-04T07:31:44Z"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "CJ-1012",
+  "description": "<p>Cover material: imitation leather<br>Cover color: black gold, bronze<br>Binding: can be customized<br>Inner text: Sketch paper<br>Inner paper size: 12.3*17CM<br>Applicable gift-giving occasions: wedding, birthday, holiday, housewarming, trade fair, advertising promotion, employee benefits, anniversary celebration, business gifts, opening ceremony, award commemoration, public relations planning</p><div><div><ul><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/979783342592.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/979783342592.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/1230965368175.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/1230965368175.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/6727382815068.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/6727382815068.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/4518321916390.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/4518321916390.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200702/9329296829817.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200702/9329296829817.jpg\"><div><div><br></div></div></div></li></ul></div></div>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200702/1230965368175.jpg",
+    "https://cf.cjdropshipping.com/20200702/6727382815068.jpg",
+    "https://cf.cjdropshipping.com/20200702/9329296829817.jpg",
+    "https://cf.cjdropshipping.com/20200702/4518321916390.jpg",
+    "https://cf.cjdropshipping.com/20200702/979783342592.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "A212603B-591F-4FF3-8B75-9F18A610FE46",
+      "name": "Stylish leather notebook Black gold",
+      "image": "https://cf.cjdropshipping.com/20200702/1230965368175.jpg",
+      "source_cost": 3.17,
+      "retail_price": 13.79
+    },
+    {
+      "vid": "EE8B9076-8E72-442E-822D-DD512DD71CCA",
+      "name": "Stylish leather notebook Bronze",
+      "image": "https://cf.cjdropshipping.com/20200702/6727382815068.jpg",
+      "source_cost": 3.07,
+      "retail_price": 13.69
+    }
+  ],
+  "synced_at": "2026-07-04T07:19:14Z"
+}

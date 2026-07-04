@@ -1,0 +1,35 @@
+{
+  "id": "CJ-1178",
+  "description": "<p><b>Product Details:</b><br/>Type: Perfume bottle<br/>Process: Blow bottle<br/>Color: Transparent<br/>Capacity: 30ml, 50ml, 100ml<br/>Material: Glass<br/><br/><b>Package contents:</b><br/>Separate bottle X1 set</p><p><img src=\"https://cf.cjdropshipping.com/17170272/2405301036310322900.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/17170272/2405301036310325500.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/17170272/2405301036310328100.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/17170272/2405301036320321100.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/17170272/2405301036320323000.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2024/05/30/10/cf63f6ab-171c-41fe-82e2-e0348bfa2598_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2024/05/30/10/aa30687a-e5b0-4bbc-afc9-ef92db79dd7a_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2024/05/30/10/3719f2fb-b9cb-4194-b845-79b780c2d586.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/05/30/10/0935c8b3-c9cd-4178-9805-aae7300fe122_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2024/05/30/10/e1999809-acda-47bf-a62f-c1a604fa8f9f.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1796128544750317568",
+      "name": "Perfume Dispensing Bottle Replacement Bottle Screw Mouth Transparent 30ml",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/05/30/10/0935c8b3-c9cd-4178-9805-aae7300fe122_trans.jpeg",
+      "source_cost": 0.64,
+      "retail_price": 11.18
+    },
+    {
+      "vid": "1796128544951644160",
+      "name": "Perfume Dispensing Bottle Replacement Bottle Screw Mouth Transparent 50ml",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/05/30/10/aa30687a-e5b0-4bbc-afc9-ef92db79dd7a_trans.jpeg",
+      "source_cost": 0.7,
+      "retail_price": 11.24
+    },
+    {
+      "vid": "1796128545056501760",
+      "name": "Perfume Dispensing Bottle Replacement Bottle Screw Mouth Transparent 100ml",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/05/30/10/cf63f6ab-171c-41fe-82e2-e0348bfa2598_trans.jpeg",
+      "source_cost": 0.78,
+      "retail_price": 11.32
+    }
+  ],
+  "synced_at": "2026-07-04T07:26:41Z"
+}

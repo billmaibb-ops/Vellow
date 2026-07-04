@@ -1,0 +1,26 @@
+{
+  "id": "CJ-1169",
+  "description": "<p><b>Product information:</b><br/></p><p>Material: knitted<br/>Color: khaki, red<br/></p><p>Warm keeping time: about 4 hours of constant temperature</p><p><br/><b>Packing list:&nbsp;</b><span style=\"font-size: 1em;\">Gloves * 1 pair</span></p><p><span style=\"font-size: 1em;\"><br/></span></p><p><img src=\"https://cf.cjdropshipping.com/20180920/2155711379153.jpg\"/></p><p><img src=\"https://cf.cjdropshipping.com/20180920/188040013818.jpg\"/></p><p><img src=\"https://cf.cjdropshipping.com/20180920/28896142656039.jpg\"/><img src=\"https://cf.cjdropshipping.com/88e79d2a-9187-45e0-94a2-634b7ecf5f19.png\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/1c8724b6-f5db-4846-8363-0229a8d0e1cf.png\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/30190cbf-fb78-4dde-b097-44a041e49326.png\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/69ce3023-668c-4b44-85f9-3afd1c7c12f1.png\" style=\"max-width: 100%;\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20180920/28896142656039.jpg",
+    "https://cf.cjdropshipping.com/20180920/188040013818.jpg",
+    "https://cf.cjdropshipping.com/20180920/2155711379153.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "42BD9CA6-6D95-4B26-8F20-A52375663923",
+      "name": "Rechargeable Heated Gloves Grey",
+      "image": "https://cf.cjdropshipping.com/20180920/2155711379153.jpg",
+      "source_cost": 18.06,
+      "retail_price": 31.28
+    },
+    {
+      "vid": "B758016C-AA6D-488E-A277-69ED22E59206",
+      "name": "Rechargeable Heated Gloves Red",
+      "image": "https://cf.cjdropshipping.com/20180920/28896142656039.jpg",
+      "source_cost": 18.06,
+      "retail_price": 31.28
+    }
+  ],
+  "synced_at": "2026-07-04T07:26:17Z"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "CJ-0891",
+  "description": "<p><b>Product information<br/></b>Material: high borosilicate glass<br/>Size: Mini<br/>  Color glass ball, glass ball+23 black bracket, glass ball+23 white bracket<br/><br/><br/><b>       Package</b>:<br/>Glass fish tank*1</p><p><br/></p><p><img src=\"https://cf.cjdropshipping.com/47d04684-36dd-4184-b6b3-36583a1ecdf4.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/652962d9-9af6-478a-8a03-98b2585b839e.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/502f92d2-ce80-4241-85ac-364babb4ca49.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/5e5f18f2-9a1e-47d2-9809-25c9674f653b.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/5a6c09a7-d32f-4c6c-bc18-d8c339ae2d37.jpg\" style=\"max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/fdf8fda4-fee8-4ac0-ab1f-16fd8c346b3e.jpg",
+    "https://cf.cjdropshipping.com/82ad6d13-ee03-4457-8bc4-1f300c9aa064.jpg",
+    "https://cf.cjdropshipping.com/1bc0a922-3dc5-49cc-9009-7f7db0835510.jpg",
+    "https://cf.cjdropshipping.com/746cbd84-9d82-4acd-b0ba-e2dbf33ad9c4.jpg",
+    "https://cf.cjdropshipping.com/24506110-54ea-4345-8867-ae1d18491122.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1440272673992216576",
+      "name": "Hanging Glass Vase Fish Tank Glass ball",
+      "image": "https://cf.cjdropshipping.com/fdf8fda4-fee8-4ac0-ab1f-16fd8c346b3e.jpg",
+      "source_cost": 0.91,
+      "retail_price": 11.46
+    },
+    {
+      "vid": "1440272674004799488",
+      "name": "Hanging Glass Vase Fish Tank Glass ball23 black bracket",
+      "image": "https://cf.cjdropshipping.com/1bc0a922-3dc5-49cc-9009-7f7db0835510.jpg",
+      "source_cost": 1.45,
+      "retail_price": 12.02
+    },
+    {
+      "vid": "1440272674013188096",
+      "name": "Hanging Glass Vase Fish Tank Glass ball23 white bracket",
+      "image": "https://cf.cjdropshipping.com/82ad6d13-ee03-4457-8bc4-1f300c9aa064.jpg",
+      "source_cost": 1.45,
+      "retail_price": 12.02
+    }
+  ],
+  "synced_at": "2026-07-04T07:13:46Z"
+}

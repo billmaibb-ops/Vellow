@@ -1,0 +1,19 @@
+{
+  "id": "CJ-1135",
+  "description": "<p>Rope Chain</p>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2024/04/03/02/91063739-f401-4a88-9e09-5fc84ef83c35.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/04/22/10/c0859586-caa4-49b0-8d75-125f4628565b.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2023/12/13/09/99c2bb88-7d28-4ba3-b9e8-1cbab45be5ea.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1734866937110339584",
+      "name": "Rope Chain 3mm silver 24inch",
+      "image": "https://oss-cf.cjdropshipping.com/product/2023/12/13/09/99c2bb88-7d28-4ba3-b9e8-1cbab45be5ea.jpg",
+      "source_cost": 0.62,
+      "retail_price": 11.16
+    }
+  ],
+  "synced_at": "2026-07-04T07:24:43Z"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "CJ-0165",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span><br/>Package size<br/><br/>Length (cm): 13.2<br/><br/>Width (cm): 8.6<br/><br/>Height (cm): 10.9<br/><br/>Weight (kg): 0.383</p><p><img src=\"https://cf.cjdropshipping.com/063d7396-b00d-4daa-8ee2-4fb4df461c90.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/2bc90e04-8a7f-4edf-8013-b24517f15048.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/9732a137-af66-497c-b25a-24bb6970ffb4.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/c0f33835-6363-40ab-9b2d-7bfeba9cacaf.jpg",
+    "https://cf.cjdropshipping.com/0b291071-da96-4029-9465-b33c0b2d9f9c.jpg",
+    "https://cf.cjdropshipping.com/e2f8cc95-18d0-40bc-8bf7-3d05075124d5.jpg",
+    "https://cf.cjdropshipping.com/11200e54-597a-4542-9baf-7e8d9c325420.jpg",
+    "https://cf.cjdropshipping.com/c9892b0f-d328-419b-9c0f-7d68335f0a8a.jpg",
+    "https://cf.cjdropshipping.com/e905a863-a2f0-490d-be4b-c26856fcaa24.jpg",
+    "https://cf.cjdropshipping.com/1f5a8552-94f9-4d6a-8624-bdc2d7965792.jpg",
+    "https://cf.cjdropshipping.com/6deb26a5-e107-406d-aa5f-1acff16b57aa.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1859855628953866240",
+      "name": "Black",
+      "image": "https://cf.cjdropshipping.com/e2f8cc95-18d0-40bc-8bf7-3d05075124d5.jpg",
+      "source_cost": 12.64,
+      "retail_price": 23.55
+    }
+  ],
+  "synced_at": "2026-07-04T06:41:10Z"
+}

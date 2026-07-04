@@ -1,0 +1,39 @@
+{
+  "id": "CJ-0408",
+  "description": "<p>Material: knitted<br>Use classification: clothing gloves<br>Applicable gender: female<br>Processing method: Jacquard<br>Function: Keep warm<br>Composition: 80% acrylic +20% spandex<img src=\"https://cf.cjdropshipping.com/f709b11c-bd53-4040-9a93-ee5a18e24ca9.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1041865b-8f27-472c-8049-313b818ee2eb.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/4b22fd12-95b9-4153-9d11-b426e3951efe.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/ba07cc5b-51d0-4110-94fd-ae146c0e87fb.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/bfbe09f8-76dd-4df0-a9da-5a8e527d1a68.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/2c45a83f-6fc9-4d93-a3d6-d1bdf239485e.jpg\" style=\"font-size: 14px; max-width: 100%;\"></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200910/20781416145415.jpg",
+    "https://cf.cjdropshipping.com/20200910/54305949800641.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "0BB97C6D-1569-4079-B280-894C910B7AD3",
+      "name": "Winter knitted gloves Purple",
+      "image": "https://cf.cjdropshipping.com/20200910/619454734262.jpg",
+      "source_cost": 1.45,
+      "retail_price": 12.02
+    },
+    {
+      "vid": "27999550-6911-4EA5-9253-A2E80BE3DB11",
+      "name": "Winter knitted gloves Pink",
+      "image": "https://cf.cjdropshipping.com/20200910/696405357129.jpg",
+      "source_cost": 1.45,
+      "retail_price": 12.02
+    },
+    {
+      "vid": "C7C5C687-D358-4350-B9DA-F4BC7A945CBC",
+      "name": "Winter knitted gloves Grey",
+      "image": "https://cf.cjdropshipping.com/20200910/3919693632106.jpg",
+      "source_cost": 1.45,
+      "retail_price": 12.02
+    },
+    {
+      "vid": "DF3AF428-3148-46ED-95F1-BA6419240469",
+      "name": "Winter knitted gloves Black",
+      "image": "https://cf.cjdropshipping.com/20200910/2102586566176.jpg",
+      "source_cost": 1.45,
+      "retail_price": 12.02
+    }
+  ],
+  "synced_at": "2026-07-04T06:51:55Z"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "CJ-1344",
+  "description": "<p>Product name: Car seat cover<br>Front seat cover size: 120*56cm<br>Three-row backrest cover size: 135*76cm<br>Three-row seat cover size: 135*55cm<br>Headgear size: 28*26cm<br></p><p>Packing size: 28*26*10cm<img src=\"https://cf.cjdropshipping.com/16d3a435-fd76-4fde-8972-87fc2c22f786.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/3f681e6e-3e54-42a3-9027-b7707afe9aa8.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/3900feaf-a125-4aab-951b-1607cf3588de.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/e4bb3f9c-8f6a-413d-81fa-9819345b85d0.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/8c85fff7-ff36-42a2-8899-e7306336b028.jpg\" style=\"font-size: 14px; max-width: 100%;\"></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200710/2972166256538.jpg",
+    "https://cf.cjdropshipping.com/20200710/914719299208.jpg",
+    "https://cf.cjdropshipping.com/20200710/25522708347216.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "3D789B20-ED81-48BF-863D-4BD0C23F37CD",
+      "name": "Car seat cover Red",
+      "image": "https://cf.cjdropshipping.com/20200710/1583984052886.jpg",
+      "source_cost": 6.57,
+      "retail_price": 17.29
+    },
+    {
+      "vid": "60BF3A7A-50E4-4D2B-B7C9-2A7AB81BBA71",
+      "name": "Car seat cover Blue",
+      "image": "https://cf.cjdropshipping.com/20200710/238302573273.jpg",
+      "source_cost": 6.57,
+      "retail_price": 17.29
+    },
+    {
+      "vid": "A51E3477-BE1A-4BE4-A4F3-9F65A7A19317",
+      "name": "Car seat cover Grey",
+      "image": "https://cf.cjdropshipping.com/20200710/1648367784733.jpg",
+      "source_cost": 6.57,
+      "retail_price": 17.29
+    }
+  ],
+  "synced_at": "2026-07-04T07:34:03Z"
+}

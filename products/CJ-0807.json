@@ -1,0 +1,55 @@
+{
+  "id": "CJ-0807",
+  "description": "<p>Battery voltage: 3.7V Input voltage current: DC5V/1000mAh<br>Output power: 4W Charging time: full for about 4 hours<br>Battery capacity: 2000mAh Working time: about 1.5h-6.5h<br>Working current: first gear 800mA/ second gear 1000mA/ third gear 1300mA Working power: first gear 3.2W/ second gear 4W/ third gear 5.2W<br>Water tank capacity: 300ML spray capacity: 40ml-50ml /h<img src=\"https://cf.cjdropshipping.com/63d1f2b5-bb0c-4b25-af04-8da27b1d9c70.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/c9a63f81-2efc-4214-8b82-73f4494716ea.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/fc3a3c36-46f3-4b26-b89c-3f8bd058846a.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/40f79e03-6e09-4fa0-9b5b-a076eaf7aede.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/40cc89ca-73b6-4206-975f-9129b74312e6.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/40e3cca1-057e-42fa-a6a6-7a915477e2e5.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/fd777a53-fb23-45d1-b009-0910134f90fa.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/59fb9675-7910-4789-a0d2-175144e36dde.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/6297d808-8eca-4def-bbc0-ab200bfe5d46.jpg\" style=\"font-size: 14px; max-width: 100%;\"></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200607/8071256493919.jpg",
+    "https://cf.cjdropshipping.com/15913728/1385783610785.jpg",
+    "https://cf.cjdropshipping.com/20200607/4851164375075.jpg",
+    "https://cf.cjdropshipping.com/20200607/2264608018164.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "0A933F5C-ED60-4283-B379-F1919C039985",
+      "name": "Usb mini humidifier fan Pink",
+      "image": "https://cf.cjdropshipping.com/20200607/525298742886.jpg",
+      "source_cost": 6.96,
+      "retail_price": 17.7
+    },
+    {
+      "vid": "7A313EC2-535F-4B6F-8CC7-40A3F9A35993",
+      "name": "Usb mini humidifier fan F4 pink",
+      "image": "https://cf.cjdropshipping.com/20200607/624571530156.jpg",
+      "source_cost": 5.46,
+      "retail_price": 16.15
+    },
+    {
+      "vid": "86086AFF-D77C-406F-A0C9-1559828DE21C",
+      "name": "Usb mini humidifier fan Blue",
+      "image": "https://cf.cjdropshipping.com/20200607/820660740329.jpg",
+      "source_cost": 6.96,
+      "retail_price": 17.7
+    },
+    {
+      "vid": "AC6FC060-F23E-421D-A94F-053E419E0833",
+      "name": "Usb mini humidifier fan F4 white",
+      "image": "https://cf.cjdropshipping.com/20200607/624571530156.jpg",
+      "source_cost": 5.46,
+      "retail_price": 16.15
+    },
+    {
+      "vid": "D2EE60AD-3CD4-4EC6-8653-928B0F5B9825",
+      "name": "Usb mini humidifier fan White",
+      "image": "https://cf.cjdropshipping.com/20200607/6541788270593.jpg",
+      "source_cost": 6.96,
+      "retail_price": 17.7
+    },
+    {
+      "vid": "DEC48291-1EE8-40B8-9183-EB804BD6FF46",
+      "name": "Usb mini humidifier fan F4 blue",
+      "image": "https://cf.cjdropshipping.com/20200607/624571530156.jpg",
+      "source_cost": 5.46,
+      "retail_price": 16.15
+    }
+  ],
+  "synced_at": "2026-07-04T07:10:03Z"
+}

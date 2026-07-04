@@ -1,0 +1,72 @@
+{
+  "id": "CJ-0847",
+  "description": "<p><b>Product information</b><br>Applicable object: general<br><br><b>Size Information</b><br>Size: 100*120cm 100*70cm<br><br><b>Packing list</b><br>Sleeping blanket*1</p><p><img src=\"https://cf.cjdropshipping.com/1621063844968.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/1621063844969.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1621063844970.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1621063844967.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1621063844977.jpg\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/1621063883571.jpg",
+    "https://cf.cjdropshipping.com/1621063855352.jpg",
+    "https://cf.cjdropshipping.com/1621063855375.jpg",
+    "https://cf.cjdropshipping.com/1621063855349.jpg",
+    "https://cf.cjdropshipping.com/1621063855350.jpg",
+    "https://cf.cjdropshipping.com/1621063855351.jpg",
+    "https://cf.cjdropshipping.com/1621063855645.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1393471869826502656",
+      "name": "Blanket Pet Quilt Fall Winter Pet Thicken Blanket Warm Flannel Sleeping Blanket White 100x70cm",
+      "image": "https://cf.cjdropshipping.com/1621063855352.jpg",
+      "source_cost": 5.58,
+      "retail_price": 16.27
+    },
+    {
+      "vid": "1393471869839085568",
+      "name": "Blanket Pet Quilt Fall Winter Pet Thicken Blanket Warm Flannel Sleeping Blanket Green giraffe 100x70cm",
+      "image": "https://cf.cjdropshipping.com/1621063855375.jpg",
+      "source_cost": 5.58,
+      "retail_price": 16.27
+    },
+    {
+      "vid": "1393471869851668480",
+      "name": "Blanket Pet Quilt Fall Winter Pet Thicken Blanket Warm Flannel Sleeping Blanket Green 100x70cm",
+      "image": "https://cf.cjdropshipping.com/1621063855350.jpg",
+      "source_cost": 5.58,
+      "retail_price": 16.27
+    },
+    {
+      "vid": "1393471869860057088",
+      "name": "Blanket Pet Quilt Fall Winter Pet Thicken Blanket Warm Flannel Sleeping Blanket Red 100x70cm",
+      "image": "https://cf.cjdropshipping.com/1621063855349.jpg",
+      "source_cost": 5.58,
+      "retail_price": 16.27
+    },
+    {
+      "vid": "1393471869868445696",
+      "name": "Blanket Pet Quilt Fall Winter Pet Thicken Blanket Warm Flannel Sleeping Blanket Yellow 100x70cm",
+      "image": "https://cf.cjdropshipping.com/1621063883571.jpg",
+      "source_cost": 5.58,
+      "retail_price": 16.27
+    },
+    {
+      "vid": "1393471869876834304",
+      "name": "Blanket Pet Quilt Fall Winter Pet Thicken Blanket Warm Flannel Sleeping Blanket Blue lucky cat 100x120cm",
+      "image": "https://cf.cjdropshipping.com/1621063855351.jpg",
+      "source_cost": 6.66,
+      "retail_price": 17.39
+    },
+    {
+      "vid": "1393471869889417216",
+      "name": "Blanket Pet Quilt Fall Winter Pet Thicken Blanket Warm Flannel Sleeping Blanket Blue lucky cat 100x70cm",
+      "image": "https://cf.cjdropshipping.com/1621063855351.jpg",
+      "source_cost": 5.58,
+      "retail_price": 16.27
+    },
+    {
+      "vid": "1393471869902000128",
+      "name": "Blanket Pet Quilt Fall Winter Pet Thicken Blanket Warm Flannel Sleeping Blanket Blue 100x70cm",
+      "image": "https://cf.cjdropshipping.com/1621063855645.jpg",
+      "source_cost": 5.58,
+      "retail_price": 16.27
+    }
+  ],
+  "synced_at": "2026-07-04T07:11:50Z"
+}

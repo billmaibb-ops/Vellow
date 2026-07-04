@@ -1,0 +1,73 @@
+{
+  "id": "CJ-0816",
+  "description": "<p>Product parameters:<br/><font size=\"2\">Material: plastic</font></p><p><font size=\"2\">Capacity: 150ml</font></p><p><font size=\"2\">Voltage: DC5V, 3W</font></p><p><font size=\"2\">N.W./ G.W.: 0.34kg/ 0.5kg</font></p><p><font size=\"2\">Noise: &lt;34db<br/>Consumption: 0.6\u00b110%g/h</font></p><p><font size=\"2\">Unit box size: 128*70*200mm</font></p><p><font size=\"2\">Color: white, black</font></p><p><img src=\"https://cf.cjdropshipping.com/eae0b2a3-1939-484d-9145-9cdd4a6f2270.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/056f52f4-72df-4440-ab10-b525a819a463.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/c9e1dc44-1c99-4638-80aa-6c0d695d6c62.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/db330ee6-73fb-4132-b38f-6a5929fe67b4.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b6ad5722-d63d-448e-848f-bc23d0ba153c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/592d445f-2113-4619-b837-1d01a9958778.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/637ef12a-1224-43cd-ade0-6bb0355723e7.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/55eaad0f-d01b-4f30-8816-a5f825658765.png",
+    "https://cf.cjdropshipping.com/f4951c9a-0ee0-4802-871e-29be81459a83.png",
+    "https://cf.cjdropshipping.com/997a626f-2466-4272-bae6-67b66cec14b9.png",
+    "https://cf.cjdropshipping.com/81b40bc8-46d2-4c45-ad52-1b00b544aaa2.png",
+    "https://cf.cjdropshipping.com/08eeb47e-a235-4622-b589-c1c589206448.png",
+    "https://cf.cjdropshipping.com/b9b97952-7372-466c-a565-68a889dab0ee.png",
+    "https://cf.cjdropshipping.com/3a59b7fc-6658-4813-a733-e48238bb0d33.png",
+    "https://cf.cjdropshipping.com/d841f926-9f9c-4bb3-b8a2-4f508195358d.png"
+  ],
+  "variants": [
+    {
+      "vid": "1579029015665987584",
+      "name": "AU-White",
+      "image": "https://cf.cjdropshipping.com/08eeb47e-a235-4622-b589-c1c589206448.png",
+      "source_cost": 19.91,
+      "retail_price": 34.49
+    },
+    {
+      "vid": "1579029015665987585",
+      "name": "EU-White",
+      "image": "https://cf.cjdropshipping.com/08eeb47e-a235-4622-b589-c1c589206448.png",
+      "source_cost": 19.91,
+      "retail_price": 34.49
+    },
+    {
+      "vid": "1579029015665987586",
+      "name": "UK-White",
+      "image": "https://cf.cjdropshipping.com/08eeb47e-a235-4622-b589-c1c589206448.png",
+      "source_cost": 19.91,
+      "retail_price": 34.49
+    },
+    {
+      "vid": "1579029015665987587",
+      "name": "US-White",
+      "image": "https://cf.cjdropshipping.com/08eeb47e-a235-4622-b589-c1c589206448.png",
+      "source_cost": 19.91,
+      "retail_price": 34.49
+    },
+    {
+      "vid": "1579029015665987588",
+      "name": "AU-Black",
+      "image": "https://cf.cjdropshipping.com/55eaad0f-d01b-4f30-8816-a5f825658765.png",
+      "source_cost": 19.91,
+      "retail_price": 34.49
+    },
+    {
+      "vid": "1579029015665987589",
+      "name": "EU-Black",
+      "image": "https://cf.cjdropshipping.com/55eaad0f-d01b-4f30-8816-a5f825658765.png",
+      "source_cost": 19.91,
+      "retail_price": 34.49
+    },
+    {
+      "vid": "1579029015665987590",
+      "name": "UK-Black",
+      "image": "https://cf.cjdropshipping.com/55eaad0f-d01b-4f30-8816-a5f825658765.png",
+      "source_cost": 19.91,
+      "retail_price": 34.49
+    },
+    {
+      "vid": "1579029015665987591",
+      "name": "US-Black",
+      "image": "https://cf.cjdropshipping.com/55eaad0f-d01b-4f30-8816-a5f825658765.png",
+      "source_cost": 19.91,
+      "retail_price": 34.49
+    }
+  ],
+  "synced_at": "2026-07-04T07:10:27Z"
+}

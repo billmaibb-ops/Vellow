@@ -1,0 +1,27 @@
+{
+  "id": "CJ-0177",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package size<br/><br/>Length\uff08cm\uff09\uff1a10<br/><br/>Width\uff08cm\uff09\uff1a10<br/><br/>Height\uff08cm\uff09\uff1a10<br/><br/>Weight\uff08kg\uff09\uff1a0.35</p><p><img src=\"https://cf.cjdropshipping.com/ef446db4-1ba8-48d9-8102-aa6800230557.png\" style=\"max-width:100%;\" contenteditable=\"false\" data-src=\"https://cf.cjdropshipping.com/17500320/1934515435022323712.jpg\" data-key=\"1\" data-uploadossfail=\"false\"/><img src=\"https://cf.cjdropshipping.com/9cf25ed2-6e5a-4f2d-8adc-17a58f5840b1.png\" style=\"max-width:100%;\" contenteditable=\"false\" data-src=\"https://cf.cjdropshipping.com/17500320/1934515436863623168.jpg\" data-key=\"2\" data-uploadossfail=\"false\"/><img src=\"https://cf.cjdropshipping.com/528f1cee-bec8-477d-8d8e-255bbcd3e26f.png\" style=\"max-width:100%;\" contenteditable=\"false\" data-src=\"https://cf.cjdropshipping.com/17500320/1934515437358551040.jpg\" data-key=\"3\" data-uploadossfail=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/17500320/1934515454517448704.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515442374938624.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515444908298240.jpg",
+    "https://cf.cjdropshipping.com/aa25d932-bb29-47b3-932e-4409c76c07dc.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515438910443520.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515450717409280.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515461861675008.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515443293491200.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515448557342720.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515458594312192.jpg",
+    "https://cf.cjdropshipping.com/17500320/1934515451564658688.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1860239001715101696",
+      "name": "Black",
+      "image": "https://cf.cjdropshipping.com/aa25d932-bb29-47b3-932e-4409c76c07dc.jpg",
+      "source_cost": 17.16,
+      "retail_price": 29.73
+    }
+  ],
+  "synced_at": "2026-07-04T06:41:41Z"
+}

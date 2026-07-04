@@ -1,0 +1,21 @@
+{
+  "id": "CJ-0830",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/75812a62-48f5-4f5e-8f7e-d3020c8d251f.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/7c899d08-fe75-4924-bdb4-3f6c5aefa748.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/edfd52f0-2bf9-4b2d-9707-76e92f12108b.jpg",
+    "https://cf.cjdropshipping.com/64d6a26c-09ed-47ce-9eb1-0a6f1e2db7d4.jpg",
+    "https://cf.cjdropshipping.com/6d25130c-c012-4223-b874-9decd309c70c.jpg",
+    "https://cf.cjdropshipping.com/129287a1-fc4c-44be-8fd9-25e82860de36.jpg",
+    "https://cf.cjdropshipping.com/5ceb6fa3-3260-44a8-b5cc-f461f141f85f.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1772519316882608128",
+      "name": "L",
+      "image": "https://cf.cjdropshipping.com/64d6a26c-09ed-47ce-9eb1-0a6f1e2db7d4.jpg",
+      "source_cost": 2.08,
+      "retail_price": 12.66
+    }
+  ],
+  "synced_at": "2026-07-04T07:11:04Z"
+}

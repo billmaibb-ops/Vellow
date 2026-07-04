@@ -1,0 +1,51 @@
+{
+  "id": "CJ-0462",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/d302c506-9844-4672-9458-6575ef9d9b60.png\" style=\"max-width:100%;\" contenteditable=\"false\"><img src=\"https://cf.cjdropshipping.com/ee091efa-41c2-4a2b-a46e-ab268844a7b1.png\" style=\"max-width:100%;\" contenteditable=\"false\"><img src=\"https://cf.cjdropshipping.com/5579c365-1e2d-4ec9-8cff-f6395b5899f4.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"><img src=\"https://cf.cjdropshipping.com/49d0a592-2078-4553-8856-b89187fc869d.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"><img src=\"https://cf.cjdropshipping.com/248d074e-7528-4da0-a7a4-974a5cdec26d.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"><img src=\"https://cf.cjdropshipping.com/9c1a81fb-b66a-4c62-ad9f-bf271076d377.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"><img src=\"https://cf.cjdropshipping.com/3d996b49-a9db-4c1f-9c54-1b6ce0fb855d.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"><img src=\"https://cf.cjdropshipping.com/c2e8aa35-f9eb-40f1-ac76-2825de9d2629.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/802d7b66-0145-4057-8472-8f172ede190d.jpg",
+    "https://cf.cjdropshipping.com/ee61be12-a611-4e5c-ad32-5bc0af2b6fc6.jpg",
+    "https://cf.cjdropshipping.com/6461574c-c778-4ecb-802f-f9b36955cbc4.jpg",
+    "https://cf.cjdropshipping.com/bb9840b8-d6c5-441b-9750-89881295d850.jpg",
+    "https://cf.cjdropshipping.com/03cd8feb-462f-4fa1-bd91-1722d54298ff.png",
+    "https://cf.cjdropshipping.com/bbc9537b-d830-4f70-82c2-1f28c769273c.jpg",
+    "https://cf.cjdropshipping.com/dea2e70e-9bf5-4b78-9a2a-7c864d84d756.png"
+  ],
+  "variants": [
+    {
+      "vid": "1956654039968534529",
+      "name": "Army Green",
+      "image": "https://cf.cjdropshipping.com/03cd8feb-462f-4fa1-bd91-1722d54298ff.png",
+      "source_cost": 10.22,
+      "retail_price": 21.06
+    },
+    {
+      "vid": "1956654039968534530",
+      "name": "Purple",
+      "image": "https://cf.cjdropshipping.com/dea2e70e-9bf5-4b78-9a2a-7c864d84d756.png",
+      "source_cost": 10.22,
+      "retail_price": 21.06
+    },
+    {
+      "vid": "1956654039968534531",
+      "name": "Blue",
+      "image": "https://cf.cjdropshipping.com/ee61be12-a611-4e5c-ad32-5bc0af2b6fc6.jpg",
+      "source_cost": 10.22,
+      "retail_price": 21.06
+    },
+    {
+      "vid": "1956654039968534532",
+      "name": "Black",
+      "image": "https://cf.cjdropshipping.com/bbc9537b-d830-4f70-82c2-1f28c769273c.jpg",
+      "source_cost": 10.22,
+      "retail_price": 21.06
+    },
+    {
+      "vid": "1956654039968534533",
+      "name": "Red",
+      "image": "https://cf.cjdropshipping.com/802d7b66-0145-4057-8472-8f172ede190d.jpg",
+      "source_cost": 10.22,
+      "retail_price": 21.06
+    }
+  ],
+  "synced_at": "2026-07-04T06:54:17Z"
+}

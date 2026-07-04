@@ -1,0 +1,24 @@
+{
+  "id": "CJ-1500",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/120285a5-78d5-4138-82bf-56cb9cc450a0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/835440bc-fbd0-41e2-9e97-fcf250530d95.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/89527d45-3855-468c-a94b-85f1c46ec955.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/a967b20f-ac7b-4502-837a-1ad9ecb26963.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b4865f54-254c-4b0c-9f4c-e95002a066da.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/c213fa40-14e6-48cb-a0a4-aab1cd1b360f.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/0fadafce-1981-43df-a8df-e58dab6031a6.jpg",
+    "https://cf.cjdropshipping.com/9dcad8b8-c0a2-4eee-a23e-83cbd90dbad5.jpg",
+    "https://cf.cjdropshipping.com/6fc6e97b-4f4f-4b42-9acc-b92c026ad1f1.jpg",
+    "https://cf.cjdropshipping.com/40c44a06-0b83-4c4f-9368-161bfd8c9922.jpg",
+    "https://cf.cjdropshipping.com/2af8e206-60e4-4358-924c-717cd47224cb.jpg",
+    "https://cf.cjdropshipping.com/cd7a001f-8997-401c-b3b1-5f7057aa46d8.jpg",
+    "https://cf.cjdropshipping.com/843ec278-0525-45d5-9c5c-cf2ed7020f6b.jpg",
+    "https://cf.cjdropshipping.com/68de77e0-6912-4e36-8b62-8b8f2cf3eb77.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2035991975820394497",
+      "name": "Style1",
+      "image": "https://cf.cjdropshipping.com/0fadafce-1981-43df-a8df-e58dab6031a6.jpg",
+      "source_cost": 10.8,
+      "retail_price": 21.65
+    }
+  ],
+  "synced_at": "2026-07-04T07:40:58Z"
+}

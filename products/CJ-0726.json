@@ -1,0 +1,28 @@
+{
+  "id": "CJ-0726",
+  "description": "<p>Product name: Dual Type-C HUB Seven-in-One HDMI Docking Station<br><br>Product model: T-808<br><br>Product Color: Classic Silver Space Gray<br><br>Interface type: dual Type-C 3.1 high-speed interface<br><br>Expansion port: USB3.0 * 2 + USB-C data + USB-C PD charging (compatible with Thunderbolt 3 standard) + HDMI 4K HD<br><br>Transmission rate: TYPE-C to USB3.1 theoretical speed 10Gbps, backward compatible with USB3.0 / USB2.0 / USB1.1<br><br>Power output: voltage: 5V-20V current 3A-5A power: 15W-100W<br><br>Product size: 12.7Cm long, 3Cm wide, 1Cm thick<br><br>Product material: high-end aluminum-magnesium alloy material<br><br>Product packaging: exquisite carton + blister inner support Package size 16cm * 7.5cm * 1.6cm</p><p><img src=\"https://cf.cjdropshipping.com/20200306/45048422632.jpg\"><br></p><p><img src=\"https://cf.cjdropshipping.com/20200306/2525073108980.jpg\"><br></p><p><img src=\"https://cf.cjdropshipping.com/20200306/593309777352.jpg\"><br></p><p><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/15504192/267251396596.jpg",
+    "https://cf.cjdropshipping.com/20200306/2525073108980.jpg",
+    "https://cf.cjdropshipping.com/20200306/593309777352.jpg",
+    "https://cf.cjdropshipping.com/20200306/1815880656863.jpg",
+    "https://cf.cjdropshipping.com/20200306/45048422632.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "F48CCE88-82A1-43FA-BC36-44F28212A08A",
+      "name": "Multi-function hub Silver",
+      "image": "https://cf.cjdropshipping.com/20190222/532587967104.JPG",
+      "source_cost": 17.88,
+      "retail_price": 30.97
+    },
+    {
+      "vid": "F7E77CEC-9142-4BDD-B8B9-3D9FB1776755",
+      "name": "Multi-function hub Gray",
+      "image": "https://cf.cjdropshipping.com/20190222/5307939201812.JPG",
+      "source_cost": 17.88,
+      "retail_price": 30.97
+    }
+  ],
+  "synced_at": "2026-07-04T07:06:28Z"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "CJ-0688",
+  "description": "<p>Type: Bluetooth Speaker<br/>Connection method: Bluetooth connection<br/>Battery capacity: 1800MA<br/>Frequency response range: 100HZ-20KHZ<br/>Output power: 6W<br/>Play time: 6 hours<br/>Extended storage: 32GB<br/>Number of speakers: 2<br/>Shell material: plastic<br/>Support format: TF card<br/>Speaker adjustment mode: button<br/>Cabinet material: ABS<br/>Power mode: USB</p><p><img src=\"https://cf.cjdropshipping.com/2050/394008259638.png\"/>&nbsp;&nbsp;<br/></p><p><img src=\"https://cf.cjdropshipping.com/2050/1840007366298.jpg\"/><br/></p><p><img src=\"https://cf.cjdropshipping.com/2050/6026302165742.png\"/>&nbsp;&nbsp;<br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/2050/6026302165742.png",
+    "https://cf.cjdropshipping.com/2052/623306036275.jpg",
+    "https://cf.cjdropshipping.com/2050/394008259638.png",
+    "https://cf.cjdropshipping.com/2050/18385945630403.jpg",
+    "https://cf.cjdropshipping.com/2050/782063717723.jpg",
+    "https://cf.cjdropshipping.com/2050/1840007366298.jpg",
+    "https://cf.cjdropshipping.com/20200606/1579630163713.png",
+    "https://cf.cjdropshipping.com/2050/545633994225.jpg",
+    "https://cf.cjdropshipping.com/2050/2288555269356.png"
+  ],
+  "variants": [
+    {
+      "vid": "0B9B022A-6DB0-48E3-8E75-CFD172027EC6",
+      "name": "Wireless bluetooth speaker Black",
+      "image": "https://cf.cjdropshipping.com/2050/394008259638.png",
+      "source_cost": 14.59,
+      "retail_price": 25.56
+    },
+    {
+      "vid": "D14D0A02-E2DE-4AE4-9505-5A7F1AC9D8AA",
+      "name": "Wireless bluetooth speaker Blue",
+      "image": "https://cf.cjdropshipping.com/20200606/1579630163713.png",
+      "source_cost": 14.59,
+      "retail_price": 25.56
+    }
+  ],
+  "synced_at": "2026-07-04T07:04:44Z"
+}

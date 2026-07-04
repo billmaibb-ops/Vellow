@@ -1,0 +1,21 @@
+{
+  "id": "CJ-1134",
+  "description": "<p>1</p>",
+  "images": [
+    "https://cf.cjdropshipping.com/15158016/955562064844.jpg",
+    "https://cf.cjdropshipping.com/15158016/24935820247836.jpg",
+    "https://cf.cjdropshipping.com/15158016/2260257101674.jpg",
+    "https://cf.cjdropshipping.com/15158016/2019642842931.jpg",
+    "https://cf.cjdropshipping.com/15158016/402791767984.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "13DDDDC0-1FF1-407B-B922-4E16B7B5D907",
+      "name": "Printed Round Beach Towels And Yoga Mat default",
+      "image": "https://cf.cjdropshipping.com/15158016/2019642842931.jpg",
+      "source_cost": 4.57,
+      "retail_price": 15.23
+    }
+  ],
+  "synced_at": "2026-07-04T07:24:40Z"
+}

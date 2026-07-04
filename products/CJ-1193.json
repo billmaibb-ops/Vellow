@@ -1,0 +1,49 @@
+{
+  "id": "CJ-1193",
+  "description": "<p>Material: Canvas<br>Product category: cat tunnel<br>Color: blue and black, black and gray, orange and purple, colorful, black and yellow<br>Specification: colorful cat tunnel<br>Use scenario: family</p><p><img src=\"https://cf.cjdropshipping.com/d7561ce8-9a4f-41f6-a71f-521fc5f9d0e5.jpg\" style=\"max-width:100%;\"><br></p><p><img src=\"https://cf.cjdropshipping.com/198603d5-ae9a-4d3d-b1e0-cf5d2aaf0409.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/a5033b3e-d778-4be5-a274-4668eca4e730.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/0f8ff042-9165-4cec-a6fa-98ce77f4e572.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/dbcf850e-3c99-43b2-a35c-f69237300dd8.jpg\" style=\"font-size: 14px; max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/8129aa9d-d720-4495-982d-787e1f234a9d.jpg\" style=\"font-size: 14px; max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/203208/1631233421626.jpg",
+    "https://cf.cjdropshipping.com/203208/4837381263.jpg",
+    "https://cf.cjdropshipping.com/203208/149589455244.jpg",
+    "https://cf.cjdropshipping.com/203208/62712825424520.jpg",
+    "https://cf.cjdropshipping.com/203208/1928291095377.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1E771322-E4C6-45E5-A477-DA79A64021BF",
+      "name": "Cat toy S-shaped cat tunnel foldable cat tunnel Blue black",
+      "image": "https://cf.cjdropshipping.com/203208/1631233421626.jpg",
+      "source_cost": 2.93,
+      "retail_price": 13.54
+    },
+    {
+      "vid": "A43A4557-F116-43E0-B0D0-F646C7CB070E",
+      "name": "Cat toy S-shaped cat tunnel foldable cat tunnel Black grey",
+      "image": "https://cf.cjdropshipping.com/203208/62712825424520.jpg",
+      "source_cost": 2.93,
+      "retail_price": 13.54
+    },
+    {
+      "vid": "A83218B1-1C2F-4202-A381-7D1BB98E4935",
+      "name": "Cat toy S-shaped cat tunnel foldable cat tunnel Colorful",
+      "image": "https://cf.cjdropshipping.com/203208/149589455244.jpg",
+      "source_cost": 2.93,
+      "retail_price": 13.54
+    },
+    {
+      "vid": "CD947B32-1C1D-4ADB-8C1E-E6BACDEF2652",
+      "name": "Cat toy S-shaped cat tunnel foldable cat tunnel Orange purple",
+      "image": "https://cf.cjdropshipping.com/203208/1928291095377.jpg",
+      "source_cost": 2.93,
+      "retail_price": 13.54
+    },
+    {
+      "vid": "D6EB7F57-C0C2-44BC-91D1-20ACB826B566",
+      "name": "Cat toy S-shaped cat tunnel foldable cat tunnel Black yellow",
+      "image": "https://cf.cjdropshipping.com/203208/4837381263.jpg",
+      "source_cost": 2.93,
+      "retail_price": 13.54
+    }
+  ],
+  "synced_at": "2026-07-04T07:27:21Z"
+}

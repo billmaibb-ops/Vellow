@@ -1,0 +1,23 @@
+{
+  "id": "CJ-0261",
+  "description": "<p><img src=\"https://cf.cjdropshipping.com/9eca824a-3895-4b7b-bf53-02e1c7cd5da4.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/683f8c43-6b87-4616-9d67-1a938afe2067.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/9a3806d9-e14c-48a2-829f-b895651570bc.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/5e370f63-c42e-47e6-b47f-11b7f5589ade.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/119c9769-509f-40cd-bedc-1c2aff3a594b.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/ecb50c25-b5cd-4199-afcc-b5f4a8e788c9.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/d2ed16a6-70fe-4358-af99-b0b29300e144.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/17589770-6f35-4409-b0e6-1f57b2335dbc.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/8064100c-08ab-4672-a8cb-0ea43331ddb9.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/ab76975d-d58f-4570-9efc-7f1cb232c860.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/0340100f-6817-44d6-a0b5-7dfe1594e8ca.jpg",
+    "https://cf.cjdropshipping.com/d860aa0f-5b22-41df-8b65-a26b3dc03c7e.jpg",
+    "https://cf.cjdropshipping.com/279bd24e-31e4-472a-b74d-366bc8ec8366.jpg",
+    "https://cf.cjdropshipping.com/ef79db86-3001-4801-b0ad-87b0ae47e8bc.jpg",
+    "https://cf.cjdropshipping.com/204d2667-ca38-4e19-a458-6df4a4cdf375.jpg",
+    "https://cf.cjdropshipping.com/d87f2354-1607-44b2-88c8-cd0407a68ad7.jpg",
+    "https://cf.cjdropshipping.com/7df7bb10-33a8-4345-bf30-229f9f12f86b.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1909097798579650562",
+      "name": "Silver",
+      "image": "https://cf.cjdropshipping.com/d860aa0f-5b22-41df-8b65-a26b3dc03c7e.jpg",
+      "source_cost": 44.12,
+      "retail_price": 76.42
+    }
+  ],
+  "synced_at": "2026-07-04T06:45:22Z"
+}

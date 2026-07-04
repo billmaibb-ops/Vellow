@@ -1,0 +1,21 @@
+{
+  "id": "CJ-0943",
+  "description": "<p><b>Product information</b><br>Processor speed: 20<br>Power supply current: 1A<br>Power supply voltage: 5V<br>Power: 5W<br>Purpose: WiFi+Bluetooth module<br>Featured service: WiFi+Bluetooth module</p><p><br></p><p><b>Packing&nbsp;list :</b><span style=\"font-size: 1em;\">Test board*1</span><br></p><p><br></p><p><br></p><p><br></p><p><img src=\"https://cf.cjdropshipping.com/1622366593878.jpg\" style=\"max-width:100%;\"><img src=\"https://cf.cjdropshipping.com/1622366593876.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1622366593875.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1622366593874.jpg\" style=\"max-width: 100%;\"><img src=\"https://cf.cjdropshipping.com/1622366593878.jpg\" style=\"max-width: 100%;\"><br></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/1622366626431.jpg",
+    "https://cf.cjdropshipping.com/1622366626430.jpg",
+    "https://cf.cjdropshipping.com/1622366626427.jpg",
+    "https://cf.cjdropshipping.com/1622366681454.jpg",
+    "https://cf.cjdropshipping.com/1622366626429.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1398933536639160320",
+      "name": "ESP32CAM Development Board Test Board WiFi And Bluetooth Module ESP32 Serial Port Transfer as shown",
+      "image": "https://cf.cjdropshipping.com/1622366626427.jpg",
+      "source_cost": 3.62,
+      "retail_price": 14.25
+    }
+  ],
+  "synced_at": "2026-07-04T07:16:09Z"
+}

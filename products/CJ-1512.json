@@ -1,0 +1,35 @@
+{
+  "id": "CJ-1512",
+  "description": "<p><b>Product information:</b><br/></p><p>Style: fashion<br/>Waterproof: Yes<br/>Waterproof performance: 30M<br/>Thickness: 8mm<br/>Dial diameter: 38mm<br/>Crown type: spiral crown<br/>Buckle material: stainless steel<br/>Color: gold, silver, rose gold</p><p><br/><b>Packing list:</b></p><p>Watch*1</p><p><img src=\"https://cf.cjdropshipping.com/17183232/2406140943570329600.jpg\" style=\"max-width:100%;\"/><img src=\"https://cf.cjdropshipping.com/17183232/2406140943580322700.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17183232/2406140943580324200.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17183232/2406140943580327600.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17183232/2406140943580329500.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17183232/2406140943590324600.jpg\" style=\"max-width: 100%;\"/><img src=\"https://cf.cjdropshipping.com/17183232/2406140943590327500.jpg\" style=\"max-width: 100%;\"/><br/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/fa73942a-a92e-4495-8379-91f09fd31596.jpg",
+    "https://cf.cjdropshipping.com/4eeca003-bffd-4f02-918c-34931a8edb59.jpg",
+    "https://cf.cjdropshipping.com/49687e6d-8653-424f-a39d-385687194d1f.jpg",
+    "https://cf.cjdropshipping.com/513ed706-7636-41e3-bb74-12a7c9d9973e.jpg",
+    "https://cf.cjdropshipping.com/4b4f04a2-7b30-4353-ba51-dbd0969b9c27.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1463409050514493440",
+      "name": "Fashion Watch Diamond Alloy Steel Band Gold",
+      "image": "https://cf.cjdropshipping.com/49687e6d-8653-424f-a39d-385687194d1f.jpg",
+      "source_cost": 1.51,
+      "retail_price": 12.08
+    },
+    {
+      "vid": "1463409050514493441",
+      "name": "Fashion Watch Diamond Alloy Steel Band Silver",
+      "image": "https://cf.cjdropshipping.com/513ed706-7636-41e3-bb74-12a7c9d9973e.jpg",
+      "source_cost": 1.51,
+      "retail_price": 12.08
+    },
+    {
+      "vid": "1463409050518687744",
+      "name": "Fashion Watch Diamond Alloy Steel Band Rose Gold",
+      "image": "https://cf.cjdropshipping.com/4b4f04a2-7b30-4353-ba51-dbd0969b9c27.jpg",
+      "source_cost": 1.51,
+      "retail_price": 12.08
+    }
+  ],
+  "synced_at": "2026-07-04T07:41:30Z"
+}

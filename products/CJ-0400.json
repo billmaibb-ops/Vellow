@@ -1,0 +1,25 @@
+{
+  "id": "CJ-0400",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package size Length\uff08cm\uff09\uff1a15 Width\uff08cm\uff09\uff1a11 Height\uff08cm\uff09\uff1a2 Weight\uff08kg\uff09\uff1a0.09</p>\n <p><img src=\"https://cf.cjdropshipping.com/b232cfbe-0cac-4a0c-bdb7-1f9422f97fec.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/21b565d1-6bca-44a5-882c-b99d20aa34fb.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/2d48c694-dc68-4d5a-b6b5-54449e64dba7.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/b2fc9507-dac5-4193-896c-1fc27bbbd519.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/18d6efec-83f5-431d-b3e6-d338490289b0.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/946b777b-7b5f-400b-b3e9-a3673b9aabee.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/0b550d65-3fb5-4afd-9980-10ef4627fd14.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/fc86bb02-0459-4140-a511-b2f463e5e517.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/acd3f15a-d540-4ccf-a1af-8e8edc3fae69.jpg",
+    "https://cf.cjdropshipping.com/779ee92e-0d7b-4d67-bf82-25ec2e769c08.jpg",
+    "https://cf.cjdropshipping.com/5f623bc8-8a67-46d1-9ddb-edc0b98d907f.jpg",
+    "https://cf.cjdropshipping.com/d3b087b1-e247-4605-b14b-131def87197d.jpg",
+    "https://cf.cjdropshipping.com/f82de58b-3d47-4540-a11b-ad3c69cf4af8.jpg",
+    "https://cf.cjdropshipping.com/061958d8-446d-4a46-9742-968630ceecbf.jpg",
+    "https://cf.cjdropshipping.com/314ba67d-40b9-4779-8999-d589918aca7d.jpg",
+    "https://cf.cjdropshipping.com/c94d5b5f-6c60-4d5b-b033-602ab61226bb.jpg",
+    "https://cf.cjdropshipping.com/af41353e-2e84-43a6-8b7e-3b93f25368ca.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1871436816630853643",
+      "name": "Golden",
+      "image": "https://cf.cjdropshipping.com/af41353e-2e84-43a6-8b7e-3b93f25368ca.jpg",
+      "source_cost": 13.78,
+      "retail_price": 24.73
+    }
+  ],
+  "synced_at": "2026-07-04T06:51:34Z"
+}

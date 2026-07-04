@@ -1,0 +1,23 @@
+{
+  "id": "CJ-0166",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>1. Liquid crystal display<br/>2. Double alarm<br/>3. Warm yellow backlight<br/>4. 12/24 hour mode<br/>5. Eyes open/close automatically<br/>6. Two recorders<br/>7. 2XAAA backup battery (not included)<br/>8. Adapter included</p><p><img src=\"https://cf.cjdropshipping.com/8c8a2a59-9fa0-4c81-b06f-43638e372df6.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/9a1484f4-03e9-4a74-8c82-393ff8e6236c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/3ec716f9-c237-446a-b850-02a8aed39e69.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/002c8c7a-783f-4cf2-a0e6-0e6d133d5146.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/a4bc6ee7-14e8-45f5-a7d0-504d5e1d6efa.png",
+    "https://cf.cjdropshipping.com/4c07d185-89f6-4ee4-8979-1bff9798f210.png",
+    "https://cf.cjdropshipping.com/6a09abf9-dfee-43ba-b2cb-18a7f126609e.png",
+    "https://cf.cjdropshipping.com/945ed3c9-0c8a-4fb1-9339-caec99f82c1d.png",
+    "https://cf.cjdropshipping.com/c06d90af-5e3b-451d-8710-b3528021f133.png",
+    "https://cf.cjdropshipping.com/92849f52-0f73-4f7b-8ddf-4f8692489340.png",
+    "https://cf.cjdropshipping.com/86cfb68c-b7be-407a-8965-e99b0a222e18.png"
+  ],
+  "variants": [
+    {
+      "vid": "1860255223550726144",
+      "name": "Yellow",
+      "image": "https://cf.cjdropshipping.com/92849f52-0f73-4f7b-8ddf-4f8692489340.png",
+      "source_cost": 10.59,
+      "retail_price": 21.44
+    }
+  ],
+  "synced_at": "2026-07-04T06:41:13Z"
+}

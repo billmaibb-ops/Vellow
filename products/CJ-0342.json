@@ -1,0 +1,40 @@
+{
+  "id": "CJ-0342",
+  "description": "<p><span style=\"background-color: rgb(194, 79, 74);\">The carriers that support self-pickup with official logistics waybills are: USPS, FedEx, UPS.<br/><br/>&nbsp;official logistics waybill: generating a USPS waybill is charged according to the labeled price, while generating UPS or FedEx requires an additional $2.</span></p><p>Package Size</p><p>Length\uff08cm\uff09\uff1a11</p><p>Width\uff08cm\uff09\uff1a16.5</p><p>Height\uff08cm\uff09\uff1a5</p><p>Weight\uff08kg\uff09\uff1a0.051</p><p><img src=\"https://cf.cjdropshipping.com/089e4696-417c-4c28-86d3-00e716099e5c.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/24de5c45-9ff7-4bef-b7d6-4045591d2cf2.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/e2ed3b90-67c1-4221-a758-bca65b81069e.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/d3beb9b5-3dce-444d-bd13-bb3c858ccdaf.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/1439b740-74c5-4b32-b4a3-f6ebc9d8360a.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/0f2beda2-b56b-46a8-a776-3c40f40205dc.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/4717b0d8-35c5-4a8d-9b66-2a3621c25134.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/c3c2a2b4-fd06-4701-ab8e-dd34c56a3354.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/606fa9db-eafe-400a-8b8e-fc789baf9d8a.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/><img src=\"https://cf.cjdropshipping.com/2465ffd6-c96f-47b2-b176-cb821ec94050.jpg\" style=\"max-width:100%;\" contenteditable=\"false\"/></p>",
+  "images": [
+    "https://cf.cjdropshipping.com/73f86303-1b74-4cdb-bc7d-37fb005f6175.jpg",
+    "https://cf.cjdropshipping.com/aca326d2-2347-4fa6-8d82-60dbd54a896d.jpg",
+    "https://cf.cjdropshipping.com/b09b882f-5605-41c4-b467-3f049eb9768e.jpg",
+    "https://cf.cjdropshipping.com/db15de72-4245-4539-a0ef-4d93b96c3436.jpg",
+    "https://cf.cjdropshipping.com/4db1c6c0-81ed-4781-9001-8e18f9970b0a.jpg",
+    "https://cf.cjdropshipping.com/60a526f5-b333-4e38-944d-4c419722d6f6.jpg",
+    "https://cf.cjdropshipping.com/4400bdf0-9aed-4f9d-9885-efcb4e7dcd10.jpg",
+    "https://cf.cjdropshipping.com/8ace418b-dc3e-4c79-b939-f8257c2b6d30.jpg",
+    "https://cf.cjdropshipping.com/7388008a-aaf9-4b50-b17a-8311069d68f3.jpg",
+    "https://cf.cjdropshipping.com/229074ae-4e71-4bdf-bbd1-32773e1e0e15.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "1860147151671021568",
+      "name": "White and green",
+      "image": "https://cf.cjdropshipping.com/73f86303-1b74-4cdb-bc7d-37fb005f6175.jpg",
+      "source_cost": 9.24,
+      "retail_price": 20.05
+    },
+    {
+      "vid": "1860147151671021569",
+      "name": "Light blue and ocean blue",
+      "image": "https://cf.cjdropshipping.com/aca326d2-2347-4fa6-8d82-60dbd54a896d.jpg",
+      "source_cost": 9.24,
+      "retail_price": 20.05
+    },
+    {
+      "vid": "1860147151671021570",
+      "name": "Red and brown",
+      "image": "https://cf.cjdropshipping.com/db15de72-4245-4539-a0ef-4d93b96c3436.jpg",
+      "source_cost": 9.24,
+      "retail_price": 20.05
+    }
+  ],
+  "synced_at": "2026-07-04T06:48:58Z"
+}

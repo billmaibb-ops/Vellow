@@ -1,0 +1,29 @@
+{
+  "id": "CJ-0994",
+  "description": "<p><b>Product information:</b><br/>Type \uff1aCup Cover<br/>Color\uff1a Black</p><br/><b>Packing list: </b><br/>1 * Cup holder<br/><b>Product Image:</b><br/><img src=\"https://cf.cjdropshipping.com/17191872/2406240602310329600.jpg\"/><img src=\"https://cf.cjdropshipping.com/17191872/2406240602320322800.jpg\"/><img src=\"https://cf.cjdropshipping.com/17191872/2406240602320326500.jpg\"/><img src=\"https://cf.cjdropshipping.com/17191872/2406240602320328400.jpg\"/><img src=\"https://cf.cjdropshipping.com/17191872/2406240602330320300.jpg\"/>",
+  "images": [
+    "https://oss-cf.cjdropshipping.com/product/2024/06/24/03/7dda4677-05ef-4cb2-ae1d-ce6c54a1b12d_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2024/06/24/03/5127745f-be09-4333-9940-8ac1fd7dfa26.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/06/24/03/b6d8cbf8-8241-436d-8839-7d98a322a003_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2024/06/24/06/34971b5f-ce3b-48a4-ae50-3609420d7dc0.jpg",
+    "https://oss-cf.cjdropshipping.com/product/2024/06/24/03/c4c529c1-0749-4613-a9d7-8186cd100d79_trans.jpeg",
+    "https://oss-cf.cjdropshipping.com/product/2024/06/24/03/2677ebe1-7a31-4db4-b24d-aacf79d435ac.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "2406240319131610800",
+      "name": "Black Cup Cover Cup Brush Suit Black 550ML",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/06/24/03/7dda4677-05ef-4cb2-ae1d-ce6c54a1b12d_trans.jpeg",
+      "source_cost": 1.62,
+      "retail_price": 12.19
+    },
+    {
+      "vid": "2406240319131611000",
+      "name": "Black Cup Cover Cup Brush Suit Black 420ML",
+      "image": "https://oss-cf.cjdropshipping.com/product/2024/06/24/03/c4c529c1-0749-4613-a9d7-8186cd100d79_trans.jpeg",
+      "source_cost": 1.62,
+      "retail_price": 12.19
+    }
+  ],
+  "synced_at": "2026-07-04T07:18:26Z"
+}

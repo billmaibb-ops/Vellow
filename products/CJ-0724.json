@@ -1,0 +1,20 @@
+{
+  "id": "CJ-0724",
+  "description": "<p>Product Specifications:<br>HDMI output port: up to 4K UHD (3840x2160 @ 30Hz) or 2K/1080p/720p/480p/360p<br>Ethernet port (RJ-45 port): support 10/100/1000Mbps<br>USB 3.0 port: Compatible with USB3.0 specification, transfer rate up to 5Gbps, backward compatible with USB2.0/1.1<br>USB-C charging port: 60W power supply up to 20V/3A (only for laptop charging)<br>SD &amp; TF 3.0 card reader: supports simultaneous reading and writing on two cards.<br>Dimensions: 124 * 55.5 * 17.5 mm<br>Cable length: 107 mm<br>Weight: 100g<br>System Requirements:<br>Laptop with USB-C port<br>Windows 7/8/8.1/10, Mac OS X V10.0, Android or higher operating system<br>Plug and play, no need to install drivers</p><ul><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200629/2204859875238.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200629/2204859875238.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200629/6123089152675.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200629/6123089152675.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200629/1359609622871.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200629/1359609622871.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200629/6338771919952.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200629/6338771919952.jpg\"></div></li><li ng-drop=\"true\" ng-drop-success=\"dropComplete($index,$data)\" ng-repeat=\"item in picContainer track by $index\"><div ng-drag=\"true\" ng-drag-data=\"item\" draggable=\"false\"><img ng-src=\"https://cf.cjdropshipping.com/20200629/3000084293565.jpg\" alt=\"\" src=\"https://cf.cjdropshipping.com/20200629/3000084293565.jpg\"></div></li></ul>",
+  "images": [
+    "https://cf.cjdropshipping.com/20200629/6123089152675.jpg",
+    "https://cf.cjdropshipping.com/20200629/2204859875238.jpg",
+    "https://cf.cjdropshipping.com/20200629/1359609622871.jpg",
+    "https://cf.cjdropshipping.com/20200629/3000084293565.jpg"
+  ],
+  "variants": [
+    {
+      "vid": "3325E13E-644A-4A78-A39A-EC31DE7CBEC3",
+      "name": "7-in-1 USB-C hub through HDMI output port Aluminum alloy",
+      "image": "https://cf.cjdropshipping.com/20200629/6338771919952.jpg",
+      "source_cost": 24.64,
+      "retail_price": 42.68
+    }
+  ],
+  "synced_at": "2026-07-04T07:06:23Z"
+}
