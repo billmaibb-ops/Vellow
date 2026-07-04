@@ -124,9 +124,16 @@ Configured in `products.json → store.order_policy`:
 - **Immediate verification + auto-order.** On order placement the backend
   re-checks live price and stock and, on success, captures payment and
   forwards the order to CJ within ~5 minutes (`auto_order_minutes: 5`).
-- **No cancellation / no returns** (`cancellable: false`, `returnable: false`).
-- **Refunds capped at 50% of the item price**, shipping non-refundable
-  (`max_refund_rate: 0.50`, `refund_excludes_shipping: true`).
+- **No cancellation** (`cancellable: false`) — orders dispatch in minutes.
+- **CJ pass-through disputes** (`dispute_model: cj_passthrough`). A customer
+  files a dispute within 30 days of delivery; we accept and review it and file
+  the matching dispute with CJ. A refund is issued **only if CJ approves one**,
+  and the customer is refunded the **same percentage CJ approves for us**
+  (`refund_contingent_on_cj_approval`, `refund_matches_cj_percentage`).
+- **Shipping non-refundable** and a **return fee** is deducted from any
+  approved refund (`refund_excludes_shipping: true`, set `return_fee`).
+  Disputes must go through CJ's Dispute Center — off-platform disputes can get
+  the CJ account blocked.
 - **Margin:** `profit_target: 1.20` (120%) sitewide, with the $10 absolute
   floor still protecting very cheap items.
 

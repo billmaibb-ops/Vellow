@@ -24,10 +24,13 @@
   "order_policy": {
    "auto_order_minutes": 5,
    "cancellable": false,
-   "returnable": false,
-   "max_refund_rate": 0.5,
+   "dispute_model": "cj_passthrough",
+   "dispute_window_days": 30,
    "refund_excludes_shipping": true,
-   "_note": "Restrictive policy. Non-delivery/defective orders and card chargebacks are governed by law/card rules regardless of this setting; see README."
+   "return_fee": null,
+   "_note": "Customer disputes are accepted, reviewed, and filed with CJ in parallel. A refund is issued ONLY if CJ approves a refund to the store, and the customer is refunded the SAME PERCENTAGE CJ approves for us (e.g. CJ approves 100% -> full item refund; CJ approves 60% -> 60%). Shipping fees are non-refundable and a return fee is deducted from any approved refund. Disputes must go through CJ's Dispute Center; off-platform disputes (e.g. PayPal) can get the CJ account blocked.",
+   "refund_contingent_on_cj_approval": true,
+   "refund_matches_cj_percentage": true
   }
  },
  "products": [
