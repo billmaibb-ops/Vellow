@@ -43,7 +43,8 @@ charging the customer.
 | `backend/cj_client.py` | CJ Dropshipping API v2 client (auth, products, stock, orders). |
 | `backend/sync_engine.py` | Hourly price/stock poll + daily deep sync → `products.json`. |
 | `backend/watchlist.json` | The CJ product IDs you've chosen to sell. |
-| `backend/server.py` | Order backend: Stripe auth-hold, verify-and-capture, CJ order forward. |
+| `backend/server.py` | Order backend: Stripe auth-hold, verify-and-capture, CJ order forward, admin API. |
+| `admin.html` | **Owner control center** — live profit, order funnel (buyers vs CJ), failed orders, refunds/disputes, Stripe + CJ balances/payouts, catalog health, low-stock, pricing config, order feed. Token-gated. |
 
 ## Pricing model (why you don't lose money in aggregate)
 
@@ -161,6 +162,35 @@ rules**, so enforcing it verbatim carries real risk:
 Recommended: keep the 50% cap for *buyer's-remorse* refunds on delivered,
 as-described items, but issue full refunds for non-delivery/defects. None of
 this is legal advice — confirm your obligations for where you operate.
+
+## Owner control center (`admin.html`)
+
+Live at `…/admin.html` — a private dashboard for the site owner:
+
+- **Profit & revenue** (today / 7d / 30d / all), product cost & Stripe fees.
+- **Order funnel:** placed by buyers → forwarded to CJ → failed to CJ →
+  released (no charge).
+- **Money:** Stripe available/pending balance, next payout, CJ wallet.
+- **Refunds & disputes/chargebacks**, with open disputes needing a response.
+- **Catalog health:** in/out of stock, low stock, avg margin, last sync times.
+- **Live pricing/policy config** and **low-stock list** and a **recent-order feed**.
+- **Alerts/blockages:** failed CJ orders, open disputes, low CJ wallet, Stripe
+  not connected, high out-of-stock ratio.
+
+Setup: set `ADMIN_TOKEN` (any long random string) in the Render env. Open
+`admin.html`, enter that token + your backend URL — it's stored locally and
+sent as a bearer token; every `/api/admin/*` call is rejected without it.
+
+Data sources: Stripe API (payments, refunds, disputes, balance, payouts — needs
+`STRIPE_SECRET_KEY`), CJ (wallet, stock), `products.json` (catalog), and an
+append-only order log written at capture time.
+
+> ⚠️ **Persistence caveat:** the order log (`orders.jsonl`) lives on the
+> backend filesystem, which is **ephemeral on Render's free tier** (wiped on
+> each deploy/restart). Stripe stays the durable record of payments, but the
+> per-order cost/profit log is not durable until you attach a persistent disk
+> or a database (`ORDERS_LOG` path or a DB). Fine for testing; upgrade before
+> relying on it for accounting.
 
 ## Before you go live — the honest checklist
 

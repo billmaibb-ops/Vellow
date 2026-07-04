@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vellow — Owner Control Center</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+  body{background:#0b1220}
+</style>
+</head>
+<body class="text-gray-200 antialiased">
+
+<!-- ===== LOGIN GATE ===== -->
+<div id="gate" class="min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-sm bg-[#131c2e] border border-white/10 rounded-xl p-6">
+    <div class="text-2xl font-black tracking-tight mb-1">VEL<span class="text-[#FF4500]">LOW</span> <span class="text-sm font-normal text-gray-400">admin</span></div>
+    <p class="text-sm text-gray-400 mb-4">Owner control center. Enter your admin token.</p>
+    <input id="tokenInput" type="password" placeholder="Admin token" class="w-full bg-[#0b1220] border border-white/15 rounded-md px-3 py-2 text-sm mb-2" />
+    <input id="apiInput" type="text" placeholder="Backend URL" class="w-full bg-[#0b1220] border border-white/15 rounded-md px-3 py-2 text-xs mb-3 text-gray-400" />
+    <button id="loginBtn" class="w-full bg-[#FF4500] hover:bg-[#e63e00] text-white font-semibold py-2 rounded-md">Unlock</button>
+    <p id="loginErr" class="text-xs text-red-400 mt-2 h-4"></p>
+  </div>
+</div>
+
+<!-- ===== DASHBOARD ===== -->
+<div id="dash" class="hidden max-w-6xl mx-auto p-4 md:p-6">
+
+  <div class="flex items-center justify-between flex-wrap gap-3 mb-5">
+    <div>
+      <div class="text-2xl font-black tracking-tight">VEL<span class="text-[#FF4500]">LOW</span> <span class="text-sm font-normal text-gray-400">control center</span></div>
+      <div id="lastUpdated" class="text-xs text-gray-500"></div>
+    </div>
+    <div class="flex items-center gap-2">
+      <label class="text-xs text-gray-400 flex items-center gap-1"><input id="autoRefresh" type="checkbox" checked class="accent-[#FF4500]"> auto</label>
+      <button id="refreshBtn" class="bg-[#1c2740] hover:bg-[#243150] text-sm px-3 py-1.5 rounded-md">↻ Refresh</button>
+      <button id="logoutBtn" class="text-sm text-gray-400 hover:text-white px-2">Sign out</button>
+    </div>
+  </div>
+
+  <!-- ALERTS -->
+  <div id="alerts" class="space-y-2 mb-5"></div>
+
+  <!-- PROFIT ROW -->
+  <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-2">Profit &amp; revenue</div>
+  <div id="profitRow" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6"></div>
+
+  <!-- ORDER FUNNEL + MONEY -->
+  <div class="grid md:grid-cols-2 gap-4 mb-6">
+    <div class="bg-[#131c2e] border border-white/10 rounded-xl p-4">
+      <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Orders</div>
+      <div id="orderFunnel" class="space-y-2"></div>
+    </div>
+    <div class="bg-[#131c2e] border border-white/10 rounded-xl p-4">
+      <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Money &amp; payouts</div>
+      <div id="moneyBlock" class="space-y-2 text-sm"></div>
+    </div>
+  </div>
+
+  <!-- REFUNDS / DISPUTES + CATALOG -->
+  <div class="grid md:grid-cols-2 gap-4 mb-6">
+    <div class="bg-[#131c2e] border border-white/10 rounded-xl p-4">
+      <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Refunds &amp; disputes</div>
+      <div id="disputeBlock" class="space-y-2 text-sm"></div>
+    </div>
+    <div class="bg-[#131c2e] border border-white/10 rounded-xl p-4">
+      <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Catalog health</div>
+      <div id="catalogBlock" class="space-y-2 text-sm"></div>
+    </div>
+  </div>
+
+  <!-- PRICING CONFIG -->
+  <div class="bg-[#131c2e] border border-white/10 rounded-xl p-4 mb-6">
+    <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Live pricing &amp; policy config</div>
+    <div id="pricingBlock" class="grid grid-cols-2 md:grid-cols-5 gap-3 text-sm"></div>
+  </div>
+
+  <!-- LOW STOCK -->
+  <div class="bg-[#131c2e] border border-white/10 rounded-xl p-4 mb-6">
+    <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Low-stock items (under buffer)</div>
+    <div id="lowStock" class="text-sm text-gray-400">—</div>
+  </div>
+
+  <!-- ORDER FEED -->
+  <div class="bg-[#131c2e] border border-white/10 rounded-xl p-4 mb-6">
+    <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Recent order activity</div>
+    <div id="orderFeed" class="text-sm text-gray-400">No orders yet.</div>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="bg-[#131c2e] border border-white/10 rounded-xl p-4 mb-10">
+    <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Manage</div>
+    <div id="links" class="flex flex-wrap gap-2 text-sm"></div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const money = n => '$' + (Number(n)||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const num = n => (Number(n)||0).toLocaleString();
+
+const TOKEN_KEY='vellow_admin_token', API_KEY='tv_api';
+const DEFAULT_API='https://vellow-backend.onrender.com';
+let token = localStorage.getItem(TOKEN_KEY) || '';
+let api = localStorage.getItem(API_KEY) || DEFAULT_API;
+let timer = null;
+
+$('apiInput').value = api;
+
+async function adminFetch(path){
+  const r = await fetch(api + path, { headers: { 'Authorization': 'Bearer ' + token } });
+  if(r.status === 401) throw new Error('unauthorized');
+  return r.json();
+}
+
+async function login(){
+  token = $('tokenInput').value.trim();
+  api = ($('apiInput').value.trim() || DEFAULT_API).replace(/\/$/,'');
+  $('loginErr').textContent = 'Checking…';
+  try{
+    const j = await adminFetch('/api/admin/summary');
+    if(!j.ok) throw new Error(j.reason||'failed');
+    localStorage.setItem(TOKEN_KEY, token);
+    localStorage.setItem(API_KEY, api);
+    $('gate').classList.add('hidden'); $('dash').classList.remove('hidden');
+    render(j); loadFeed(); startAuto();
+  }catch(e){
+    $('loginErr').textContent = e.message==='unauthorized' ? 'Wrong token or backend locked.' : 'Could not reach backend (it may be waking up — try again).';
+  }
+}
+
+function logout(){ localStorage.removeItem(TOKEN_KEY); location.reload(); }
+
+function card(label, value, sub, accent){
+  return `<div class="bg-[#131c2e] border border-white/10 rounded-xl p-4">
+    <div class="text-xs text-gray-400">${label}</div>
+    <div class="text-2xl font-bold ${accent||''}">${value}</div>
+    ${sub?`<div class="text-xs text-gray-500 mt-0.5">${sub}</div>`:''}</div>`;
+}
+function row(label, value, cls){
+  return `<div class="flex justify-between"><span class="text-gray-400">${label}</span><span class="${cls||''}">${value}</span></div>`;
+}
+
+function render(j){
+  $('lastUpdated').textContent = 'Updated ' + new Date(j.generated_at).toLocaleString() + ' · ' + (j.store.name||'store');
+
+  // alerts
+  $('alerts').innerHTML = (j.alerts||[]).map(a=>{
+    const c = a.level==='danger' ? 'bg-red-500/15 border-red-500/40 text-red-300' : 'bg-amber-500/15 border-amber-500/40 text-amber-300';
+    return `<div class="border ${c} rounded-md px-3 py-2 text-sm">⚠ ${a.msg}</div>`;
+  }).join('') || `<div class="text-xs text-green-400">✓ No blockages. Everything looks healthy.</div>`;
+
+  // profit
+  const p = j.profit;
+  $('profitRow').innerHTML =
+    card('Profit — today', money(p.today.profit), p.today.orders+' orders · '+money(p.today.revenue)+' rev', 'text-green-400') +
+    card('Profit — 7 days', money(p['7d'].profit), p['7d'].orders+' orders · '+money(p['7d'].revenue)+' rev', 'text-green-400') +
+    card('Profit — 30 days', money(p['30d'].profit), p['30d'].orders+' orders · '+money(p['30d'].revenue)+' rev', 'text-green-400') +
+    card('Profit — all time', money(p.all.profit), money(p.all.revenue)+' rev · '+money(p.all.product_cost)+' cost · '+money(p.all.stripe_fees)+' fees', 'text-green-400');
+
+  // order funnel
+  const o = j.orders;
+  $('orderFunnel').innerHTML =
+    row('🛒 Placed by buyers (charged)', '<b>'+num(o.placed_by_buyers)+'</b>') +
+    row('📦 Forwarded to CJ', '<b class="text-green-400">'+num(o.sent_to_cj)+'</b>') +
+    row('⛔ Failed to reach CJ', '<b class="'+(o.failed_to_cj?'text-red-400':'')+'">'+num(o.failed_to_cj)+'</b>') +
+    row('↩ Released (out of stock, no charge)', num(o.released_no_charge));
+
+  // money
+  const s = j.stripe, cj = j.cj;
+  $('moneyBlock').innerHTML = s.connected ? (
+    row('Stripe available', money(s.balance_available), 'text-green-400') +
+    row('Stripe pending', money(s.balance_pending)) +
+    row('Next payout', money(s.next_payout) + (s.next_payout_date?' · '+s.next_payout_date:'')) +
+    row('CJ wallet', cj.wallet!=null ? money(cj.wallet) : '—') +
+    (s.error?`<div class="text-xs text-red-400">Stripe: ${s.error}</div>`:'')
+  ) : `<div class="text-amber-300 text-sm">Stripe not connected — add STRIPE keys to see revenue, balance &amp; payouts.</div>` +
+      row('CJ wallet', cj.wallet!=null ? money(cj.wallet) : '—');
+
+  // disputes / refunds
+  $('disputeBlock').innerHTML = s.connected ? (
+    row('Refunds issued', num(s.refund_count) + ' · ' + money(s.refund_total)) +
+    row('Chargebacks / disputes', num(s.dispute_count) + ' · ' + money(s.dispute_total), s.dispute_count?'text-red-300':'') +
+    row('Open disputes needing response', '<b class="'+(s.dispute_open?'text-red-400':'')+'">'+num(s.dispute_open)+'</b>')
+  ) : `<div class="text-gray-500 text-sm">Connect Stripe to track refunds &amp; chargebacks.</div>`;
+
+  // catalog
+  const c = j.catalog;
+  $('catalogBlock').innerHTML =
+    row('Total products', num(c.total)) +
+    row('In stock', '<span class="text-green-400">'+num(c.in_stock)+'</span>') +
+    row('Out of stock', '<span class="'+(c.out_of_stock?'text-amber-300':'')+'">'+num(c.out_of_stock)+'</span>') +
+    row('Low stock (under buffer)', num(c.low_stock)) +
+    row('Last price sync', c.last_price_sync ? new Date(c.last_price_sync).toLocaleString() : '—') +
+    row('Last deep sync', c.last_full_sync ? new Date(c.last_full_sync).toLocaleString() : '—');
+
+  // pricing config
+  const pr = j.pricing;
+  $('pricingBlock').innerHTML =
+    card('Product margin', pr.profit_target_pct+'%','') +
+    card('Profit floor', money(pr.min_profit_per_unit),'per unit') +
+    card('Shipping markup', pr.shipping_markup_pct+'%','') +
+    card('Stock buffer', num(pr.safety_stock_buffer),'units') +
+    card('Gateway fee', pr.gateway_fee_pct+'%','');
+
+  // low stock list
+  $('lowStock').innerHTML = (j.low_stock_items||[]).length
+    ? j.low_stock_items.map(x=>`<div class="flex justify-between border-b border-white/5 py-1"><span class="truncate pr-2">${x.title}</span><span class="text-amber-300 shrink-0">${x.stock}</span></div>`).join('')
+    : 'No items under the buffer.';
+
+  // links
+  const origin = j.store.url || 'https://billmaibb-ops.github.io/Vellow';
+  $('links').innerHTML = [
+    ['View live store', origin],
+    ['Storefront repo / Actions', 'https://github.com/billmaibb-ops/Vellow/actions'],
+    ['Render backend', 'https://dashboard.render.com'],
+    ['Stripe dashboard', 'https://dashboard.stripe.com'],
+    ['CJ dashboard', 'https://cjdropshipping.com'],
+  ].map(([t,u])=>`<a href="${u}" target="_blank" class="bg-[#1c2740] hover:bg-[#243150] px-3 py-1.5 rounded-md">${t} ↗</a>`).join('');
+}
+
+async function loadFeed(){
+  try{
+    const j = await adminFetch('/api/admin/orders');
+    if(!j.ok || !j.orders.length){ $('orderFeed').textContent = 'No orders yet.'; return; }
+    $('orderFeed').innerHTML = `<div class="overflow-x-auto"><table class="w-full text-xs">
+      <tr class="text-gray-500 text-left"><th class="py-1">When</th><th>Status</th><th>Customer</th><th>Dest</th><th class="text-right">Total</th><th class="text-right">Profit</th><th>CJ order</th></tr>
+      ${j.orders.map(o=>{
+        const st = o.status==='fulfilled'?'<span class="text-green-400">fulfilled</span>'
+                 : o.status==='paid_cj_failed'?'<span class="text-red-400">CJ failed</span>'
+                 : o.status.startsWith('released')?'<span class="text-gray-500">released</span>'
+                 : o.status;
+        return `<tr class="border-t border-white/5"><td class="py-1">${(o.ts||'').replace('T',' ').replace('Z','')}</td><td>${st}</td><td>${o.customer||'—'}</td><td>${o.dest||'—'}</td><td class="text-right">${o.total?money(o.total):'—'}</td><td class="text-right text-green-400">${o.est_profit?money(o.est_profit):'—'}</td><td>${o.cj_order_id||'—'}</td></tr>`;
+      }).join('')}</table></div>`;
+  }catch(e){ /* ignore */ }
+}
+
+async function refresh(){
+  try{ const j = await adminFetch('/api/admin/summary'); if(j.ok){ render(j); loadFeed(); } }
+  catch(e){ if(e.message==='unauthorized') logout(); }
+}
+function startAuto(){
+  clearInterval(timer);
+  if($('autoRefresh').checked) timer = setInterval(refresh, 45000);
+}
+
+$('loginBtn').onclick = login;
+$('tokenInput').addEventListener('keydown', e=>{ if(e.key==='Enter') login(); });
+$('refreshBtn').onclick = refresh;
+$('logoutBtn').onclick = logout;
+$('autoRefresh').onchange = startAuto;
+
+// auto-login if token already saved
+if(token){ login(); }
+</script>
+</body>
+</html>

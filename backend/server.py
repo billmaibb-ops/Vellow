@@ -124,6 +124,53 @@ RETURN_FEE_MARGIN_RATE = float(os.environ.get("RETURN_FEE_MARGIN_RATE", "0.20"))
 # only (private env var); the multiplier is never exposed to the storefront.
 SHIPPING_MARKUP = float(os.environ.get("SHIPPING_MARKUP", "1.20"))  # +20%
 
+# ---------------------------------------------------------------------------
+# Owner control center — auth + order log
+# ---------------------------------------------------------------------------
+# Bearer token that gates every /api/admin/* endpoint. Set ADMIN_TOKEN in the
+# Render env; without it, the admin API is locked (returns 401) so the public
+# admin.html page shows nothing.
+ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN", "")
+
+# Append-only order log. NOTE: on Render's free tier the filesystem is
+# EPHEMERAL — it resets on each deploy/restart, so this is fine for testing but
+# for production you should point ORDERS_LOG at a persistent disk or, better,
+# a database. Stripe remains the durable source of truth for payments; this log
+# adds the per-order COST/PROFIT data Stripe doesn't know.
+ORDERS_LOG = Path(os.environ.get("ORDERS_LOG", str(HERE / "orders.jsonl")))
+
+
+def log_order(record: dict):
+    record = {"ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), **record}
+    try:
+        with open(ORDERS_LOG, "a") as f:
+            f.write(json.dumps(record) + "\n")
+    except Exception as e:  # noqa: BLE001 — logging must never break checkout
+        print(f"[warn] could not write order log: {e}")
+
+
+def read_orders() -> list[dict]:
+    if not ORDERS_LOG.exists():
+        return []
+    out = []
+    for line in ORDERS_LOG.read_text().splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            out.append(json.loads(line))
+        except json.JSONDecodeError:
+            continue
+    return out
+
+
+def admin_ok() -> bool:
+    if not ADMIN_TOKEN:
+        return False
+    auth = request.headers.get("Authorization", "")
+    token = auth[7:] if auth.startswith("Bearer ") else request.args.get("token", "")
+    return token == ADMIN_TOKEN
+
 
 def compute_return_fee(retail_price: float, source_cost: float,
                        cj_extra_fees: float = 0.0) -> float:
@@ -340,13 +387,25 @@ def verify_and_capture():
             stripe.PaymentIntent.cancel(pi_id)
         except Exception:
             pass
+        log_order({"pi": pi_id, "status": "released_out_of_stock",
+                   "reason": "; ".join(problems)})
         return jsonify(ok=False, captured=False, reason="; ".join(problems)), 409
+
+    # Cost snapshot for the owner dashboard (Stripe doesn't know supplier cost).
+    prod_cost = round(sum(float(l["product"].get("source_cost", 0)) * l["qty"]
+                          for l in verified_lines), 2)
 
     # ---- 2. capture the authorized funds ----
     try:
         intent = stripe.PaymentIntent.capture(pi_id)
     except stripe.error.StripeError as e:
+        log_order({"pi": pi_id, "status": "capture_failed", "reason": e.user_message})
         return jsonify(ok=False, captured=False, reason=f"Capture failed: {e.user_message}"), 402
+
+    order_total = float(intent.amount) / 100
+    # Est. Stripe fee (2.9% + $0.30) and est. profit for the dashboard.
+    stripe_fee = round(order_total * 0.029 + 0.30, 2)
+    est_profit = round(order_total - prod_cost - stripe_fee, 2)
 
     # ---- 3. forward the order to CJ for fulfillment ----
     ship = body["shipping"]
@@ -362,15 +421,25 @@ def verify_and_capture():
         "remark": "Auto-forwarded by storefront after payment capture",
         "products": [{"vid": l["vid"], "quantity": l["qty"]} for l in verified_lines],
     }
+    base = {"pi": pi_id, "total": order_total, "product_cost": prod_cost,
+            "stripe_fee": stripe_fee, "est_profit": est_profit,
+            "items": [{"id": l["product"]["id"], "title": l["product"]["title"],
+                       "vid": l["vid"], "qty": l["qty"]} for l in verified_lines],
+            "customer": ship.get("name", ""), "email": ship.get("email", ""),
+            "dest": f"{ship.get('city','')}, {ship.get('state','')} {ship.get('zip','')}"}
     try:
         cj_result = cj.create_order(cj_order)
     except CJError as e:
         # Payment captured but CJ order failed — flag for manual handling,
         # do NOT silently drop it. In production: enqueue a retry + alert.
+        log_order({**base, "status": "paid_cj_failed", "reason": str(e)})
         return jsonify(ok=True, captured=True, fulfilled=False,
                        reason=f"Paid, but CJ order needs manual retry: {e}",
                        payment_intent=intent.id), 202
 
+    log_order({**base, "status": "fulfilled",
+               "cj_order_id": (cj_result or {}).get("orderId")
+                              or (cj_result or {}).get("orderNum") or ""})
     return jsonify(ok=True, captured=True, fulfilled=True,
                    payment_intent=intent.id, cj_order=cj_result)
 
@@ -494,6 +563,168 @@ def verify_stock_only():
         results[item["id"]] = {"ok": ok, "available": eff}
         all_ok = all_ok and ok
     return jsonify(ok=all_ok, items=results)
+
+
+# ---------------------------------------------------------------------------
+# OWNER CONTROL CENTER API  (all token-gated)
+# ---------------------------------------------------------------------------
+def _since(days: int) -> float:
+    return time.time() - days * 86400
+
+
+def _order_ts(o: dict) -> float:
+    try:
+        return time.mktime(time.strptime(o.get("ts", ""), "%Y-%m-%dT%H:%M:%SZ"))
+    except Exception:
+        return 0.0
+
+
+@app.get("/api/admin/summary")
+def admin_summary():
+    """Everything the owner dashboard needs in one call."""
+    if not admin_ok():
+        return jsonify(ok=False, reason="unauthorized"), 401
+
+    catalog = load_catalog()
+    store = catalog["store"]
+    products = catalog["products"]
+    cfg = PricingConfig.from_store(store)
+    orders = read_orders()
+
+    # ---- catalog health ----
+    threshold = store.get("safety_stock_threshold", 10)
+    known_stock = [p for p in products if isinstance(p.get("stock"), (int, float))]
+    out_of_stock = sum(1 for p in products if not p.get("in_stock"))
+    low_stock = [p for p in known_stock if 0 < p["stock"] < threshold]
+    margins = [(p["retail_price"] - p["source_cost"]) for p in products
+               if p.get("source_cost")]
+    avg_margin_pct = round(
+        sum((p["retail_price"] / p["source_cost"] - 1) for p in products
+            if p.get("source_cost")) / max(1, len(products)) * 100, 1)
+
+    # ---- orders (from our log) grouped by outcome ----
+    def cnt(status): return sum(1 for o in orders if o.get("status") == status)
+    fulfilled = [o for o in orders if o.get("status") == "fulfilled"]
+    paid_cj_failed = [o for o in orders if o.get("status") == "paid_cj_failed"]
+    released = [o for o in orders if o.get("status", "").startswith("released")]
+    captured = fulfilled + paid_cj_failed          # money actually taken
+
+    def window(olist, days):
+        c = _since(days)
+        return [o for o in olist if _order_ts(o) >= c]
+
+    def profit(olist): return round(sum(float(o.get("est_profit", 0)) for o in olist), 2)
+    def revenue(olist): return round(sum(float(o.get("total", 0)) for o in olist), 2)
+    def cost(olist): return round(sum(float(o.get("product_cost", 0)) for o in olist), 2)
+    def fees(olist): return round(sum(float(o.get("stripe_fee", 0)) for o in olist), 2)
+
+    profit_blocks = {
+        "today": {"orders": len(window(captured, 1)), "revenue": revenue(window(captured, 1)),
+                  "profit": profit(window(captured, 1))},
+        "7d": {"orders": len(window(captured, 7)), "revenue": revenue(window(captured, 7)),
+               "profit": profit(window(captured, 7))},
+        "30d": {"orders": len(window(captured, 30)), "revenue": revenue(window(captured, 30)),
+                "profit": profit(window(captured, 30))},
+        "all": {"orders": len(captured), "revenue": revenue(captured),
+                "profit": profit(captured), "product_cost": cost(captured),
+                "stripe_fees": fees(captured)},
+    }
+
+    # ---- Stripe live data (payments, refunds, disputes, balance, payouts) ----
+    stripe_block = {"connected": PAYMENTS_ENABLED}
+    if PAYMENTS_ENABLED:
+        try:
+            refunds = stripe.Refund.list(limit=100).data
+            disputes = stripe.Dispute.list(limit=100).data
+            bal = stripe.Balance.retrieve()
+            payouts = stripe.Payout.list(limit=3).data
+            stripe_block.update({
+                "refund_count": len(refunds),
+                "refund_total": round(sum(r.amount for r in refunds) / 100, 2),
+                "dispute_count": len(disputes),
+                "dispute_open": sum(1 for d in disputes if d.status in
+                                    ("warning_needs_response", "needs_response",
+                                     "under_review")),
+                "dispute_total": round(sum(d.amount for d in disputes) / 100, 2),
+                "balance_available": round(sum(b.amount for b in bal.available) / 100, 2),
+                "balance_pending": round(sum(b.amount for b in bal.pending) / 100, 2),
+                "next_payout": (payouts[0].amount / 100 if payouts else 0),
+                "next_payout_date": (time.strftime("%Y-%m-%d",
+                                     time.gmtime(payouts[0].arrival_date))
+                                     if payouts else None),
+            })
+        except Exception as e:  # noqa: BLE001
+            stripe_block["error"] = str(e)
+
+    # ---- CJ wallet balance (best-effort) ----
+    cj_block = {"connected": cj is not None}
+    if cj is not None:
+        try:
+            bal = cj._get("/shopping/pay/getBalance", {})
+            data = bal.get("data") or {}
+            cj_block["wallet"] = data.get("amount") or data.get("balance")
+        except Exception:
+            cj_block["wallet"] = None
+
+    # ---- alerts / blockages the owner must act on ----
+    alerts = []
+    if paid_cj_failed:
+        alerts.append({"level": "danger", "msg": f"{len(paid_cj_failed)} paid order(s) failed to reach CJ — manual retry needed"})
+    if stripe_block.get("dispute_open"):
+        alerts.append({"level": "danger", "msg": f"{stripe_block['dispute_open']} open dispute(s) need a response"})
+    if not PAYMENTS_ENABLED:
+        alerts.append({"level": "warning", "msg": "Stripe not connected — store cannot charge cards yet"})
+    if cj_block.get("wallet") is not None:
+        try:
+            if float(cj_block["wallet"]) < 50:
+                alerts.append({"level": "warning", "msg": f"CJ wallet low (${cj_block['wallet']}) — top up to keep orders shipping"})
+        except Exception:
+            pass
+    if out_of_stock > len(products) * 0.3:
+        alerts.append({"level": "warning", "msg": f"{out_of_stock} products out of stock ({round(out_of_stock/max(1,len(products))*100)}% of catalog)"})
+
+    return jsonify(
+        ok=True,
+        generated_at=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        store={"name": store.get("name"), "url": os.environ.get("STOREFRONT_ORIGIN", "")},
+        profit=profit_blocks,
+        orders={
+            "placed_by_buyers": len(captured),
+            "sent_to_cj": len(fulfilled),
+            "failed_to_cj": len(paid_cj_failed),
+            "released_no_charge": len(released),
+        },
+        stripe=stripe_block,
+        cj=cj_block,
+        catalog={
+            "total": len(products),
+            "in_stock": len(products) - out_of_stock,
+            "out_of_stock": out_of_stock,
+            "low_stock": len(low_stock),
+            "avg_margin_pct": avg_margin_pct,
+            "last_price_sync": store.get("last_price_sync"),
+            "last_full_sync": store.get("last_full_sync"),
+        },
+        pricing={
+            "profit_target_pct": round(cfg.profit_target * 100),
+            "min_profit_per_unit": cfg.min_profit_per_unit,
+            "shipping_markup_pct": round((SHIPPING_MARKUP - 1) * 100),
+            "safety_stock_buffer": threshold,
+            "gateway_fee_pct": round(cfg.gateway_fee_rate * 100, 1),
+        },
+        low_stock_items=[{"id": p["id"], "title": p["title"], "stock": p["stock"]}
+                         for p in low_stock[:25]],
+        alerts=alerts,
+    )
+
+
+@app.get("/api/admin/orders")
+def admin_orders():
+    """Recent order activity feed (newest first)."""
+    if not admin_ok():
+        return jsonify(ok=False, reason="unauthorized"), 401
+    orders = sorted(read_orders(), key=_order_ts, reverse=True)
+    return jsonify(ok=True, count=len(orders), orders=orders[:200])
 
 
 @app.get("/api/health")
