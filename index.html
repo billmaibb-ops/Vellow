@@ -210,7 +210,7 @@ const CONFIG = {
   // ?api=https://your-backend.example.com (persisted in localStorage).
   BACKEND_URL: new URLSearchParams(location.search).get('api')
                || localStorage.getItem('tv_api')
-               || 'http://localhost:8000',
+               || 'https://vellow-backend.onrender.com',
   STRIPE_PUBLISHABLE_KEY: 'pk_test_51TpKjmITdlc9nHv3LhNTtixO1SlmTuWOYZQrDaGkBszBPnJG6QBmR1gHUUXPIZ3dupK3w5d8ZTiB6xOiGsrowKfm00E80dIrx4'   // publishable (safe in browser); test mode
 };
 // Persist ?api= override so catalog.html and future visits use it too.

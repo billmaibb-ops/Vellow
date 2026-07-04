@@ -54,8 +54,10 @@ stripe.api_key = (os.environ.get("STRIPE_SECRET_KEY")
 PAYMENTS_ENABLED = bool(stripe.api_key)
 
 app = Flask(__name__)
-# Lock CORS to your storefront's domain in production.
-CORS(app, origins=os.environ.get("STOREFRONT_ORIGIN", "*"))
+# Public storefront can live on any domain (github.io, vellow.pages.dev,
+# vellow.com …), so allow all origins. Sensitive endpoints are token-gated
+# (admin) or require the full payment flow; nothing secret is exposed by origin.
+CORS(app, origins="*")
 
 # CJ client is needed for live price/stock/shipping. If the key is missing the
 # app still boots; those endpoints then report a clear config error.
