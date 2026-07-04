@@ -429,11 +429,17 @@ def verify_and_capture():
         logistic_name = sq.get("name") or logistic_name
     except Exception:
         pass
+    _country_names = {"US": "United States", "CA": "Canada", "GB": "United Kingdom",
+                      "AU": "Australia", "DE": "Germany", "FR": "France"}
+    _cc = ship.get("country", "US")
     cj_order = {
         "orderNumber": intent.id,                       # your idempotency key
         "fromCountryCode": "CN",                         # origin warehouse (CJ routes)
         "logisticName": logistic_name,                   # shipping method (required)
-        "shippingCountryCode": ship.get("country", "US"),
+        "shippingCountryCode": _cc,
+        "shippingCountry": _country_names.get(_cc, _cc), # full country name (required)
+        "email": ship.get("email", ""),
+        "houseNumber": "1",
         "shippingProvince": ship.get("state", ""),
         "shippingCity": ship.get("city", ""),
         "shippingAddress": ship.get("addr", ""),
