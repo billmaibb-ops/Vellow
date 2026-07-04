@@ -29,6 +29,7 @@ def main():
 
     order = {
         "orderNumber": f"TEST-{args.pid[-6:]}-{args.zip}",
+        "fromCountryCode": "CN",
         "shippingCountryCode": "US",
         "shippingProvince": args.state,
         "shippingCity": args.city,

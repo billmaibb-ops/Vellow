@@ -422,6 +422,7 @@ def verify_and_capture():
     ship = body["shipping"]
     cj_order = {
         "orderNumber": intent.id,                       # your idempotency key
+        "fromCountryCode": "CN",                         # origin warehouse (CJ routes)
         "shippingCountryCode": ship.get("country", "US"),
         "shippingProvince": ship.get("state", ""),
         "shippingCity": ship.get("city", ""),
