@@ -20,7 +20,7 @@
       "placement": "footer"
     },
     "last_full_sync": "2026-07-04T07:46:50Z",
-    "last_price_sync": "2026-07-04T16:16:56Z",
+    "last_price_sync": "2026-07-04T19:34:48Z",
     "order_policy": {
       "auto_order_minutes": 5,
       "cancellable": false,
@@ -52,7 +52,7 @@
       "stock": 13508,
       "in_stock": true,
       "trending_score": 0.4411,
-      "source_verified_at": "2026-07-04T14:38:57Z",
+      "source_verified_at": "2026-07-04T18:03:05Z",
       "has_detail": true
     },
     {
@@ -73,7 +73,7 @@
       "stock": 51,
       "in_stock": true,
       "trending_score": 0.0055,
-      "source_verified_at": "2026-07-04T14:39:01Z",
+      "source_verified_at": "2026-07-04T18:03:09Z",
       "has_detail": true
     },
     {
@@ -94,7 +94,7 @@
       "stock": 443,
       "in_stock": true,
       "trending_score": 0.0097,
-      "source_verified_at": "2026-07-04T14:39:05Z",
+      "source_verified_at": "2026-07-04T18:03:13Z",
       "has_detail": true
     },
     {
@@ -115,7 +115,7 @@
       "stock": 110,
       "in_stock": true,
       "trending_score": 0.007,
-      "source_verified_at": "2026-07-04T14:39:09Z",
+      "source_verified_at": "2026-07-04T18:03:17Z",
       "has_detail": true
     },
     {
@@ -136,7 +136,7 @@
       "stock": 33,
       "in_stock": true,
       "trending_score": 0.0048,
-      "source_verified_at": "2026-07-04T14:39:13Z",
+      "source_verified_at": "2026-07-04T18:03:20Z",
       "has_detail": true
     },
     {
@@ -157,7 +157,7 @@
       "stock": 10674,
       "in_stock": true,
       "trending_score": 0.027,
-      "source_verified_at": "2026-07-04T14:39:17Z",
+      "source_verified_at": "2026-07-04T18:03:24Z",
       "has_detail": true
     },
     {
@@ -178,7 +178,7 @@
       "stock": 254,
       "in_stock": true,
       "trending_score": 0.0118,
-      "source_verified_at": "2026-07-04T14:39:20Z",
+      "source_verified_at": "2026-07-04T18:03:28Z",
       "has_detail": true
     },
     {
@@ -199,7 +199,7 @@
       "stock": 57,
       "in_stock": true,
       "trending_score": 0.0275,
-      "source_verified_at": "2026-07-04T14:39:24Z",
+      "source_verified_at": "2026-07-04T18:03:31Z",
       "has_detail": true
     },
     {
@@ -220,7 +220,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.943,
-      "source_verified_at": "2026-07-04T14:39:28Z",
+      "source_verified_at": "2026-07-04T18:03:35Z",
       "has_detail": true
     },
     {
@@ -241,7 +241,7 @@
       "stock": 40689,
       "in_stock": true,
       "trending_score": 0.093,
-      "source_verified_at": "2026-07-04T14:39:32Z",
+      "source_verified_at": "2026-07-04T18:03:39Z",
       "has_detail": true
     },
     {
@@ -262,7 +262,7 @@
       "stock": 114,
       "in_stock": true,
       "trending_score": 0.0832,
-      "source_verified_at": "2026-07-04T14:39:36Z",
+      "source_verified_at": "2026-07-04T18:03:43Z",
       "has_detail": true
     },
     {
@@ -283,7 +283,7 @@
       "stock": 369,
       "in_stock": true,
       "trending_score": 0.0158,
-      "source_verified_at": "2026-07-04T14:39:39Z",
+      "source_verified_at": "2026-07-04T18:03:46Z",
       "has_detail": true
     },
     {
@@ -304,7 +304,7 @@
       "stock": 29,
       "in_stock": true,
       "trending_score": 0.0074,
-      "source_verified_at": "2026-07-04T14:39:43Z",
+      "source_verified_at": "2026-07-04T18:03:50Z",
       "has_detail": true
     },
     {
@@ -325,7 +325,7 @@
       "stock": 6865,
       "in_stock": true,
       "trending_score": 0.011,
-      "source_verified_at": "2026-07-04T14:39:47Z",
+      "source_verified_at": "2026-07-04T18:03:54Z",
       "has_detail": true
     },
     {
@@ -346,7 +346,7 @@
       "stock": 129,
       "in_stock": true,
       "trending_score": 0.0008,
-      "source_verified_at": "2026-07-04T14:39:51Z",
+      "source_verified_at": "2026-07-04T18:03:57Z",
       "has_detail": true
     },
     {
@@ -367,7 +367,7 @@
       "stock": 1,
       "in_stock": false,
       "trending_score": 0.0033,
-      "source_verified_at": "2026-07-04T14:39:55Z",
+      "source_verified_at": "2026-07-04T18:04:01Z",
       "has_detail": true
     },
     {
@@ -388,7 +388,7 @@
       "stock": 60,
       "in_stock": true,
       "trending_score": 0.0048,
-      "source_verified_at": "2026-07-04T14:39:58Z",
+      "source_verified_at": "2026-07-04T18:04:05Z",
       "has_detail": true
     },
     {
@@ -406,10 +406,10 @@
       "category": "General",
       "source_cost": 70.47,
       "retail_price": 122.06,
-      "stock": 1689,
+      "stock": 1684,
       "in_stock": true,
       "trending_score": 0.0008,
-      "source_verified_at": "2026-07-04T14:40:02Z",
+      "source_verified_at": "2026-07-04T18:04:08Z",
       "has_detail": true
     },
     {
@@ -430,7 +430,7 @@
       "stock": 882,
       "in_stock": true,
       "trending_score": 0.0005,
-      "source_verified_at": "2026-07-04T14:40:06Z",
+      "source_verified_at": "2026-07-04T18:04:12Z",
       "has_detail": true
     },
     {
@@ -448,10 +448,10 @@
       "category": "General",
       "source_cost": 101.92,
       "retail_price": 176.53,
-      "stock": 315,
+      "stock": 311,
       "in_stock": true,
       "trending_score": 0.0009,
-      "source_verified_at": "2026-07-04T14:40:10Z",
+      "source_verified_at": "2026-07-04T18:04:16Z",
       "has_detail": true
     },
     {
@@ -472,7 +472,7 @@
       "stock": 69,
       "in_stock": true,
       "trending_score": 0.031,
-      "source_verified_at": "2026-07-04T14:40:15Z",
+      "source_verified_at": "2026-07-04T18:04:19Z",
       "has_detail": true
     },
     {
@@ -493,7 +493,7 @@
       "stock": 37101,
       "in_stock": true,
       "trending_score": 0.2333,
-      "source_verified_at": "2026-07-04T14:40:15Z",
+      "source_verified_at": "2026-07-04T18:04:23Z",
       "has_detail": true
     },
     {
@@ -514,7 +514,7 @@
       "stock": 29291,
       "in_stock": true,
       "trending_score": 0.0397,
-      "source_verified_at": "2026-07-04T14:40:19Z",
+      "source_verified_at": "2026-07-04T18:04:26Z",
       "has_detail": true
     },
     {
@@ -535,7 +535,7 @@
       "stock": 12637,
       "in_stock": true,
       "trending_score": 0.0243,
-      "source_verified_at": "2026-07-04T14:40:23Z",
+      "source_verified_at": "2026-07-04T18:04:30Z",
       "has_detail": true
     },
     {
@@ -553,10 +553,10 @@
       "category": "General",
       "source_cost": 12.48,
       "retail_price": 23.39,
-      "stock": 51,
+      "stock": 50,
       "in_stock": true,
       "trending_score": 0.0451,
-      "source_verified_at": "2026-07-04T14:40:27Z",
+      "source_verified_at": "2026-07-04T18:04:34Z",
       "has_detail": true
     },
     {
@@ -577,7 +577,7 @@
       "stock": 21,
       "in_stock": true,
       "trending_score": 0.011,
-      "source_verified_at": "2026-07-04T14:40:31Z",
+      "source_verified_at": "2026-07-04T18:04:37Z",
       "has_detail": true
     },
     {
@@ -598,7 +598,7 @@
       "stock": 94,
       "in_stock": true,
       "trending_score": 0.0003,
-      "source_verified_at": "2026-07-04T14:40:34Z",
+      "source_verified_at": "2026-07-04T18:04:41Z",
       "has_detail": true
     },
     {
@@ -619,7 +619,7 @@
       "stock": 14475,
       "in_stock": true,
       "trending_score": 0.2104,
-      "source_verified_at": "2026-07-04T14:40:38Z",
+      "source_verified_at": "2026-07-04T18:04:45Z",
       "has_detail": true
     },
     {
@@ -640,7 +640,7 @@
       "stock": 136,
       "in_stock": true,
       "trending_score": 0.0078,
-      "source_verified_at": "2026-07-04T14:40:42Z",
+      "source_verified_at": "2026-07-04T18:04:48Z",
       "has_detail": true
     },
     {
@@ -661,7 +661,7 @@
       "stock": 30000,
       "in_stock": true,
       "trending_score": 0.0663,
-      "source_verified_at": "2026-07-04T14:40:46Z",
+      "source_verified_at": "2026-07-04T18:04:52Z",
       "has_detail": true
     },
     {
@@ -682,7 +682,7 @@
       "stock": 37567,
       "in_stock": true,
       "trending_score": 0.0617,
-      "source_verified_at": "2026-07-04T14:40:50Z",
+      "source_verified_at": "2026-07-04T18:04:55Z",
       "has_detail": true
     },
     {
@@ -703,7 +703,7 @@
       "stock": 30000,
       "in_stock": true,
       "trending_score": 0.0637,
-      "source_verified_at": "2026-07-04T14:40:54Z",
+      "source_verified_at": "2026-07-04T18:04:59Z",
       "has_detail": true
     },
     {
@@ -724,7 +724,7 @@
       "stock": 50,
       "in_stock": true,
       "trending_score": 0.0028,
-      "source_verified_at": "2026-07-04T14:40:58Z",
+      "source_verified_at": "2026-07-04T18:05:03Z",
       "has_detail": true
     },
     {
@@ -745,7 +745,7 @@
       "stock": 695,
       "in_stock": true,
       "trending_score": 0.0059,
-      "source_verified_at": "2026-07-04T14:41:02Z",
+      "source_verified_at": "2026-07-04T18:05:07Z",
       "has_detail": true
     },
     {
@@ -766,7 +766,7 @@
       "stock": 37743,
       "in_stock": true,
       "trending_score": 0.0296,
-      "source_verified_at": "2026-07-04T14:41:06Z",
+      "source_verified_at": "2026-07-04T18:05:11Z",
       "has_detail": true
     },
     {
@@ -787,7 +787,7 @@
       "stock": 183,
       "in_stock": true,
       "trending_score": 0.0032,
-      "source_verified_at": "2026-07-04T14:41:10Z",
+      "source_verified_at": "2026-07-04T18:05:14Z",
       "has_detail": true
     },
     {
@@ -808,7 +808,7 @@
       "stock": 13368,
       "in_stock": true,
       "trending_score": 0.0223,
-      "source_verified_at": "2026-07-04T14:41:14Z",
+      "source_verified_at": "2026-07-04T18:05:18Z",
       "has_detail": true
     },
     {
@@ -829,7 +829,7 @@
       "stock": 95,
       "in_stock": true,
       "trending_score": 0.0019,
-      "source_verified_at": "2026-07-04T14:41:18Z",
+      "source_verified_at": "2026-07-04T18:05:22Z",
       "has_detail": true
     },
     {
@@ -850,7 +850,7 @@
       "stock": 93,
       "in_stock": true,
       "trending_score": 0.0029,
-      "source_verified_at": "2026-07-04T14:41:21Z",
+      "source_verified_at": "2026-07-04T18:05:25Z",
       "has_detail": true
     },
     {
@@ -871,7 +871,7 @@
       "stock": 168,
       "in_stock": true,
       "trending_score": 0.0024,
-      "source_verified_at": "2026-07-04T14:41:25Z",
+      "source_verified_at": "2026-07-04T18:05:30Z",
       "has_detail": true
     },
     {
@@ -892,7 +892,7 @@
       "stock": 299,
       "in_stock": true,
       "trending_score": 0.0043,
-      "source_verified_at": "2026-07-04T14:41:29Z",
+      "source_verified_at": "2026-07-04T18:05:33Z",
       "has_detail": true
     },
     {
@@ -913,7 +913,7 @@
       "stock": 385,
       "in_stock": true,
       "trending_score": 0.0039,
-      "source_verified_at": "2026-07-04T14:41:32Z",
+      "source_verified_at": "2026-07-04T18:05:37Z",
       "has_detail": true
     },
     {
@@ -934,7 +934,7 @@
       "stock": 20000,
       "in_stock": true,
       "trending_score": 0.0317,
-      "source_verified_at": "2026-07-04T14:41:36Z",
+      "source_verified_at": "2026-07-04T18:05:40Z",
       "has_detail": true
     },
     {
@@ -954,7 +954,7 @@
       "stock": 20000,
       "in_stock": true,
       "trending_score": 0.0497,
-      "source_verified_at": "2026-07-04T14:41:40Z",
+      "source_verified_at": "2026-07-04T18:05:44Z",
       "has_detail": true
     },
     {
@@ -975,7 +975,7 @@
       "stock": 460,
       "in_stock": true,
       "trending_score": 0.0014,
-      "source_verified_at": "2026-07-04T14:41:44Z",
+      "source_verified_at": "2026-07-04T18:05:47Z",
       "has_detail": true
     },
     {
@@ -996,7 +996,7 @@
       "stock": 11136,
       "in_stock": true,
       "trending_score": 0.0322,
-      "source_verified_at": "2026-07-04T14:41:48Z",
+      "source_verified_at": "2026-07-04T18:05:51Z",
       "has_detail": true
     },
     {
@@ -1017,7 +1017,7 @@
       "stock": 704,
       "in_stock": true,
       "trending_score": 0.0133,
-      "source_verified_at": "2026-07-04T14:41:52Z",
+      "source_verified_at": "2026-07-04T18:05:55Z",
       "has_detail": true
     },
     {
@@ -1038,7 +1038,7 @@
       "stock": 151,
       "in_stock": true,
       "trending_score": 0.0005,
-      "source_verified_at": "2026-07-04T14:41:55Z",
+      "source_verified_at": "2026-07-04T18:05:59Z",
       "has_detail": true
     },
     {
@@ -1059,7 +1059,7 @@
       "stock": 10902,
       "in_stock": true,
       "trending_score": 0.0828,
-      "source_verified_at": "2026-07-04T14:41:59Z",
+      "source_verified_at": "2026-07-04T18:06:02Z",
       "has_detail": true
     },
     {
@@ -1080,7 +1080,7 @@
       "stock": 235,
       "in_stock": true,
       "trending_score": 0.0012,
-      "source_verified_at": "2026-07-04T14:42:03Z",
+      "source_verified_at": "2026-07-04T18:06:06Z",
       "has_detail": true
     },
     {
@@ -1101,7 +1101,7 @@
       "stock": 49,
       "in_stock": true,
       "trending_score": 0.0009,
-      "source_verified_at": "2026-07-04T14:42:07Z",
+      "source_verified_at": "2026-07-04T18:06:09Z",
       "has_detail": true
     },
     {
@@ -1122,7 +1122,7 @@
       "stock": 4000,
       "in_stock": true,
       "trending_score": 0.7697,
-      "source_verified_at": "2026-07-04T14:42:11Z",
+      "source_verified_at": "2026-07-04T18:06:13Z",
       "has_detail": true
     },
     {
@@ -1143,7 +1143,7 @@
       "stock": 30,
       "in_stock": true,
       "trending_score": 0.0001,
-      "source_verified_at": "2026-07-04T14:42:15Z",
+      "source_verified_at": "2026-07-04T18:06:16Z",
       "has_detail": true
     },
     {
@@ -1164,7 +1164,7 @@
       "stock": 47,
       "in_stock": true,
       "trending_score": 0.0835,
-      "source_verified_at": "2026-07-04T14:42:19Z",
+      "source_verified_at": "2026-07-04T18:06:20Z",
       "has_detail": true
     },
     {
@@ -1185,7 +1185,7 @@
       "stock": 98,
       "in_stock": true,
       "trending_score": 0.1052,
-      "source_verified_at": "2026-07-04T14:42:23Z",
+      "source_verified_at": "2026-07-04T18:06:24Z",
       "has_detail": true
     },
     {
@@ -1206,7 +1206,7 @@
       "stock": 194,
       "in_stock": true,
       "trending_score": 0.077,
-      "source_verified_at": "2026-07-04T14:42:27Z",
+      "source_verified_at": "2026-07-04T18:06:27Z",
       "has_detail": true
     },
     {
@@ -1227,7 +1227,7 @@
       "stock": 41763,
       "in_stock": true,
       "trending_score": 0.0465,
-      "source_verified_at": "2026-07-04T14:42:30Z",
+      "source_verified_at": "2026-07-04T18:06:31Z",
       "has_detail": true
     },
     {
@@ -1248,7 +1248,7 @@
       "stock": 152,
       "in_stock": true,
       "trending_score": 0.0112,
-      "source_verified_at": "2026-07-04T14:42:34Z",
+      "source_verified_at": "2026-07-04T18:06:35Z",
       "has_detail": true
     },
     {
@@ -1269,7 +1269,7 @@
       "stock": 460,
       "in_stock": true,
       "trending_score": 0.0014,
-      "source_verified_at": "2026-07-04T14:42:38Z",
+      "source_verified_at": "2026-07-04T18:06:38Z",
       "has_detail": true
     },
     {
@@ -1290,7 +1290,7 @@
       "stock": 48,
       "in_stock": true,
       "trending_score": 0.0003,
-      "source_verified_at": "2026-07-04T14:42:42Z",
+      "source_verified_at": "2026-07-04T18:06:42Z",
       "has_detail": true
     },
     {
@@ -1311,7 +1311,7 @@
       "stock": 18,
       "in_stock": true,
       "trending_score": 0.0003,
-      "source_verified_at": "2026-07-04T14:42:45Z",
+      "source_verified_at": "2026-07-04T18:06:45Z",
       "has_detail": true
     },
     {
@@ -1332,7 +1332,7 @@
       "stock": 699,
       "in_stock": true,
       "trending_score": 0.0081,
-      "source_verified_at": "2026-07-04T14:42:49Z",
+      "source_verified_at": "2026-07-04T18:06:49Z",
       "has_detail": true
     },
     {
@@ -1353,7 +1353,7 @@
       "stock": 179,
       "in_stock": true,
       "trending_score": 0.0029,
-      "source_verified_at": "2026-07-04T14:42:53Z",
+      "source_verified_at": "2026-07-04T18:06:53Z",
       "has_detail": true
     },
     {
@@ -1374,7 +1374,7 @@
       "stock": 25,
       "in_stock": true,
       "trending_score": 0.0006,
-      "source_verified_at": "2026-07-04T14:42:57Z",
+      "source_verified_at": "2026-07-04T18:06:56Z",
       "has_detail": true
     },
     {
@@ -1393,7 +1393,7 @@
       "source_cost": 36.56,
       "retail_price": 63.33,
       "stock": 375,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.003,
       "source_verified_at": "2026-07-04T14:43:00Z",
       "has_detail": true
@@ -1416,7 +1416,7 @@
       "stock": 27,
       "in_stock": true,
       "trending_score": 0.0012,
-      "source_verified_at": "2026-07-04T14:43:04Z",
+      "source_verified_at": "2026-07-04T18:07:03Z",
       "has_detail": true
     },
     {
@@ -1437,7 +1437,7 @@
       "stock": 113,
       "in_stock": true,
       "trending_score": 0.0012,
-      "source_verified_at": "2026-07-04T14:43:08Z",
+      "source_verified_at": "2026-07-04T18:07:07Z",
       "has_detail": true
     },
     {
@@ -1458,7 +1458,7 @@
       "stock": 418,
       "in_stock": true,
       "trending_score": 0.0031,
-      "source_verified_at": "2026-07-04T14:43:12Z",
+      "source_verified_at": "2026-07-04T18:07:10Z",
       "has_detail": true
     },
     {
@@ -1477,7 +1477,7 @@
       "source_cost": 6.55,
       "retail_price": 17.27,
       "stock": 38516,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0929,
       "source_verified_at": "2026-07-04T14:43:16Z",
       "has_detail": true
@@ -1498,7 +1498,7 @@
       "source_cost": 5.31,
       "retail_price": 15.99,
       "stock": 13138,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.4711,
       "source_verified_at": "2026-07-04T14:43:20Z",
       "has_detail": true
@@ -1519,7 +1519,7 @@
       "source_cost": 2.0,
       "retail_price": 12.58,
       "stock": 12153,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.4371,
       "source_verified_at": "2026-07-04T14:43:24Z",
       "has_detail": true
@@ -1540,7 +1540,7 @@
       "source_cost": 3.96,
       "retail_price": 14.6,
       "stock": 40167,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.321,
       "source_verified_at": "2026-07-04T14:43:27Z",
       "has_detail": true
@@ -1561,7 +1561,7 @@
       "source_cost": 12.86,
       "retail_price": 23.78,
       "stock": 596,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0122,
       "source_verified_at": "2026-07-04T14:43:31Z",
       "has_detail": true
@@ -1582,7 +1582,7 @@
       "source_cost": 36.92,
       "retail_price": 63.95,
       "stock": 591,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0039,
       "source_verified_at": "2026-07-04T14:43:35Z",
       "has_detail": true
@@ -1603,7 +1603,7 @@
       "source_cost": 66.61,
       "retail_price": 115.37,
       "stock": 100,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0009,
       "source_verified_at": "2026-07-04T14:43:39Z",
       "has_detail": true
@@ -1624,7 +1624,7 @@
       "source_cost": 54.19,
       "retail_price": 93.86,
       "stock": 460,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0001,
       "source_verified_at": "2026-07-04T14:43:42Z",
       "has_detail": true
@@ -1645,7 +1645,7 @@
       "source_cost": 23.7,
       "retail_price": 41.05,
       "stock": 525,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0008,
       "source_verified_at": "2026-07-04T14:43:46Z",
       "has_detail": true
@@ -1665,7 +1665,7 @@
       "source_cost": 32.24,
       "retail_price": 55.84,
       "stock": 434,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0011,
       "source_verified_at": "2026-07-04T14:43:50Z",
       "has_detail": true
@@ -1686,7 +1686,7 @@
       "source_cost": 19.5,
       "retail_price": 33.78,
       "stock": 180,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0188,
       "source_verified_at": "2026-07-04T14:43:54Z",
       "has_detail": true
@@ -1707,7 +1707,7 @@
       "source_cost": 244.05,
       "retail_price": 422.69,
       "stock": 102,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0011,
       "source_verified_at": "2026-07-04T14:43:57Z",
       "has_detail": true
@@ -1728,7 +1728,7 @@
       "source_cost": 1.69,
       "retail_price": 12.26,
       "stock": 13971,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.6148,
       "source_verified_at": "2026-07-04T14:44:01Z",
       "has_detail": true
@@ -1749,7 +1749,7 @@
       "source_cost": 19.6,
       "retail_price": 33.95,
       "stock": 241,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.009,
       "source_verified_at": "2026-07-04T14:44:05Z",
       "has_detail": true
@@ -1772,7 +1772,7 @@
       "stock": 199,
       "in_stock": true,
       "trending_score": 0.0118,
-      "source_verified_at": "2026-07-04T14:44:09Z",
+      "source_verified_at": "2026-07-04T18:08:00Z",
       "has_detail": true
     },
     {
@@ -1793,7 +1793,7 @@
       "stock": 337,
       "in_stock": true,
       "trending_score": 0.0021,
-      "source_verified_at": "2026-07-04T14:44:13Z",
+      "source_verified_at": "2026-07-04T18:08:03Z",
       "has_detail": true
     },
     {
@@ -1814,7 +1814,7 @@
       "stock": 75,
       "in_stock": true,
       "trending_score": 0.0023,
-      "source_verified_at": "2026-07-04T14:44:17Z",
+      "source_verified_at": "2026-07-04T18:08:07Z",
       "has_detail": true
     },
     {
@@ -1835,7 +1835,7 @@
       "stock": 51,
       "in_stock": true,
       "trending_score": 0.0046,
-      "source_verified_at": "2026-07-04T14:44:20Z",
+      "source_verified_at": "2026-07-04T18:08:10Z",
       "has_detail": true
     },
     {
@@ -1854,7 +1854,7 @@
       "source_cost": 16.61,
       "retail_price": 28.77,
       "stock": 31,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0027,
       "source_verified_at": "2026-07-04T14:44:24Z",
       "has_detail": true
@@ -1875,7 +1875,7 @@
       "source_cost": 3.75,
       "retail_price": 14.39,
       "stock": 37899,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.99,
       "source_verified_at": "2026-07-04T14:44:28Z",
       "has_detail": true
@@ -1896,7 +1896,7 @@
       "source_cost": 1.0,
       "retail_price": 11.55,
       "stock": 24766,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0057,
       "source_verified_at": "2026-07-04T14:44:32Z",
       "has_detail": true
@@ -1917,7 +1917,7 @@
       "source_cost": 0.76,
       "retail_price": 11.3,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1541,
       "source_verified_at": "2026-07-04T14:44:35Z",
       "has_detail": true
@@ -1938,7 +1938,7 @@
       "source_cost": 1.0,
       "retail_price": 11.55,
       "stock": 14509,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.004,
       "source_verified_at": "2026-07-04T14:44:39Z",
       "has_detail": true
@@ -1959,7 +1959,7 @@
       "source_cost": 35.62,
       "retail_price": 61.7,
       "stock": 194,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0115,
       "source_verified_at": "2026-07-04T14:44:43Z",
       "has_detail": true
@@ -1980,7 +1980,7 @@
       "source_cost": 226.72,
       "retail_price": 392.67,
       "stock": 80,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0016,
       "source_verified_at": "2026-07-04T14:44:47Z",
       "has_detail": true
@@ -2001,7 +2001,7 @@
       "source_cost": 382.93,
       "retail_price": 663.22,
       "stock": 112,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.002,
       "source_verified_at": "2026-07-04T14:44:48Z",
       "has_detail": true
@@ -2022,7 +2022,7 @@
       "source_cost": 320.01,
       "retail_price": 554.25,
       "stock": 50,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0018,
       "source_verified_at": "2026-07-04T14:44:52Z",
       "has_detail": true
@@ -2043,7 +2043,7 @@
       "source_cost": 206.23,
       "retail_price": 357.19,
       "stock": 150,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0019,
       "source_verified_at": "2026-07-04T14:44:56Z",
       "has_detail": true
@@ -2064,7 +2064,7 @@
       "source_cost": 250.22,
       "retail_price": 433.38,
       "stock": 114,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0012,
       "source_verified_at": "2026-07-04T14:45:00Z",
       "has_detail": true
@@ -2085,7 +2085,7 @@
       "source_cost": 173.58,
       "retail_price": 300.64,
       "stock": 100,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0018,
       "source_verified_at": "2026-07-04T14:45:04Z",
       "has_detail": true
@@ -2106,7 +2106,7 @@
       "source_cost": 206.23,
       "retail_price": 357.19,
       "stock": 50,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0019,
       "source_verified_at": "2026-07-04T14:45:08Z",
       "has_detail": true
@@ -2127,7 +2127,7 @@
       "source_cost": 1.77,
       "retail_price": 12.35,
       "stock": 38123,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.5357,
       "source_verified_at": "2026-07-04T14:45:12Z",
       "has_detail": true
@@ -2150,7 +2150,7 @@
       "stock": 35127,
       "in_stock": true,
       "trending_score": 0.0131,
-      "source_verified_at": "2026-07-04T14:45:16Z",
+      "source_verified_at": "2026-07-04T18:09:01Z",
       "has_detail": true
     },
     {
@@ -2171,7 +2171,7 @@
       "stock": 11452,
       "in_stock": true,
       "trending_score": 0.0468,
-      "source_verified_at": "2026-07-04T14:45:20Z",
+      "source_verified_at": "2026-07-04T18:09:04Z",
       "has_detail": true
     },
     {
@@ -2192,7 +2192,7 @@
       "stock": 31,
       "in_stock": true,
       "trending_score": 0.0,
-      "source_verified_at": "2026-07-04T14:45:24Z",
+      "source_verified_at": "2026-07-04T18:09:08Z",
       "has_detail": true
     },
     {
@@ -2211,7 +2211,7 @@
       "source_cost": 129.8,
       "retail_price": 224.81,
       "stock": 73,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0004,
       "source_verified_at": "2026-07-04T14:45:28Z",
       "has_detail": true
@@ -2232,7 +2232,7 @@
       "source_cost": 48.66,
       "retail_price": 84.28,
       "stock": 136,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0026,
       "source_verified_at": "2026-07-04T14:45:32Z",
       "has_detail": true
@@ -2253,7 +2253,7 @@
       "source_cost": 48.97,
       "retail_price": 84.82,
       "stock": 402,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0004,
       "source_verified_at": "2026-07-04T14:45:36Z",
       "has_detail": true
@@ -2274,7 +2274,7 @@
       "source_cost": 125.39,
       "retail_price": 217.18,
       "stock": 60,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0002,
       "source_verified_at": "2026-07-04T14:45:40Z",
       "has_detail": true
@@ -2295,7 +2295,7 @@
       "source_cost": 8.8,
       "retail_price": 19.59,
       "stock": 49,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0183,
       "source_verified_at": "2026-07-04T14:45:44Z",
       "has_detail": true
@@ -2316,7 +2316,7 @@
       "source_cost": 82.37,
       "retail_price": 142.67,
       "stock": 956,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.001,
       "source_verified_at": "2026-07-04T14:45:48Z",
       "has_detail": true
@@ -2337,7 +2337,7 @@
       "source_cost": 152.9,
       "retail_price": 264.82,
       "stock": 25,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0,
       "source_verified_at": "2026-07-04T14:45:52Z",
       "has_detail": true
@@ -2358,7 +2358,7 @@
       "source_cost": 105.2,
       "retail_price": 182.21,
       "stock": 47,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0004,
       "source_verified_at": "2026-07-04T14:45:53Z",
       "has_detail": true
@@ -2379,7 +2379,7 @@
       "source_cost": 105.2,
       "retail_price": 182.21,
       "stock": 65,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0002,
       "source_verified_at": "2026-07-04T14:45:57Z",
       "has_detail": true
@@ -2400,7 +2400,7 @@
       "source_cost": 55.12,
       "retail_price": 95.47,
       "stock": 298,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0032,
       "source_verified_at": "2026-07-04T14:46:01Z",
       "has_detail": true
@@ -2421,7 +2421,7 @@
       "source_cost": 55.12,
       "retail_price": 95.47,
       "stock": 104,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0003,
       "source_verified_at": "2026-07-04T14:46:04Z",
       "has_detail": true
@@ -2442,7 +2442,7 @@
       "source_cost": 55.12,
       "retail_price": 95.47,
       "stock": 825,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0027,
       "source_verified_at": "2026-07-04T14:46:08Z",
       "has_detail": true
@@ -2463,7 +2463,7 @@
       "source_cost": 26.52,
       "retail_price": 45.94,
       "stock": 21,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0026,
       "source_verified_at": "2026-07-04T14:46:12Z",
       "has_detail": true
@@ -2484,7 +2484,7 @@
       "source_cost": 18.2,
       "retail_price": 31.53,
       "stock": 68,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0035,
       "source_verified_at": "2026-07-04T14:46:16Z",
       "has_detail": true
@@ -2505,7 +2505,7 @@
       "source_cost": 55.12,
       "retail_price": 95.47,
       "stock": 1470,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0033,
       "source_verified_at": "2026-07-04T14:46:19Z",
       "has_detail": true
@@ -2528,7 +2528,7 @@
       "stock": 13374,
       "in_stock": true,
       "trending_score": 0.0655,
-      "source_verified_at": "2026-07-04T14:46:23Z",
+      "source_verified_at": "2026-07-04T18:10:01Z",
       "has_detail": true
     },
     {
@@ -2549,7 +2549,7 @@
       "stock": 433,
       "in_stock": true,
       "trending_score": 0.0023,
-      "source_verified_at": "2026-07-04T14:46:27Z",
+      "source_verified_at": "2026-07-04T18:10:04Z",
       "has_detail": true
     },
     {
@@ -2570,7 +2570,7 @@
       "stock": 172,
       "in_stock": true,
       "trending_score": 0.0028,
-      "source_verified_at": "2026-07-04T14:46:31Z",
+      "source_verified_at": "2026-07-04T18:10:08Z",
       "has_detail": true
     },
     {
@@ -2591,7 +2591,7 @@
       "stock": 398,
       "in_stock": true,
       "trending_score": 0.003,
-      "source_verified_at": "2026-07-04T14:46:35Z",
+      "source_verified_at": "2026-07-04T18:10:12Z",
       "has_detail": true
     },
     {
@@ -2610,7 +2610,7 @@
       "source_cost": 4.5,
       "retail_price": 15.16,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.113,
       "source_verified_at": "2026-07-04T14:46:38Z",
       "has_detail": true
@@ -2631,7 +2631,7 @@
       "source_cost": 158.02,
       "retail_price": 273.69,
       "stock": 65,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0006,
       "source_verified_at": "2026-07-04T14:46:42Z",
       "has_detail": true
@@ -2652,7 +2652,7 @@
       "source_cost": 93.96,
       "retail_price": 162.74,
       "stock": 230,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0006,
       "source_verified_at": "2026-07-04T14:46:46Z",
       "has_detail": true
@@ -2673,7 +2673,7 @@
       "source_cost": 93.96,
       "retail_price": 162.74,
       "stock": 230,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0003,
       "source_verified_at": "2026-07-04T14:46:50Z",
       "has_detail": true
@@ -2694,7 +2694,7 @@
       "source_cost": 125.51,
       "retail_price": 217.38,
       "stock": 15,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0,
       "source_verified_at": "2026-07-04T14:46:54Z",
       "has_detail": true
@@ -2715,7 +2715,7 @@
       "source_cost": 48.15,
       "retail_price": 83.4,
       "stock": 14,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0,
       "source_verified_at": "2026-07-04T14:46:57Z",
       "has_detail": true
@@ -2736,7 +2736,7 @@
       "source_cost": 89.52,
       "retail_price": 155.05,
       "stock": 14,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0,
       "source_verified_at": "2026-07-04T14:47:01Z",
       "has_detail": true
@@ -2757,7 +2757,7 @@
       "source_cost": 89.52,
       "retail_price": 155.05,
       "stock": 14,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0,
       "source_verified_at": "2026-07-04T14:47:05Z",
       "has_detail": true
@@ -2778,7 +2778,7 @@
       "source_cost": 89.52,
       "retail_price": 155.05,
       "stock": 11,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0,
       "source_verified_at": "2026-07-04T14:47:08Z",
       "has_detail": true
@@ -2799,7 +2799,7 @@
       "source_cost": 28.69,
       "retail_price": 49.69,
       "stock": 230,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0022,
       "source_verified_at": "2026-07-04T14:47:12Z",
       "has_detail": true
@@ -2820,7 +2820,7 @@
       "source_cost": 30.52,
       "retail_price": 52.86,
       "stock": 247,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0017,
       "source_verified_at": "2026-07-04T14:47:16Z",
       "has_detail": true
@@ -2841,7 +2841,7 @@
       "source_cost": 49.49,
       "retail_price": 85.72,
       "stock": 78,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0007,
       "source_verified_at": "2026-07-04T14:47:20Z",
       "has_detail": true
@@ -2862,7 +2862,7 @@
       "source_cost": 20.79,
       "retail_price": 36.01,
       "stock": 139,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0024,
       "source_verified_at": "2026-07-04T14:47:24Z",
       "has_detail": true
@@ -2883,7 +2883,7 @@
       "source_cost": 1.11,
       "retail_price": 11.66,
       "stock": 12220,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1807,
       "source_verified_at": "2026-07-04T14:47:27Z",
       "has_detail": true
@@ -2906,7 +2906,7 @@
       "stock": 199,
       "in_stock": true,
       "trending_score": 0.0104,
-      "source_verified_at": "2026-07-04T14:47:31Z",
+      "source_verified_at": "2026-07-04T18:11:01Z",
       "has_detail": true
     },
     {
@@ -2927,7 +2927,7 @@
       "stock": 30000,
       "in_stock": true,
       "trending_score": 0.6988,
-      "source_verified_at": "2026-07-04T14:47:35Z",
+      "source_verified_at": "2026-07-04T18:11:05Z",
       "has_detail": true
     },
     {
@@ -2945,10 +2945,10 @@
       "category": "General",
       "source_cost": 141.02,
       "retail_price": 244.25,
-      "stock": 627,
+      "stock": 626,
       "in_stock": true,
       "trending_score": 0.0008,
-      "source_verified_at": "2026-07-04T14:47:38Z",
+      "source_verified_at": "2026-07-04T18:11:09Z",
       "has_detail": true
     },
     {
@@ -2967,7 +2967,7 @@
       "source_cost": 53.67,
       "retail_price": 92.96,
       "stock": 1256,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0058,
       "source_verified_at": "2026-07-04T14:47:42Z",
       "has_detail": true
@@ -2988,7 +2988,7 @@
       "source_cost": 25.08,
       "retail_price": 43.44,
       "stock": 356,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0025,
       "source_verified_at": "2026-07-04T14:47:46Z",
       "has_detail": true
@@ -3009,7 +3009,7 @@
       "source_cost": 26.0,
       "retail_price": 45.04,
       "stock": 73,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0052,
       "source_verified_at": "2026-07-04T14:47:50Z",
       "has_detail": true
@@ -3030,7 +3030,7 @@
       "source_cost": 8.6,
       "retail_price": 19.39,
       "stock": 13647,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.015,
       "source_verified_at": "2026-07-04T14:47:54Z",
       "has_detail": true
@@ -3051,7 +3051,7 @@
       "source_cost": 3.0,
       "retail_price": 13.61,
       "stock": 14488,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0315,
       "source_verified_at": "2026-07-04T14:47:57Z",
       "has_detail": true
@@ -3072,7 +3072,7 @@
       "source_cost": 43.59,
       "retail_price": 75.5,
       "stock": 259,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0018,
       "source_verified_at": "2026-07-04T14:48:01Z",
       "has_detail": true
@@ -3093,7 +3093,7 @@
       "source_cost": 53.47,
       "retail_price": 92.61,
       "stock": 73,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0002,
       "source_verified_at": "2026-07-04T14:48:05Z",
       "has_detail": true
@@ -3114,7 +3114,7 @@
       "source_cost": 21.41,
       "retail_price": 37.09,
       "stock": 96,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0056,
       "source_verified_at": "2026-07-04T14:48:09Z",
       "has_detail": true
@@ -3135,7 +3135,7 @@
       "source_cost": 24.42,
       "retail_price": 42.3,
       "stock": 20026,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0191,
       "source_verified_at": "2026-07-04T14:48:13Z",
       "has_detail": true
@@ -3156,7 +3156,7 @@
       "source_cost": 14.71,
       "retail_price": 25.69,
       "stock": 460,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0029,
       "source_verified_at": "2026-07-04T14:48:16Z",
       "has_detail": true
@@ -3177,7 +3177,7 @@
       "source_cost": 5.22,
       "retail_price": 15.9,
       "stock": 11853,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.2087,
       "source_verified_at": "2026-07-04T14:48:20Z",
       "has_detail": true
@@ -3198,7 +3198,7 @@
       "source_cost": 42.95,
       "retail_price": 74.39,
       "stock": 99,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0047,
       "source_verified_at": "2026-07-04T14:48:24Z",
       "has_detail": true
@@ -3219,7 +3219,7 @@
       "source_cost": 279.12,
       "retail_price": 483.43,
       "stock": 41,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0045,
       "source_verified_at": "2026-07-04T14:48:28Z",
       "has_detail": true
@@ -3240,7 +3240,7 @@
       "source_cost": 86.95,
       "retail_price": 150.6,
       "stock": 44,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0034,
       "source_verified_at": "2026-07-04T14:48:31Z",
       "has_detail": true
@@ -3261,7 +3261,7 @@
       "source_cost": 135.41,
       "retail_price": 234.53,
       "stock": 37,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0022,
       "source_verified_at": "2026-07-04T14:48:36Z",
       "has_detail": true
@@ -3284,7 +3284,7 @@
       "stock": 41760,
       "in_stock": true,
       "trending_score": 0.0084,
-      "source_verified_at": "2026-07-04T14:48:40Z",
+      "source_verified_at": "2026-07-04T18:12:02Z",
       "has_detail": true
     },
     {
@@ -3302,10 +3302,10 @@
       "category": "General",
       "source_cost": 92.85,
       "retail_price": 160.82,
-      "stock": 12449,
+      "stock": 12439,
       "in_stock": true,
       "trending_score": 0.0034,
-      "source_verified_at": "2026-07-04T14:48:43Z",
+      "source_verified_at": "2026-07-04T18:12:05Z",
       "has_detail": true
     },
     {
@@ -3323,10 +3323,10 @@
       "category": "General",
       "source_cost": 45.14,
       "retail_price": 78.19,
-      "stock": 20540,
+      "stock": 20534,
       "in_stock": true,
       "trending_score": 0.0705,
-      "source_verified_at": "2026-07-04T14:48:47Z",
+      "source_verified_at": "2026-07-04T18:12:09Z",
       "has_detail": true
     },
     {
@@ -3345,7 +3345,7 @@
       "source_cost": 42.12,
       "retail_price": 72.96,
       "stock": 74,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0086,
       "source_verified_at": "2026-07-04T14:48:51Z",
       "has_detail": true
@@ -3366,7 +3366,7 @@
       "source_cost": 24.7,
       "retail_price": 42.78,
       "stock": 146,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0074,
       "source_verified_at": "2026-07-04T14:48:55Z",
       "has_detail": true
@@ -3387,7 +3387,7 @@
       "source_cost": 18.9,
       "retail_price": 32.74,
       "stock": 77,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0014,
       "source_verified_at": "2026-07-04T14:48:59Z",
       "has_detail": true
@@ -3408,7 +3408,7 @@
       "source_cost": 10.49,
       "retail_price": 21.33,
       "stock": 72,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0013,
       "source_verified_at": "2026-07-04T14:49:03Z",
       "has_detail": true
@@ -3450,7 +3450,7 @@
       "source_cost": 32.45,
       "retail_price": 56.21,
       "stock": 421,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0018,
       "source_verified_at": "2026-07-04T14:49:10Z",
       "has_detail": true
@@ -3471,7 +3471,7 @@
       "source_cost": 10.07,
       "retail_price": 20.9,
       "stock": 49,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0045,
       "source_verified_at": "2026-07-04T14:49:14Z",
       "has_detail": true
@@ -3492,7 +3492,7 @@
       "source_cost": 12.64,
       "retail_price": 23.55,
       "stock": 48,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0008,
       "source_verified_at": "2026-07-04T14:49:18Z",
       "has_detail": true
@@ -3513,7 +3513,7 @@
       "source_cost": 10.59,
       "retail_price": 21.44,
       "stock": 61,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0029,
       "source_verified_at": "2026-07-04T14:49:22Z",
       "has_detail": true
@@ -3534,7 +3534,7 @@
       "source_cost": 10.9,
       "retail_price": 21.76,
       "stock": 19,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0006,
       "source_verified_at": "2026-07-04T14:49:25Z",
       "has_detail": true
@@ -3555,7 +3555,7 @@
       "source_cost": 2.28,
       "retail_price": 12.87,
       "stock": 21443,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.2429,
       "source_verified_at": "2026-07-04T14:49:29Z",
       "has_detail": true
@@ -3576,7 +3576,7 @@
       "source_cost": 16.97,
       "retail_price": 29.4,
       "stock": 38,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0034,
       "source_verified_at": "2026-07-04T14:49:33Z",
       "has_detail": true
@@ -3597,7 +3597,7 @@
       "source_cost": 1.63,
       "retail_price": 12.2,
       "stock": 10849,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.639,
       "source_verified_at": "2026-07-04T14:49:37Z",
       "has_detail": true
@@ -3618,7 +3618,7 @@
       "source_cost": 6.79,
       "retail_price": 17.52,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0937,
       "source_verified_at": "2026-07-04T14:49:41Z",
       "has_detail": true
@@ -3639,7 +3639,7 @@
       "source_cost": 0.99,
       "retail_price": 11.54,
       "stock": 14847,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0323,
       "source_verified_at": "2026-07-04T14:49:45Z",
       "has_detail": true
@@ -3662,7 +3662,7 @@
       "stock": 34762,
       "in_stock": true,
       "trending_score": 0.0147,
-      "source_verified_at": "2026-07-04T14:49:49Z",
+      "source_verified_at": "2026-07-04T18:13:02Z",
       "has_detail": true
     },
     {
@@ -3683,7 +3683,7 @@
       "stock": 43478,
       "in_stock": true,
       "trending_score": 0.0233,
-      "source_verified_at": "2026-07-04T14:49:53Z",
+      "source_verified_at": "2026-07-04T18:13:06Z",
       "has_detail": true
     },
     {
@@ -3704,7 +3704,7 @@
       "stock": 27,
       "in_stock": true,
       "trending_score": 0.1093,
-      "source_verified_at": "2026-07-04T14:49:56Z",
+      "source_verified_at": "2026-07-04T18:13:09Z",
       "has_detail": true
     },
     {
@@ -3725,7 +3725,7 @@
       "stock": 652,
       "in_stock": true,
       "trending_score": 0.0051,
-      "source_verified_at": "2026-07-04T14:50:00Z",
+      "source_verified_at": "2026-07-04T18:13:13Z",
       "has_detail": true
     },
     {
@@ -3744,7 +3744,7 @@
       "source_cost": 17.16,
       "retail_price": 29.73,
       "stock": 24,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0045,
       "source_verified_at": "2026-07-04T14:50:04Z",
       "has_detail": true
@@ -3765,7 +3765,7 @@
       "source_cost": 16.36,
       "retail_price": 28.34,
       "stock": 61,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0031,
       "source_verified_at": "2026-07-04T14:50:08Z",
       "has_detail": true
@@ -3786,7 +3786,7 @@
       "source_cost": 16.36,
       "retail_price": 28.34,
       "stock": 69,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0041,
       "source_verified_at": "2026-07-04T14:50:12Z",
       "has_detail": true
@@ -3807,7 +3807,7 @@
       "source_cost": 2.57,
       "retail_price": 13.17,
       "stock": 26606,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0469,
       "source_verified_at": "2026-07-04T14:50:16Z",
       "has_detail": true
@@ -3849,7 +3849,7 @@
       "source_cost": 2.48,
       "retail_price": 13.08,
       "stock": 10330,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0707,
       "source_verified_at": "2026-07-04T14:50:24Z",
       "has_detail": true
@@ -3870,7 +3870,7 @@
       "source_cost": 33.99,
       "retail_price": 58.87,
       "stock": 39,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0025,
       "source_verified_at": "2026-07-04T14:50:27Z",
       "has_detail": true
@@ -3891,7 +3891,7 @@
       "source_cost": 22.09,
       "retail_price": 38.26,
       "stock": 501,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0053,
       "source_verified_at": "2026-07-04T14:50:31Z",
       "has_detail": true
@@ -3912,7 +3912,7 @@
       "source_cost": 3.74,
       "retail_price": 14.38,
       "stock": 35131,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.103,
       "source_verified_at": "2026-07-04T14:50:35Z",
       "has_detail": true
@@ -3954,7 +3954,7 @@
       "source_cost": 31.99,
       "retail_price": 55.41,
       "stock": 11,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0186,
       "source_verified_at": "2026-07-04T14:50:42Z",
       "has_detail": true
@@ -3975,7 +3975,7 @@
       "source_cost": 4.8,
       "retail_price": 15.47,
       "stock": 40010,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1103,
       "source_verified_at": "2026-07-04T14:50:46Z",
       "has_detail": true
@@ -3996,7 +3996,7 @@
       "source_cost": 38.99,
       "retail_price": 67.53,
       "stock": 11,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0169,
       "source_verified_at": "2026-07-04T14:50:50Z",
       "has_detail": true
@@ -4017,7 +4017,7 @@
       "source_cost": 278.14,
       "retail_price": 481.73,
       "stock": 28,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0001,
       "source_verified_at": "2026-07-04T14:50:54Z",
       "has_detail": true
@@ -4040,7 +4040,7 @@
       "stock": 15,
       "in_stock": true,
       "trending_score": 0.0023,
-      "source_verified_at": "2026-07-04T14:50:57Z",
+      "source_verified_at": "2026-07-04T18:14:03Z",
       "has_detail": true
     },
     {
@@ -4061,7 +4061,7 @@
       "stock": 55,
       "in_stock": true,
       "trending_score": 0.0014,
-      "source_verified_at": "2026-07-04T14:51:01Z",
+      "source_verified_at": "2026-07-04T18:14:07Z",
       "has_detail": true
     },
     {
@@ -4082,7 +4082,7 @@
       "stock": 0,
       "in_stock": false,
       "trending_score": 0.0047,
-      "source_verified_at": "2026-07-04T14:51:05Z",
+      "source_verified_at": "2026-07-04T18:14:10Z",
       "has_detail": true
     },
     {
@@ -4101,7 +4101,7 @@
       "source_cost": 96.15,
       "retail_price": 166.53,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.186,
       "source_verified_at": "2026-07-04T14:51:09Z",
       "has_detail": true
@@ -4122,7 +4122,7 @@
       "source_cost": 21.6,
       "retail_price": 37.42,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.2821,
       "source_verified_at": "2026-07-04T14:51:13Z",
       "has_detail": true
@@ -4143,7 +4143,7 @@
       "source_cost": 9.54,
       "retail_price": 20.36,
       "stock": 103,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.005,
       "source_verified_at": "2026-07-04T14:51:17Z",
       "has_detail": true
@@ -4164,7 +4164,7 @@
       "source_cost": 1.9,
       "retail_price": 12.48,
       "stock": 16032,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0846,
       "source_verified_at": "2026-07-04T14:51:21Z",
       "has_detail": true
@@ -4185,7 +4185,7 @@
       "source_cost": 10.06,
       "retail_price": 20.89,
       "stock": 8150,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0491,
       "source_verified_at": "2026-07-04T14:51:25Z",
       "has_detail": true
@@ -4206,7 +4206,7 @@
       "source_cost": 20.97,
       "retail_price": 36.32,
       "stock": 12630,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.01,
       "source_verified_at": "2026-07-04T14:51:28Z",
       "has_detail": true
@@ -4227,7 +4227,7 @@
       "source_cost": 8.3,
       "retail_price": 19.08,
       "stock": 530,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0237,
       "source_verified_at": "2026-07-04T14:51:32Z",
       "has_detail": true
@@ -4245,7 +4245,7 @@
       "source_cost": 9.99,
       "retail_price": 20.82,
       "stock": 149,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0094,
       "source_verified_at": "2026-07-04T14:51:36Z",
       "has_detail": true
@@ -4266,7 +4266,7 @@
       "source_cost": 9.99,
       "retail_price": 20.82,
       "stock": 484,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0094,
       "source_verified_at": "2026-07-04T14:51:40Z",
       "has_detail": true
@@ -4287,7 +4287,7 @@
       "source_cost": 7.2,
       "retail_price": 17.94,
       "stock": 12871,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0376,
       "source_verified_at": "2026-07-04T14:51:43Z",
       "has_detail": true
@@ -4308,7 +4308,7 @@
       "source_cost": 144.42,
       "retail_price": 250.13,
       "stock": 338,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0001,
       "source_verified_at": "2026-07-04T14:51:47Z",
       "has_detail": true
@@ -4329,7 +4329,7 @@
       "source_cost": 123.17,
       "retail_price": 213.33,
       "stock": 427,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0004,
       "source_verified_at": "2026-07-04T14:51:51Z",
       "has_detail": true
@@ -4350,7 +4350,7 @@
       "source_cost": 84.7,
       "retail_price": 146.7,
       "stock": 172,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0001,
       "source_verified_at": "2026-07-04T14:51:55Z",
       "has_detail": true
@@ -4371,7 +4371,7 @@
       "source_cost": 90.62,
       "retail_price": 156.96,
       "stock": 238,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0001,
       "source_verified_at": "2026-07-04T14:51:58Z",
       "has_detail": true
@@ -4392,7 +4392,7 @@
       "source_cost": 100.26,
       "retail_price": 173.65,
       "stock": 90,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0001,
       "source_verified_at": "2026-07-04T14:52:02Z",
       "has_detail": true
@@ -4415,7 +4415,7 @@
       "stock": 78,
       "in_stock": true,
       "trending_score": 0.0001,
-      "source_verified_at": "2026-07-04T14:52:06Z",
+      "source_verified_at": "2026-07-04T18:15:03Z",
       "has_detail": true
     },
     {
@@ -4436,7 +4436,7 @@
       "stock": 265,
       "in_stock": true,
       "trending_score": 0.0002,
-      "source_verified_at": "2026-07-04T14:52:10Z",
+      "source_verified_at": "2026-07-04T18:15:07Z",
       "has_detail": true
     },
     {
@@ -4457,7 +4457,7 @@
       "stock": 121,
       "in_stock": true,
       "trending_score": 0.0001,
-      "source_verified_at": "2026-07-04T14:52:13Z",
+      "source_verified_at": "2026-07-04T18:15:10Z",
       "has_detail": true
     },
     {
@@ -4478,7 +4478,7 @@
       "stock": 157,
       "in_stock": true,
       "trending_score": 0.0002,
-      "source_verified_at": "2026-07-04T14:52:17Z",
+      "source_verified_at": "2026-07-04T18:15:14Z",
       "has_detail": true
     },
     {
@@ -4497,7 +4497,7 @@
       "source_cost": 27.04,
       "retail_price": 46.84,
       "stock": 81,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0013,
       "source_verified_at": "2026-07-04T14:52:21Z",
       "has_detail": true
@@ -4518,7 +4518,7 @@
       "source_cost": 1.85,
       "retail_price": 12.43,
       "stock": 11826,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.3182,
       "source_verified_at": "2026-07-04T14:52:25Z",
       "has_detail": true
@@ -4539,7 +4539,7 @@
       "source_cost": 0.72,
       "retail_price": 11.26,
       "stock": 11640,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0653,
       "source_verified_at": "2026-07-04T14:52:29Z",
       "has_detail": true
@@ -4560,7 +4560,7 @@
       "source_cost": 60.27,
       "retail_price": 104.39,
       "stock": 1440,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0017,
       "source_verified_at": "2026-07-04T14:52:33Z",
       "has_detail": true
@@ -4581,7 +4581,7 @@
       "source_cost": 67.6,
       "retail_price": 117.09,
       "stock": 72,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0012,
       "source_verified_at": "2026-07-04T14:52:37Z",
       "has_detail": true
@@ -4602,7 +4602,7 @@
       "source_cost": 8.0,
       "retail_price": 18.77,
       "stock": 94,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.004,
       "source_verified_at": "2026-07-04T14:52:40Z",
       "has_detail": true
@@ -4623,7 +4623,7 @@
       "source_cost": 80.38,
       "retail_price": 139.22,
       "stock": 67,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0006,
       "source_verified_at": "2026-07-04T14:52:44Z",
       "has_detail": true
@@ -4644,7 +4644,7 @@
       "source_cost": 32.24,
       "retail_price": 55.84,
       "stock": 58,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.059,
       "source_verified_at": "2026-07-04T14:52:48Z",
       "has_detail": true
@@ -4665,7 +4665,7 @@
       "source_cost": 99.84,
       "retail_price": 172.92,
       "stock": 100,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0249,
       "source_verified_at": "2026-07-04T14:52:52Z",
       "has_detail": true
@@ -4728,7 +4728,7 @@
       "source_cost": 30.34,
       "retail_price": 52.55,
       "stock": 18586,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0032,
       "source_verified_at": "2026-07-04T14:53:03Z",
       "has_detail": true
@@ -4749,7 +4749,7 @@
       "source_cost": 36.92,
       "retail_price": 63.95,
       "stock": 63,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0012,
       "source_verified_at": "2026-07-04T14:53:08Z",
       "has_detail": true
@@ -4772,7 +4772,7 @@
       "stock": 1449,
       "in_stock": true,
       "trending_score": 0.001,
-      "source_verified_at": "2026-07-04T14:53:11Z",
+      "source_verified_at": "2026-07-04T18:16:00Z",
       "has_detail": true
     },
     {
@@ -4793,7 +4793,7 @@
       "stock": 32,
       "in_stock": true,
       "trending_score": 0.0007,
-      "source_verified_at": "2026-07-04T14:53:16Z",
+      "source_verified_at": "2026-07-04T18:16:04Z",
       "has_detail": true
     },
     {
@@ -4812,9 +4812,9 @@
       "source_cost": 32.76,
       "retail_price": 56.74,
       "stock": 84,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0012,
-      "source_verified_at": "2026-07-04T10:25:39Z",
+      "source_verified_at": "2026-07-04T18:16:08Z",
       "has_detail": true
     },
     {
@@ -5085,7 +5085,7 @@
       "source_cost": 3.29,
       "retail_price": 13.91,
       "stock": 12618,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0231,
       "source_verified_at": "2026-07-04T14:54:02Z",
       "has_detail": true
@@ -5106,7 +5106,7 @@
       "source_cost": 8.0,
       "retail_price": 18.77,
       "stock": 11926,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0269,
       "source_verified_at": "2026-07-04T14:54:06Z",
       "has_detail": true
@@ -5127,7 +5127,7 @@
       "source_cost": 203.31,
       "retail_price": 352.13,
       "stock": 31,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0011,
       "source_verified_at": "2026-07-04T14:54:10Z",
       "has_detail": true
@@ -5148,9 +5148,9 @@
       "source_cost": 24.67,
       "retail_price": 42.73,
       "stock": 5202,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.004,
-      "source_verified_at": "2026-07-04T10:26:40Z",
+      "source_verified_at": "2026-07-04T18:17:01Z",
       "has_detail": true
     },
     {
@@ -5168,10 +5168,10 @@
       "category": "General",
       "source_cost": 57.2,
       "retail_price": 99.07,
-      "stock": 22159,
-      "in_stock": false,
+      "stock": 22123,
+      "in_stock": true,
       "trending_score": 0.0409,
-      "source_verified_at": "2026-07-04T12:23:00Z",
+      "source_verified_at": "2026-07-04T18:17:05Z",
       "has_detail": true
     },
     {
@@ -5190,9 +5190,9 @@
       "source_cost": 8.3,
       "retail_price": 19.08,
       "stock": 93,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0022,
-      "source_verified_at": "2026-07-04T12:23:04Z",
+      "source_verified_at": "2026-07-04T18:17:08Z",
       "has_detail": true
     },
     {
@@ -5440,7 +5440,7 @@
       "source_cost": 76.42,
       "retail_price": 132.36,
       "stock": 3282,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0011,
       "source_verified_at": "2026-07-04T14:55:03Z",
       "has_detail": true
@@ -5461,7 +5461,7 @@
       "source_cost": 155.8,
       "retail_price": 269.84,
       "stock": 200,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.001,
       "source_verified_at": "2026-07-04T14:55:07Z",
       "has_detail": true
@@ -5482,7 +5482,7 @@
       "source_cost": 83.46,
       "retail_price": 144.55,
       "stock": 71,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0004,
       "source_verified_at": "2026-07-04T14:55:11Z",
       "has_detail": true
@@ -5503,7 +5503,7 @@
       "source_cost": 44.12,
       "retail_price": 76.42,
       "stock": 1255,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0013,
       "source_verified_at": "2026-07-04T14:55:15Z",
       "has_detail": true
@@ -5524,9 +5524,9 @@
       "source_cost": 14.5,
       "retail_price": 25.47,
       "stock": 26,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0079,
-      "source_verified_at": "2026-07-04T12:24:02Z",
+      "source_verified_at": "2026-07-04T18:18:01Z",
       "has_detail": true
     },
     {
@@ -5545,9 +5545,9 @@
       "source_cost": 25.87,
       "retail_price": 44.81,
       "stock": 150,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0011,
-      "source_verified_at": "2026-07-04T12:24:07Z",
+      "source_verified_at": "2026-07-04T18:18:05Z",
       "has_detail": true
     },
     {
@@ -5566,9 +5566,9 @@
       "source_cost": 10.71,
       "retail_price": 21.56,
       "stock": 460,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0003,
-      "source_verified_at": "2026-07-04T12:24:07Z",
+      "source_verified_at": "2026-07-04T18:18:08Z",
       "has_detail": true
     },
     {
@@ -5587,9 +5587,9 @@
       "source_cost": 47.69,
       "retail_price": 82.6,
       "stock": 432,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0018,
-      "source_verified_at": "2026-07-04T10:28:01Z",
+      "source_verified_at": "2026-07-04T18:18:12Z",
       "has_detail": true
     },
     {
@@ -5794,7 +5794,7 @@
       "source_cost": 2.17,
       "retail_price": 12.76,
       "stock": 40240,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0021,
       "source_verified_at": "2026-07-04T14:56:05Z",
       "has_detail": true
@@ -5815,7 +5815,7 @@
       "source_cost": 72.8,
       "retail_price": 126.09,
       "stock": 58,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.002,
       "source_verified_at": "2026-07-04T14:56:08Z",
       "has_detail": true
@@ -5899,9 +5899,9 @@
       "source_cost": 200.63,
       "retail_price": 347.49,
       "stock": 65,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0004,
-      "source_verified_at": "2026-07-04T12:25:07Z",
+      "source_verified_at": "2026-07-04T18:19:01Z",
       "has_detail": true
     },
     {
@@ -5920,9 +5920,9 @@
       "source_cost": 147.5,
       "retail_price": 255.47,
       "stock": 25,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0001,
-      "source_verified_at": "2026-07-04T12:25:11Z",
+      "source_verified_at": "2026-07-04T18:19:05Z",
       "has_detail": true
     },
     {
@@ -5941,9 +5941,9 @@
       "source_cost": 147.5,
       "retail_price": 255.47,
       "stock": 16,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0004,
-      "source_verified_at": "2026-07-04T12:25:16Z",
+      "source_verified_at": "2026-07-04T18:19:08Z",
       "has_detail": true
     },
     {
@@ -6130,7 +6130,7 @@
       "source_cost": 36.9,
       "retail_price": 63.91,
       "stock": 175,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.005,
       "source_verified_at": "2026-07-04T14:57:02Z",
       "has_detail": true
@@ -6151,7 +6151,7 @@
       "source_cost": 20.53,
       "retail_price": 35.56,
       "stock": 230,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0014,
       "source_verified_at": "2026-07-04T14:57:06Z",
       "has_detail": true
@@ -6172,7 +6172,7 @@
       "source_cost": 1.65,
       "retail_price": 12.22,
       "stock": 117,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0337,
       "source_verified_at": "2026-07-04T14:57:10Z",
       "has_detail": true
@@ -6275,10 +6275,10 @@
       "category": "General",
       "source_cost": 59.31,
       "retail_price": 102.73,
-      "stock": 882,
-      "in_stock": false,
+      "stock": 880,
+      "in_stock": true,
       "trending_score": 0.0049,
-      "source_verified_at": "2026-07-04T10:30:03Z",
+      "source_verified_at": "2026-07-04T18:20:01Z",
       "has_detail": true
     },
     {
@@ -6297,9 +6297,9 @@
       "source_cost": 4.5,
       "retail_price": 15.16,
       "stock": 13563,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0745,
-      "source_verified_at": "2026-07-04T10:30:04Z",
+      "source_verified_at": "2026-07-04T18:20:05Z",
       "has_detail": true
     },
     {
@@ -6318,9 +6318,9 @@
       "source_cost": 9.99,
       "retail_price": 20.82,
       "stock": 500,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0131,
-      "source_verified_at": "2026-07-04T10:30:08Z",
+      "source_verified_at": "2026-07-04T18:20:09Z",
       "has_detail": true
     },
     {
@@ -6339,9 +6339,9 @@
       "source_cost": 22.87,
       "retail_price": 39.61,
       "stock": 330,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.021,
-      "source_verified_at": "2026-07-04T10:30:12Z",
+      "source_verified_at": "2026-07-04T18:20:12Z",
       "has_detail": true
     },
     {
@@ -6486,7 +6486,7 @@
       "source_cost": 2.25,
       "retail_price": 12.84,
       "stock": 11333,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1008,
       "source_verified_at": "2026-07-04T14:58:03Z",
       "has_detail": true
@@ -6507,7 +6507,7 @@
       "source_cost": 14.35,
       "retail_price": 25.31,
       "stock": 101,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0099,
       "source_verified_at": "2026-07-04T14:58:07Z",
       "has_detail": true
@@ -6528,7 +6528,7 @@
       "source_cost": 16.58,
       "retail_price": 28.72,
       "stock": 14081,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1064,
       "source_verified_at": "2026-07-04T14:58:11Z",
       "has_detail": true
@@ -6549,7 +6549,7 @@
       "source_cost": 92.89,
       "retail_price": 160.89,
       "stock": 87,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0013,
       "source_verified_at": "2026-07-04T14:58:15Z",
       "has_detail": true
@@ -6651,9 +6651,9 @@
       "source_cost": 9.99,
       "retail_price": 20.82,
       "stock": 475,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0088,
-      "source_verified_at": "2026-07-04T10:31:07Z",
+      "source_verified_at": "2026-07-04T18:21:02Z",
       "has_detail": true
     },
     {
@@ -6672,9 +6672,9 @@
       "source_cost": 9.99,
       "retail_price": 20.82,
       "stock": 180,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0109,
-      "source_verified_at": "2026-07-04T10:31:11Z",
+      "source_verified_at": "2026-07-04T18:21:06Z",
       "has_detail": true
     },
     {
@@ -6693,9 +6693,9 @@
       "source_cost": 9.99,
       "retail_price": 20.82,
       "stock": 1996,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0268,
-      "source_verified_at": "2026-07-04T10:31:15Z",
+      "source_verified_at": "2026-07-04T18:21:10Z",
       "has_detail": true
     },
     {
@@ -6816,7 +6816,7 @@
       "source_cost": 9.99,
       "retail_price": 20.82,
       "stock": 1800,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0151,
       "source_verified_at": "2026-07-04T14:59:01Z",
       "has_detail": true
@@ -6837,7 +6837,7 @@
       "source_cost": 66.3,
       "retail_price": 114.83,
       "stock": 902,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0027,
       "source_verified_at": "2026-07-04T14:59:05Z",
       "has_detail": true
@@ -6858,7 +6858,7 @@
       "source_cost": 0.76,
       "retail_price": 11.3,
       "stock": 31653,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.99,
       "source_verified_at": "2026-07-04T14:59:09Z",
       "has_detail": true
@@ -7003,9 +7003,9 @@
       "source_cost": 1.5,
       "retail_price": 12.07,
       "stock": 14786,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0885,
-      "source_verified_at": "2026-07-04T10:32:08Z",
+      "source_verified_at": "2026-07-04T18:22:00Z",
       "has_detail": true
     },
     {
@@ -7024,9 +7024,9 @@
       "source_cost": 40.75,
       "retail_price": 70.58,
       "stock": 100,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0139,
-      "source_verified_at": "2026-07-04T10:32:13Z",
+      "source_verified_at": "2026-07-04T18:22:04Z",
       "has_detail": true
     },
     {
@@ -7045,9 +7045,9 @@
       "source_cost": 84.71,
       "retail_price": 146.72,
       "stock": 128,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0926,
-      "source_verified_at": "2026-07-04T10:32:17Z",
+      "source_verified_at": "2026-07-04T18:22:08Z",
       "has_detail": true
     },
     {
@@ -7171,7 +7171,7 @@
       "source_cost": 1.09,
       "retail_price": 11.64,
       "stock": 8085,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0007,
       "source_verified_at": "2026-07-04T15:00:02Z",
       "has_detail": true
@@ -7192,7 +7192,7 @@
       "source_cost": 9.24,
       "retail_price": 20.05,
       "stock": 144,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0065,
       "source_verified_at": "2026-07-04T15:00:06Z",
       "has_detail": true
@@ -7213,7 +7213,7 @@
       "source_cost": 9.24,
       "retail_price": 20.05,
       "stock": 128,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0045,
       "source_verified_at": "2026-07-04T15:00:10Z",
       "has_detail": true
@@ -7234,7 +7234,7 @@
       "source_cost": 9.24,
       "retail_price": 20.05,
       "stock": 76,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0028,
       "source_verified_at": "2026-07-04T15:00:14Z",
       "has_detail": true
@@ -7381,9 +7381,9 @@
       "source_cost": 10.4,
       "retail_price": 21.24,
       "stock": 39,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0052,
-      "source_verified_at": "2026-07-04T10:33:21Z",
+      "source_verified_at": "2026-07-04T18:23:01Z",
       "has_detail": true
     },
     {
@@ -7402,9 +7402,9 @@
       "source_cost": 10.4,
       "retail_price": 21.24,
       "stock": 33,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0034,
-      "source_verified_at": "2026-07-04T10:33:25Z",
+      "source_verified_at": "2026-07-04T18:23:05Z",
       "has_detail": true
     },
     {
@@ -7423,9 +7423,9 @@
       "source_cost": 10.4,
       "retail_price": 21.24,
       "stock": 27,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0039,
-      "source_verified_at": "2026-07-04T10:33:29Z",
+      "source_verified_at": "2026-07-04T18:23:09Z",
       "has_detail": true
     },
     {
@@ -7444,9 +7444,9 @@
       "source_cost": 10.4,
       "retail_price": 21.24,
       "stock": 49,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0033,
-      "source_verified_at": "2026-07-04T10:33:33Z",
+      "source_verified_at": "2026-07-04T18:23:12Z",
       "has_detail": true
     },
     {
@@ -7507,7 +7507,7 @@
       "source_cost": 10.4,
       "retail_price": 21.24,
       "stock": 41,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0042,
       "source_verified_at": "2026-07-04T15:01:00Z",
       "has_detail": true
@@ -7528,7 +7528,7 @@
       "source_cost": 100.83,
       "retail_price": 174.64,
       "stock": 40,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0003,
       "source_verified_at": "2026-07-04T15:01:04Z",
       "has_detail": true
@@ -7549,7 +7549,7 @@
       "source_cost": 0.7,
       "retail_price": 11.24,
       "stock": 12347,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0513,
       "source_verified_at": "2026-07-04T15:01:08Z",
       "has_detail": true
@@ -7759,9 +7759,9 @@
       "source_cost": 3.5,
       "retail_price": 14.13,
       "stock": 13228,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0169,
-      "source_verified_at": "2026-07-04T10:34:29Z",
+      "source_verified_at": "2026-07-04T18:24:02Z",
       "has_detail": true
     },
     {
@@ -7777,9 +7777,9 @@
       "source_cost": 1.47,
       "retail_price": 12.04,
       "stock": 90,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.005,
-      "source_verified_at": "2026-07-04T10:34:33Z",
+      "source_verified_at": "2026-07-04T18:24:05Z",
       "has_detail": true
     },
     {
@@ -7798,9 +7798,9 @@
       "source_cost": 4.49,
       "retail_price": 15.15,
       "stock": 11712,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0441,
-      "source_verified_at": "2026-07-04T10:34:37Z",
+      "source_verified_at": "2026-07-04T18:24:09Z",
       "has_detail": true
     },
     {
@@ -7861,7 +7861,7 @@
       "source_cost": 1.84,
       "retail_price": 12.42,
       "stock": 5387,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0347,
       "source_verified_at": "2026-07-04T15:02:02Z",
       "has_detail": true
@@ -7882,7 +7882,7 @@
       "source_cost": 33.75,
       "retail_price": 58.46,
       "stock": 21,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0079,
       "source_verified_at": "2026-07-04T15:02:06Z",
       "has_detail": true
@@ -7903,7 +7903,7 @@
       "source_cost": 55.04,
       "retail_price": 95.33,
       "stock": 405,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0019,
       "source_verified_at": "2026-07-04T15:02:10Z",
       "has_detail": true
@@ -8133,9 +8133,9 @@
       "source_cost": 5.82,
       "retail_price": 16.52,
       "stock": 227,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0036,
-      "source_verified_at": "2026-07-04T06:50:58Z",
+      "source_verified_at": "2026-07-04T18:25:03Z",
       "has_detail": true
     },
     {
@@ -8154,9 +8154,9 @@
       "source_cost": 37.44,
       "retail_price": 64.85,
       "stock": 300,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0018,
-      "source_verified_at": "2026-07-04T06:51:01Z",
+      "source_verified_at": "2026-07-04T18:25:06Z",
       "has_detail": true
     },
     {
@@ -8175,9 +8175,9 @@
       "source_cost": 0.67,
       "retail_price": 11.21,
       "stock": 13694,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0021,
-      "source_verified_at": "2026-07-04T06:51:04Z",
+      "source_verified_at": "2026-07-04T18:25:10Z",
       "has_detail": true
     },
     {
@@ -8194,9 +8194,9 @@
       "source_cost": 0.53,
       "retail_price": 11.07,
       "stock": 13594,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0327,
-      "source_verified_at": "2026-07-04T06:51:07Z",
+      "source_verified_at": "2026-07-04T18:25:14Z",
       "has_detail": true
     },
     {
@@ -8215,7 +8215,7 @@
       "source_cost": 0.57,
       "retail_price": 11.11,
       "stock": 12936,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0456,
       "source_verified_at": "2026-07-04T15:03:03Z",
       "has_detail": true
@@ -8236,7 +8236,7 @@
       "source_cost": 8.13,
       "retail_price": 18.9,
       "stock": 12148,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0457,
       "source_verified_at": "2026-07-04T15:03:07Z",
       "has_detail": true
@@ -8257,7 +8257,7 @@
       "source_cost": 22.64,
       "retail_price": 39.22,
       "stock": 40,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0051,
       "source_verified_at": "2026-07-04T15:03:10Z",
       "has_detail": true
@@ -8278,7 +8278,7 @@
       "source_cost": 0.54,
       "retail_price": 11.08,
       "stock": 10572,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.005,
       "source_verified_at": "2026-07-04T15:03:14Z",
       "has_detail": true
@@ -8487,10 +8487,10 @@
       "category": "General",
       "source_cost": 110.42,
       "retail_price": 191.25,
-      "stock": 495,
-      "in_stock": false,
+      "stock": 493,
+      "in_stock": true,
       "trending_score": 0.0001,
-      "source_verified_at": "2026-07-04T06:51:44Z",
+      "source_verified_at": "2026-07-04T18:26:01Z",
       "has_detail": true
     },
     {
@@ -8509,9 +8509,9 @@
       "source_cost": 78.92,
       "retail_price": 136.69,
       "stock": 94,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0046,
-      "source_verified_at": "2026-07-04T06:51:47Z",
+      "source_verified_at": "2026-07-04T18:26:04Z",
       "has_detail": true
     },
     {
@@ -8530,9 +8530,9 @@
       "source_cost": 1.25,
       "retail_price": 11.81,
       "stock": 12893,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0448,
-      "source_verified_at": "2026-07-04T06:51:49Z",
+      "source_verified_at": "2026-07-04T18:26:08Z",
       "has_detail": true
     },
     {
@@ -8550,7 +8550,7 @@
       "source_cost": 1.19,
       "retail_price": 11.75,
       "stock": 10317,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0432,
       "source_verified_at": "2026-07-04T15:04:00Z",
       "has_detail": true
@@ -8569,7 +8569,7 @@
       "source_cost": 1.45,
       "retail_price": 12.02,
       "stock": 11535,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1204,
       "source_verified_at": "2026-07-04T15:04:04Z",
       "has_detail": true
@@ -8590,7 +8590,7 @@
       "source_cost": 5.86,
       "retail_price": 16.56,
       "stock": 716,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0161,
       "source_verified_at": "2026-07-04T15:04:08Z",
       "has_detail": true
@@ -8863,9 +8863,9 @@
       "source_cost": 198.33,
       "retail_price": 343.5,
       "stock": 157,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0024,
-      "source_verified_at": "2026-07-04T06:52:33Z",
+      "source_verified_at": "2026-07-04T18:27:01Z",
       "has_detail": true
     },
     {
@@ -8884,9 +8884,9 @@
       "source_cost": 21.89,
       "retail_price": 37.92,
       "stock": 549,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0147,
-      "source_verified_at": "2026-07-04T06:52:36Z",
+      "source_verified_at": "2026-07-04T18:27:05Z",
       "has_detail": true
     },
     {
@@ -8907,7 +8907,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.1586,
-      "source_verified_at": "2026-07-04T15:05:01Z",
+      "source_verified_at": "2026-07-04T18:27:08Z",
       "has_detail": true
     },
     {
@@ -8926,7 +8926,7 @@
       "source_cost": 15.59,
       "retail_price": 27.01,
       "stock": 193,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0508,
       "source_verified_at": "2026-07-04T15:05:05Z",
       "has_detail": true
@@ -8947,7 +8947,7 @@
       "source_cost": 0.95,
       "retail_price": 11.5,
       "stock": 10807,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.2436,
       "source_verified_at": "2026-07-04T15:05:09Z",
       "has_detail": true
@@ -8968,7 +8968,7 @@
       "source_cost": 6.3,
       "retail_price": 17.02,
       "stock": 10965,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.6557,
       "source_verified_at": "2026-07-04T15:05:10Z",
       "has_detail": true
@@ -9241,9 +9241,9 @@
       "source_cost": 142.03,
       "retail_price": 246.0,
       "stock": 76,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0016,
-      "source_verified_at": "2026-07-04T06:53:21Z",
+      "source_verified_at": "2026-07-04T18:28:01Z",
       "has_detail": true
     },
     {
@@ -9262,9 +9262,9 @@
       "source_cost": 154.06,
       "retail_price": 266.83,
       "stock": 155,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0006,
-      "source_verified_at": "2026-07-04T06:53:24Z",
+      "source_verified_at": "2026-07-04T18:28:05Z",
       "has_detail": true
     },
     {
@@ -9285,7 +9285,7 @@
       "stock": 67,
       "in_stock": true,
       "trending_score": 0.0007,
-      "source_verified_at": "2026-07-04T15:06:03Z",
+      "source_verified_at": "2026-07-04T18:28:09Z",
       "has_detail": true
     },
     {
@@ -9306,7 +9306,7 @@
       "stock": 41,
       "in_stock": true,
       "trending_score": 0.0519,
-      "source_verified_at": "2026-07-04T15:06:07Z",
+      "source_verified_at": "2026-07-04T18:28:12Z",
       "has_detail": true
     },
     {
@@ -9325,7 +9325,7 @@
       "source_cost": 142.14,
       "retail_price": 246.19,
       "stock": 47,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0,
       "source_verified_at": "2026-07-04T15:06:11Z",
       "has_detail": true
@@ -9621,7 +9621,7 @@
       "stock": 27674,
       "in_stock": true,
       "trending_score": 0.0344,
-      "source_verified_at": "2026-07-04T15:07:00Z",
+      "source_verified_at": "2026-07-04T18:29:02Z",
       "has_detail": true
     },
     {
@@ -9642,7 +9642,7 @@
       "stock": 312,
       "in_stock": true,
       "trending_score": 0.0231,
-      "source_verified_at": "2026-07-04T15:07:04Z",
+      "source_verified_at": "2026-07-04T18:29:06Z",
       "has_detail": true
     },
     {
@@ -9663,7 +9663,7 @@
       "stock": 11891,
       "in_stock": true,
       "trending_score": 0.0641,
-      "source_verified_at": "2026-07-04T15:07:08Z",
+      "source_verified_at": "2026-07-04T18:29:09Z",
       "has_detail": true
     },
     {
@@ -9973,7 +9973,7 @@
       "source_cost": 27.14,
       "retail_price": 47.01,
       "stock": 11,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0066,
       "source_verified_at": "2026-07-04T15:08:01Z",
       "has_detail": true
@@ -9996,7 +9996,7 @@
       "stock": 43,
       "in_stock": true,
       "trending_score": 0.0068,
-      "source_verified_at": "2026-07-04T15:08:05Z",
+      "source_verified_at": "2026-07-04T18:30:02Z",
       "has_detail": true
     },
     {
@@ -10017,7 +10017,7 @@
       "stock": 101,
       "in_stock": true,
       "trending_score": 0.0022,
-      "source_verified_at": "2026-07-04T15:08:08Z",
+      "source_verified_at": "2026-07-04T18:30:06Z",
       "has_detail": true
     },
     {
@@ -10038,7 +10038,7 @@
       "stock": 68,
       "in_stock": true,
       "trending_score": 0.0005,
-      "source_verified_at": "2026-07-04T15:08:12Z",
+      "source_verified_at": "2026-07-04T18:30:10Z",
       "has_detail": true
     },
     {
@@ -10057,9 +10057,9 @@
       "source_cost": 75.0,
       "retail_price": 129.9,
       "stock": 201,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0008,
-      "source_verified_at": "2026-07-04T12:37:11Z",
+      "source_verified_at": "2026-07-04T18:30:13Z",
       "has_detail": true
     },
     {
@@ -10330,7 +10330,7 @@
       "source_cost": 29.12,
       "retail_price": 50.44,
       "stock": 508,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0042,
       "source_verified_at": "2026-07-04T15:09:02Z",
       "has_detail": true
@@ -10353,7 +10353,7 @@
       "stock": 496,
       "in_stock": true,
       "trending_score": 0.0034,
-      "source_verified_at": "2026-07-04T15:09:05Z",
+      "source_verified_at": "2026-07-04T18:31:00Z",
       "has_detail": true
     },
     {
@@ -10374,7 +10374,7 @@
       "stock": 219,
       "in_stock": true,
       "trending_score": 0.0018,
-      "source_verified_at": "2026-07-04T15:09:10Z",
+      "source_verified_at": "2026-07-04T18:31:04Z",
       "has_detail": true
     },
     {
@@ -10393,9 +10393,9 @@
       "source_cost": 205.35,
       "retail_price": 355.66,
       "stock": 230,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0001,
-      "source_verified_at": "2026-07-04T12:38:11Z",
+      "source_verified_at": "2026-07-04T18:31:07Z",
       "has_detail": true
     },
     {
@@ -10687,7 +10687,7 @@
       "source_cost": 70.5,
       "retail_price": 122.11,
       "stock": 69,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0017,
       "source_verified_at": "2026-07-04T15:10:04Z",
       "has_detail": true
@@ -10708,7 +10708,7 @@
       "source_cost": 234.69,
       "retail_price": 406.48,
       "stock": 111,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0029,
       "source_verified_at": "2026-07-04T15:10:07Z",
       "has_detail": true
@@ -10731,7 +10731,7 @@
       "stock": 235,
       "in_stock": true,
       "trending_score": 0.0009,
-      "source_verified_at": "2026-07-04T15:10:11Z",
+      "source_verified_at": "2026-07-04T18:32:01Z",
       "has_detail": true
     },
     {
@@ -10752,7 +10752,7 @@
       "stock": 219,
       "in_stock": true,
       "trending_score": 0.0005,
-      "source_verified_at": "2026-07-04T15:10:15Z",
+      "source_verified_at": "2026-07-04T18:32:04Z",
       "has_detail": true
     },
     {
@@ -10771,9 +10771,9 @@
       "source_cost": 77.71,
       "retail_price": 134.6,
       "stock": 100,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0013,
-      "source_verified_at": "2026-07-04T10:43:16Z",
+      "source_verified_at": "2026-07-04T18:32:08Z",
       "has_detail": true
     },
     {
@@ -11023,7 +11023,7 @@
       "source_cost": 32.45,
       "retail_price": 56.21,
       "stock": 13314,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0278,
       "source_verified_at": "2026-07-04T15:11:01Z",
       "has_detail": true
@@ -11044,7 +11044,7 @@
       "source_cost": 36.67,
       "retail_price": 63.52,
       "stock": 30946,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.5151,
       "source_verified_at": "2026-07-04T15:11:05Z",
       "has_detail": true
@@ -11065,7 +11065,7 @@
       "source_cost": 40.72,
       "retail_price": 70.53,
       "stock": 4582,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0118,
       "source_verified_at": "2026-07-04T15:11:09Z",
       "has_detail": true
@@ -11107,9 +11107,9 @@
       "source_cost": 2.6,
       "retail_price": 13.2,
       "stock": 34942,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0477,
-      "source_verified_at": "2026-07-04T06:57:12Z",
+      "source_verified_at": "2026-07-04T18:33:01Z",
       "has_detail": true
     },
     {
@@ -11128,9 +11128,9 @@
       "source_cost": 5.25,
       "retail_price": 15.93,
       "stock": 39153,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.99,
-      "source_verified_at": "2026-07-04T06:57:15Z",
+      "source_verified_at": "2026-07-04T18:33:05Z",
       "has_detail": true
     },
     {
@@ -11148,10 +11148,10 @@
       "category": "General",
       "source_cost": 18.62,
       "retail_price": 32.25,
-      "stock": 1573,
-      "in_stock": false,
+      "stock": 1563,
+      "in_stock": true,
       "trending_score": 0.0054,
-      "source_verified_at": "2026-07-04T06:57:17Z",
+      "source_verified_at": "2026-07-04T18:33:08Z",
       "has_detail": true
     },
     {
@@ -11169,10 +11169,10 @@
       "category": "General",
       "source_cost": 76.42,
       "retail_price": 132.36,
-      "stock": 1551,
-      "in_stock": false,
+      "stock": 1548,
+      "in_stock": true,
       "trending_score": 0.0013,
-      "source_verified_at": "2026-07-04T06:57:20Z",
+      "source_verified_at": "2026-07-04T18:33:12Z",
       "has_detail": true
     },
     {
@@ -11375,7 +11375,7 @@
       "source_cost": 4.64,
       "retail_price": 15.3,
       "stock": 22000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0841,
       "source_verified_at": "2026-07-04T15:12:02Z",
       "has_detail": true
@@ -11396,7 +11396,7 @@
       "source_cost": 130.95,
       "retail_price": 226.8,
       "stock": 33,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0274,
       "source_verified_at": "2026-07-04T15:12:06Z",
       "has_detail": true
@@ -11417,7 +11417,7 @@
       "source_cost": 71.82,
       "retail_price": 124.39,
       "stock": 89,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0003,
       "source_verified_at": "2026-07-04T15:12:10Z",
       "has_detail": true
@@ -11480,9 +11480,9 @@
       "source_cost": 7.67,
       "retail_price": 18.43,
       "stock": 11688,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.099,
-      "source_verified_at": "2026-07-04T06:57:57Z",
+      "source_verified_at": "2026-07-04T18:34:02Z",
       "has_detail": true
     },
     {
@@ -11501,9 +11501,9 @@
       "source_cost": 7.16,
       "retail_price": 17.9,
       "stock": 13080,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0657,
-      "source_verified_at": "2026-07-04T06:58:00Z",
+      "source_verified_at": "2026-07-04T18:34:06Z",
       "has_detail": true
     },
     {
@@ -11522,9 +11522,9 @@
       "source_cost": 95.02,
       "retail_price": 164.58,
       "stock": 39,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0035,
-      "source_verified_at": "2026-07-04T06:58:03Z",
+      "source_verified_at": "2026-07-04T18:34:10Z",
       "has_detail": true
     },
     {
@@ -11731,7 +11731,7 @@
       "source_cost": 70.3,
       "retail_price": 121.76,
       "stock": 45,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0066,
       "source_verified_at": "2026-07-04T15:13:03Z",
       "has_detail": true
@@ -11752,7 +11752,7 @@
       "source_cost": 75.35,
       "retail_price": 130.51,
       "stock": 943,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0047,
       "source_verified_at": "2026-07-04T15:13:07Z",
       "has_detail": true
@@ -11771,7 +11771,7 @@
       "source_cost": 7.72,
       "retail_price": 18.48,
       "stock": 1062,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0057,
       "source_verified_at": "2026-07-04T15:13:11Z",
       "has_detail": true
@@ -11792,7 +11792,7 @@
       "source_cost": 2.18,
       "retail_price": 12.77,
       "stock": 12032,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0913,
       "source_verified_at": "2026-07-04T15:13:15Z",
       "has_detail": true
@@ -11854,9 +11854,9 @@
       "source_cost": 28.2,
       "retail_price": 48.85,
       "stock": 78,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0002,
-      "source_verified_at": "2026-07-04T06:58:43Z",
+      "source_verified_at": "2026-07-04T18:35:02Z",
       "has_detail": true
     },
     {
@@ -11875,9 +11875,9 @@
       "source_cost": 35.96,
       "retail_price": 62.29,
       "stock": 40,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0004,
-      "source_verified_at": "2026-07-04T06:58:46Z",
+      "source_verified_at": "2026-07-04T18:35:06Z",
       "has_detail": true
     },
     {
@@ -11896,9 +11896,9 @@
       "source_cost": 54.92,
       "retail_price": 95.12,
       "stock": 727,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0123,
-      "source_verified_at": "2026-07-04T06:58:48Z",
+      "source_verified_at": "2026-07-04T18:35:09Z",
       "has_detail": true
     },
     {
@@ -11916,10 +11916,10 @@
       "category": "General",
       "source_cost": 85.17,
       "retail_price": 147.52,
-      "stock": 10980,
-      "in_stock": false,
+      "stock": 10978,
+      "in_stock": true,
       "trending_score": 0.0261,
-      "source_verified_at": "2026-07-04T06:58:51Z",
+      "source_verified_at": "2026-07-04T18:35:13Z",
       "has_detail": true
     },
     {
@@ -12064,7 +12064,7 @@
       "source_cost": 40.38,
       "retail_price": 69.94,
       "stock": 165,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0,
       "source_verified_at": "2026-07-04T15:14:01Z",
       "has_detail": true
@@ -12085,7 +12085,7 @@
       "source_cost": 41.9,
       "retail_price": 72.57,
       "stock": 57,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0009,
       "source_verified_at": "2026-07-04T15:14:05Z",
       "has_detail": true
@@ -12106,7 +12106,7 @@
       "source_cost": 2.79,
       "retail_price": 13.4,
       "stock": 10061,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0323,
       "source_verified_at": "2026-07-04T15:14:08Z",
       "has_detail": true
@@ -12232,9 +12232,9 @@
       "source_cost": 12.59,
       "retail_price": 23.5,
       "stock": 12655,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0067,
-      "source_verified_at": "2026-07-04T06:59:32Z",
+      "source_verified_at": "2026-07-04T18:36:02Z",
       "has_detail": true
     },
     {
@@ -12253,9 +12253,9 @@
       "source_cost": 4.53,
       "retail_price": 15.19,
       "stock": 5132,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0071,
-      "source_verified_at": "2026-07-04T06:59:34Z",
+      "source_verified_at": "2026-07-04T18:36:06Z",
       "has_detail": true
     },
     {
@@ -12274,9 +12274,9 @@
       "source_cost": 7.46,
       "retail_price": 18.21,
       "stock": 9919,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0088,
-      "source_verified_at": "2026-07-04T06:59:37Z",
+      "source_verified_at": "2026-07-04T18:36:09Z",
       "has_detail": true
     },
     {
@@ -12421,7 +12421,7 @@
       "source_cost": 27.5,
       "retail_price": 47.63,
       "stock": 230,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0104,
       "source_verified_at": "2026-07-04T15:15:01Z",
       "has_detail": true
@@ -12442,7 +12442,7 @@
       "source_cost": 10.6,
       "retail_price": 21.45,
       "stock": 78,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0013,
       "source_verified_at": "2026-07-04T15:15:05Z",
       "has_detail": true
@@ -12463,7 +12463,7 @@
       "source_cost": 10.5,
       "retail_price": 21.35,
       "stock": 98,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.001,
       "source_verified_at": "2026-07-04T15:15:09Z",
       "has_detail": true
@@ -12484,7 +12484,7 @@
       "source_cost": 11.1,
       "retail_price": 21.96,
       "stock": 97,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0015,
       "source_verified_at": "2026-07-04T15:15:13Z",
       "has_detail": true
@@ -12610,9 +12610,9 @@
       "source_cost": 10.14,
       "retail_price": 20.97,
       "stock": 13192,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.2182,
-      "source_verified_at": "2026-07-04T07:00:22Z",
+      "source_verified_at": "2026-07-04T18:37:03Z",
       "has_detail": true
     },
     {
@@ -12631,9 +12631,9 @@
       "source_cost": 5.97,
       "retail_price": 16.68,
       "stock": 14070,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.1339,
-      "source_verified_at": "2026-07-04T07:00:25Z",
+      "source_verified_at": "2026-07-04T18:37:06Z",
       "has_detail": true
     },
     {
@@ -12652,9 +12652,9 @@
       "source_cost": 1.53,
       "retail_price": 12.1,
       "stock": 20000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.1542,
-      "source_verified_at": "2026-07-04T07:00:27Z",
+      "source_verified_at": "2026-07-04T18:37:10Z",
       "has_detail": true
     },
     {
@@ -12778,7 +12778,7 @@
       "source_cost": 1.93,
       "retail_price": 12.51,
       "stock": 12711,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0147,
       "source_verified_at": "2026-07-04T15:16:03Z",
       "has_detail": true
@@ -12799,7 +12799,7 @@
       "source_cost": 2.28,
       "retail_price": 12.87,
       "stock": 11476,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0878,
       "source_verified_at": "2026-07-04T15:16:07Z",
       "has_detail": true
@@ -12820,7 +12820,7 @@
       "source_cost": 7.22,
       "retail_price": 17.96,
       "stock": 10245,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.2345,
       "source_verified_at": "2026-07-04T15:16:10Z",
       "has_detail": true
@@ -12988,9 +12988,9 @@
       "source_cost": 47.9,
       "retail_price": 82.97,
       "stock": 50,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.007,
-      "source_verified_at": "2026-07-04T07:01:14Z",
+      "source_verified_at": "2026-07-04T18:38:03Z",
       "has_detail": true
     },
     {
@@ -13009,9 +13009,9 @@
       "source_cost": 28.9,
       "retail_price": 50.06,
       "stock": 50,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.007,
-      "source_verified_at": "2026-07-04T07:01:17Z",
+      "source_verified_at": "2026-07-04T18:38:07Z",
       "has_detail": true
     },
     {
@@ -13030,9 +13030,9 @@
       "source_cost": 32.9,
       "retail_price": 56.99,
       "stock": 48,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0104,
-      "source_verified_at": "2026-07-04T12:46:02Z",
+      "source_verified_at": "2026-07-04T18:38:10Z",
       "has_detail": true
     },
     {
@@ -13051,9 +13051,9 @@
       "source_cost": 28.9,
       "retail_price": 50.06,
       "stock": 50,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0085,
-      "source_verified_at": "2026-07-04T12:46:06Z",
+      "source_verified_at": "2026-07-04T18:38:14Z",
       "has_detail": true
     },
     {
@@ -13114,7 +13114,7 @@
       "source_cost": 26.9,
       "retail_price": 46.59,
       "stock": 49,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0102,
       "source_verified_at": "2026-07-04T15:17:01Z",
       "has_detail": true
@@ -13135,7 +13135,7 @@
       "source_cost": 33.9,
       "retail_price": 58.72,
       "stock": 50,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0113,
       "source_verified_at": "2026-07-04T15:17:01Z",
       "has_detail": true
@@ -13156,7 +13156,7 @@
       "source_cost": 5.15,
       "retail_price": 15.83,
       "stock": 35404,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0892,
       "source_verified_at": "2026-07-04T15:17:05Z",
       "has_detail": true
@@ -13347,7 +13347,7 @@
       "stock": 7,
       "in_stock": false,
       "trending_score": 0.0018,
-      "source_verified_at": "2026-07-04T07:02:03Z",
+      "source_verified_at": "2026-07-04T18:39:00Z",
       "has_detail": true
     },
     {
@@ -13368,7 +13368,7 @@
       "stock": 1,
       "in_stock": false,
       "trending_score": 0.0122,
-      "source_verified_at": "2026-07-04T12:47:01Z",
+      "source_verified_at": "2026-07-04T18:39:04Z",
       "has_detail": true
     },
     {
@@ -13387,9 +13387,9 @@
       "source_cost": 8.13,
       "retail_price": 18.9,
       "stock": 12042,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0388,
-      "source_verified_at": "2026-07-04T12:47:05Z",
+      "source_verified_at": "2026-07-04T18:39:07Z",
       "has_detail": true
     },
     {
@@ -13491,7 +13491,7 @@
       "source_cost": 13.99,
       "retail_price": 24.94,
       "stock": 14,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0157,
       "source_verified_at": "2026-07-04T15:18:02Z",
       "has_detail": true
@@ -13512,7 +13512,7 @@
       "source_cost": 5.8,
       "retail_price": 16.5,
       "stock": 9793,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0045,
       "source_verified_at": "2026-07-04T15:18:06Z",
       "has_detail": true
@@ -13533,7 +13533,7 @@
       "source_cost": 5.38,
       "retail_price": 16.07,
       "stock": 14911,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0073,
       "source_verified_at": "2026-07-04T15:18:10Z",
       "has_detail": true
@@ -13551,7 +13551,7 @@
       "source_cost": 2.61,
       "retail_price": 13.21,
       "stock": 10003,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0112,
       "source_verified_at": "2026-07-04T15:18:14Z",
       "has_detail": true
@@ -13718,7 +13718,7 @@
       "stock": 7,
       "in_stock": false,
       "trending_score": 0.001,
-      "source_verified_at": "2026-07-04T12:48:05Z",
+      "source_verified_at": "2026-07-04T18:40:00Z",
       "has_detail": true
     },
     {
@@ -13737,9 +13737,9 @@
       "source_cost": 4.62,
       "retail_price": 15.28,
       "stock": 12576,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0796,
-      "source_verified_at": "2026-07-04T12:48:09Z",
+      "source_verified_at": "2026-07-04T18:40:04Z",
       "has_detail": true
     },
     {
@@ -13758,9 +13758,9 @@
       "source_cost": 3.52,
       "retail_price": 14.15,
       "stock": 14319,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0089,
-      "source_verified_at": "2026-07-04T12:48:15Z",
+      "source_verified_at": "2026-07-04T18:40:08Z",
       "has_detail": true
     },
     {
@@ -13779,9 +13779,9 @@
       "source_cost": 2.11,
       "retail_price": 12.7,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.7034,
-      "source_verified_at": "2026-07-04T10:52:06Z",
+      "source_verified_at": "2026-07-04T18:40:11Z",
       "has_detail": true
     },
     {
@@ -13842,7 +13842,7 @@
       "source_cost": 1.74,
       "retail_price": 12.31,
       "stock": 14202,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.3517,
       "source_verified_at": "2026-07-04T15:19:03Z",
       "has_detail": true
@@ -13862,7 +13862,7 @@
       "source_cost": 3.04,
       "retail_price": 13.65,
       "stock": 11744,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0455,
       "source_verified_at": "2026-07-04T15:19:07Z",
       "has_detail": true
@@ -13883,7 +13883,7 @@
       "source_cost": 1.81,
       "retail_price": 12.39,
       "stock": 11667,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.7042,
       "source_verified_at": "2026-07-04T15:19:11Z",
       "has_detail": true
@@ -14093,9 +14093,9 @@
       "source_cost": 7.13,
       "retail_price": 17.87,
       "stock": 5098,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0135,
-      "source_verified_at": "2026-07-04T12:49:11Z",
+      "source_verified_at": "2026-07-04T18:41:01Z",
       "has_detail": true
     },
     {
@@ -14114,9 +14114,9 @@
       "source_cost": 5.89,
       "retail_price": 16.59,
       "stock": 11074,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0417,
-      "source_verified_at": "2026-07-04T10:53:06Z",
+      "source_verified_at": "2026-07-04T18:41:05Z",
       "has_detail": true
     },
     {
@@ -14135,9 +14135,9 @@
       "source_cost": 11.28,
       "retail_price": 22.15,
       "stock": 9422,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0192,
-      "source_verified_at": "2026-07-04T10:53:10Z",
+      "source_verified_at": "2026-07-04T18:41:09Z",
       "has_detail": true
     },
     {
@@ -14177,7 +14177,7 @@
       "source_cost": 0.94,
       "retail_price": 11.49,
       "stock": 6336,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0089,
       "source_verified_at": "2026-07-04T15:20:00Z",
       "has_detail": true
@@ -14198,7 +14198,7 @@
       "source_cost": 1.18,
       "retail_price": 11.74,
       "stock": 13004,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0411,
       "source_verified_at": "2026-07-04T15:20:05Z",
       "has_detail": true
@@ -14219,7 +14219,7 @@
       "source_cost": 1.04,
       "retail_price": 11.59,
       "stock": 40077,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0544,
       "source_verified_at": "2026-07-04T15:20:09Z",
       "has_detail": true
@@ -14240,7 +14240,7 @@
       "source_cost": 12.99,
       "retail_price": 23.91,
       "stock": 50,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0006,
       "source_verified_at": "2026-07-04T15:20:09Z",
       "has_detail": true
@@ -14469,9 +14469,9 @@
       "source_cost": 15.07,
       "retail_price": 26.11,
       "stock": 11516,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.025,
-      "source_verified_at": "2026-07-04T10:54:09Z",
+      "source_verified_at": "2026-07-04T18:42:02Z",
       "has_detail": true
     },
     {
@@ -14490,9 +14490,9 @@
       "source_cost": 7.13,
       "retail_price": 17.87,
       "stock": 11987,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0063,
-      "source_verified_at": "2026-07-04T07:04:52Z",
+      "source_verified_at": "2026-07-04T18:42:05Z",
       "has_detail": true
     },
     {
@@ -14510,9 +14510,9 @@
       "source_cost": 5.51,
       "retail_price": 16.2,
       "stock": 14277,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0229,
-      "source_verified_at": "2026-07-04T07:04:55Z",
+      "source_verified_at": "2026-07-04T18:42:09Z",
       "has_detail": true
     },
     {
@@ -14549,7 +14549,7 @@
       "source_cost": 426.68,
       "retail_price": 739.0,
       "stock": 11433,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0196,
       "source_verified_at": "2026-07-04T15:21:03Z",
       "has_detail": true
@@ -14570,7 +14570,7 @@
       "source_cost": 3.87,
       "retail_price": 14.51,
       "stock": 31066,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1,
       "source_verified_at": "2026-07-04T15:21:07Z",
       "has_detail": true
@@ -14591,7 +14591,7 @@
       "source_cost": 12.6,
       "retail_price": 23.51,
       "stock": 12815,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0342,
       "source_verified_at": "2026-07-04T15:21:11Z",
       "has_detail": true
@@ -14838,9 +14838,9 @@
       "source_cost": 0.63,
       "retail_price": 11.17,
       "stock": 12252,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.021,
-      "source_verified_at": "2026-07-04T07:05:41Z",
+      "source_verified_at": "2026-07-04T18:43:02Z",
       "has_detail": true
     },
     {
@@ -14859,9 +14859,9 @@
       "source_cost": 0.69,
       "retail_price": 11.23,
       "stock": 10578,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0148,
-      "source_verified_at": "2026-07-04T07:05:44Z",
+      "source_verified_at": "2026-07-04T18:43:06Z",
       "has_detail": true
     },
     {
@@ -14882,7 +14882,7 @@
       "stock": 11473,
       "in_stock": true,
       "trending_score": 0.0228,
-      "source_verified_at": "2026-07-04T15:22:02Z",
+      "source_verified_at": "2026-07-04T18:43:10Z",
       "has_detail": true
     },
     {
@@ -14903,7 +14903,7 @@
       "stock": 10663,
       "in_stock": true,
       "trending_score": 0.0064,
-      "source_verified_at": "2026-07-04T15:22:05Z",
+      "source_verified_at": "2026-07-04T18:43:13Z",
       "has_detail": true
     },
     {
@@ -14922,7 +14922,7 @@
       "source_cost": 1.86,
       "retail_price": 12.44,
       "stock": 34455,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0103,
       "source_verified_at": "2026-07-04T15:22:09Z",
       "has_detail": true
@@ -15190,9 +15190,9 @@
       "source_cost": 1.41,
       "retail_price": 11.97,
       "stock": 11517,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0104,
-      "source_verified_at": "2026-07-04T07:06:26Z",
+      "source_verified_at": "2026-07-04T18:44:00Z",
       "has_detail": true
     },
     {
@@ -15211,9 +15211,9 @@
       "source_cost": 17.88,
       "retail_price": 30.97,
       "stock": 14593,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0161,
-      "source_verified_at": "2026-07-04T07:06:28Z",
+      "source_verified_at": "2026-07-04T18:44:03Z",
       "has_detail": true
     },
     {
@@ -15234,7 +15234,7 @@
       "stock": 32797,
       "in_stock": true,
       "trending_score": 0.0047,
-      "source_verified_at": "2026-07-04T15:23:02Z",
+      "source_verified_at": "2026-07-04T18:44:07Z",
       "has_detail": true
     },
     {
@@ -15253,7 +15253,7 @@
       "source_cost": 6.27,
       "retail_price": 16.98,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0316,
       "source_verified_at": "2026-07-04T15:23:06Z",
       "has_detail": true
@@ -15274,7 +15274,7 @@
       "source_cost": 21.81,
       "retail_price": 37.78,
       "stock": 33523,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0368,
       "source_verified_at": "2026-07-04T15:23:10Z",
       "has_detail": true
@@ -15295,7 +15295,7 @@
       "source_cost": 7.2,
       "retail_price": 17.94,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0041,
       "source_verified_at": "2026-07-04T15:23:14Z",
       "has_detail": true
@@ -15569,7 +15569,7 @@
       "stock": 14026,
       "in_stock": true,
       "trending_score": 0.0904,
-      "source_verified_at": "2026-07-04T15:24:00Z",
+      "source_verified_at": "2026-07-04T18:45:00Z",
       "has_detail": true
     },
     {
@@ -15590,7 +15590,7 @@
       "stock": 14813,
       "in_stock": true,
       "trending_score": 0.0042,
-      "source_verified_at": "2026-07-04T15:24:04Z",
+      "source_verified_at": "2026-07-04T18:45:04Z",
       "has_detail": true
     },
     {
@@ -15611,7 +15611,7 @@
       "stock": 11243,
       "in_stock": true,
       "trending_score": 0.0201,
-      "source_verified_at": "2026-07-04T15:24:08Z",
+      "source_verified_at": "2026-07-04T18:45:08Z",
       "has_detail": true
     },
     {
@@ -15630,9 +15630,9 @@
       "source_cost": 0.98,
       "retail_price": 11.53,
       "stock": 13407,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0089,
-      "source_verified_at": "2026-07-04T07:07:24Z",
+      "source_verified_at": "2026-07-04T18:45:12Z",
       "has_detail": true
     },
     {
@@ -15924,7 +15924,7 @@
       "source_cost": 10.52,
       "retail_price": 21.37,
       "stock": 13429,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1143,
       "source_verified_at": "2026-07-04T15:25:02Z",
       "has_detail": true
@@ -15947,7 +15947,7 @@
       "stock": 12627,
       "in_stock": true,
       "trending_score": 0.0465,
-      "source_verified_at": "2026-07-04T15:25:06Z",
+      "source_verified_at": "2026-07-04T18:46:03Z",
       "has_detail": true
     },
     {
@@ -15968,7 +15968,7 @@
       "stock": 14090,
       "in_stock": true,
       "trending_score": 0.146,
-      "source_verified_at": "2026-07-04T15:25:11Z",
+      "source_verified_at": "2026-07-04T18:46:06Z",
       "has_detail": true
     },
     {
@@ -15989,7 +15989,7 @@
       "stock": 28663,
       "in_stock": true,
       "trending_score": 0.0157,
-      "source_verified_at": "2026-07-04T15:25:12Z",
+      "source_verified_at": "2026-07-04T18:46:10Z",
       "has_detail": true
     },
     {
@@ -16279,7 +16279,7 @@
       "source_cost": 3.37,
       "retail_price": 13.99,
       "stock": 14467,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0162,
       "source_verified_at": "2026-07-04T15:26:03Z",
       "has_detail": true
@@ -16300,7 +16300,7 @@
       "source_cost": 4.7,
       "retail_price": 15.37,
       "stock": 11634,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1252,
       "source_verified_at": "2026-07-04T15:26:07Z",
       "has_detail": true
@@ -16323,7 +16323,7 @@
       "stock": 14795,
       "in_stock": true,
       "trending_score": 0.0159,
-      "source_verified_at": "2026-07-04T15:26:12Z",
+      "source_verified_at": "2026-07-04T18:47:03Z",
       "has_detail": true
     },
     {
@@ -16342,9 +16342,9 @@
       "source_cost": 5.97,
       "retail_price": 16.68,
       "stock": 13374,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0029,
-      "source_verified_at": "2026-07-04T07:08:54Z",
+      "source_verified_at": "2026-07-04T18:47:06Z",
       "has_detail": true
     },
     {
@@ -16363,9 +16363,9 @@
       "source_cost": 5.24,
       "retail_price": 15.92,
       "stock": 12737,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0141,
-      "source_verified_at": "2026-07-04T07:08:57Z",
+      "source_verified_at": "2026-07-04T18:47:10Z",
       "has_detail": true
     },
     {
@@ -16615,7 +16615,7 @@
       "source_cost": 28.67,
       "retail_price": 49.66,
       "stock": 12903,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0058,
       "source_verified_at": "2026-07-04T15:27:01Z",
       "has_detail": true
@@ -16636,7 +16636,7 @@
       "source_cost": 24.88,
       "retail_price": 43.1,
       "stock": 12922,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.3389,
       "source_verified_at": "2026-07-04T15:27:05Z",
       "has_detail": true
@@ -16657,7 +16657,7 @@
       "source_cost": 8.13,
       "retail_price": 18.9,
       "stock": 11540,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0103,
       "source_verified_at": "2026-07-04T15:27:09Z",
       "has_detail": true
@@ -16699,9 +16699,9 @@
       "source_cost": 2.84,
       "retail_price": 13.45,
       "stock": 27930,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.1434,
-      "source_verified_at": "2026-07-04T07:09:39Z",
+      "source_verified_at": "2026-07-04T18:48:03Z",
       "has_detail": true
     },
     {
@@ -16720,9 +16720,9 @@
       "source_cost": 5.44,
       "retail_price": 16.13,
       "stock": 14558,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0111,
-      "source_verified_at": "2026-07-04T07:09:42Z",
+      "source_verified_at": "2026-07-04T18:48:06Z",
       "has_detail": true
     },
     {
@@ -16741,9 +16741,9 @@
       "source_cost": 9.66,
       "retail_price": 20.48,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0072,
-      "source_verified_at": "2026-07-04T07:09:44Z",
+      "source_verified_at": "2026-07-04T18:48:10Z",
       "has_detail": true
     },
     {
@@ -16762,9 +16762,9 @@
       "source_cost": 4.57,
       "retail_price": 15.23,
       "stock": 13516,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0053,
-      "source_verified_at": "2026-07-04T12:57:01Z",
+      "source_verified_at": "2026-07-04T18:48:14Z",
       "has_detail": true
     },
     {
@@ -16972,7 +16972,7 @@
       "source_cost": 1.26,
       "retail_price": 11.82,
       "stock": 12865,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0695,
       "source_verified_at": "2026-07-04T15:28:03Z",
       "has_detail": true
@@ -16993,7 +16993,7 @@
       "source_cost": 4.19,
       "retail_price": 14.84,
       "stock": 14678,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.367,
       "source_verified_at": "2026-07-04T15:28:07Z",
       "has_detail": true
@@ -17014,7 +17014,7 @@
       "source_cost": 11.33,
       "retail_price": 22.2,
       "stock": 14854,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0117,
       "source_verified_at": "2026-07-04T15:28:11Z",
       "has_detail": true
@@ -17035,7 +17035,7 @@
       "source_cost": 9.96,
       "retail_price": 20.79,
       "stock": 14153,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0452,
       "source_verified_at": "2026-07-04T15:28:15Z",
       "has_detail": true
@@ -17056,9 +17056,9 @@
       "source_cost": 9.12,
       "retail_price": 19.92,
       "stock": 11412,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.1157,
-      "source_verified_at": "2026-07-04T07:10:24Z",
+      "source_verified_at": "2026-07-04T18:49:01Z",
       "has_detail": true
     },
     {
@@ -17077,9 +17077,9 @@
       "source_cost": 19.91,
       "retail_price": 34.49,
       "stock": 12457,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0266,
-      "source_verified_at": "2026-07-04T07:10:27Z",
+      "source_verified_at": "2026-07-04T18:49:04Z",
       "has_detail": true
     },
     {
@@ -17098,9 +17098,9 @@
       "source_cost": 2.38,
       "retail_price": 12.97,
       "stock": 12299,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0131,
-      "source_verified_at": "2026-07-04T12:58:01Z",
+      "source_verified_at": "2026-07-04T18:49:08Z",
       "has_detail": true
     },
     {
@@ -17305,7 +17305,7 @@
       "source_cost": 5.12,
       "retail_price": 15.8,
       "stock": 12654,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.002,
       "source_verified_at": "2026-07-04T15:29:01Z",
       "has_detail": true
@@ -17326,7 +17326,7 @@
       "source_cost": 1.4,
       "retail_price": 11.96,
       "stock": 27989,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0138,
       "source_verified_at": "2026-07-04T15:29:05Z",
       "has_detail": true
@@ -17347,7 +17347,7 @@
       "source_cost": 3.86,
       "retail_price": 14.5,
       "stock": 13000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0602,
       "source_verified_at": "2026-07-04T15:29:06Z",
       "has_detail": true
@@ -17431,9 +17431,9 @@
       "source_cost": 4.18,
       "retail_price": 14.83,
       "stock": 28215,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.035,
-      "source_verified_at": "2026-07-04T12:59:00Z",
+      "source_verified_at": "2026-07-04T18:50:01Z",
       "has_detail": true
     },
     {
@@ -17452,9 +17452,9 @@
       "source_cost": 3.97,
       "retail_price": 14.61,
       "stock": 5371,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0019,
-      "source_verified_at": "2026-07-04T12:59:04Z",
+      "source_verified_at": "2026-07-04T18:50:05Z",
       "has_detail": true
     },
     {
@@ -17473,9 +17473,9 @@
       "source_cost": 0.5,
       "retail_price": 11.04,
       "stock": 7587,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0045,
-      "source_verified_at": "2026-07-04T12:59:08Z",
+      "source_verified_at": "2026-07-04T18:50:09Z",
       "has_detail": true
     },
     {
@@ -17494,9 +17494,9 @@
       "source_cost": 43.48,
       "retail_price": 75.31,
       "stock": 14670,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0005,
-      "source_verified_at": "2026-07-04T11:03:00Z",
+      "source_verified_at": "2026-07-04T18:50:12Z",
       "has_detail": true
     },
     {
@@ -17662,7 +17662,7 @@
       "source_cost": 1.91,
       "retail_price": 12.49,
       "stock": 14091,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0042,
       "source_verified_at": "2026-07-04T15:30:01Z",
       "has_detail": true
@@ -17683,7 +17683,7 @@
       "source_cost": 12.03,
       "retail_price": 22.92,
       "stock": 30469,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0757,
       "source_verified_at": "2026-07-04T15:30:05Z",
       "has_detail": true
@@ -17704,7 +17704,7 @@
       "source_cost": 6.3,
       "retail_price": 17.02,
       "stock": 11416,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0015,
       "source_verified_at": "2026-07-04T15:30:09Z",
       "has_detail": true
@@ -17725,7 +17725,7 @@
       "source_cost": 5.58,
       "retail_price": 16.27,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0279,
       "source_verified_at": "2026-07-04T15:30:13Z",
       "has_detail": true
@@ -17809,9 +17809,9 @@
       "source_cost": 1.01,
       "retail_price": 11.56,
       "stock": 34552,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0114,
-      "source_verified_at": "2026-07-04T13:00:05Z",
+      "source_verified_at": "2026-07-04T18:51:02Z",
       "has_detail": true
     },
     {
@@ -17830,9 +17830,9 @@
       "source_cost": 4.36,
       "retail_price": 15.02,
       "stock": 13915,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0055,
-      "source_verified_at": "2026-07-04T13:00:06Z",
+      "source_verified_at": "2026-07-04T18:51:06Z",
       "has_detail": true
     },
     {
@@ -17851,9 +17851,9 @@
       "source_cost": 2.98,
       "retail_price": 13.59,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0639,
-      "source_verified_at": "2026-07-04T13:00:07Z",
+      "source_verified_at": "2026-07-04T18:51:09Z",
       "has_detail": true
     },
     {
@@ -18017,7 +18017,7 @@
       "source_cost": 7.34,
       "retail_price": 18.09,
       "stock": 2415,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0041,
       "source_verified_at": "2026-07-04T15:31:03Z",
       "has_detail": true
@@ -18038,7 +18038,7 @@
       "source_cost": 7.0,
       "retail_price": 17.74,
       "stock": 12363,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0131,
       "source_verified_at": "2026-07-04T15:31:07Z",
       "has_detail": true
@@ -18059,7 +18059,7 @@
       "source_cost": 33.17,
       "retail_price": 57.45,
       "stock": 33813,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.3277,
       "source_verified_at": "2026-07-04T15:31:11Z",
       "has_detail": true
@@ -18185,9 +18185,9 @@
       "source_cost": 4.92,
       "retail_price": 15.59,
       "stock": 31540,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0621,
-      "source_verified_at": "2026-07-04T13:01:09Z",
+      "source_verified_at": "2026-07-04T18:52:02Z",
       "has_detail": true
     },
     {
@@ -18206,9 +18206,9 @@
       "source_cost": 4.01,
       "retail_price": 14.65,
       "stock": 13032,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0019,
-      "source_verified_at": "2026-07-04T11:05:05Z",
+      "source_verified_at": "2026-07-04T18:52:06Z",
       "has_detail": true
     },
     {
@@ -18227,9 +18227,9 @@
       "source_cost": 2.81,
       "retail_price": 13.42,
       "stock": 14933,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.2198,
-      "source_verified_at": "2026-07-04T11:05:09Z",
+      "source_verified_at": "2026-07-04T18:52:10Z",
       "has_detail": true
     },
     {
@@ -18353,7 +18353,7 @@
       "source_cost": 0.9,
       "retail_price": 11.45,
       "stock": 10543,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0009,
       "source_verified_at": "2026-07-04T15:32:01Z",
       "has_detail": true
@@ -18374,7 +18374,7 @@
       "source_cost": 1.59,
       "retail_price": 12.16,
       "stock": 12559,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0027,
       "source_verified_at": "2026-07-04T15:32:05Z",
       "has_detail": true
@@ -18395,7 +18395,7 @@
       "source_cost": 2.71,
       "retail_price": 13.31,
       "stock": 12404,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0017,
       "source_verified_at": "2026-07-04T15:32:09Z",
       "has_detail": true
@@ -18563,9 +18563,9 @@
       "source_cost": 2.13,
       "retail_price": 12.72,
       "stock": 10175,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0458,
-      "source_verified_at": "2026-07-04T11:06:10Z",
+      "source_verified_at": "2026-07-04T18:53:03Z",
       "has_detail": true
     },
     {
@@ -18584,9 +18584,9 @@
       "source_cost": 7.6,
       "retail_price": 18.36,
       "stock": 13537,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0011,
-      "source_verified_at": "2026-07-04T07:13:38Z",
+      "source_verified_at": "2026-07-04T18:53:07Z",
       "has_detail": true
     },
     {
@@ -18605,9 +18605,9 @@
       "source_cost": 7.7,
       "retail_price": 18.46,
       "stock": 12770,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0033,
-      "source_verified_at": "2026-07-04T07:13:41Z",
+      "source_verified_at": "2026-07-04T18:53:08Z",
       "has_detail": true
     },
     {
@@ -18626,9 +18626,9 @@
       "source_cost": 3.87,
       "retail_price": 14.51,
       "stock": 30186,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.076,
-      "source_verified_at": "2026-07-04T07:13:43Z",
+      "source_verified_at": "2026-07-04T18:53:11Z",
       "has_detail": true
     },
     {
@@ -18710,7 +18710,7 @@
       "source_cost": 6.47,
       "retail_price": 17.19,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0168,
       "source_verified_at": "2026-07-04T15:33:03Z",
       "has_detail": true
@@ -18731,7 +18731,7 @@
       "source_cost": 15.37,
       "retail_price": 26.63,
       "stock": 39517,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0137,
       "source_verified_at": "2026-07-04T15:33:07Z",
       "has_detail": true
@@ -18752,7 +18752,7 @@
       "source_cost": 3.49,
       "retail_price": 14.12,
       "stock": 30219,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0117,
       "source_verified_at": "2026-07-04T15:33:11Z",
       "has_detail": true
@@ -18773,7 +18773,7 @@
       "source_cost": 0.57,
       "retail_price": 11.11,
       "stock": 30456,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0128,
       "source_verified_at": "2026-07-04T15:33:15Z",
       "has_detail": true
@@ -18941,9 +18941,9 @@
       "source_cost": 0.92,
       "retail_price": 11.47,
       "stock": 10048,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0004,
-      "source_verified_at": "2026-07-04T07:14:25Z",
+      "source_verified_at": "2026-07-04T18:54:02Z",
       "has_detail": true
     },
     {
@@ -18962,9 +18962,9 @@
       "source_cost": 1.0,
       "retail_price": 11.55,
       "stock": 13685,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.1352,
-      "source_verified_at": "2026-07-04T07:14:27Z",
+      "source_verified_at": "2026-07-04T18:54:05Z",
       "has_detail": true
     },
     {
@@ -18983,9 +18983,9 @@
       "source_cost": 11.61,
       "retail_price": 22.49,
       "stock": 5147,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.039,
-      "source_verified_at": "2026-07-04T07:14:30Z",
+      "source_verified_at": "2026-07-04T18:54:09Z",
       "has_detail": true
     },
     {
@@ -19046,7 +19046,7 @@
       "source_cost": 1.24,
       "retail_price": 11.8,
       "stock": 11454,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0047,
       "source_verified_at": "2026-07-04T15:34:01Z",
       "has_detail": true
@@ -19067,7 +19067,7 @@
       "source_cost": 2.95,
       "retail_price": 13.56,
       "stock": 7855,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0008,
       "source_verified_at": "2026-07-04T15:34:05Z",
       "has_detail": true
@@ -19088,7 +19088,7 @@
       "source_cost": 2.99,
       "retail_price": 13.6,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1259,
       "source_verified_at": "2026-07-04T15:34:09Z",
       "has_detail": true
@@ -19319,9 +19319,9 @@
       "source_cost": 0.63,
       "retail_price": 11.17,
       "stock": 33336,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0108,
-      "source_verified_at": "2026-07-04T07:15:13Z",
+      "source_verified_at": "2026-07-04T18:55:02Z",
       "has_detail": true
     },
     {
@@ -19340,9 +19340,9 @@
       "source_cost": 9.18,
       "retail_price": 19.98,
       "stock": 1829,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0279,
-      "source_verified_at": "2026-07-04T07:15:16Z",
+      "source_verified_at": "2026-07-04T18:55:06Z",
       "has_detail": true
     },
     {
@@ -19361,9 +19361,9 @@
       "source_cost": 9.7,
       "retail_price": 20.52,
       "stock": 9405,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.003,
-      "source_verified_at": "2026-07-04T07:15:19Z",
+      "source_verified_at": "2026-07-04T18:55:09Z",
       "has_detail": true
     },
     {
@@ -19382,9 +19382,9 @@
       "source_cost": 103.63,
       "retail_price": 179.49,
       "stock": 29,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0042,
-      "source_verified_at": "2026-07-04T07:15:22Z",
+      "source_verified_at": "2026-07-04T18:55:13Z",
       "has_detail": true
     },
     {
@@ -19403,7 +19403,7 @@
       "source_cost": 5.17,
       "retail_price": 15.85,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0125,
       "source_verified_at": "2026-07-04T15:35:02Z",
       "has_detail": true
@@ -19424,7 +19424,7 @@
       "source_cost": 5.79,
       "retail_price": 16.49,
       "stock": 6930,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0056,
       "source_verified_at": "2026-07-04T15:35:06Z",
       "has_detail": true
@@ -19445,7 +19445,7 @@
       "source_cost": 15.87,
       "retail_price": 27.49,
       "stock": 21761,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0591,
       "source_verified_at": "2026-07-04T15:35:10Z",
       "has_detail": true
@@ -19466,7 +19466,7 @@
       "source_cost": 4.68,
       "retail_price": 15.35,
       "stock": 12685,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0155,
       "source_verified_at": "2026-07-04T15:35:14Z",
       "has_detail": true
@@ -19697,9 +19697,9 @@
       "source_cost": 37.01,
       "retail_price": 64.1,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0067,
-      "source_verified_at": "2026-07-04T07:16:04Z",
+      "source_verified_at": "2026-07-04T18:56:03Z",
       "has_detail": true
     },
     {
@@ -19718,9 +19718,9 @@
       "source_cost": 3.72,
       "retail_price": 14.36,
       "stock": 10000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0014,
-      "source_verified_at": "2026-07-04T07:16:06Z",
+      "source_verified_at": "2026-07-04T18:56:06Z",
       "has_detail": true
     },
     {
@@ -19741,7 +19741,7 @@
       "stock": 30599,
       "in_stock": true,
       "trending_score": 0.003,
-      "source_verified_at": "2026-07-04T15:36:01Z",
+      "source_verified_at": "2026-07-04T18:56:10Z",
       "has_detail": true
     },
     {
@@ -19760,7 +19760,7 @@
       "source_cost": 3.28,
       "retail_price": 13.9,
       "stock": 14763,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1519,
       "source_verified_at": "2026-07-04T15:36:05Z",
       "has_detail": true
@@ -19781,7 +19781,7 @@
       "source_cost": 11.07,
       "retail_price": 21.93,
       "stock": 30518,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.2234,
       "source_verified_at": "2026-07-04T15:36:08Z",
       "has_detail": true
@@ -20074,9 +20074,9 @@
       "source_cost": 10.82,
       "retail_price": 21.68,
       "stock": 12992,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0098,
-      "source_verified_at": "2026-07-04T07:16:53Z",
+      "source_verified_at": "2026-07-04T18:57:03Z",
       "has_detail": true
     },
     {
@@ -20097,7 +20097,7 @@
       "stock": 39160,
       "in_stock": true,
       "trending_score": 0.0029,
-      "source_verified_at": "2026-07-04T15:37:02Z",
+      "source_verified_at": "2026-07-04T18:57:07Z",
       "has_detail": true
     },
     {
@@ -20118,7 +20118,7 @@
       "stock": 11102,
       "in_stock": true,
       "trending_score": 0.0625,
-      "source_verified_at": "2026-07-04T15:37:06Z",
+      "source_verified_at": "2026-07-04T18:57:10Z",
       "has_detail": true
     },
     {
@@ -20137,7 +20137,7 @@
       "source_cost": 8.26,
       "retail_price": 19.04,
       "stock": 12903,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0294,
       "source_verified_at": "2026-07-04T15:37:10Z",
       "has_detail": true
@@ -20433,7 +20433,7 @@
       "stock": 8315,
       "in_stock": true,
       "trending_score": 0.0785,
-      "source_verified_at": "2026-07-04T15:38:01Z",
+      "source_verified_at": "2026-07-04T18:58:00Z",
       "has_detail": true
     },
     {
@@ -20454,7 +20454,7 @@
       "stock": 8469,
       "in_stock": true,
       "trending_score": 0.0011,
-      "source_verified_at": "2026-07-04T15:38:05Z",
+      "source_verified_at": "2026-07-04T18:58:04Z",
       "has_detail": true
     },
     {
@@ -20475,7 +20475,7 @@
       "stock": 13835,
       "in_stock": true,
       "trending_score": 0.0042,
-      "source_verified_at": "2026-07-04T15:38:09Z",
+      "source_verified_at": "2026-07-04T18:58:07Z",
       "has_detail": true
     },
     {
@@ -20496,7 +20496,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.0025,
-      "source_verified_at": "2026-07-04T15:38:13Z",
+      "source_verified_at": "2026-07-04T18:58:11Z",
       "has_detail": true
     },
     {
@@ -20788,7 +20788,7 @@
       "source_cost": 16.3,
       "retail_price": 28.24,
       "stock": 40151,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0866,
       "source_verified_at": "2026-07-04T15:39:03Z",
       "has_detail": true
@@ -20811,7 +20811,7 @@
       "stock": 11710,
       "in_stock": true,
       "trending_score": 0.001,
-      "source_verified_at": "2026-07-04T15:39:07Z",
+      "source_verified_at": "2026-07-04T18:59:00Z",
       "has_detail": true
     },
     {
@@ -20830,7 +20830,7 @@
       "stock": 12829,
       "in_stock": true,
       "trending_score": 0.0184,
-      "source_verified_at": "2026-07-04T15:39:11Z",
+      "source_verified_at": "2026-07-04T18:59:04Z",
       "has_detail": true
     },
     {
@@ -20849,9 +20849,9 @@
       "source_cost": 11.82,
       "retail_price": 22.71,
       "stock": 11419,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.5881,
-      "source_verified_at": "2026-07-04T07:18:32Z",
+      "source_verified_at": "2026-07-04T18:59:08Z",
       "has_detail": true
     },
     {
@@ -21119,7 +21119,7 @@
       "source_cost": 10.35,
       "retail_price": 21.19,
       "stock": 11994,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0079,
       "source_verified_at": "2026-07-04T15:40:01Z",
       "has_detail": true
@@ -21140,7 +21140,7 @@
       "source_cost": 2.34,
       "retail_price": 12.93,
       "stock": 10000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.003,
       "source_verified_at": "2026-07-04T15:40:05Z",
       "has_detail": true
@@ -21161,7 +21161,7 @@
       "source_cost": 9.3,
       "retail_price": 20.11,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0391,
       "source_verified_at": "2026-07-04T15:40:09Z",
       "has_detail": true
@@ -21184,7 +21184,7 @@
       "stock": 10925,
       "in_stock": true,
       "trending_score": 0.0291,
-      "source_verified_at": "2026-07-04T15:40:13Z",
+      "source_verified_at": "2026-07-04T19:00:01Z",
       "has_detail": true
     },
     {
@@ -21203,9 +21203,9 @@
       "source_cost": 2.8,
       "retail_price": 13.41,
       "stock": 12031,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0071,
-      "source_verified_at": "2026-07-04T07:19:17Z",
+      "source_verified_at": "2026-07-04T19:00:05Z",
       "has_detail": true
     },
     {
@@ -21224,9 +21224,9 @@
       "source_cost": 6.27,
       "retail_price": 16.98,
       "stock": 38802,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0096,
-      "source_verified_at": "2026-07-04T13:10:02Z",
+      "source_verified_at": "2026-07-04T19:00:09Z",
       "has_detail": true
     },
     {
@@ -21245,9 +21245,9 @@
       "source_cost": 1.09,
       "retail_price": 11.64,
       "stock": 9995,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0046,
-      "source_verified_at": "2026-07-04T13:10:06Z",
+      "source_verified_at": "2026-07-04T19:00:13Z",
       "has_detail": true
     },
     {
@@ -21476,7 +21476,7 @@
       "source_cost": 3.19,
       "retail_price": 13.81,
       "stock": 10000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1205,
       "source_verified_at": "2026-07-04T15:41:02Z",
       "has_detail": true
@@ -21497,7 +21497,7 @@
       "source_cost": 0.33,
       "retail_price": 10.86,
       "stock": 10966,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0119,
       "source_verified_at": "2026-07-04T15:41:06Z",
       "has_detail": true
@@ -21518,7 +21518,7 @@
       "source_cost": 0.95,
       "retail_price": 11.5,
       "stock": 13142,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0163,
       "source_verified_at": "2026-07-04T15:41:10Z",
       "has_detail": true
@@ -21558,9 +21558,9 @@
       "source_cost": 0.52,
       "retail_price": 11.06,
       "stock": 14294,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0189,
-      "source_verified_at": "2026-07-04T13:11:01Z",
+      "source_verified_at": "2026-07-04T19:01:03Z",
       "has_detail": true
     },
     {
@@ -21579,9 +21579,9 @@
       "source_cost": 0.09,
       "retail_price": 10.61,
       "stock": 32395,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0128,
-      "source_verified_at": "2026-07-04T13:11:05Z",
+      "source_verified_at": "2026-07-04T19:01:07Z",
       "has_detail": true
     },
     {
@@ -21600,9 +21600,9 @@
       "source_cost": 7.84,
       "retail_price": 18.6,
       "stock": 34265,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0067,
-      "source_verified_at": "2026-07-04T13:11:09Z",
+      "source_verified_at": "2026-07-04T19:01:11Z",
       "has_detail": true
     },
     {
@@ -21808,7 +21808,7 @@
       "source_cost": 3.08,
       "retail_price": 13.7,
       "stock": 10767,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0014,
       "source_verified_at": "2026-07-04T15:42:01Z",
       "has_detail": true
@@ -21829,7 +21829,7 @@
       "source_cost": 1.28,
       "retail_price": 11.84,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0422,
       "source_verified_at": "2026-07-04T15:42:05Z",
       "has_detail": true
@@ -21850,7 +21850,7 @@
       "source_cost": 6.95,
       "retail_price": 17.69,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0309,
       "source_verified_at": "2026-07-04T15:42:09Z",
       "has_detail": true
@@ -21911,9 +21911,9 @@
       "source_cost": 3.66,
       "retail_price": 14.29,
       "stock": 10238,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0611,
-      "source_verified_at": "2026-07-04T13:12:06Z",
+      "source_verified_at": "2026-07-04T19:02:00Z",
       "has_detail": true
     },
     {
@@ -21932,9 +21932,9 @@
       "source_cost": 2.33,
       "retail_price": 12.92,
       "stock": 12154,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.001,
-      "source_verified_at": "2026-07-04T13:12:10Z",
+      "source_verified_at": "2026-07-04T19:02:04Z",
       "has_detail": true
     },
     {
@@ -21953,9 +21953,9 @@
       "source_cost": 9.37,
       "retail_price": 20.18,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0036,
-      "source_verified_at": "2026-07-04T11:16:02Z",
+      "source_verified_at": "2026-07-04T19:02:08Z",
       "has_detail": true
     },
     {
@@ -22163,7 +22163,7 @@
       "source_cost": 2.99,
       "retail_price": 13.6,
       "stock": 11582,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0644,
       "source_verified_at": "2026-07-04T15:43:03Z",
       "has_detail": true
@@ -22184,7 +22184,7 @@
       "source_cost": 5.51,
       "retail_price": 16.2,
       "stock": 12717,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.343,
       "source_verified_at": "2026-07-04T15:43:07Z",
       "has_detail": true
@@ -22205,7 +22205,7 @@
       "source_cost": 1.72,
       "retail_price": 12.29,
       "stock": 12558,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.113,
       "source_verified_at": "2026-07-04T15:43:10Z",
       "has_detail": true
@@ -22226,7 +22226,7 @@
       "source_cost": 6.42,
       "retail_price": 17.14,
       "stock": 3127,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.106,
       "source_verified_at": "2026-07-04T15:43:14Z",
       "has_detail": true
@@ -22289,9 +22289,9 @@
       "source_cost": 1.62,
       "retail_price": 12.19,
       "stock": 13079,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0185,
-      "source_verified_at": "2026-07-04T13:13:06Z",
+      "source_verified_at": "2026-07-04T19:03:01Z",
       "has_detail": true
     },
     {
@@ -22310,9 +22310,9 @@
       "source_cost": 11.9,
       "retail_price": 22.79,
       "stock": 39908,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.049,
-      "source_verified_at": "2026-07-04T13:13:14Z",
+      "source_verified_at": "2026-07-04T19:03:04Z",
       "has_detail": true
     },
     {
@@ -22328,9 +22328,9 @@
       "source_cost": 1.93,
       "retail_price": 12.51,
       "stock": 11915,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0036,
-      "source_verified_at": "2026-07-04T11:17:04Z",
+      "source_verified_at": "2026-07-04T19:03:08Z",
       "has_detail": true
     },
     {
@@ -22349,9 +22349,9 @@
       "source_cost": 3.91,
       "retail_price": 14.55,
       "stock": 38727,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.2956,
-      "source_verified_at": "2026-07-04T11:17:09Z",
+      "source_verified_at": "2026-07-04T19:03:12Z",
       "has_detail": true
     },
     {
@@ -22496,7 +22496,7 @@
       "source_cost": 1.73,
       "retail_price": 12.3,
       "stock": 6271,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0006,
       "source_verified_at": "2026-07-04T15:44:00Z",
       "has_detail": true
@@ -22517,7 +22517,7 @@
       "source_cost": 0.64,
       "retail_price": 11.18,
       "stock": 9794,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0018,
       "source_verified_at": "2026-07-04T15:44:04Z",
       "has_detail": true
@@ -22538,7 +22538,7 @@
       "source_cost": 1.43,
       "retail_price": 11.99,
       "stock": 13840,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.005,
       "source_verified_at": "2026-07-04T15:44:08Z",
       "has_detail": true
@@ -22664,9 +22664,9 @@
       "source_cost": 1.53,
       "retail_price": 12.1,
       "stock": 6448,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0031,
-      "source_verified_at": "2026-07-04T11:18:04Z",
+      "source_verified_at": "2026-07-04T19:04:02Z",
       "has_detail": true
     },
     {
@@ -22685,9 +22685,9 @@
       "source_cost": 8.26,
       "retail_price": 19.04,
       "stock": 1216,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0554,
-      "source_verified_at": "2026-07-04T11:18:08Z",
+      "source_verified_at": "2026-07-04T19:04:05Z",
       "has_detail": true
     },
     {
@@ -22706,9 +22706,9 @@
       "source_cost": 9.98,
       "retail_price": 20.81,
       "stock": 1612,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.1773,
-      "source_verified_at": "2026-07-04T11:18:12Z",
+      "source_verified_at": "2026-07-04T19:04:09Z",
       "has_detail": true
     },
     {
@@ -22853,7 +22853,7 @@
       "source_cost": 0.41,
       "retail_price": 10.94,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0034,
       "source_verified_at": "2026-07-04T15:45:01Z",
       "has_detail": true
@@ -22874,7 +22874,7 @@
       "source_cost": 2.23,
       "retail_price": 12.82,
       "stock": 30061,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.033,
       "source_verified_at": "2026-07-04T15:45:05Z",
       "has_detail": true
@@ -22895,7 +22895,7 @@
       "source_cost": 0.76,
       "retail_price": 11.3,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0638,
       "source_verified_at": "2026-07-04T15:45:09Z",
       "has_detail": true
@@ -22916,7 +22916,7 @@
       "source_cost": 0.96,
       "retail_price": 11.51,
       "stock": 30000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0353,
       "source_verified_at": "2026-07-04T15:45:14Z",
       "has_detail": true
@@ -23042,9 +23042,9 @@
       "source_cost": 9.37,
       "retail_price": 20.18,
       "stock": 29244,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0135,
-      "source_verified_at": "2026-07-04T11:19:09Z",
+      "source_verified_at": "2026-07-04T19:05:01Z",
       "has_detail": true
     },
     {
@@ -23063,9 +23063,9 @@
       "source_cost": 1.17,
       "retail_price": 11.73,
       "stock": 12024,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0308,
-      "source_verified_at": "2026-07-04T07:23:17Z",
+      "source_verified_at": "2026-07-04T19:05:05Z",
       "has_detail": true
     },
     {
@@ -23084,9 +23084,9 @@
       "source_cost": 6.9,
       "retail_price": 17.63,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0269,
-      "source_verified_at": "2026-07-04T07:23:19Z",
+      "source_verified_at": "2026-07-04T19:05:09Z",
       "has_detail": true
     },
     {
@@ -23105,9 +23105,9 @@
       "source_cost": 5.8,
       "retail_price": 16.5,
       "stock": 11781,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0045,
-      "source_verified_at": "2026-07-04T07:23:22Z",
+      "source_verified_at": "2026-07-04T19:05:13Z",
       "has_detail": true
     },
     {
@@ -23210,7 +23210,7 @@
       "source_cost": 4.63,
       "retail_price": 15.29,
       "stock": 10542,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0151,
       "source_verified_at": "2026-07-04T15:46:02Z",
       "has_detail": true
@@ -23231,7 +23231,7 @@
       "source_cost": 1.55,
       "retail_price": 12.12,
       "stock": 11035,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0152,
       "source_verified_at": "2026-07-04T15:46:06Z",
       "has_detail": true
@@ -23252,7 +23252,7 @@
       "source_cost": 5.01,
       "retail_price": 15.69,
       "stock": 12665,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.4957,
       "source_verified_at": "2026-07-04T15:46:10Z",
       "has_detail": true
@@ -23393,9 +23393,9 @@
       "source_cost": 8.96,
       "retail_price": 19.76,
       "stock": 7191,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0033,
-      "source_verified_at": "2026-07-04T11:20:12Z",
+      "source_verified_at": "2026-07-04T19:06:00Z",
       "has_detail": true
     },
     {
@@ -23414,9 +23414,9 @@
       "source_cost": 1.43,
       "retail_price": 11.99,
       "stock": 14806,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.003,
-      "source_verified_at": "2026-07-04T07:24:02Z",
+      "source_verified_at": "2026-07-04T19:06:03Z",
       "has_detail": true
     },
     {
@@ -23435,9 +23435,9 @@
       "source_cost": 1.55,
       "retail_price": 12.12,
       "stock": 12380,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0621,
-      "source_verified_at": "2026-07-04T07:24:05Z",
+      "source_verified_at": "2026-07-04T19:06:07Z",
       "has_detail": true
     },
     {
@@ -23534,7 +23534,7 @@
       "source_cost": 16.98,
       "retail_price": 29.41,
       "stock": 1159,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0309,
       "source_verified_at": "2026-07-04T15:47:00Z",
       "has_detail": true
@@ -23555,7 +23555,7 @@
       "source_cost": 9.98,
       "retail_price": 20.81,
       "stock": 997,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.199,
       "source_verified_at": "2026-07-04T15:47:04Z",
       "has_detail": true
@@ -23576,7 +23576,7 @@
       "source_cost": 1.29,
       "retail_price": 11.85,
       "stock": 14427,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0019,
       "source_verified_at": "2026-07-04T15:47:08Z",
       "has_detail": true
@@ -23764,9 +23764,9 @@
       "source_cost": 1.84,
       "retail_price": 12.42,
       "stock": 25534,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0086,
-      "source_verified_at": "2026-07-04T07:24:46Z",
+      "source_verified_at": "2026-07-04T19:07:00Z",
       "has_detail": true
     },
     {
@@ -23785,9 +23785,9 @@
       "source_cost": 0.6,
       "retail_price": 11.14,
       "stock": 12358,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0027,
-      "source_verified_at": "2026-07-04T07:24:48Z",
+      "source_verified_at": "2026-07-04T19:07:03Z",
       "has_detail": true
     },
     {
@@ -23806,9 +23806,9 @@
       "source_cost": 5.03,
       "retail_price": 15.71,
       "stock": 6434,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0004,
-      "source_verified_at": "2026-07-04T07:24:51Z",
+      "source_verified_at": "2026-07-04T19:07:07Z",
       "has_detail": true
     },
     {
@@ -23890,7 +23890,7 @@
       "source_cost": 1.21,
       "retail_price": 11.77,
       "stock": 11439,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0005,
       "source_verified_at": "2026-07-04T15:48:02Z",
       "has_detail": true
@@ -23911,7 +23911,7 @@
       "source_cost": 10.78,
       "retail_price": 21.63,
       "stock": 12210,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0048,
       "source_verified_at": "2026-07-04T15:48:06Z",
       "has_detail": true
@@ -23932,7 +23932,7 @@
       "source_cost": 2.22,
       "retail_price": 12.81,
       "stock": 13611,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0032,
       "source_verified_at": "2026-07-04T15:48:09Z",
       "has_detail": true
@@ -23953,7 +23953,7 @@
       "source_cost": 7.11,
       "retail_price": 17.85,
       "stock": 9443,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0052,
       "source_verified_at": "2026-07-04T15:48:14Z",
       "has_detail": true
@@ -24142,9 +24142,9 @@
       "source_cost": 1.09,
       "retail_price": 11.64,
       "stock": 14920,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0005,
-      "source_verified_at": "2026-07-04T07:25:36Z",
+      "source_verified_at": "2026-07-04T19:08:00Z",
       "has_detail": true
     },
     {
@@ -24163,9 +24163,9 @@
       "source_cost": 0.61,
       "retail_price": 11.15,
       "stock": 13123,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.043,
-      "source_verified_at": "2026-07-04T07:25:39Z",
+      "source_verified_at": "2026-07-04T19:08:04Z",
       "has_detail": true
     },
     {
@@ -24183,9 +24183,9 @@
       "source_cost": 0.92,
       "retail_price": 11.47,
       "stock": 14055,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0149,
-      "source_verified_at": "2026-07-04T07:25:42Z",
+      "source_verified_at": "2026-07-04T19:08:07Z",
       "has_detail": true
     },
     {
@@ -24204,9 +24204,9 @@
       "source_cost": 24.07,
       "retail_price": 41.69,
       "stock": 32372,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0286,
-      "source_verified_at": "2026-07-04T07:25:45Z",
+      "source_verified_at": "2026-07-04T19:08:11Z",
       "has_detail": true
     },
     {
@@ -24225,7 +24225,7 @@
       "source_cost": 1.67,
       "retail_price": 12.24,
       "stock": 9581,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1225,
       "source_verified_at": "2026-07-04T15:49:00Z",
       "has_detail": true
@@ -24246,7 +24246,7 @@
       "source_cost": 3.69,
       "retail_price": 14.32,
       "stock": 11646,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0411,
       "source_verified_at": "2026-07-04T15:49:04Z",
       "has_detail": true
@@ -24267,7 +24267,7 @@
       "source_cost": 1.97,
       "retail_price": 12.55,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0166,
       "source_verified_at": "2026-07-04T15:49:08Z",
       "has_detail": true
@@ -24518,9 +24518,9 @@
       "source_cost": 2.79,
       "retail_price": 13.4,
       "stock": 14786,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.1124,
-      "source_verified_at": "2026-07-04T07:26:25Z",
+      "source_verified_at": "2026-07-04T19:09:01Z",
       "has_detail": true
     },
     {
@@ -24539,9 +24539,9 @@
       "source_cost": 29.68,
       "retail_price": 51.41,
       "stock": 8175,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0001,
-      "source_verified_at": "2026-07-04T07:26:28Z",
+      "source_verified_at": "2026-07-04T19:09:04Z",
       "has_detail": true
     },
     {
@@ -24560,9 +24560,9 @@
       "source_cost": 4.37,
       "retail_price": 15.03,
       "stock": 13711,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0011,
-      "source_verified_at": "2026-07-04T07:26:30Z",
+      "source_verified_at": "2026-07-04T19:09:08Z",
       "has_detail": true
     },
     {
@@ -24581,7 +24581,7 @@
       "source_cost": 2.6,
       "retail_price": 13.2,
       "stock": 9405,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0234,
       "source_verified_at": "2026-07-04T15:50:01Z",
       "has_detail": true
@@ -24602,7 +24602,7 @@
       "source_cost": 5.02,
       "retail_price": 15.7,
       "stock": 33642,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.99,
       "source_verified_at": "2026-07-04T15:50:05Z",
       "has_detail": true
@@ -24623,7 +24623,7 @@
       "source_cost": 7.96,
       "retail_price": 18.73,
       "stock": 6490,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.001,
       "source_verified_at": "2026-07-04T15:50:09Z",
       "has_detail": true
@@ -24644,7 +24644,7 @@
       "source_cost": 0.64,
       "retail_price": 11.18,
       "stock": 12035,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0067,
       "source_verified_at": "2026-07-04T15:50:13Z",
       "has_detail": true
@@ -24895,9 +24895,9 @@
       "source_cost": 3.64,
       "retail_price": 14.27,
       "stock": 31706,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.008,
-      "source_verified_at": "2026-07-04T07:27:13Z",
+      "source_verified_at": "2026-07-04T19:10:01Z",
       "has_detail": true
     },
     {
@@ -24916,9 +24916,9 @@
       "source_cost": 1.81,
       "retail_price": 12.39,
       "stock": 13014,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0019,
-      "source_verified_at": "2026-07-04T07:27:16Z",
+      "source_verified_at": "2026-07-04T19:10:05Z",
       "has_detail": true
     },
     {
@@ -24939,7 +24939,7 @@
       "stock": 20000,
       "in_stock": true,
       "trending_score": 0.0106,
-      "source_verified_at": "2026-07-04T15:51:03Z",
+      "source_verified_at": "2026-07-04T19:10:09Z",
       "has_detail": true
     },
     {
@@ -24960,7 +24960,7 @@
       "stock": 20000,
       "in_stock": true,
       "trending_score": 0.0228,
-      "source_verified_at": "2026-07-04T15:51:07Z",
+      "source_verified_at": "2026-07-04T19:10:13Z",
       "has_detail": true
     },
     {
@@ -24979,7 +24979,7 @@
       "source_cost": 2.59,
       "retail_price": 13.19,
       "stock": 11568,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0118,
       "source_verified_at": "2026-07-04T15:51:11Z",
       "has_detail": true
@@ -25275,7 +25275,7 @@
       "stock": 6311,
       "in_stock": true,
       "trending_score": 0.0015,
-      "source_verified_at": "2026-07-04T15:52:01Z",
+      "source_verified_at": "2026-07-04T19:11:02Z",
       "has_detail": true
     },
     {
@@ -25296,7 +25296,7 @@
       "stock": 11168,
       "in_stock": true,
       "trending_score": 0.0015,
-      "source_verified_at": "2026-07-04T15:52:05Z",
+      "source_verified_at": "2026-07-04T19:11:06Z",
       "has_detail": true
     },
     {
@@ -25317,7 +25317,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.092,
-      "source_verified_at": "2026-07-04T15:52:08Z",
+      "source_verified_at": "2026-07-04T19:11:10Z",
       "has_detail": true
     },
     {
@@ -25630,7 +25630,7 @@
       "source_cost": 1.14,
       "retail_price": 11.7,
       "stock": 12705,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0212,
       "source_verified_at": "2026-07-04T15:53:02Z",
       "has_detail": true
@@ -25653,7 +25653,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.3512,
-      "source_verified_at": "2026-07-04T15:53:03Z",
+      "source_verified_at": "2026-07-04T19:12:03Z",
       "has_detail": true
     },
     {
@@ -25674,7 +25674,7 @@
       "stock": 34513,
       "in_stock": true,
       "trending_score": 0.0138,
-      "source_verified_at": "2026-07-04T15:53:07Z",
+      "source_verified_at": "2026-07-04T19:12:07Z",
       "has_detail": true
     },
     {
@@ -25695,7 +25695,7 @@
       "stock": 9110,
       "in_stock": true,
       "trending_score": 0.0043,
-      "source_verified_at": "2026-07-04T15:53:11Z",
+      "source_verified_at": "2026-07-04T19:12:10Z",
       "has_detail": true
     },
     {
@@ -26009,7 +26009,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.1508,
-      "source_verified_at": "2026-07-04T15:54:02Z",
+      "source_verified_at": "2026-07-04T19:13:00Z",
       "has_detail": true
     },
     {
@@ -26030,7 +26030,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.0266,
-      "source_verified_at": "2026-07-04T15:54:07Z",
+      "source_verified_at": "2026-07-04T19:13:04Z",
       "has_detail": true
     },
     {
@@ -26051,7 +26051,7 @@
       "stock": 30000,
       "in_stock": true,
       "trending_score": 0.0066,
-      "source_verified_at": "2026-07-04T15:54:07Z",
+      "source_verified_at": "2026-07-04T19:13:08Z",
       "has_detail": true
     },
     {
@@ -26070,9 +26070,9 @@
       "source_cost": 0.64,
       "retail_price": 11.18,
       "stock": 8105,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0037,
-      "source_verified_at": "2026-07-04T11:28:08Z",
+      "source_verified_at": "2026-07-04T19:13:12Z",
       "has_detail": true
     },
     {
@@ -26359,7 +26359,7 @@
       "source_cost": 5.15,
       "retail_price": 15.83,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0666,
       "source_verified_at": "2026-07-04T15:55:01Z",
       "has_detail": true
@@ -26382,7 +26382,7 @@
       "stock": 32198,
       "in_stock": true,
       "trending_score": 0.0105,
-      "source_verified_at": "2026-07-04T15:55:04Z",
+      "source_verified_at": "2026-07-04T19:14:02Z",
       "has_detail": true
     },
     {
@@ -26403,7 +26403,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.0075,
-      "source_verified_at": "2026-07-04T15:55:08Z",
+      "source_verified_at": "2026-07-04T19:14:05Z",
       "has_detail": true
     },
     {
@@ -26424,7 +26424,7 @@
       "stock": 27942,
       "in_stock": true,
       "trending_score": 0.0263,
-      "source_verified_at": "2026-07-04T15:55:12Z",
+      "source_verified_at": "2026-07-04T19:14:09Z",
       "has_detail": true
     },
     {
@@ -26715,7 +26715,7 @@
       "source_cost": 14.91,
       "retail_price": 25.89,
       "stock": 6414,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0094,
       "source_verified_at": "2026-07-04T15:56:01Z",
       "has_detail": true
@@ -26736,7 +26736,7 @@
       "source_cost": 1.01,
       "retail_price": 11.56,
       "stock": 7139,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0064,
       "source_verified_at": "2026-07-04T15:56:05Z",
       "has_detail": true
@@ -26759,7 +26759,7 @@
       "stock": 6889,
       "in_stock": true,
       "trending_score": 0.0098,
-      "source_verified_at": "2026-07-04T15:56:09Z",
+      "source_verified_at": "2026-07-04T19:15:02Z",
       "has_detail": true
     },
     {
@@ -26778,9 +26778,9 @@
       "source_cost": 1.65,
       "retail_price": 12.22,
       "stock": 6949,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0067,
-      "source_verified_at": "2026-07-04T13:26:10Z",
+      "source_verified_at": "2026-07-04T19:15:06Z",
       "has_detail": true
     },
     {
@@ -26799,9 +26799,9 @@
       "source_cost": 0.56,
       "retail_price": 11.1,
       "stock": 9388,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0039,
-      "source_verified_at": "2026-07-04T07:31:16Z",
+      "source_verified_at": "2026-07-04T19:15:10Z",
       "has_detail": true
     },
     {
@@ -26820,9 +26820,9 @@
       "source_cost": 2.67,
       "retail_price": 13.27,
       "stock": 8366,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0063,
-      "source_verified_at": "2026-07-04T07:31:19Z",
+      "source_verified_at": "2026-07-04T19:15:13Z",
       "has_detail": true
     },
     {
@@ -27072,7 +27072,7 @@
       "source_cost": 14.96,
       "retail_price": 25.94,
       "stock": 41289,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0464,
       "source_verified_at": "2026-07-04T15:57:02Z",
       "has_detail": true
@@ -27093,7 +27093,7 @@
       "source_cost": 64.72,
       "retail_price": 112.1,
       "stock": 14853,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.018,
       "source_verified_at": "2026-07-04T15:57:05Z",
       "has_detail": true
@@ -27114,7 +27114,7 @@
       "source_cost": 7.04,
       "retail_price": 17.78,
       "stock": 13703,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0227,
       "source_verified_at": "2026-07-04T15:57:09Z",
       "has_detail": true
@@ -27135,9 +27135,9 @@
       "source_cost": 9.78,
       "retail_price": 20.6,
       "stock": 11324,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0046,
-      "source_verified_at": "2026-07-04T11:31:10Z",
+      "source_verified_at": "2026-07-04T19:16:03Z",
       "has_detail": true
     },
     {
@@ -27156,9 +27156,9 @@
       "source_cost": 8.2,
       "retail_price": 18.97,
       "stock": 14716,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0228,
-      "source_verified_at": "2026-07-04T07:32:03Z",
+      "source_verified_at": "2026-07-04T19:16:07Z",
       "has_detail": true
     },
     {
@@ -27177,9 +27177,9 @@
       "source_cost": 13.98,
       "retail_price": 24.93,
       "stock": 12452,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0351,
-      "source_verified_at": "2026-07-04T07:32:06Z",
+      "source_verified_at": "2026-07-04T19:16:10Z",
       "has_detail": true
     },
     {
@@ -27428,7 +27428,7 @@
       "source_cost": 0.73,
       "retail_price": 11.27,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0066,
       "source_verified_at": "2026-07-04T15:58:03Z",
       "has_detail": true
@@ -27449,7 +27449,7 @@
       "source_cost": 2.59,
       "retail_price": 13.19,
       "stock": 14612,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0065,
       "source_verified_at": "2026-07-04T15:58:07Z",
       "has_detail": true
@@ -27470,7 +27470,7 @@
       "source_cost": 6.8,
       "retail_price": 17.53,
       "stock": 6103,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0008,
       "source_verified_at": "2026-07-04T15:58:08Z",
       "has_detail": true
@@ -27493,7 +27493,7 @@
       "stock": 14773,
       "in_stock": true,
       "trending_score": 0.0023,
-      "source_verified_at": "2026-07-04T15:58:12Z",
+      "source_verified_at": "2026-07-04T19:17:00Z",
       "has_detail": true
     },
     {
@@ -27512,9 +27512,9 @@
       "source_cost": 2.62,
       "retail_price": 13.22,
       "stock": 13574,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0064,
-      "source_verified_at": "2026-07-04T07:32:48Z",
+      "source_verified_at": "2026-07-04T19:17:04Z",
       "has_detail": true
     },
     {
@@ -27533,9 +27533,9 @@
       "source_cost": 0.5,
       "retail_price": 11.04,
       "stock": 11418,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0542,
-      "source_verified_at": "2026-07-04T07:32:51Z",
+      "source_verified_at": "2026-07-04T19:17:07Z",
       "has_detail": true
     },
     {
@@ -27782,7 +27782,7 @@
       "source_cost": 7.28,
       "retail_price": 18.03,
       "stock": 38296,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.4648,
       "source_verified_at": "2026-07-04T15:59:01Z",
       "has_detail": true
@@ -27803,7 +27803,7 @@
       "source_cost": 2.45,
       "retail_price": 13.05,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0082,
       "source_verified_at": "2026-07-04T15:59:05Z",
       "has_detail": true
@@ -27824,7 +27824,7 @@
       "source_cost": 4.63,
       "retail_price": 15.29,
       "stock": 12192,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0373,
       "source_verified_at": "2026-07-04T15:59:09Z",
       "has_detail": true
@@ -27864,9 +27864,9 @@
       "source_cost": 32.58,
       "retail_price": 56.43,
       "stock": 11923,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0006,
-      "source_verified_at": "2026-07-04T07:33:33Z",
+      "source_verified_at": "2026-07-04T19:18:01Z",
       "has_detail": true
     },
     {
@@ -27885,9 +27885,9 @@
       "source_cost": 3.19,
       "retail_price": 13.81,
       "stock": 11463,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.4517,
-      "source_verified_at": "2026-07-04T07:33:35Z",
+      "source_verified_at": "2026-07-04T19:18:05Z",
       "has_detail": true
     },
     {
@@ -27906,9 +27906,9 @@
       "source_cost": 1.02,
       "retail_price": 11.57,
       "stock": 13749,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0549,
-      "source_verified_at": "2026-07-04T07:33:38Z",
+      "source_verified_at": "2026-07-04T19:18:09Z",
       "has_detail": true
     },
     {
@@ -27927,9 +27927,9 @@
       "source_cost": 63.77,
       "retail_price": 110.45,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0216,
-      "source_verified_at": "2026-07-04T07:33:40Z",
+      "source_verified_at": "2026-07-04T19:18:12Z",
       "has_detail": true
     },
     {
@@ -28136,7 +28136,7 @@
       "source_cost": 2.74,
       "retail_price": 13.35,
       "stock": 13517,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0259,
       "source_verified_at": "2026-07-04T16:00:02Z",
       "has_detail": true
@@ -28157,7 +28157,7 @@
       "source_cost": 0.65,
       "retail_price": 11.19,
       "stock": 13070,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0919,
       "source_verified_at": "2026-07-04T16:00:04Z",
       "has_detail": true
@@ -28178,7 +28178,7 @@
       "source_cost": 2.13,
       "retail_price": 12.72,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0098,
       "source_verified_at": "2026-07-04T16:00:05Z",
       "has_detail": true
@@ -28199,7 +28199,7 @@
       "source_cost": 3.47,
       "retail_price": 14.1,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0208,
       "source_verified_at": "2026-07-04T16:00:06Z",
       "has_detail": true
@@ -28240,9 +28240,9 @@
       "source_cost": 5.24,
       "retail_price": 15.92,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0599,
-      "source_verified_at": "2026-07-04T07:34:19Z",
+      "source_verified_at": "2026-07-04T19:19:02Z",
       "has_detail": true
     },
     {
@@ -28261,9 +28261,9 @@
       "source_cost": 3.69,
       "retail_price": 14.32,
       "stock": 14610,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0197,
-      "source_verified_at": "2026-07-04T07:34:21Z",
+      "source_verified_at": "2026-07-04T19:19:06Z",
       "has_detail": true
     },
     {
@@ -28282,9 +28282,9 @@
       "source_cost": 0.58,
       "retail_price": 11.12,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0077,
-      "source_verified_at": "2026-07-04T07:34:24Z",
+      "source_verified_at": "2026-07-04T19:19:10Z",
       "has_detail": true
     },
     {
@@ -28513,7 +28513,7 @@
       "source_cost": 0.81,
       "retail_price": 11.36,
       "stock": 28979,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0029,
       "source_verified_at": "2026-07-04T16:01:01Z",
       "has_detail": true
@@ -28534,7 +28534,7 @@
       "source_cost": 2.11,
       "retail_price": 12.7,
       "stock": 12420,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.048,
       "source_verified_at": "2026-07-04T16:01:01Z",
       "has_detail": true
@@ -28555,7 +28555,7 @@
       "source_cost": 1.84,
       "retail_price": 12.42,
       "stock": 14330,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.002,
       "source_verified_at": "2026-07-04T16:01:05Z",
       "has_detail": true
@@ -28597,9 +28597,9 @@
       "source_cost": 16.42,
       "retail_price": 28.44,
       "stock": 5309,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0019,
-      "source_verified_at": "2026-07-04T07:35:03Z",
+      "source_verified_at": "2026-07-04T19:20:00Z",
       "has_detail": true
     },
     {
@@ -28618,9 +28618,9 @@
       "source_cost": 4.24,
       "retail_price": 14.89,
       "stock": 34861,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0417,
-      "source_verified_at": "2026-07-04T07:35:06Z",
+      "source_verified_at": "2026-07-04T19:20:04Z",
       "has_detail": true
     },
     {
@@ -28639,9 +28639,9 @@
       "source_cost": 1.62,
       "retail_price": 12.19,
       "stock": 10446,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0018,
-      "source_verified_at": "2026-07-04T07:35:08Z",
+      "source_verified_at": "2026-07-04T19:20:08Z",
       "has_detail": true
     },
     {
@@ -28660,9 +28660,9 @@
       "source_cost": 7.46,
       "retail_price": 18.21,
       "stock": 13687,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0051,
-      "source_verified_at": "2026-07-04T07:35:11Z",
+      "source_verified_at": "2026-07-04T19:20:12Z",
       "has_detail": true
     },
     {
@@ -28870,7 +28870,7 @@
       "source_cost": 10.12,
       "retail_price": 20.95,
       "stock": 14657,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1592,
       "source_verified_at": "2026-07-04T16:02:01Z",
       "has_detail": true
@@ -28891,7 +28891,7 @@
       "source_cost": 3.35,
       "retail_price": 13.97,
       "stock": 14172,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0518,
       "source_verified_at": "2026-07-04T16:02:05Z",
       "has_detail": true
@@ -28912,7 +28912,7 @@
       "source_cost": 2.11,
       "retail_price": 12.7,
       "stock": 12133,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0026,
       "source_verified_at": "2026-07-04T16:02:09Z",
       "has_detail": true
@@ -28975,9 +28975,9 @@
       "source_cost": 1.67,
       "retail_price": 12.24,
       "stock": 12789,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0034,
-      "source_verified_at": "2026-07-04T07:35:51Z",
+      "source_verified_at": "2026-07-04T19:21:02Z",
       "has_detail": true
     },
     {
@@ -28996,9 +28996,9 @@
       "source_cost": 0.8,
       "retail_price": 11.35,
       "stock": 13023,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0458,
-      "source_verified_at": "2026-07-04T07:35:54Z",
+      "source_verified_at": "2026-07-04T19:21:05Z",
       "has_detail": true
     },
     {
@@ -29017,9 +29017,9 @@
       "source_cost": 2.5,
       "retail_price": 13.1,
       "stock": 11356,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.6236,
-      "source_verified_at": "2026-07-04T07:35:56Z",
+      "source_verified_at": "2026-07-04T19:21:09Z",
       "has_detail": true
     },
     {
@@ -29224,7 +29224,7 @@
       "source_cost": 1.41,
       "retail_price": 11.97,
       "stock": 30001,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0861,
       "source_verified_at": "2026-07-04T16:03:02Z",
       "has_detail": true
@@ -29245,7 +29245,7 @@
       "source_cost": 5.11,
       "retail_price": 15.79,
       "stock": 40001,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1545,
       "source_verified_at": "2026-07-04T16:03:06Z",
       "has_detail": true
@@ -29266,7 +29266,7 @@
       "source_cost": 3.44,
       "retail_price": 14.07,
       "stock": 13212,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0039,
       "source_verified_at": "2026-07-04T16:03:10Z",
       "has_detail": true
@@ -29287,7 +29287,7 @@
       "source_cost": 2.81,
       "retail_price": 13.42,
       "stock": 14067,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0037,
       "source_verified_at": "2026-07-04T16:03:14Z",
       "has_detail": true
@@ -29350,9 +29350,9 @@
       "source_cost": 3.35,
       "retail_price": 13.97,
       "stock": 12310,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0012,
-      "source_verified_at": "2026-07-04T07:36:40Z",
+      "source_verified_at": "2026-07-04T19:22:02Z",
       "has_detail": true
     },
     {
@@ -29371,9 +29371,9 @@
       "source_cost": 4.02,
       "retail_price": 14.66,
       "stock": 10721,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0016,
-      "source_verified_at": "2026-07-04T07:36:43Z",
+      "source_verified_at": "2026-07-04T19:22:06Z",
       "has_detail": true
     },
     {
@@ -29392,9 +29392,9 @@
       "source_cost": 2.46,
       "retail_price": 13.06,
       "stock": 11709,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0026,
-      "source_verified_at": "2026-07-04T07:36:46Z",
+      "source_verified_at": "2026-07-04T19:22:09Z",
       "has_detail": true
     },
     {
@@ -29560,7 +29560,7 @@
       "source_cost": 1.01,
       "retail_price": 11.56,
       "stock": 12660,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0028,
       "source_verified_at": "2026-07-04T16:04:01Z",
       "has_detail": true
@@ -29581,7 +29581,7 @@
       "source_cost": 2.36,
       "retail_price": 12.95,
       "stock": 36588,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0065,
       "source_verified_at": "2026-07-04T16:04:04Z",
       "has_detail": true
@@ -29602,7 +29602,7 @@
       "source_cost": 2.34,
       "retail_price": 12.93,
       "stock": 8993,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0002,
       "source_verified_at": "2026-07-04T16:04:08Z",
       "has_detail": true
@@ -29727,9 +29727,9 @@
       "source_cost": 2.16,
       "retail_price": 12.75,
       "stock": 35209,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0054,
-      "source_verified_at": "2026-07-04T07:37:27Z",
+      "source_verified_at": "2026-07-04T19:23:03Z",
       "has_detail": true
     },
     {
@@ -29748,9 +29748,9 @@
       "source_cost": 7.58,
       "retail_price": 18.33,
       "stock": 29168,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0035,
-      "source_verified_at": "2026-07-04T07:37:29Z",
+      "source_verified_at": "2026-07-04T19:23:03Z",
       "has_detail": true
     },
     {
@@ -29769,9 +29769,9 @@
       "source_cost": 8.52,
       "retail_price": 19.3,
       "stock": 12932,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.004,
-      "source_verified_at": "2026-07-04T13:35:01Z",
+      "source_verified_at": "2026-07-04T19:23:07Z",
       "has_detail": true
     },
     {
@@ -29790,9 +29790,9 @@
       "source_cost": 27.53,
       "retail_price": 47.69,
       "stock": 13330,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0084,
-      "source_verified_at": "2026-07-04T13:35:05Z",
+      "source_verified_at": "2026-07-04T19:23:11Z",
       "has_detail": true
     },
     {
@@ -29915,7 +29915,7 @@
       "source_cost": 1.06,
       "retail_price": 11.61,
       "stock": 13454,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0004,
       "source_verified_at": "2026-07-04T16:05:02Z",
       "has_detail": true
@@ -29936,7 +29936,7 @@
       "source_cost": 2.75,
       "retail_price": 13.36,
       "stock": 12566,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0005,
       "source_verified_at": "2026-07-04T16:05:06Z",
       "has_detail": true
@@ -29957,7 +29957,7 @@
       "source_cost": 0.4,
       "retail_price": 10.93,
       "stock": 14582,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0005,
       "source_verified_at": "2026-07-04T16:05:10Z",
       "has_detail": true
@@ -29978,7 +29978,7 @@
       "source_cost": 2.81,
       "retail_price": 13.42,
       "stock": 8143,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0006,
       "source_verified_at": "2026-07-04T16:05:14Z",
       "has_detail": true
@@ -30104,9 +30104,9 @@
       "source_cost": 1.57,
       "retail_price": 12.14,
       "stock": 13551,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0676,
-      "source_verified_at": "2026-07-04T13:36:00Z",
+      "source_verified_at": "2026-07-04T19:24:01Z",
       "has_detail": true
     },
     {
@@ -30125,9 +30125,9 @@
       "source_cost": 13.74,
       "retail_price": 24.69,
       "stock": 10529,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0071,
-      "source_verified_at": "2026-07-04T13:36:05Z",
+      "source_verified_at": "2026-07-04T19:24:05Z",
       "has_detail": true
     },
     {
@@ -30146,9 +30146,9 @@
       "source_cost": 16.75,
       "retail_price": 29.02,
       "stock": 11104,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0034,
-      "source_verified_at": "2026-07-04T13:36:06Z",
+      "source_verified_at": "2026-07-04T19:24:08Z",
       "has_detail": true
     },
     {
@@ -30251,7 +30251,7 @@
       "source_cost": 1.65,
       "retail_price": 12.22,
       "stock": 13392,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0396,
       "source_verified_at": "2026-07-04T16:06:01Z",
       "has_detail": true
@@ -30272,7 +30272,7 @@
       "source_cost": 5.22,
       "retail_price": 15.9,
       "stock": 14059,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0109,
       "source_verified_at": "2026-07-04T16:06:05Z",
       "has_detail": true
@@ -30293,7 +30293,7 @@
       "source_cost": 0.99,
       "retail_price": 11.54,
       "stock": 14594,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0089,
       "source_verified_at": "2026-07-04T16:06:09Z",
       "has_detail": true
@@ -30482,9 +30482,9 @@
       "source_cost": 3.69,
       "retail_price": 14.32,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0132,
-      "source_verified_at": "2026-07-04T13:37:07Z",
+      "source_verified_at": "2026-07-04T19:25:01Z",
       "has_detail": true
     },
     {
@@ -30503,9 +30503,9 @@
       "source_cost": 12.12,
       "retail_price": 23.02,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0121,
-      "source_verified_at": "2026-07-04T13:37:08Z",
+      "source_verified_at": "2026-07-04T19:25:05Z",
       "has_detail": true
     },
     {
@@ -30524,9 +30524,9 @@
       "source_cost": 5.31,
       "retail_price": 15.99,
       "stock": 40000,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0791,
-      "source_verified_at": "2026-07-04T07:39:07Z",
+      "source_verified_at": "2026-07-04T19:25:09Z",
       "has_detail": true
     },
     {
@@ -30545,9 +30545,9 @@
       "source_cost": 6.67,
       "retail_price": 17.4,
       "stock": 12575,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0158,
-      "source_verified_at": "2026-07-04T07:39:10Z",
+      "source_verified_at": "2026-07-04T19:25:12Z",
       "has_detail": true
     },
     {
@@ -30608,7 +30608,7 @@
       "source_cost": 3.27,
       "retail_price": 13.89,
       "stock": 5421,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0119,
       "source_verified_at": "2026-07-04T16:07:03Z",
       "has_detail": true
@@ -30629,7 +30629,7 @@
       "source_cost": 2.24,
       "retail_price": 12.83,
       "stock": 11239,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0065,
       "source_verified_at": "2026-07-04T16:07:07Z",
       "has_detail": true
@@ -30650,7 +30650,7 @@
       "source_cost": 1.71,
       "retail_price": 12.28,
       "stock": 11298,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0071,
       "source_verified_at": "2026-07-04T16:07:10Z",
       "has_detail": true
@@ -30859,9 +30859,9 @@
       "source_cost": 2.28,
       "retail_price": 12.87,
       "stock": 5999,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0095,
-      "source_verified_at": "2026-07-04T13:38:09Z",
+      "source_verified_at": "2026-07-04T19:26:02Z",
       "has_detail": true
     },
     {
@@ -30880,9 +30880,9 @@
       "source_cost": 2.53,
       "retail_price": 13.13,
       "stock": 39166,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0054,
-      "source_verified_at": "2026-07-04T13:38:13Z",
+      "source_verified_at": "2026-07-04T19:26:06Z",
       "has_detail": true
     },
     {
@@ -30901,9 +30901,9 @@
       "source_cost": 1.05,
       "retail_price": 11.6,
       "stock": 10614,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0098,
-      "source_verified_at": "2026-07-04T07:39:56Z",
+      "source_verified_at": "2026-07-04T19:26:10Z",
       "has_detail": true
     },
     {
@@ -30964,7 +30964,7 @@
       "source_cost": 5.19,
       "retail_price": 15.87,
       "stock": 10854,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0161,
       "source_verified_at": "2026-07-04T16:08:03Z",
       "has_detail": true
@@ -30985,7 +30985,7 @@
       "source_cost": 4.7,
       "retail_price": 15.37,
       "stock": 13604,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0048,
       "source_verified_at": "2026-07-04T16:08:07Z",
       "has_detail": true
@@ -31006,7 +31006,7 @@
       "source_cost": 60.32,
       "retail_price": 104.48,
       "stock": 29297,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0201,
       "source_verified_at": "2026-07-04T16:08:11Z",
       "has_detail": true
@@ -31027,7 +31027,7 @@
       "source_cost": 24.48,
       "retail_price": 42.4,
       "stock": 7049,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0037,
       "source_verified_at": "2026-07-04T16:08:15Z",
       "has_detail": true
@@ -31234,9 +31234,9 @@
       "source_cost": 1.36,
       "retail_price": 11.92,
       "stock": 8043,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0034,
-      "source_verified_at": "2026-07-04T07:40:40Z",
+      "source_verified_at": "2026-07-04T19:27:03Z",
       "has_detail": true
     },
     {
@@ -31255,9 +31255,9 @@
       "source_cost": 3.75,
       "retail_price": 14.39,
       "stock": 40613,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0175,
-      "source_verified_at": "2026-07-04T07:40:42Z",
+      "source_verified_at": "2026-07-04T19:27:06Z",
       "has_detail": true
     },
     {
@@ -31276,9 +31276,9 @@
       "source_cost": 6.8,
       "retail_price": 17.53,
       "stock": 5838,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0016,
-      "source_verified_at": "2026-07-04T07:40:45Z",
+      "source_verified_at": "2026-07-04T19:27:10Z",
       "has_detail": true
     },
     {
@@ -31297,7 +31297,7 @@
       "source_cost": 3.18,
       "retail_price": 13.8,
       "stock": 9162,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0047,
       "source_verified_at": "2026-07-04T16:09:01Z",
       "has_detail": true
@@ -31318,7 +31318,7 @@
       "source_cost": 12.0,
       "retail_price": 22.89,
       "stock": 10763,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0016,
       "source_verified_at": "2026-07-04T16:09:05Z",
       "has_detail": true
@@ -31339,7 +31339,7 @@
       "source_cost": 10.8,
       "retail_price": 21.65,
       "stock": 12545,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0011,
       "source_verified_at": "2026-07-04T16:09:09Z",
       "has_detail": true
@@ -31612,9 +31612,9 @@
       "source_cost": 5.03,
       "retail_price": 15.71,
       "stock": 7035,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0008,
-      "source_verified_at": "2026-07-04T07:41:27Z",
+      "source_verified_at": "2026-07-04T19:28:03Z",
       "has_detail": true
     },
     {
@@ -31633,9 +31633,9 @@
       "source_cost": 1.51,
       "retail_price": 12.08,
       "stock": 35530,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0203,
-      "source_verified_at": "2026-07-04T07:41:30Z",
+      "source_verified_at": "2026-07-04T19:28:07Z",
       "has_detail": true
     },
     {
@@ -31656,7 +31656,7 @@
       "stock": 5117,
       "in_stock": true,
       "trending_score": 0.0117,
-      "source_verified_at": "2026-07-04T16:10:02Z",
+      "source_verified_at": "2026-07-04T19:28:10Z",
       "has_detail": true
     },
     {
@@ -31677,7 +31677,7 @@
       "stock": 10970,
       "in_stock": true,
       "trending_score": 0.0026,
-      "source_verified_at": "2026-07-04T16:10:06Z",
+      "source_verified_at": "2026-07-04T19:28:14Z",
       "has_detail": true
     },
     {
@@ -31696,7 +31696,7 @@
       "source_cost": 4.18,
       "retail_price": 14.83,
       "stock": 5337,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0023,
       "source_verified_at": "2026-07-04T16:10:11Z",
       "has_detail": true
@@ -31717,7 +31717,7 @@
       "source_cost": 6.97,
       "retail_price": 17.71,
       "stock": 6658,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0004,
       "source_verified_at": "2026-07-04T16:10:15Z",
       "has_detail": true
@@ -31969,9 +31969,9 @@
       "source_cost": 17.41,
       "retail_price": 30.16,
       "stock": 6567,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0035,
-      "source_verified_at": "2026-07-04T07:42:12Z",
+      "source_verified_at": "2026-07-04T19:29:00Z",
       "has_detail": true
     },
     {
@@ -31990,9 +31990,9 @@
       "source_cost": 1.41,
       "retail_price": 11.97,
       "stock": 30562,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0094,
-      "source_verified_at": "2026-07-04T07:42:14Z",
+      "source_verified_at": "2026-07-04T19:29:04Z",
       "has_detail": true
     },
     {
@@ -32013,7 +32013,7 @@
       "stock": 39427,
       "in_stock": true,
       "trending_score": 0.002,
-      "source_verified_at": "2026-07-04T16:11:02Z",
+      "source_verified_at": "2026-07-04T19:29:07Z",
       "has_detail": true
     },
     {
@@ -32032,7 +32032,7 @@
       "source_cost": 4.49,
       "retail_price": 15.15,
       "stock": 7554,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.001,
       "source_verified_at": "2026-07-04T16:11:05Z",
       "has_detail": true
@@ -32053,7 +32053,7 @@
       "source_cost": 1.85,
       "retail_price": 12.43,
       "stock": 10533,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0112,
       "source_verified_at": "2026-07-04T16:11:09Z",
       "has_detail": true
@@ -32347,9 +32347,9 @@
       "source_cost": 10.1,
       "retail_price": 20.93,
       "stock": 1826,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0089,
-      "source_verified_at": "2026-07-04T07:42:57Z",
+      "source_verified_at": "2026-07-04T19:30:01Z",
       "has_detail": true
     },
     {
@@ -32370,7 +32370,7 @@
       "stock": 3823,
       "in_stock": true,
       "trending_score": 0.0265,
-      "source_verified_at": "2026-07-04T16:12:02Z",
+      "source_verified_at": "2026-07-04T19:30:04Z",
       "has_detail": true
     },
     {
@@ -32391,7 +32391,7 @@
       "stock": 12154,
       "in_stock": true,
       "trending_score": 0.0651,
-      "source_verified_at": "2026-07-04T16:12:06Z",
+      "source_verified_at": "2026-07-04T19:30:08Z",
       "has_detail": true
     },
     {
@@ -32412,7 +32412,7 @@
       "stock": 25916,
       "in_stock": true,
       "trending_score": 0.4039,
-      "source_verified_at": "2026-07-04T16:12:10Z",
+      "source_verified_at": "2026-07-04T19:30:12Z",
       "has_detail": true
     },
     {
@@ -32725,7 +32725,7 @@
       "stock": 13201,
       "in_stock": true,
       "trending_score": 0.0027,
-      "source_verified_at": "2026-07-04T16:13:03Z",
+      "source_verified_at": "2026-07-04T19:31:02Z",
       "has_detail": true
     },
     {
@@ -32746,7 +32746,7 @@
       "stock": 6048,
       "in_stock": true,
       "trending_score": 0.0037,
-      "source_verified_at": "2026-07-04T16:13:07Z",
+      "source_verified_at": "2026-07-04T19:31:06Z",
       "has_detail": true
     },
     {
@@ -32767,7 +32767,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.0119,
-      "source_verified_at": "2026-07-04T16:13:11Z",
+      "source_verified_at": "2026-07-04T19:31:10Z",
       "has_detail": true
     },
     {
@@ -32786,7 +32786,7 @@
       "source_cost": 3.03,
       "retail_price": 13.64,
       "stock": 10289,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.3621,
       "source_verified_at": "2026-07-04T16:13:15Z",
       "has_detail": true
@@ -33075,7 +33075,7 @@
       "source_cost": 1.65,
       "retail_price": 12.22,
       "stock": 40000,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.0022,
       "source_verified_at": "2026-07-04T16:14:03Z",
       "has_detail": true
@@ -33098,7 +33098,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.6437,
-      "source_verified_at": "2026-07-04T16:14:04Z",
+      "source_verified_at": "2026-07-04T19:32:03Z",
       "has_detail": true
     },
     {
@@ -33119,7 +33119,7 @@
       "stock": 11515,
       "in_stock": true,
       "trending_score": 0.3071,
-      "source_verified_at": "2026-07-04T16:14:08Z",
+      "source_verified_at": "2026-07-04T19:32:07Z",
       "has_detail": true
     },
     {
@@ -33138,9 +33138,9 @@
       "source_cost": 0.68,
       "retail_price": 11.22,
       "stock": 7122,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0335,
-      "source_verified_at": "2026-07-04T07:44:39Z",
+      "source_verified_at": "2026-07-04T19:32:10Z",
       "has_detail": true
     },
     {
@@ -33455,7 +33455,7 @@
       "stock": 30000,
       "in_stock": true,
       "trending_score": 0.0411,
-      "source_verified_at": "2026-07-04T16:15:02Z",
+      "source_verified_at": "2026-07-04T19:33:00Z",
       "has_detail": true
     },
     {
@@ -33476,7 +33476,7 @@
       "stock": 147,
       "in_stock": true,
       "trending_score": 0.0444,
-      "source_verified_at": "2026-07-04T16:15:06Z",
+      "source_verified_at": "2026-07-04T19:33:04Z",
       "has_detail": true
     },
     {
@@ -33497,7 +33497,7 @@
       "stock": 12899,
       "in_stock": true,
       "trending_score": 0.0053,
-      "source_verified_at": "2026-07-04T16:15:10Z",
+      "source_verified_at": "2026-07-04T19:33:08Z",
       "has_detail": true
     },
     {
@@ -33518,7 +33518,7 @@
       "stock": 14825,
       "in_stock": true,
       "trending_score": 0.0301,
-      "source_verified_at": "2026-07-04T16:15:13Z",
+      "source_verified_at": "2026-07-04T19:33:12Z",
       "has_detail": true
     },
     {
@@ -33809,7 +33809,7 @@
       "source_cost": 5.6,
       "retail_price": 16.29,
       "stock": 28978,
-      "in_stock": true,
+      "in_stock": false,
       "trending_score": 0.1856,
       "source_verified_at": "2026-07-04T16:16:03Z",
       "has_detail": true
@@ -33832,7 +33832,7 @@
       "stock": 40000,
       "in_stock": true,
       "trending_score": 0.0025,
-      "source_verified_at": "2026-07-04T16:16:06Z",
+      "source_verified_at": "2026-07-04T19:34:02Z",
       "has_detail": true
     },
     {
@@ -33853,7 +33853,7 @@
       "stock": 13542,
       "in_stock": true,
       "trending_score": 0.0065,
-      "source_verified_at": "2026-07-04T16:16:10Z",
+      "source_verified_at": "2026-07-04T19:34:05Z",
       "has_detail": true
     },
     {
@@ -33872,9 +33872,9 @@
       "source_cost": 0.7,
       "retail_price": 11.24,
       "stock": 38184,
-      "in_stock": false,
+      "in_stock": true,
       "trending_score": 0.0028,
-      "source_verified_at": "2026-07-04T11:51:06Z",
+      "source_verified_at": "2026-07-04T19:34:09Z",
       "has_detail": true
     },
     {
