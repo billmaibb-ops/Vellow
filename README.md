@@ -117,6 +117,40 @@ Use cron (mac/linux) — do **not** run an infinite loop:
 30 3 * * *  cd /path/to/backend && /path/to/venv/bin/python sync_engine.py --mode daily
 ```
 
+## Order & refund policy (store.order_policy)
+
+Configured in `products.json → store.order_policy`:
+
+- **Immediate verification + auto-order.** On order placement the backend
+  re-checks live price and stock and, on success, captures payment and
+  forwards the order to CJ within ~5 minutes (`auto_order_minutes: 5`).
+- **No cancellation / no returns** (`cancellable: false`, `returnable: false`).
+- **Refunds capped at 50% of the item price**, shipping non-refundable
+  (`max_refund_rate: 0.50`, `refund_excludes_shipping: true`).
+- **Margin:** `profit_target: 1.20` (120%) sitewide, with the $10 absolute
+  floor still protecting very cheap items.
+
+### ⚠️ Legal reality check on this policy
+
+This policy is restrictive and parts of it **cannot override the law or card
+rules**, so enforcing it verbatim carries real risk:
+
+- **FTC / non-delivery & defects.** If an item never ships, arrives broken, or
+  isn't as described, US law generally entitles the buyer to a *full* refund —
+  a 50% cap doesn't apply there. (Our authorize→verify→capture flow already
+  means a customer isn't charged when stock can't be confirmed, which covers
+  the most common non-delivery case.)
+- **Chargebacks.** Customers can always dispute a charge with their card
+  issuer regardless of your posted policy. A "no refund / 50% max" stance on
+  undelivered or defective goods tends to *generate* chargebacks, and a high
+  dispute rate can get your Stripe/CJ account frozen.
+- **"No cancellation"** is largely moot operationally (we dispatch in minutes),
+  but some jurisdictions still mandate a cancellation right before shipment.
+
+Recommended: keep the 50% cap for *buyer's-remorse* refunds on delivered,
+as-described items, but issue full refunds for non-delivery/defects. None of
+this is legal advice — confirm your obligations for where you operate.
+
 ## Before you go live — the honest checklist
 
 - **Fraud screening on.** Enable Stripe Radar. Chargebacks are the #1 way
