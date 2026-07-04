@@ -130,7 +130,12 @@ SHIPPING_MARKUP = float(os.environ.get("SHIPPING_MARKUP", "1.20"))  # +20%
 # Bearer token that gates every /api/admin/* endpoint. Set ADMIN_TOKEN in the
 # Render env; without it, the admin API is locked (returns 401) so the public
 # admin.html page shows nothing.
-ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN", "")
+# Accept a few env-var name variants so a small naming slip doesn't lock you out.
+ADMIN_TOKEN = (os.environ.get("ADMIN_TOKEN")
+               or os.environ.get("Vellow_Admin")
+               or os.environ.get("VELLOW_ADMIN")
+               or os.environ.get("vellow_admin")
+               or "").strip()
 
 # Append-only order log. NOTE: on Render's free tier the filesystem is
 # EPHEMERAL — it resets on each deploy/restart, so this is fine for testing but
@@ -169,7 +174,7 @@ def admin_ok() -> bool:
         return False
     auth = request.headers.get("Authorization", "")
     token = auth[7:] if auth.startswith("Bearer ") else request.args.get("token", "")
-    return token == ADMIN_TOKEN
+    return token.strip() == ADMIN_TOKEN
 
 
 def compute_return_fee(retail_price: float, source_cost: float,
