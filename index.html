@@ -157,11 +157,17 @@
   </div>
 
   <div class="p-4 border-t">
+    <label class="flex items-start gap-2 text-xs text-gray-600 mb-3 cursor-pointer select-none">
+      <input id="agreeTerms" type="checkbox" class="mt-0.5 accent-[#FF4500]" />
+      <span>I have read, understood, and agree to be bound by the
+        <a href="terms.html" target="_blank" class="text-[#FF4500] underline font-medium">Terms &amp; Conditions</a>,
+        including the no-cancellation, conditional-refund, arbitration, and class-action-waiver provisions.</span>
+    </label>
     <div class="flex justify-center gap-4 text-[11px] text-gray-500 mb-2">
       <span><span class="text-[#185FA5]">🔒</span> Secure checkout</span>
-      <span><span class="text-[#3B6D11]">✓</span> 30-day money-back guarantee</span>
+      <span><span class="text-[#3B6D11]">✓</span> Conditional refund policy applies</span>
     </div>
-    <button id="placeOrder" class="w-full bg-[#FF4500] hover:bg-[#e63e00] disabled:opacity-60 text-white font-bold py-3 rounded-md flex items-center justify-center gap-2">
+    <button id="placeOrder" disabled class="w-full bg-[#FF4500] hover:bg-[#e63e00] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3 rounded-md flex items-center justify-center gap-2">
       <span id="placeLabel">Place order</span>
       <svg id="placeSpin" class="hidden spin w-5 h-5" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.3"/>
@@ -516,6 +522,9 @@ async function placeOrder(){
   if(!shipping.name || !shipping.addr || !shipping.city || !shipping.state || !shipping.zip){
     setStatus('Please complete your full shipping address.','red'); return;
   }
+  if(!document.getElementById('agreeTerms').checked){
+    setStatus('Please agree to the Terms & Conditions to continue.','red'); return;
+  }
 
   toggleBusy(true); setLabel('Checking price & shipping…');
   try{
@@ -572,6 +581,9 @@ document.addEventListener('click', e=>{
 ['f_addr','f_city','f_state','f_zip'].forEach(id=>{
   document.getElementById(id).addEventListener('input', scheduleQuote);
   document.getElementById(id).addEventListener('change', scheduleQuote);
+});
+document.getElementById('agreeTerms').addEventListener('change', e=>{
+  document.getElementById('placeOrder').disabled = !e.target.checked;
 });
 document.getElementById('search').addEventListener('input', e=>{ state.filter=e.target.value; state.shown=PAGE; render(); });
 document.getElementById('catPills').addEventListener('click', e=>{
