@@ -420,9 +420,19 @@ def verify_and_capture():
 
     # ---- 3. forward the order to CJ for fulfillment ----
     ship = body["shipping"]
+    # CJ requires a shipping method (logisticName). Use the cheapest live option.
+    logistic_name = "CJPacket Ordinary"
+    try:
+        sq = cj.get_shipping_quote_multi(
+            [{"vid": l["vid"], "quantity": l["qty"]} for l in verified_lines],
+            ship.get("country", "US"), ship.get("zip", ""), ship.get("state", ""))
+        logistic_name = sq.get("name") or logistic_name
+    except Exception:
+        pass
     cj_order = {
         "orderNumber": intent.id,                       # your idempotency key
         "fromCountryCode": "CN",                         # origin warehouse (CJ routes)
+        "logisticName": logistic_name,                   # shipping method (required)
         "shippingCountryCode": ship.get("country", "US"),
         "shippingProvince": ship.get("state", ""),
         "shippingCity": ship.get("city", ""),

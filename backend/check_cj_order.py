@@ -27,9 +27,19 @@ def main():
     vid = variants[0].get("vid")
     print(f"product: {detail.get('productNameEn','?')[:50]} | vid: {vid}")
 
+    logistic_name = "CJPacket Ordinary"
+    try:
+        sq = cj.get_shipping_quote_multi([{"vid": vid, "quantity": args.qty}],
+                                         "US", args.zip, args.state)
+        logistic_name = sq.get("name") or logistic_name
+    except Exception as e:  # noqa: BLE001
+        print(f"(shipping quote failed, using default logistic: {e})")
+    print(f"logisticName: {logistic_name}")
+
     order = {
         "orderNumber": f"TEST-{args.pid[-6:]}-{args.zip}",
         "fromCountryCode": "CN",
+        "logisticName": logistic_name,
         "shippingCountryCode": "US",
         "shippingProvince": args.state,
         "shippingCity": args.city,
