@@ -210,7 +210,9 @@ function render(j){
     : 'No items under the buffer.';
 
   // links
-  const origin = j.store.url || 'https://billmaibb-ops.github.io/Vellow';
+  // Store lives in the same folder as admin.html (…/Vellow/). Derive it from
+  // this page's own URL so the link is always correct regardless of env config.
+  const origin = new URL('.', location.href).href;
   $('links').innerHTML = [
     ['View live store', origin],
     ['Storefront repo / Actions', 'https://github.com/billmaibb-ops/Vellow/actions'],
