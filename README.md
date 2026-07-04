@@ -130,10 +130,11 @@ Configured in `products.json → store.order_policy`:
   the matching dispute with CJ. A refund is issued **only if CJ approves one**,
   and the customer is refunded the **same percentage CJ approves for us**
   (`refund_contingent_on_cj_approval`, `refund_matches_cj_percentage`).
-- **Shipping non-refundable** and a **return fee** is deducted from any
-  approved refund (`refund_excludes_shipping: true`, set `return_fee`).
-  Disputes must go through CJ's Dispute Center — off-platform disputes can get
-  the CJ account blocked.
+- **Shipping non-refundable** (`refund_excludes_shipping: true`).
+- **Return fee** (`return_fee`, `return_fee_applies_to: change_of_mind_only`)
+  is charged **only** on change-of-mind returns — never when an item arrives
+  damaged, defective, wrong, or undelivered. Disputes must go through CJ's
+  Dispute Center — off-platform disputes can get the CJ account blocked.
 - **Margin:** `profit_target: 1.20` (120%) sitewide, with the $10 absolute
   floor still protecting very cheap items.
 

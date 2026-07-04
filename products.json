@@ -28,9 +28,10 @@
    "dispute_window_days": 30,
    "refund_excludes_shipping": true,
    "return_fee": null,
-   "_note": "Customer disputes are accepted, reviewed, and filed with CJ in parallel. A refund is issued ONLY if CJ approves a refund to the store, and the customer is refunded the SAME PERCENTAGE CJ approves for us (e.g. CJ approves 100% -> full item refund; CJ approves 60% -> 60%). Shipping fees are non-refundable and a return fee is deducted from any approved refund. Disputes must go through CJ's Dispute Center; off-platform disputes (e.g. PayPal) can get the CJ account blocked.",
+   "_note": "Customer disputes are accepted, reviewed, and filed with CJ in parallel. A refund is issued ONLY if CJ approves a refund to the store, and the customer is refunded the SAME PERCENTAGE CJ approves for us. Shipping fees are non-refundable. A RETURN FEE applies ONLY to change-of-mind returns (customer no longer wants the item) and is NEVER charged when the item arrives damaged, defective, wrong, or not delivered. Disputes must go through CJ's Dispute Center; off-platform disputes (e.g. PayPal) can get the CJ account blocked.",
    "refund_contingent_on_cj_approval": true,
-   "refund_matches_cj_percentage": true
+   "refund_matches_cj_percentage": true,
+   "return_fee_applies_to": "change_of_mind_only"
   }
  },
  "products": [
