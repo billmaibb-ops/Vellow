@@ -85,35 +85,43 @@ class CJClient:
         return {"CJ-Access-Token": self._token, "Content-Type": "application/json"}
 
     # ---------------- low-level request w/ one retry on 401 ----------------
-    def _get(self, path: str, params: dict) -> dict:
-        for attempt in (1, 2):
-            r = requests.get(f"{BASE}{path}", params=params,
-                             headers=self._headers(), timeout=self.timeout)
-            if r.status_code == 401 and attempt == 1:
+    def _request(self, method: str, path: str, *, params=None, json_body=None) -> dict:
+        """One CJ request with retries for auth (401) and rate-limit (429).
+
+        CJ rate-limits product endpoints hard; on 429 we honor Retry-After
+        (or back off exponentially) and retry, so a big deep sync rides through
+        throttling instead of crashing."""
+        backoff = 3.0
+        for attempt in range(1, 7):
+            r = requests.request(method, f"{BASE}{path}", params=params,
+                                 json=json_body, headers=self._headers(),
+                                 timeout=self.timeout)
+            if r.status_code == 401 and attempt < 6:
                 with self._lock:
-                    self._token = None  # force re-auth
+                    self._token = None          # force re-auth
+                continue
+            if r.status_code == 429 and attempt < 6:
+                wait = float(r.headers.get("Retry-After", 0)) or backoff
+                time.sleep(min(wait, 30))
+                backoff = min(backoff * 2, 30)
                 continue
             r.raise_for_status()
             body = r.json()
+            # CJ signals its own rate limit in-body too ("Too Many Requests").
+            msg = str(body.get("message") or "")
+            if body.get("code") == 429 or "many request" in msg.lower():
+                if attempt < 6:
+                    time.sleep(backoff); backoff = min(backoff * 2, 30); continue
             if body.get("code") not in (200, None) and body.get("result") is False:
                 raise CJError(f"CJ error on {path}: {body.get('message')} ({body})")
             return body
-        raise CJError(f"CJ request failed after retry: {path}")
+        raise CJError(f"CJ request failed after retries: {path}")
+
+    def _get(self, path: str, params: dict) -> dict:
+        return self._request("GET", path, params=params)
 
     def _post(self, path: str, data: dict) -> dict:
-        for attempt in (1, 2):
-            r = requests.post(f"{BASE}{path}", json=data,
-                              headers=self._headers(), timeout=self.timeout)
-            if r.status_code == 401 and attempt == 1:
-                with self._lock:
-                    self._token = None
-                continue
-            r.raise_for_status()
-            body = r.json()
-            if body.get("code") not in (200, None) and body.get("result") is False:
-                raise CJError(f"CJ error on {path}: {body.get('message')} ({body})")
-            return body
-        raise CJError(f"CJ request failed after retry: {path}")
+        return self._request("POST", path, json_body=data)
 
     # ---------------- products ----------------
     def search_products(self, keyword: str, page: int = 1, size: int = 20) -> list[dict]:

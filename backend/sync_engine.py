@@ -133,90 +133,104 @@ def run_daily(cj: CJClient, catalog: dict) -> dict:
     old_by_pid = {(p.get("cj_pid") or p.get("id")): p for p in catalog["products"]}
     synced_pids = set()
 
+    # Resumable: if a product already has a fresh detail file AND its catalog
+    # entry already carries a cj_vid, keep it as-is and skip the CJ calls. So a
+    # run that was rate-limited part-way makes real progress each time instead
+    # of starting over (and we stay well under CJ's request budget).
+    have_detail = {p.get("cj_pid"): p for p in catalog["products"]
+                   if p.get("cj_vid") and (DETAILS_DIR / f"{p['id']}.json").exists()}
+
     products = []
     for entry in watchlist:
         pid = entry["pid"]
-        time.sleep(0.6)  # CJ rate-limits product endpoints (~1 req/s)
         try:
-            detail = cj.get_product(pid)
-        except CJError as e:
-            print(f"[warn] deep sync failed for pid {pid}: {e}", file=sys.stderr)
-            continue
-
-        # Pick the variant we sell by default (explicit vid, else the first).
-        variants = detail.get("variants") or []
-        vid = entry.get("vid")
-        variant = next((v for v in variants if v.get("vid") == vid), variants[0] if variants else {})
-        vid = variant.get("vid", vid)
-
-        cost = float(variant.get("variantSellPrice") or detail.get("sellPrice") or 0) or None
-        if not cost:
-            print(f"[warn] no cost for pid {pid}; skipping", file=sys.stderr)
-            continue
-
-        time.sleep(0.5)
-        try:
-            stock = cj.get_variant_stock(vid) if vid else {"us_quantity": 0, "quantity": 0}
-        except CJError:
-            stock = {"us_quantity": 0, "quantity": 0}
-        eff, in_stock = safe_stock(stock["us_quantity"], stock["quantity"], threshold)
-
-        images = detail.get("productImageSet") or detail.get("productImage") or []
-        if isinstance(images, str):
-            images = [images]
-
-        sku = entry.get("sku") or f"CJ-{pid}"
-        # Per-variant options (color/size) with their own risk-adjusted retail.
-        variant_rows = []
-        for v in variants[:40]:
-            vcost = float(v.get("variantSellPrice") or 0)
-            if not v.get("vid") or vcost <= 0:
+            if pid in have_detail:
+                # already fully synced on a prior run — just refresh nothing,
+                # keep the existing record (cheap; no CJ call)
+                products.append(have_detail[pid])
+                synced_pids.add(pid)
                 continue
-            variant_rows.append({
-                "vid": v["vid"],
-                "name": (v.get("variantNameEn") or v.get("variantKey")
-                         or v.get("variantName") or "").strip() or "Default",
-                "image": v.get("variantImage") or "",
-                "source_cost": round(vcost, 2),
-                "retail_price": retail_price(vcost, cfg),
+
+            time.sleep(0.9)  # be gentle: CJ rate-limits product endpoints
+            detail = cj.get_product(pid)
+
+            # Pick the variant we sell by default (explicit vid, else the first).
+            variants = detail.get("variants") or []
+            vid = entry.get("vid")
+            variant = next((v for v in variants if v.get("vid") == vid), variants[0] if variants else {})
+            vid = variant.get("vid", vid)
+
+            cost = float(variant.get("variantSellPrice") or detail.get("sellPrice") or 0) or None
+            if not cost:
+                print(f"[warn] no cost for pid {pid}; skipping", file=sys.stderr)
+                continue
+
+            time.sleep(0.6)
+            try:
+                stock = cj.get_variant_stock(vid) if vid else {"us_quantity": 0, "quantity": 0}
+            except Exception:  # noqa: BLE001
+                stock = {"us_quantity": 0, "quantity": 0}
+            eff, in_stock = safe_stock(stock["us_quantity"], stock["quantity"], threshold)
+
+            images = detail.get("productImageSet") or detail.get("productImage") or []
+            if isinstance(images, str):
+                images = [images]
+
+            sku = entry.get("sku") or f"CJ-{pid}"
+            # Per-variant options (color/size) with their own risk-adjusted retail.
+            variant_rows = []
+            for v in variants[:40]:
+                vcost = float(v.get("variantSellPrice") or 0)
+                if not v.get("vid") or vcost <= 0:
+                    continue
+                variant_rows.append({
+                    "vid": v["vid"],
+                    "name": (v.get("variantNameEn") or v.get("variantKey")
+                             or v.get("variantName") or "").strip() or "Default",
+                    "image": v.get("variantImage") or "",
+                    "source_cost": round(vcost, 2),
+                    "retail_price": retail_price(vcost, cfg),
+                })
+
+            # Write the detail file the product page fetches on demand. Kept out
+            # of products.json so the storefront list stays a fast, small fetch.
+            atomic_write(DETAILS_DIR / f"{sku}.json", {
+                "id": sku,
+                "description": sanitize_html(detail.get("description") or ""),
+                "images": images,          # full set — matches the CJ product page
+                "variants": variant_rows,
+                "synced_at": now_iso(),
             })
 
-        # Write the detail file the product page fetches on demand. Kept out
-        # of products.json so the storefront list stays a fast, small fetch.
-        atomic_write(DETAILS_DIR / f"{sku}.json", {
-            "id": sku,
-            "description": sanitize_html(detail.get("description") or ""),
-            "images": images,          # full set — matches the CJ product page
-            "variants": variant_rows,
-            "synced_at": now_iso(),
-        })
-
-        prod = {
-            "id": sku,
-            "cj_pid": pid,
-            "cj_vid": vid,
-            "title": entry.get("title") or detail.get("productNameEn", "Untitled"),
-            "image": images[0] if images else "https://placehold.co/600x600?text=No+Image",
-            "images": images[:4],   # a few for the list card; full set is in the detail file
-            "category": entry.get("category", detail.get("categoryName", "General")),
-            "source_cost": round(cost, 2),
-            "retail_price": retail_price(cost, cfg),
-            "stock": eff,
-            "in_stock": in_stock,
-            "trending_score": entry.get("trending_score", 0.5),
-            "source_verified_at": now_iso(),
-            "has_detail": True,
-        }
-        # No fabricated social proof: rating/review_count only if truly known.
-        if entry.get("rating"):
-            prod["rating"] = entry["rating"]
-            prod["review_count"] = entry.get("review_count", 0)
-        if entry.get("brand"):
-            prod["brand"] = entry["brand"]
-        products.append(prod)
-        synced_pids.add(pid)
-        if len(products) % 100 == 0:
-            print(f"[daily] {len(products)} synced so far…")
+            prod = {
+                "id": sku,
+                "cj_pid": pid,
+                "cj_vid": vid,
+                "title": entry.get("title") or detail.get("productNameEn", "Untitled"),
+                "image": images[0] if images else "https://placehold.co/600x600?text=No+Image",
+                "images": images[:4],   # a few for the list card; full set is in the detail file
+                "category": entry.get("category", detail.get("categoryName", "General")),
+                "source_cost": round(cost, 2),
+                "retail_price": retail_price(cost, cfg),
+                "stock": eff,
+                "in_stock": in_stock,
+                "trending_score": entry.get("trending_score", 0.5),
+                "source_verified_at": now_iso(),
+                "has_detail": True,
+            }
+            # No fabricated social proof: rating/review_count only if truly known.
+            if entry.get("rating"):
+                prod["rating"] = entry["rating"]
+                prod["review_count"] = entry.get("review_count", 0)
+            if entry.get("brand"):
+                prod["brand"] = entry["brand"]
+            products.append(prod)
+            synced_pids.add(pid)
+            if len(products) % 100 == 0:
+                print(f"[daily] {len(products)} synced so far…")
+        except Exception as e:  # noqa: BLE001 — one bad product must not abort the run
+            print(f"[warn] deep sync skipped pid {pid}: {e}", file=sys.stderr)
+            continue
 
     # Keep any existing product whose sync failed this run (don't shrink the
     # catalog because of transient CJ errors — next run retries them).
