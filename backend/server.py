@@ -44,7 +44,13 @@ PRODUCTS_JSON = HERE.parent / "products.json"
 # Payments are OPTIONAL at boot. The quote/shipping/stock endpoints don't need
 # Stripe, so the service comes up and serves them even before a Stripe key is
 # configured. Only the charge steps (create-hold / verify-and-capture) require it.
-stripe.api_key = os.environ.get("STRIPE_SECRET_KEY", "")
+# Accept common env-var name variants so a small naming slip doesn't leave
+# payments disabled.
+stripe.api_key = (os.environ.get("STRIPE_SECRET_KEY")
+                  or os.environ.get("SK_TEST_KEY")
+                  or os.environ.get("STRIPE_KEY")
+                  or os.environ.get("stripe_secret_key")
+                  or "").strip()
 PAYMENTS_ENABLED = bool(stripe.api_key)
 
 app = Flask(__name__)
