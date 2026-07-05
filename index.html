@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://js.stripe.com/v3/"></script>
 <script>
   tailwind.config = {
     theme: { extend: {
@@ -504,6 +505,9 @@ function openCheckout(){
   document.getElementById('overlay').classList.remove('hidden');
   document.getElementById('checkout').classList.remove('translate-x-full');
   autofill();
+  // Re-run the quote every time the drawer opens so shipping/tax/total always
+  // reflect the current cart + saved address (instead of a stale prior quote).
+  scheduleQuote();
 }
 function closeCheckout(){
   document.getElementById('overlay').classList.add('hidden');
