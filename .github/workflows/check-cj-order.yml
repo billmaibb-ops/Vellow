@@ -12,6 +12,10 @@ on:
       state:
         description: "State code"
         default: "NY"
+      pay:
+        description: "Also test wallet pay (safe on unfunded wallet)"
+        type: boolean
+        default: true
 
 jobs:
   cjorder:
@@ -26,4 +30,4 @@ jobs:
         env:
           CJ_API_KEY: ${{ secrets.CJ_API_KEY }}
         working-directory: backend
-        run: python check_cj_order.py --pid "${{ github.event.inputs.pid }}" --zip "${{ github.event.inputs.zip }}" --state "${{ github.event.inputs.state }}"
+        run: python check_cj_order.py --pid "${{ github.event.inputs.pid }}" --zip "${{ github.event.inputs.zip }}" --state "${{ github.event.inputs.state }}" ${{ github.event.inputs.pay == 'true' && '--pay' || '' }}
