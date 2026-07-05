@@ -3,80 +3,162 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vellow — Trending Finds</title>
+<title>Vellow — Trending Finds, Shipped Fast</title>
+<meta name="description" content="Vellow — curated trending products shipped fast from US warehouses. Secure Stripe checkout, 30-day returns, and you're only charged after stock is verified." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://js.stripe.com/v3/"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: {
+        ink:      '#0B2545',   // deep trust navy — brand
+        ink2:     '#08203f',
+        brandblue:'#1E6FE0',   // confident trust blue — links/accents
+        buy:      '#0E9F6E',   // green — "buy" / go / safe
+        buydark:  '#0B8457',
+        urgency:  '#D97706',   // warm — sale / urgency only, used sparingly
+      },
+      fontFamily: { sans: ['Inter','system-ui','-apple-system','Segoe UI','sans-serif'] },
+      boxShadow: { card: '0 1px 2px rgba(11,37,69,.06), 0 8px 24px rgba(11,37,69,.06)' },
+    }}
+  }
+</script>
 <style>
   [x-cloak]{display:none}
   .spin{animation:spin 1s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
+  body{font-family:'Inter',system-ui,sans-serif}
+  .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .line-clamp-1{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 </style>
 </head>
-<body class="bg-white text-[#1A1A1A] antialiased">
+<body class="bg-white text-[#0B2545] antialiased">
 
 <!-- ============ PROMO BAR ============ -->
-<!-- Keep this honest: only advertise offers you actually honor. -->
-<div class="bg-[#FF4500] text-white text-xs font-semibold text-center py-1.5 tracking-wide">
-  NEW DROPS WEEKLY · FAST TRACKED SHIPPING FROM US WAREHOUSES
+<div class="bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide">
+  Free tracked shipping on orders over $60 &nbsp;·&nbsp; Secure checkout &nbsp;·&nbsp; 30-day returns
 </div>
 
 <!-- ============ HEADER ============ -->
-<header class="bg-[#0C2340] text-white sticky top-0 z-40 shadow">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
-    <div class="text-2xl font-black tracking-tight">VEL<span class="text-[#FF4500]">LOW</span></div>
-    <div class="flex-1">
-      <input id="search" type="text" placeholder="What are you looking for?"
-        class="w-full rounded-md px-4 py-2 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#FF4500]" />
+<header class="bg-white sticky top-0 z-40 border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3 sm:gap-5">
+    <a href="/" class="flex items-center gap-2 shrink-0">
+      <span class="text-2xl font-extrabold tracking-tight text-ink">Vellow</span>
+      <span class="w-2 h-2 rounded-full bg-buy mt-1.5" title="verified store"></span>
+    </a>
+    <div class="flex-1 relative">
+      <svg class="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="text" placeholder="Search products…"
+        class="w-full rounded-lg border border-gray-300 pl-9 pr-4 py-2.5 text-sm text-gray-900 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brandblue focus:border-transparent" />
     </div>
-    <button id="cartBtn" class="relative flex items-center gap-2 bg-[#FF4500] hover:bg-[#e63e00] text-white font-semibold px-4 py-2 rounded-md">
-      Cart
-      <span id="cartCount" class="bg-white text-[#0C2340] text-xs font-bold rounded-full px-2 py-0.5">0</span>
+    <button id="cartBtn" class="relative flex items-center gap-2 text-ink font-semibold px-3 sm:px-4 py-2.5 rounded-lg border border-gray-300 hover:border-ink hover:bg-gray-50 transition">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="hidden sm:inline">Cart</span>
+      <span id="cartCount" class="bg-buy text-white text-xs font-bold rounded-full min-w-[20px] h-5 px-1.5 flex items-center justify-center">0</span>
     </button>
-  </div>
-  <div class="bg-[#081a30] text-xs text-blue-200">
-    <div class="max-w-7xl mx-auto px-4 py-1.5 flex flex-wrap gap-x-6 gap-y-1">
-      <span id="syncStamp">Prices synced hourly</span>
-      <span>🔒 Secure checkout · You're only charged after stock is verified</span>
-    </div>
   </div>
 </header>
 
-<!-- ============ TRUST STRIP ============ -->
-<div class="border-b border-gray-200 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap justify-center gap-x-8 gap-y-1 text-xs text-gray-600">
-    <span><span class="text-[#185FA5]">🔒</span> Secure checkout</span>
-    <span><span class="text-[#3B6D11]">✓</span> 30-day money-back guarantee</span>
-    <span><span class="text-[#185FA5]">🚚</span> Tracked shipping · timeline confirmed before you're charged</span>
+<!-- ============ HERO + TRUST ============ -->
+<section class="bg-gradient-to-b from-[#F4F7FB] to-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 pt-10 pb-6 text-center">
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink">Trending finds, shipped fast from US warehouses</h1>
+    <p class="mt-3 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">Real prices, live stock, and tracked delivery. You're only charged after we confirm the item is in stock — and every order is protected by a 30-day return policy.</p>
   </div>
-</div>
+  <!-- trust badges (real SVG icons, no emoji) -->
+  <div class="max-w-5xl mx-auto px-4 pb-7">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="flex items-center gap-2.5 bg-white border border-gray-200 rounded-xl px-3 py-3">
+        <svg class="w-5 h-5 text-buy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div><div class="text-xs font-semibold text-ink leading-tight">Secure checkout</div><div class="text-[11px] text-gray-500 leading-tight">Encrypted &amp; PCI-compliant</div></div>
+      </div>
+      <div class="flex items-center gap-2.5 bg-white border border-gray-200 rounded-xl px-3 py-3">
+        <svg class="w-5 h-5 text-buy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div><div class="text-xs font-semibold text-ink leading-tight">Charged only if in stock</div><div class="text-[11px] text-gray-500 leading-tight">Stock verified before payment</div></div>
+      </div>
+      <div class="flex items-center gap-2.5 bg-white border border-gray-200 rounded-xl px-3 py-3">
+        <svg class="w-5 h-5 text-buy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h1a1 1 0 0 0 1-1v-3.34a2 2 0 0 0-.6-1.42L18 8h-4v9h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+        <div><div class="text-xs font-semibold text-ink leading-tight">Tracked shipping</div><div class="text-[11px] text-gray-500 leading-tight">Tracking on every order</div></div>
+      </div>
+      <div class="flex items-center gap-2.5 bg-white border border-gray-200 rounded-xl px-3 py-3">
+        <svg class="w-5 h-5 text-buy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+        <div><div class="text-xs font-semibold text-ink leading-tight">30-day returns</div><div class="text-[11px] text-gray-500 leading-tight">Straightforward &amp; fair</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ PRODUCT GRID ============ -->
-<main class="max-w-7xl mx-auto px-4 py-6">
-  <div class="flex items-baseline justify-between flex-wrap gap-2 mb-3">
-    <h1 class="text-xl font-bold">Trending under $100</h1>
+<main class="max-w-7xl mx-auto px-4 py-8">
+  <div class="flex items-baseline justify-between flex-wrap gap-2 mb-4">
+    <h2 class="text-lg font-bold text-ink">Trending now</h2>
     <span id="resultCount" class="text-sm text-gray-500"></span>
   </div>
-  <div id="catPills" class="flex flex-wrap gap-2 mb-5"></div>
-  <div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  <div id="catPills" class="flex flex-wrap gap-2 mb-6"></div>
+  <div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
     <!-- cards injected here -->
   </div>
   <p id="emptyState" class="hidden text-center text-gray-500 py-16">No products match your search.</p>
-  <div class="flex justify-center mt-6">
-    <button id="loadMore" class="hidden bg-[#0C2340] hover:bg-[#183a63] text-white font-semibold px-8 py-2.5 rounded-md text-sm">
-      Load more products
+  <div class="flex justify-center mt-8">
+    <button id="loadMore" class="hidden border border-ink text-ink hover:bg-ink hover:text-white font-semibold px-8 py-2.5 rounded-lg text-sm transition">
+      Load more
     </button>
+  </div>
+
+  <!-- optional ad slot (hidden unless enabled in config) -->
+  <div id="adSlot" class="hidden mt-10">
+    <div class="text-[10px] uppercase tracking-wide text-gray-400 mb-1 text-center">Advertisement</div>
+    <div id="adUnit" class="w-full min-h-[90px] bg-gray-100 rounded flex items-center justify-center text-gray-400 text-sm">
+      Ad unit (728×90) — configure slot in products.json → store.ads
+    </div>
   </div>
 </main>
 
-<!-- ============ FOOTER AD SLOT ============ -->
-<footer class="max-w-7xl mx-auto px-4 pb-10">
-  <div id="adSlot" class="hidden">
-    <div class="text-[10px] uppercase tracking-wide text-gray-400 mb-1 text-center">Advertisement</div>
-    <!-- Paste your ad-network snippet here (e.g. Google AdSense <ins class="adsbygoogle">).
-         Keep ads clearly labeled and away from the checkout button to stay within
-         AdSense policy and avoid hurting buyer trust. -->
-    <div id="adUnit" class="w-full min-h-[90px] bg-gray-200 rounded flex items-center justify-center text-gray-400 text-sm">
-      Ad unit (728×90) — configure slot in products.json → store.ads
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-white mt-8">
+  <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="col-span-2 md:col-span-1">
+      <div class="flex items-center gap-2">
+        <span class="text-xl font-extrabold">Vellow</span>
+        <span class="w-2 h-2 rounded-full bg-buy mt-1"></span>
+      </div>
+      <p class="mt-3 text-sm text-blue-100/70 leading-relaxed">Curated trending products, shipped fast from US warehouses with tracked delivery and a fair return policy.</p>
+    </div>
+    <div>
+      <div class="text-xs font-semibold uppercase tracking-wide text-blue-200/60 mb-3">Shop</div>
+      <ul class="space-y-2 text-sm text-blue-100/80">
+        <li><a href="/" class="hover:text-white">All products</a></li>
+        <li><a href="/?cart=1" class="hover:text-white">Your cart</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-xs font-semibold uppercase tracking-wide text-blue-200/60 mb-3">Support</div>
+      <ul class="space-y-2 text-sm text-blue-100/80">
+        <li><a href="terms.html" class="hover:text-white">Terms &amp; Conditions</a></li>
+        <li><a href="terms.html" class="hover:text-white">Shipping &amp; Returns</a></li>
+        <li><a id="contactLink" href="mailto:support@vellow.store" class="hover:text-white">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-xs font-semibold uppercase tracking-wide text-blue-200/60 mb-3">Payments secured by</div>
+      <div class="flex items-center gap-2 mb-3 text-ink">
+        <span class="bg-white rounded px-2 py-1 text-[11px] font-bold tracking-wide">VISA</span>
+        <span class="bg-white rounded px-2 py-1 text-[11px] font-bold tracking-wide">MC</span>
+        <span class="bg-white rounded px-2 py-1 text-[11px] font-bold tracking-wide">AMEX</span>
+        <span class="bg-white rounded px-2 py-1 text-[11px] font-bold tracking-wide">DISC</span>
+      </div>
+      <div class="flex items-center gap-1.5 text-xs text-blue-100/70">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Powered by Stripe
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-2 text-xs text-blue-100/60">
+      <span>© <span id="yr"></span> Vellow. All rights reserved.</span>
+      <span>Prices and stock are checked live at checkout.</span>
     </div>
   </div>
 </footer>
@@ -84,8 +166,8 @@
 <!-- ============ CHECKOUT DRAWER ============ -->
 <div id="overlay" class="fixed inset-0 bg-black/50 z-50 hidden"></div>
 <aside id="checkout" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl translate-x-full transition-transform duration-300 flex flex-col">
-  <div class="flex items-center justify-between p-4 border-b">
-    <h2 class="font-bold text-lg">Checkout</h2>
+  <div class="flex items-center justify-between p-4 border-b border-gray-200">
+    <h2 class="font-bold text-lg text-ink">Checkout</h2>
     <button id="closeCheckout" class="text-gray-400 hover:text-gray-700 text-2xl leading-none">&times;</button>
   </div>
 
@@ -94,13 +176,13 @@
 
     <!-- Shipping address (drives the live quote) -->
     <div class="space-y-2">
-      <h3 class="font-semibold text-sm">Shipping details</h3>
-      <input id="f_name"  class="w-full border rounded px-3 py-2 text-sm" placeholder="Full name" />
-      <input id="f_email" class="w-full border rounded px-3 py-2 text-sm" placeholder="Email" />
-      <input id="f_addr"  class="w-full border rounded px-3 py-2 text-sm" placeholder="Street address" />
+      <h3 class="font-semibold text-sm text-ink">Shipping details</h3>
+      <input id="f_name"  class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brandblue" placeholder="Full name" />
+      <input id="f_email" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brandblue" placeholder="Email" />
+      <input id="f_addr"  class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brandblue" placeholder="Street address" />
       <div class="flex gap-2">
-        <input id="f_city"  class="w-1/2 border rounded px-3 py-2 text-sm" placeholder="City" />
-        <select id="f_state" class="w-1/4 border rounded px-2 py-2 text-sm bg-white text-gray-700">
+        <input id="f_city"  class="w-1/2 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brandblue" placeholder="City" />
+        <select id="f_state" class="w-1/4 border border-gray-300 rounded-lg px-2 py-2 text-sm bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-brandblue">
           <option value="">State</option>
           <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option>
           <option>CO</option><option>CT</option><option>DE</option><option>DC</option><option>FL</option>
@@ -113,16 +195,16 @@
           <option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option>
           <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
         </select>
-        <input id="f_zip"   class="w-1/4 border rounded px-3 py-2 text-sm" placeholder="ZIP" />
+        <input id="f_zip"   class="w-1/4 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brandblue" placeholder="ZIP" />
       </div>
     </div>
 
     <!-- Live order total: price + tax + real CJ shipping to this address -->
-    <div class="border rounded-md p-3 text-sm space-y-1 bg-gray-50">
+    <div class="border border-gray-200 rounded-xl p-3 text-sm space-y-1 bg-gray-50">
       <div class="flex justify-between"><span>Subtotal</span><span id="sumSubtotal">$0.00</span></div>
       <div class="flex justify-between text-gray-600"><span>Tax <span id="taxNote" class="text-gray-400"></span></span><span id="sumTax">—</span></div>
       <div class="flex justify-between text-gray-600"><span>Shipping <span id="shipNote" class="text-gray-400 text-xs"></span></span><span id="sumShipping">—</span></div>
-      <div class="flex justify-between font-bold text-base pt-1 border-t mt-1"><span>Total</span><span id="sumTotal">$0.00</span></div>
+      <div class="flex justify-between font-bold text-base pt-1 border-t border-gray-200 mt-1"><span>Total</span><span id="sumTotal" class="text-ink">$0.00</span></div>
       <div id="quoteStatus" class="flex items-center gap-2 text-xs text-gray-500 pt-1">
         <svg id="quoteSpin" class="hidden spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.3"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3"/></svg>
         <span id="quoteMsg">Enter your address to calculate shipping &amp; total.</span>
@@ -131,24 +213,28 @@
 
     <!-- Payment (Stripe Elements — card never touches your server) -->
     <div class="space-y-2">
-      <h3 class="font-semibold text-sm">Payment</h3>
-      <div id="card-element" class="border rounded px-3 py-3 bg-white"></div>
+      <h3 class="font-semibold text-sm text-ink">Payment</h3>
+      <div id="card-element" class="border border-gray-300 rounded-lg px-3 py-3 bg-white"></div>
       <div id="card-errors" class="text-xs text-red-600 min-h-4"></div>
+      <div class="flex items-center gap-1.5 text-[11px] text-gray-500">
+        <svg class="w-3.5 h-3.5 text-buy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Card details are encrypted and handled by Stripe — never stored on our servers.
+      </div>
     </div>
   </div>
 
-  <div class="p-4 border-t">
+  <div class="p-4 border-t border-gray-200">
     <label class="flex items-start gap-2 text-xs text-gray-600 mb-3 cursor-pointer select-none">
-      <input id="agreeTerms" type="checkbox" class="mt-0.5 accent-[#FF4500]" />
+      <input id="agreeTerms" type="checkbox" class="mt-0.5 accent-buy" />
       <span>I have read, understood, and agree to be bound by the
-        <a href="terms.html" target="_blank" class="text-[#FF4500] underline font-medium">Terms &amp; Conditions</a>,
+        <a href="terms.html" target="_blank" class="text-brandblue underline font-medium">Terms &amp; Conditions</a>,
         including the no-cancellation, conditional-refund, arbitration, and class-action-waiver provisions.</span>
     </label>
-    <div class="flex justify-center gap-4 text-[11px] text-gray-500 mb-2">
-      <span><span class="text-[#185FA5]">🔒</span> Secure checkout</span>
-      <span><span class="text-[#3B6D11]">✓</span> Conditional refund policy applies</span>
+    <div class="flex justify-center items-center gap-4 text-[11px] text-gray-500 mb-2">
+      <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5 text-buy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Secure checkout</span>
+      <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5 text-buy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Charged only after stock is verified</span>
     </div>
-    <button id="placeOrder" disabled class="w-full bg-[#FF4500] hover:bg-[#e63e00] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3 rounded-md flex items-center justify-center gap-2">
+    <button id="placeOrder" disabled class="w-full bg-buy hover:bg-buydark disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition">
       <span id="placeLabel">Place order</span>
       <svg id="placeSpin" class="hidden spin w-5 h-5" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity="0.3"/>
@@ -237,8 +323,6 @@ async function load(){
   renderPills();
   updateCartUI();
   if (new URLSearchParams(location.search).get('cart') === '1') openCheckout();
-  document.getElementById('syncStamp').textContent =
-    'Prices synced ' + new Date(data.store.last_price_sync).toLocaleString();
   // Show the footer ad slot only if ads are enabled in config.
   if(data.store.ads && data.store.ads.enabled){
     document.getElementById('adSlot').classList.remove('hidden');
@@ -254,10 +338,10 @@ function categories(){
 }
 
 function renderPills(){
-  const active = 'bg-[#0C2340] text-white';
-  const idle   = 'bg-white text-gray-600 border border-gray-300 hover:border-[#0C2340]';
+  const active = 'bg-ink text-white border border-ink';
+  const idle   = 'bg-white text-gray-600 border border-gray-300 hover:border-ink';
   document.getElementById('catPills').innerHTML = categories().map(c=>`
-    <button data-cat="${c}" class="text-xs px-3.5 py-1.5 rounded-full ${c===state.category?active:idle}">
+    <button data-cat="${c}" class="text-xs font-medium px-3.5 py-1.5 rounded-full ${c===state.category?active:idle}">
       ${c}</button>`).join('');
 }
 
@@ -289,29 +373,30 @@ function cardHTML(p){
   const pct = compare ? Math.round((1 - p.retail_price / p.compare_at_price) * 100) : 0;
   const url = 'product.html?id=' + encodeURIComponent(p.id);
   return `
-  <div class="bg-white rounded-lg border border-gray-200 hover:shadow-md transition overflow-hidden flex flex-col">
-    <a href="${url}" class="aspect-square bg-gray-50 relative block">
-      <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover ${oos?'opacity-40':''}" />
-      ${compare ? `<span class="absolute top-2 left-2 bg-[#E24B4A] text-white text-xs font-bold px-2 py-1 rounded">-${pct}%</span>` : ''}
-      ${oos ? '<span class="absolute top-2 right-2 bg-gray-900 text-white text-xs px-2 py-1 rounded">Out of stock</span>'
-        : lowStock ? `<span class="absolute bottom-2 left-2 bg-[#0C2340] text-white text-xs px-2 py-1 rounded">Only ${p.stock} left</span>`
-        : p.trending_score>0.85 ? '<span class="absolute bottom-2 left-2 bg-[#0C2340] text-white text-xs px-2 py-1 rounded">🔥 Selling fast</span>' : ''}
+  <div class="group bg-white rounded-xl border border-gray-200 hover:shadow-card hover:border-gray-300 transition overflow-hidden flex flex-col">
+    <a href="${url}" class="aspect-square bg-gray-50 relative block overflow-hidden">
+      <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300 ${oos?'opacity-40':''}" />
+      ${compare ? `<span class="absolute top-2 left-2 bg-urgency text-white text-[11px] font-bold px-2 py-1 rounded-md">-${pct}%</span>` : ''}
+      ${oos ? '<span class="absolute top-2 right-2 bg-gray-900/90 text-white text-[11px] px-2 py-1 rounded-md">Out of stock</span>'
+        : lowStock ? `<span class="absolute bottom-2 left-2 bg-urgency text-white text-[11px] font-semibold px-2 py-1 rounded-md">Only ${p.stock} left</span>`
+        : p.trending_score>0.85 ? '<span class="absolute bottom-2 left-2 bg-ink text-white text-[11px] font-semibold px-2 py-1 rounded-md">Selling fast</span>' : ''}
     </a>
     <div class="p-3 flex flex-col flex-1">
-      ${p.brand ? `<div class="text-xs text-gray-500">${p.brand}</div>` : ''}
-      <a href="${url}" class="text-sm font-medium line-clamp-2 flex-1 hover:text-[#FF4500]">${p.title}</a>
-      ${p.rating ? `<div class="flex items-center gap-1 text-xs text-[#BA7517] mt-1">
-        ★ ${p.rating} <span class="text-gray-400">(${(p.review_count||0).toLocaleString()})</span>
+      ${p.brand ? `<div class="text-[11px] uppercase tracking-wide text-gray-400 mb-0.5">${p.brand}</div>` : ''}
+      <a href="${url}" class="text-sm font-medium text-gray-800 line-clamp-2 flex-1 hover:text-brandblue">${p.title}</a>
+      ${p.rating ? `<div class="flex items-center gap-1 text-xs text-urgency mt-1">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span class="font-semibold text-gray-700">${p.rating}</span> <span class="text-gray-400">(${(p.review_count||0).toLocaleString()})</span>
       </div>` : ''}
-      <div class="mt-2">
-        <span class="text-lg font-bold ${compare?'text-[#E24B4A]':'text-[#0C2340]'}">${money(p.retail_price)}</span>
-        ${compare ? `<span class="text-sm text-gray-400 line-through ml-1">${money(p.compare_at_price)}</span>` : ''}
+      <div class="mt-2 flex items-baseline gap-1.5">
+        <span class="text-lg font-extrabold ${compare?'text-urgency':'text-ink'}">${money(p.retail_price)}</span>
+        ${compare ? `<span class="text-sm text-gray-400 line-through">${money(p.compare_at_price)}</span>` : ''}
       </div>
       <button ${oos?'disabled':''} data-add="${p.id}"
-        class="mt-2 w-full text-sm font-bold py-2 rounded-md ${oos
-          ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-          : 'bg-[#FF4500] hover:bg-[#e63e00] text-white'}">
-        ${oos ? 'UNAVAILABLE' : 'ADD TO CART'}
+        class="mt-2.5 w-full text-sm font-semibold py-2.5 rounded-lg transition flex items-center justify-center gap-1.5 ${oos
+          ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+          : 'bg-buy hover:bg-buydark text-white'}">
+        ${oos ? 'Unavailable' : `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg> Add to cart`}
       </button>
     </div>
   </div>`;
@@ -348,7 +433,7 @@ function updateCartUI(){
   document.getElementById('cartCount').textContent = count;
   document.getElementById('cartLines').innerHTML = cartItems().map(x=>`
     <div class="flex gap-3 items-center">
-      <img src="${x.p.image}" class="w-14 h-14 object-cover rounded" />
+      <img src="${x.p.image}" class="w-14 h-14 object-cover rounded-lg border border-gray-200" />
       <div class="flex-1 text-sm">
         <div class="font-medium line-clamp-1">${x.p.title}</div>
         ${x.e.variant ? `<div class="text-xs text-gray-400">${x.e.variant}</div>` : ''}
@@ -578,6 +663,7 @@ document.getElementById('cartBtn').addEventListener('click', openCheckout);
 document.getElementById('closeCheckout').addEventListener('click', closeCheckout);
 document.getElementById('overlay').addEventListener('click', closeCheckout);
 document.getElementById('placeOrder').addEventListener('click', placeOrder);
+document.getElementById('yr').textContent = new Date().getFullYear();
 
 initStripe();
 load();
