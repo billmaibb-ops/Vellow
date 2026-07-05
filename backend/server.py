@@ -133,6 +133,82 @@ RETURN_FEE_MARGIN_RATE = float(os.environ.get("RETURN_FEE_MARGIN_RATE", "0.20"))
 SHIPPING_MARKUP = float(os.environ.get("SHIPPING_MARKUP", "1.20"))  # +20%
 
 # ---------------------------------------------------------------------------
+# Transactional email (Resend). Set RESEND_API_KEY in the Render env to enable.
+# EMAIL_FROM should be a verified sender once you have a domain; until then the
+# Resend onboarding address works for testing (deliverability is limited).
+# If no key is set, email is skipped gracefully (never blocks checkout).
+# ---------------------------------------------------------------------------
+RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
+EMAIL_FROM = os.environ.get("EMAIL_FROM", "Vellow <onboarding@resend.dev>")
+STORE_URL = os.environ.get("STOREFRONT_ORIGIN", "https://vellow-five.vercel.app")
+
+
+def send_email(to: str, subject: str, html: str) -> bool:
+    if not RESEND_API_KEY or not to:
+        print(f"[email] skipped (no key or recipient): {subject}")
+        return False
+    try:
+        r = requests.post("https://api.resend.com/emails",
+                          headers={"Authorization": f"Bearer {RESEND_API_KEY}",
+                                   "Content-Type": "application/json"},
+                          json={"from": EMAIL_FROM, "to": [to],
+                                "subject": subject, "html": html}, timeout=15)
+        if r.status_code >= 300:
+            print(f"[email] failed {r.status_code}: {r.text[:200]}")
+            return False
+        return True
+    except Exception as e:  # noqa: BLE001 — email must never break the order
+        print(f"[email] error: {e}")
+        return False
+
+
+def _email_shell(inner: str) -> str:
+    return (f'<div style="font-family:Arial,sans-serif;max-width:560px;margin:0 auto;'
+            f'color:#1A1A1A">'
+            f'<div style="background:#0C2340;color:#fff;padding:16px 20px;font-size:22px;'
+            f'font-weight:800">VEL<span style="color:#FF4500">LOW</span></div>'
+            f'<div style="padding:20px">{inner}'
+            f'<p style="color:#888;font-size:12px;margin-top:24px">Questions? Just reply to '
+            f'this email. Vellow · <a href="{STORE_URL}">{STORE_URL}</a></p></div></div>')
+
+
+def send_order_confirmation(email: str, order_number: str, items: list,
+                            total: float, dest: str):
+    rows = "".join(
+        f'<tr><td style="padding:4px 0">{i.get("title","Item")}</td>'
+        f'<td style="padding:4px 0;text-align:right">× {i.get("qty",1)}</td></tr>'
+        for i in items)
+    inner = (
+        f'<h2 style="margin:0 0 8px">Thanks for your order!</h2>'
+        f'<p>Your payment is confirmed and your order is on its way to our supplier for '
+        f'fulfillment. Order <b>#{order_number[-10:]}</b>.</p>'
+        f'<table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:14px">'
+        f'{rows}<tr><td style="border-top:1px solid #eee;padding-top:8px"><b>Total paid</b></td>'
+        f'<td style="border-top:1px solid #eee;padding-top:8px;text-align:right">'
+        f'<b>${total:.2f}</b></td></tr></table>'
+        f'<p style="font-size:14px"><b>Shipping to:</b> {dest}</p>'
+        f'<div style="background:#f6f8fb;border-radius:8px;padding:12px;font-size:14px;margin:12px 0">'
+        f'📦 <b>Tracking to follow.</b> We\'ll email you a tracking link as soon as your order '
+        f'ships (usually within a few days).</div>')
+    return send_email(email, f"Your Vellow order is confirmed (#{order_number[-10:]})",
+                      _email_shell(inner))
+
+
+def send_tracking_email(email: str, order_number: str, tracking: str,
+                        carrier: str = "", url: str = ""):
+    link = url or (f"https://t.17track.net/en#nums={tracking}" if tracking else "")
+    inner = (
+        f'<h2 style="margin:0 0 8px">Your order has shipped 🚚</h2>'
+        f'<p>Good news — order <b>#{order_number[-10:]}</b> is on its way.</p>'
+        f'<p style="font-size:14px"><b>Carrier:</b> {carrier or "—"}<br>'
+        f'<b>Tracking number:</b> {tracking}</p>'
+        + (f'<p><a href="{link}" style="display:inline-block;background:#FF4500;color:#fff;'
+           f'text-decoration:none;padding:10px 18px;border-radius:6px;font-weight:bold">'
+           f'Track your package</a></p>' if link else ''))
+    return send_email(email, f"Your Vellow order has shipped (#{order_number[-10:]})",
+                      _email_shell(inner))
+
+# ---------------------------------------------------------------------------
 # Owner control center — auth + order log
 # ---------------------------------------------------------------------------
 # Bearer token that gates every /api/admin/* endpoint. Set ADMIN_TOKEN in the
@@ -457,6 +533,12 @@ def verify_and_capture():
                        "vid": l["vid"], "qty": l["qty"]} for l in verified_lines],
             "customer": ship.get("name", ""), "email": ship.get("email", ""),
             "dest": f"{ship.get('city','')}, {ship.get('state','')} {ship.get('zip','')}"}
+
+    # Order confirmation email (fires on every captured order, regardless of the
+    # CJ forward outcome). Tracking is emailed separately once CJ provides it.
+    send_order_confirmation(ship.get("email", ""), intent.id, base["items"],
+                            order_total, base["dest"])
+
     try:
         cj_result = cj.create_order(cj_order)
     except Exception as e:  # noqa: BLE001 — any CJ failure must not 500 after capture
@@ -757,6 +839,25 @@ def admin_orders():
         return jsonify(ok=False, reason="unauthorized"), 401
     orders = sorted(read_orders(), key=_order_ts, reverse=True)
     return jsonify(ok=True, count=len(orders), orders=orders[:200])
+
+
+@app.post("/api/admin/send-tracking")
+def admin_send_tracking():
+    """Email a shipment-tracking link to a customer. Owner triggers this from
+    the dashboard once CJ provides a tracking number for an order.
+    Body: { email, order_number, tracking, carrier?, url? }"""
+    if not admin_ok():
+        return jsonify(ok=False, reason="unauthorized"), 401
+    b = request.get_json(force=True)
+    if not b.get("email") or not b.get("tracking"):
+        return jsonify(ok=False, reason="email and tracking required"), 400
+    sent = send_tracking_email(b["email"], b.get("order_number", ""),
+                               b["tracking"], b.get("carrier", ""), b.get("url", ""))
+    # record it on the order log for the dashboard feed
+    log_order({"status": "tracking_sent", "email": b["email"],
+               "pi": b.get("order_number", ""), "tracking": b["tracking"],
+               "carrier": b.get("carrier", "")})
+    return jsonify(ok=sent, sent=sent)
 
 
 @app.get("/api/health")
