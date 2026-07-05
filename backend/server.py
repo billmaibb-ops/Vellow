@@ -570,7 +570,7 @@ def verify_and_capture():
     pay_reason = ""
     if CJ_AUTO_PAY and cj_order_id:
         try:
-            cj.pay_order(cj_order_id)
+            cj.pay_order(cj_order_id, order_number=intent.id)
             pay_status = "order_paid"  # paid → CJ will fulfill & ship
         except Exception as e:  # noqa: BLE001 — never crash a captured order
             pay_reason = str(e)

@@ -88,7 +88,7 @@ def main():
         if balance and balance > 0:
             print(f"  NOTE: wallet has ${balance:.2f} — this WILL spend real money.")
         try:
-            pr = cj.pay_order(order_id)
+            pr = cj.pay_order(order_id, order_number=order.get("orderNumber"))
             print("PAY SUCCESS — CJ order is paid and will be fulfilled:")
             print(f"  {pr}")
         except CJError as e:

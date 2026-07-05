@@ -263,24 +263,49 @@ class CJClient:
             return {"amount": 0.0, "raw": data}
         raise CJError(f"Could not read CJ balance: {last_err}")
 
-    def pay_order(self, order_id: str) -> dict:
+    def pay_order(self, order_id: str, order_number: str | None = None) -> dict:
         """Pay a created CJ order from the wallet balance so CJ fulfills it.
 
         SPENDS REAL MONEY from your CJ wallet. Only call after create_order
         and after the customer's payment has been captured. `order_id` is the
-        `orderId` returned by create_order.
+        `orderId` returned by create_order; `order_number` is the merchant
+        orderNumber you passed to create_order (some CJ accounts key the
+        pay endpoint on one or the other).
 
-        Returns CJ's response dict. Raises CJError on failure (e.g. an
-        unfunded wallet returns an 'insufficient balance' message — a safe
-        signal that the endpoint/fields are correct and only funding is
-        missing; no money moves in that case)."""
-        if not order_id:
-            raise CJError("pay_order: missing order_id")
-        # CJ's balance-pay endpoint. The id field name varies, so send both
-        # the documented key and the common alternates defensively.
-        payload = {"orderId": order_id, "orderIds": [order_id]}
-        body = self._post("/shopping/pay/payBalance", payload)
-        return body.get("data") or body
+        The endpoint path (/shopping/pay/payBalance) is confirmed, but CJ can
+        (a) key on orderId vs orderNumber and (b) briefly 'not find' an order
+        that was just created (replication lag). So we try each id field and
+        retry a couple of times on a 'not found' response before giving up.
+
+        Returns CJ's response dict. Raises CJError on real failure (e.g. an
+        unfunded wallet's 'insufficient balance', which is a safe signal that
+        the request shape is correct and only funding is missing — no money
+        moves in that case)."""
+        if not order_id and not order_number:
+            raise CJError("pay_order: missing order id/number")
+        # Candidate payloads, most-likely first.
+        candidates = []
+        if order_id:
+            candidates.append({"orderId": order_id})
+            candidates.append({"orderIds": [order_id]})
+        if order_number:
+            candidates.append({"orderNumber": order_number})
+        last = None
+        for payload in candidates:
+            for attempt in range(3):
+                try:
+                    body = self._post("/shopping/pay/payBalance", payload)
+                    return body.get("data") or body
+                except CJError as e:
+                    last = e
+                    # Retry only the 'not found' case (likely propagation lag);
+                    # any other error (e.g. insufficient balance) is definitive
+                    # for this payload, so move to the next candidate.
+                    if "not found" in str(e).lower() and attempt < 2:
+                        time.sleep(3)
+                        continue
+                    break
+        raise CJError(f"payBalance failed: {last}")
 
     def get_shipping_quote(self, vid: str, quantity: int, country: str, zip_code: str) -> dict:
         """Real carrier/shipping cost for a variant to a destination.
