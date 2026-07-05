@@ -42,6 +42,15 @@
   <!-- ALERTS -->
   <div id="alerts" class="space-y-2 mb-5"></div>
 
+  <!-- ORDERS AWAITING PAYMENT (owner action report) -->
+  <div id="payReportWrap" class="bg-[#1a1305] border border-amber-500/40 rounded-xl p-4 mb-6 hidden">
+    <div class="flex items-center justify-between mb-3">
+      <div class="text-sm font-semibold text-amber-300 uppercase tracking-wide">💳 Orders awaiting payment</div>
+      <div id="payReportSummary" class="text-xs text-amber-200/80"></div>
+    </div>
+    <div id="payReport" class="text-sm text-gray-300"></div>
+  </div>
+
   <!-- PROFIT ROW -->
   <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-2">Profit &amp; revenue</div>
   <div id="profitRow" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6"></div>
@@ -223,10 +232,39 @@ function render(j){
   ].map(([t,u])=>`<a href="${u}" target="_blank" class="bg-[#1c2740] hover:bg-[#243150] px-3 py-1.5 rounded-md">${t} ↗</a>`).join('');
 }
 
+const CJ_ORDERS_URL = 'https://app.cjdropshipping.com/myCJ.html#/order';
+
+function renderPayReport(orders){
+  // Orders the owner still needs to pay in CJ (created-unpaid or CJ-failed).
+  const due = orders.filter(o => o.status==='order_placed' || o.status==='paid_cj_failed');
+  if(!due.length){ $('payReportWrap').classList.add('hidden'); return; }
+  const totalCost = due.reduce((s,o)=> s + (Number(o.supplier_cost)||0), 0);
+  $('payReportSummary').textContent =
+    `${due.length} order${due.length>1?'s':''} · ${money(totalCost)} to pay CJ`;
+  $('payReport').innerHTML = `<div class="overflow-x-auto"><table class="w-full text-xs">
+    <tr class="text-amber-200/60 text-left"><th class="py-1">When</th><th>Customer</th><th>Ship to</th><th class="text-right">You pay CJ</th><th class="text-right">Customer paid</th><th>CJ order id</th><th></th></tr>
+    ${due.map(o=>{
+      const cost = Number(o.supplier_cost)||0, paid = Number(o.total)||0;
+      const flag = o.status==='paid_cj_failed'
+        ? '<span class="text-red-400"> · CJ failed, place manually</span>' : '';
+      return `<tr class="border-t border-amber-500/10">
+        <td class="py-1">${(o.ts||'').replace('T',' ').replace('Z','').slice(0,16)}</td>
+        <td>${o.customer||'—'}${flag}</td>
+        <td>${o.dest||'—'}</td>
+        <td class="text-right text-amber-200">${cost?money(cost):'—'}</td>
+        <td class="text-right">${paid?money(paid):'—'}</td>
+        <td class="font-mono">${o.cj_order_id||'—'}</td>
+        <td class="text-right"><a href="${CJ_ORDERS_URL}" target="_blank" class="text-amber-300 underline">pay ↗</a></td>
+      </tr>`;
+    }).join('')}</table></div>`;
+  $('payReportWrap').classList.remove('hidden');
+}
+
 async function loadFeed(){
   try{
     const j = await adminFetch('/api/admin/orders');
-    if(!j.ok || !j.orders.length){ $('orderFeed').textContent = 'No orders yet.'; return; }
+    if(!j.ok || !j.orders.length){ $('orderFeed').textContent = 'No orders yet.'; renderPayReport([]); return; }
+    renderPayReport(j.orders);
     $('orderFeed').innerHTML = `<div class="overflow-x-auto"><table class="w-full text-xs">
       <tr class="text-gray-500 text-left"><th class="py-1">When</th><th>Status</th><th>Customer</th><th>Dest</th><th class="text-right">Total</th><th class="text-right">Profit</th><th>CJ order</th></tr>
       ${j.orders.map(o=>{
