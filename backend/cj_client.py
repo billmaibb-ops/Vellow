@@ -221,9 +221,66 @@ class CJClient:
         `order` must include the customer's shipping address and the CJ
         variant IDs + quantities. Shape follows CJ's createOrderV2.
         Only call this AFTER you have captured payment.
+
+        NOTE: createOrderV2 only CREATES the order in CJ — it does not pay it.
+        CJ holds the order as an unpaid draft until you pay it from your CJ
+        wallet balance (see pay_order). Nothing ships until the order is paid.
         """
         body = self._post("/shopping/order/createOrderV2", order)
         return body.get("data") or {}
+
+    def get_balance(self) -> dict:
+        """Read the CJ wallet balance. Pure read (no money moves).
+
+        Returns {"amount": float, "raw": <cj payload>} on success. CJ field
+        names vary by account/version, so we probe a couple of endpoints and
+        normalize the first numeric balance we find. Raises CJError if none
+        of the endpoints answer."""
+        last_err = None
+        for path in ("/shopping/pay/getBalance", "/shopping/pay/queryBalance"):
+            try:
+                body = self._get(path, {})
+            except CJError as e:
+                last_err = e
+                continue
+            data = body.get("data")
+            if data is None:
+                continue
+            rows = data if isinstance(data, list) else [data]
+            for d in rows:
+                if not isinstance(d, dict):
+                    try:               # some accounts return the number directly
+                        return {"amount": float(d), "raw": data}
+                    except (TypeError, ValueError):
+                        continue
+                for k in ("amount", "balance", "totalAmount",
+                          "availableBalance", "money"):
+                    if d.get(k) is not None:
+                        try:
+                            return {"amount": float(d[k]), "raw": data}
+                        except (TypeError, ValueError):
+                            pass
+            return {"amount": 0.0, "raw": data}
+        raise CJError(f"Could not read CJ balance: {last_err}")
+
+    def pay_order(self, order_id: str) -> dict:
+        """Pay a created CJ order from the wallet balance so CJ fulfills it.
+
+        SPENDS REAL MONEY from your CJ wallet. Only call after create_order
+        and after the customer's payment has been captured. `order_id` is the
+        `orderId` returned by create_order.
+
+        Returns CJ's response dict. Raises CJError on failure (e.g. an
+        unfunded wallet returns an 'insufficient balance' message — a safe
+        signal that the endpoint/fields are correct and only funding is
+        missing; no money moves in that case)."""
+        if not order_id:
+            raise CJError("pay_order: missing order_id")
+        # CJ's balance-pay endpoint. The id field name varies, so send both
+        # the documented key and the common alternates defensively.
+        payload = {"orderId": order_id, "orderIds": [order_id]}
+        body = self._post("/shopping/pay/payBalance", payload)
+        return body.get("data") or body
 
     def get_shipping_quote(self, vid: str, quantity: int, country: str, zip_code: str) -> dict:
         """Real carrier/shipping cost for a variant to a destination.

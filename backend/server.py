@@ -132,6 +132,13 @@ RETURN_FEE_MARGIN_RATE = float(os.environ.get("RETURN_FEE_MARGIN_RATE", "0.20"))
 # only (private env var); the multiplier is never exposed to the storefront.
 SHIPPING_MARKUP = float(os.environ.get("SHIPPING_MARKUP", "1.20"))  # +20%
 
+# Auto-pay CJ orders from the wallet balance right after they're created, so
+# fulfillment is fully hands-off. This SPENDS REAL MONEY per order, so it is
+# OFF by default: orders are created in CJ but left unpaid until you either pay
+# them in the CJ dashboard or turn this on. Enable only after your CJ wallet is
+# funded — set env CJ_AUTO_PAY=1 (or true/yes). Any other value keeps it off.
+CJ_AUTO_PAY = os.environ.get("CJ_AUTO_PAY", "").strip().lower() in ("1", "true", "yes", "on")
+
 # ---------------------------------------------------------------------------
 # Transactional email (Resend). Set RESEND_API_KEY in the Render env to enable.
 # EMAIL_FROM should be a verified sender once you have a domain; until then the
@@ -551,10 +558,28 @@ def verify_and_capture():
                        reason=f"Paid, but CJ order needs manual retry: {e}",
                        payment_intent=intent.id), 202
 
-    log_order({**base, "status": "order_placed",   # awaiting tracking from CJ
-               "cj_order_id": (cj_result or {}).get("orderId")
-                              or (cj_result or {}).get("orderNum") or ""})
-    return jsonify(ok=True, captured=True, fulfilled=True,
+    cj_order_id = ((cj_result or {}).get("orderId")
+                   or (cj_result or {}).get("orderNum") or "")
+
+    # ---- 4. pay the CJ order from wallet balance (optional, gated) ----
+    # createOrderV2 only creates the order; CJ won't ship until it's paid.
+    # When CJ_AUTO_PAY is enabled AND the wallet is funded, pay it now so the
+    # whole flow is hands-off. Failure here (e.g. unfunded wallet) never 500s a
+    # captured order — it's logged as "order_placed" (unpaid) for manual pay.
+    pay_status = "order_placed"        # created in CJ, not yet paid
+    pay_reason = ""
+    if CJ_AUTO_PAY and cj_order_id:
+        try:
+            cj.pay_order(cj_order_id)
+            pay_status = "order_paid"  # paid → CJ will fulfill & ship
+        except Exception as e:  # noqa: BLE001 — never crash a captured order
+            pay_reason = str(e)
+            print(f"[cj-pay-failed] {cj_order_id}: {e}")
+
+    log_order({**base, "status": pay_status,        # awaiting tracking from CJ
+               "cj_order_id": cj_order_id,
+               **({"pay_reason": pay_reason} if pay_reason else {})})
+    return jsonify(ok=True, captured=True, fulfilled=True, paid=(pay_status == "order_paid"),
                    payment_intent=intent.id, cj_order=cj_result)
 
 
