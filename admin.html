@@ -163,7 +163,8 @@ function render(j){
   const o = j.orders;
   $('orderFunnel').innerHTML =
     row('🛒 Placed by buyers (charged)', '<b>'+num(o.placed_by_buyers)+'</b>') +
-    row('📦 Forwarded to CJ', '<b class="text-green-400">'+num(o.sent_to_cj)+'</b>') +
+    row('📦 Order placed with CJ', '<b class="text-green-400">'+num(o.sent_to_cj)+'</b>') +
+    row('🚚 Tracking emailed', '<b class="text-green-400">'+num(o.tracking_emailed||0)+'</b>') +
     row('⛔ Failed to reach CJ', '<b class="'+(o.failed_to_cj?'text-red-400':'')+'">'+num(o.failed_to_cj)+'</b>') +
     row('↩ Released (out of stock, no charge)', num(o.released_no_charge));
 
@@ -229,9 +230,11 @@ async function loadFeed(){
     $('orderFeed').innerHTML = `<div class="overflow-x-auto"><table class="w-full text-xs">
       <tr class="text-gray-500 text-left"><th class="py-1">When</th><th>Status</th><th>Customer</th><th>Dest</th><th class="text-right">Total</th><th class="text-right">Profit</th><th>CJ order</th></tr>
       ${j.orders.map(o=>{
-        const st = o.status==='fulfilled'?'<span class="text-green-400">fulfilled</span>'
+        const st = o.status==='order_placed'?'<span class="text-blue-300">order placed</span>'
+                 : o.status==='tracking_sent'?'<span class="text-green-400">shipped · tracking sent</span>'
+                 : o.status==='fulfilled'?'<span class="text-green-400">fulfilled</span>'
                  : o.status==='paid_cj_failed'?'<span class="text-red-400">CJ failed</span>'
-                 : o.status.startsWith('released')?'<span class="text-gray-500">released</span>'
+                 : (o.status||'').startsWith('released')?'<span class="text-gray-500">released</span>'
                  : o.status;
         return `<tr class="border-t border-white/5"><td class="py-1">${(o.ts||'').replace('T',' ').replace('Z','')}</td><td>${st}</td><td>${o.customer||'—'}</td><td>${o.dest||'—'}</td><td class="text-right">${o.total?money(o.total):'—'}</td><td class="text-right text-green-400">${o.est_profit?money(o.est_profit):'—'}</td><td>${o.cj_order_id||'—'}</td></tr>`;
       }).join('')}</table></div>`;

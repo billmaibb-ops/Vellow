@@ -551,7 +551,7 @@ def verify_and_capture():
                        reason=f"Paid, but CJ order needs manual retry: {e}",
                        payment_intent=intent.id), 202
 
-    log_order({**base, "status": "fulfilled",
+    log_order({**base, "status": "order_placed",   # awaiting tracking from CJ
                "cj_order_id": (cj_result or {}).get("orderId")
                               or (cj_result or {}).get("orderNum") or ""})
     return jsonify(ok=True, captured=True, fulfilled=True,
@@ -718,7 +718,8 @@ def admin_summary():
 
     # ---- orders (from our log) grouped by outcome ----
     def cnt(status): return sum(1 for o in orders if o.get("status") == status)
-    fulfilled = [o for o in orders if o.get("status") == "fulfilled"]
+    fulfilled = [o for o in orders if o.get("status") in ("order_placed", "fulfilled")]
+    tracking_sent = [o for o in orders if o.get("status") == "tracking_sent"]
     paid_cj_failed = [o for o in orders if o.get("status") == "paid_cj_failed"]
     released = [o for o in orders if o.get("status", "").startswith("released")]
     captured = fulfilled + paid_cj_failed          # money actually taken
@@ -805,6 +806,7 @@ def admin_summary():
         orders={
             "placed_by_buyers": len(captured),
             "sent_to_cj": len(fulfilled),
+            "tracking_emailed": len(tracking_sent),
             "failed_to_cj": len(paid_cj_failed),
             "released_no_charge": len(released),
         },
@@ -839,6 +841,41 @@ def admin_orders():
         return jsonify(ok=False, reason="unauthorized"), 401
     orders = sorted(read_orders(), key=_order_ts, reverse=True)
     return jsonify(ok=True, count=len(orders), orders=orders[:200])
+
+
+@app.post("/api/admin/refresh-tracking")
+def admin_refresh_tracking():
+    """Automatic tracking dispatch. For every 'order placed' order that has a CJ
+    order id and hasn't had tracking emailed yet, ask CJ for tracking; the moment
+    it exists, email the customer and mark it sent. Meant to be hit on a schedule.
+    """
+    if not admin_ok():
+        return jsonify(ok=False, reason="unauthorized"), 401
+    if cj is None:
+        return jsonify(ok=False, reason="CJ not configured"), 503
+
+    orders = read_orders()
+    already_sent = {o.get("pi") for o in orders if o.get("status") == "tracking_sent"}
+    placed = [o for o in orders if o.get("status") == "order_placed"
+              and o.get("cj_order_id") and o.get("pi") not in already_sent]
+
+    checked, sent = 0, 0
+    for o in placed:
+        checked += 1
+        try:
+            tr = cj.get_tracking(o["cj_order_id"])
+        except Exception:  # noqa: BLE001
+            tr = None
+        if not tr:
+            continue
+        if send_tracking_email(o.get("email", ""), o.get("pi", ""),
+                               tr["tracking"], tr.get("carrier", "")):
+            sent += 1
+            log_order({"status": "tracking_sent", "pi": o.get("pi", ""),
+                       "email": o.get("email", ""), "tracking": tr["tracking"],
+                       "carrier": tr.get("carrier", "")})
+        time.sleep(0.5)
+    return jsonify(ok=True, checked=checked, tracking_emails_sent=sent)
 
 
 @app.post("/api/admin/send-tracking")

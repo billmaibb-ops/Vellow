@@ -1,0 +1,27 @@
+name: Send tracking emails
+
+# Every 2 hours, ask the backend to check CJ for tracking numbers on placed
+# orders and automatically email customers the tracking link. Runs on GitHub's
+# servers so it fires even when nobody is on the site.
+#
+# Setup: add a repo secret ADMIN_TOKEN whose value matches the admin token set
+# in the Render backend env (Vellow_Admin). Without it, this no-ops.
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"   # every 2 hours
+  workflow_dispatch: {}
+
+jobs:
+  tracking:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger tracking dispatch
+        run: |
+          if [ -z "${{ secrets.ADMIN_TOKEN }}" ]; then
+            echo "ADMIN_TOKEN secret not set — skipping"; exit 0
+          fi
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.ADMIN_TOKEN }}" \
+            https://vellow-backend.onrender.com/api/admin/refresh-tracking
+          echo

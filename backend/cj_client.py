@@ -190,6 +190,31 @@ class CJClient:
         return {"quantity": total, "us_quantity": us_total, "available": total > 0}
 
     # ---------------- orders ----------------
+    def get_tracking(self, order_id: str) -> dict | None:
+        """Look up shipment tracking for a placed CJ order. Returns
+        {"tracking": str, "carrier": str} once available, else None.
+        Tries a couple of CJ endpoints defensively since field names vary."""
+        if not order_id:
+            return None
+        for path, params in (
+            ("/shopping/order/getOrderDetail", {"orderId": order_id}),
+            ("/logistic/getTrackInfo", {"orderId": order_id}),
+        ):
+            try:
+                body = self._get(path, params)
+            except CJError:
+                continue
+            data = body.get("data") or {}
+            rows = data if isinstance(data, list) else [data]
+            for d in rows:
+                tn = (d.get("trackNumber") or d.get("trackingNumber")
+                      or d.get("trackNo") or d.get("logisticNumber"))
+                if tn:
+                    return {"tracking": str(tn),
+                            "carrier": d.get("logisticName") or d.get("trackingName")
+                                       or d.get("carrier") or ""}
+        return None
+
     def create_order(self, order: dict) -> dict:
         """Forward a paid order to CJ for fulfillment.
 
