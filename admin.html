@@ -230,7 +230,8 @@ async function loadFeed(){
     $('orderFeed').innerHTML = `<div class="overflow-x-auto"><table class="w-full text-xs">
       <tr class="text-gray-500 text-left"><th class="py-1">When</th><th>Status</th><th>Customer</th><th>Dest</th><th class="text-right">Total</th><th class="text-right">Profit</th><th>CJ order</th></tr>
       ${j.orders.map(o=>{
-        const st = o.status==='order_placed'?'<span class="text-blue-300">order placed</span>'
+        const st = o.status==='order_placed'?'<span class="text-blue-300">order placed · unpaid</span>'
+                 : o.status==='order_paid'?'<span class="text-emerald-300">paid · CJ fulfilling</span>'
                  : o.status==='tracking_sent'?'<span class="text-green-400">shipped · tracking sent</span>'
                  : o.status==='fulfilled'?'<span class="text-green-400">fulfilled</span>'
                  : o.status==='paid_cj_failed'?'<span class="text-red-400">CJ failed</span>'
