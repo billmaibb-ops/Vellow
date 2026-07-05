@@ -149,9 +149,8 @@ RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 EMAIL_FROM = os.environ.get("EMAIL_FROM", "Vellow <onboarding@resend.dev>")
 STORE_URL = os.environ.get("STOREFRONT_ORIGIN", "https://vellow-five.vercel.app")
 
-# Where owner "action needed — pay this order" alerts go, and the CJ page to
-# pay them on. Used when CJ_AUTO_PAY is off so you never miss an order to pay.
-OWNER_EMAIL = (os.environ.get("OWNER_EMAIL") or "billmai.bb@gmail.com").strip()
+# CJ order page the owner dashboard links to when paying an order (report only;
+# the owner is notified on the admin page, not by email).
 CJ_ORDERS_URL = os.environ.get("CJ_ORDERS_URL",
                                "https://app.cjdropshipping.com/myCJ.html#/order")
 
@@ -219,37 +218,6 @@ def send_tracking_email(email: str, order_number: str, tracking: str,
            f'text-decoration:none;padding:10px 18px;border-radius:6px;font-weight:bold">'
            f'Track your package</a></p>' if link else ''))
     return send_email(email, f"Your Vellow order has shipped (#{order_number[-10:]})",
-                      _email_shell(inner))
-
-
-def send_owner_payment_alert(order_number: str, items: list, cost: float,
-                             retail: float, cj_order_id: str, dest: str):
-    """Tell the owner a paid order was created in CJ and is awaiting payment.
-
-    Fires only when the order is left unpaid (auto-pay off, or auto-pay
-    failed). Includes the supplier cost, your margin, and a direct link to the
-    CJ order list so you can pay it with your card in a couple of clicks."""
-    rows = "".join(
-        f'<tr><td style="padding:4px 0">{i.get("title","Item")}</td>'
-        f'<td style="padding:4px 0;text-align:right">× {i.get("qty",1)}</td></tr>'
-        for i in items)
-    margin = round(retail - cost, 2)
-    inner = (
-        f'<h2 style="margin:0 0 8px">💳 Action needed — pay this order in CJ</h2>'
-        f'<p>A customer just paid, and order <b>#{order_number[-10:]}</b> has been '
-        f'created in CJ. Pay it from your card to start fulfillment.</p>'
-        f'<table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:14px">'
-        f'{rows}</table>'
-        f'<p style="font-size:14px">CJ order id: <b>{cj_order_id or "—"}</b><br>'
-        f'Ship to: {dest}<br>'
-        f'Supplier cost (what you pay CJ): <b>${cost:.2f}</b><br>'
-        f'Customer paid: <b>${retail:.2f}</b> · '
-        f'Your gross margin: <b>${margin:.2f}</b></p>'
-        f'<p><a href="{CJ_ORDERS_URL}" style="display:inline-block;background:#FF4500;'
-        f'color:#fff;text-decoration:none;padding:10px 18px;border-radius:6px;'
-        f'font-weight:bold">Open CJ orders to pay</a></p>')
-    return send_email(OWNER_EMAIL,
-                      f"💳 Pay order #{order_number[-10:]} in CJ (${cost:.2f})",
                       _email_shell(inner))
 
 # ---------------------------------------------------------------------------
@@ -590,20 +558,9 @@ def verify_and_capture():
         # do NOT silently drop it and do NOT crash. In production: enqueue a
         # retry + alert. The order shows in the admin dashboard as "failed to CJ".
         print(f"[cj-order-failed] {e}")  # surface CJ's reason in the logs
-        log_order({**base, "status": "paid_cj_failed", "reason": str(e)})
-        # Alert the owner: customer paid but CJ order didn't go through, so it
-        # needs to be placed manually in CJ. Never blocks the response.
-        send_email(OWNER_EMAIL,
-                   f"⚠️ Order #{intent.id[-10:]} paid but NOT in CJ — place it manually",
-                   _email_shell(
-                       f'<h2 style="margin:0 0 8px">⚠️ Paid, but CJ order failed</h2>'
-                       f'<p>Customer paid for order <b>#{intent.id[-10:]}</b>, but forwarding '
-                       f'it to CJ failed, so it must be placed manually in CJ.</p>'
-                       f'<p style="font-size:14px"><b>Reason:</b> {e}<br>'
-                       f'<b>Ship to:</b> {base["dest"]}</p>'
-                       f'<p><a href="{CJ_ORDERS_URL}" style="display:inline-block;'
-                       f'background:#FF4500;color:#fff;text-decoration:none;padding:10px 18px;'
-                       f'border-radius:6px;font-weight:bold">Open CJ</a></p>'))
+        # Shows on the owner dashboard as "CJ failed" — needs manual placement.
+        log_order({**base, "status": "paid_cj_failed", "reason": str(e),
+                   "supplier_cost": prod_cost})
         return jsonify(ok=True, captured=True, fulfilled=False,
                        reason=f"Paid, but CJ order needs manual retry: {e}",
                        payment_intent=intent.id), 202
@@ -626,15 +583,13 @@ def verify_and_capture():
             pay_reason = str(e)
             print(f"[cj-pay-failed] {cj_order_id}: {e}")
 
+    # Orders left unpaid surface on the OWNER's admin dashboard as an "awaiting
+    # payment" report (status "order_placed") — the owner is notified there, not
+    # by email. Customer emails (confirmation + tracking) are separate.
     log_order({**base, "status": pay_status,        # awaiting tracking from CJ
                "cj_order_id": cj_order_id,
+               "supplier_cost": prod_cost,          # shown in the pay report
                **({"pay_reason": pay_reason} if pay_reason else {})})
-
-    # If the order was NOT auto-paid, alert the owner to go pay it in CJ
-    # (this is the manual, card-per-order workflow). Never blocks the response.
-    if pay_status != "order_paid":
-        send_owner_payment_alert(intent.id, base["items"], prod_cost,
-                                 order_total, cj_order_id, base["dest"])
 
     return jsonify(ok=True, captured=True, fulfilled=True, paid=(pay_status == "order_paid"),
                    payment_intent=intent.id, cj_order=cj_result)
