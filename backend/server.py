@@ -754,12 +754,8 @@ def _order_ts(o: dict) -> float:
         return 0.0
 
 
-@app.get("/api/admin/summary")
-def admin_summary():
-    """Everything the owner dashboard needs in one call."""
-    if not admin_ok():
-        return jsonify(ok=False, reason="unauthorized"), 401
-
+def _build_summary_payload():
+    """Compute the full owner snapshot (orders, money, Stripe, CJ, catalog)."""
     catalog = load_catalog()
     store = catalog["store"]
     products = catalog["products"]
@@ -859,7 +855,7 @@ def admin_summary():
     if out_of_stock > len(products) * 0.3:
         alerts.append({"level": "warning", "msg": f"{out_of_stock} products out of stock ({round(out_of_stock/max(1,len(products))*100)}% of catalog)"})
 
-    return jsonify(
+    return dict(
         ok=True,
         generated_at=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         store={"name": store.get("name"), "url": os.environ.get("STOREFRONT_ORIGIN", "")},
@@ -893,6 +889,91 @@ def admin_summary():
                          for p in low_stock[:25]],
         alerts=alerts,
     )
+
+
+@app.get("/api/admin/summary")
+def admin_summary():
+    """Everything the owner dashboard needs in one call."""
+    if not admin_ok():
+        return jsonify(ok=False, reason="unauthorized"), 401
+    return jsonify(_build_summary_payload())
+
+
+def render_daily_report_html(p: dict) -> str:
+    """Render the summary payload as an owner-facing HTML email."""
+    prof = p.get("profit", {})
+    t, w, m = prof.get("today", {}), prof.get("7d", {}), prof.get("30d", {})
+    o = p.get("orders", {})
+    cat = p.get("catalog", {})
+    st = p.get("stripe", {})
+    cj_b = p.get("cj", {})
+    alerts = p.get("alerts", [])
+
+    def money(x): return f"${float(x or 0):,.2f}"
+
+    alert_html = ""
+    if alerts:
+        rows = "".join(
+            f'<div style="padding:8px 12px;margin:4px 0;border-radius:6px;'
+            f'background:{"#fde8e8" if a.get("level")=="danger" else "#fef6e0"};'
+            f'color:{"#a12020" if a.get("level")=="danger" else "#8a6d0f"}">'
+            f'{"&#9888; " if a.get("level")=="danger" else "&#9888; "}{a.get("msg","")}</div>'
+            for a in alerts)
+        alert_html = f'<h3 style="margin:18px 0 6px">Needs your attention</h3>{rows}'
+    else:
+        alert_html = '<p style="color:#3fb96a;font-weight:600">&#10003; No action items today.</p>'
+
+    unpaid = o.get("sent_to_cj", 0)  # order_placed = created in CJ, awaiting your manual pay
+    manual = (f'<div style="padding:10px 12px;margin:8px 0;border-radius:6px;background:#eef3fb;'
+              f'color:#1c3a63"><b>{unpaid}</b> order(s) placed in CJ and awaiting your manual '
+              f'wallet payment to ship. Pay them in the CJ dashboard.</div>') if unpaid else ""
+
+    return (
+        f'<h2 style="margin:0 0 4px">Vellow — Daily Report</h2>'
+        f'<p style="color:#888;margin:0 0 16px">{p.get("generated_at","")} · '
+        f'{p.get("store",{}).get("name","Vellow")}</p>'
+        f'{alert_html}{manual}'
+        f'<h3 style="margin:18px 0 6px">Money (captured orders)</h3>'
+        f'<table style="width:100%;border-collapse:collapse;font-size:14px">'
+        f'<tr style="color:#888;text-align:left"><th>Window</th><th>Orders</th>'
+        f'<th>Revenue</th><th>Profit</th></tr>'
+        f'<tr><td>Today</td><td>{t.get("orders",0)}</td><td>{money(t.get("revenue"))}</td>'
+        f'<td>{money(t.get("profit"))}</td></tr>'
+        f'<tr><td>7 days</td><td>{w.get("orders",0)}</td><td>{money(w.get("revenue"))}</td>'
+        f'<td>{money(w.get("profit"))}</td></tr>'
+        f'<tr><td>30 days</td><td>{m.get("orders",0)}</td><td>{money(m.get("revenue"))}</td>'
+        f'<td>{money(m.get("profit"))}</td></tr></table>'
+        f'<h3 style="margin:18px 0 6px">Order pipeline</h3>'
+        f'<p style="font-size:14px">Placed by buyers: <b>{o.get("placed_by_buyers",0)}</b> · '
+        f'Sent to CJ: <b>{o.get("sent_to_cj",0)}</b> · '
+        f'Tracking emailed: <b>{o.get("tracking_emailed",0)}</b> · '
+        f'Failed to CJ: <b style="color:#a12020">{o.get("failed_to_cj",0)}</b></p>'
+        f'<h3 style="margin:18px 0 6px">Payments &amp; wallet</h3>'
+        f'<p style="font-size:14px">Stripe available: <b>{money(st.get("balance_available"))}</b> · '
+        f'Pending: {money(st.get("balance_pending"))} · '
+        f'Open disputes: <b>{st.get("dispute_open",0)}</b> · '
+        f'Refunds: {st.get("refund_count",0)} ({money(st.get("refund_total"))})<br>'
+        f'CJ wallet: <b>{money(cj_b.get("wallet")) if cj_b.get("wallet") is not None else "n/a"}</b></p>'
+        f'<h3 style="margin:18px 0 6px">Catalog health</h3>'
+        f'<p style="font-size:14px">In stock: <b>{cat.get("in_stock",0)}</b> / '
+        f'{cat.get("total",0)} · Out of stock: {cat.get("out_of_stock",0)} · '
+        f'Low stock: {cat.get("low_stock",0)} · Avg margin: {cat.get("avg_margin_pct",0)}%<br>'
+        f'Last price sync: {cat.get("last_price_sync","?")}</p>'
+    )
+
+
+@app.post("/api/admin/daily-report")
+def admin_daily_report():
+    """Build the owner snapshot, email it to OWNER_EMAIL, and return it.
+    Meant to be hit once a day by a scheduled GitHub Action."""
+    if not admin_ok():
+        return jsonify(ok=False, reason="unauthorized"), 401
+    payload = _build_summary_payload()
+    html = render_daily_report_html(payload)
+    subject = f"Vellow Daily Report — {time.strftime('%b %d', time.gmtime())}"
+    emailed = send_email(OWNER_EMAIL, subject, _email_shell(html)) if OWNER_EMAIL else False
+    return jsonify(ok=True, emailed=emailed, owner_email_set=bool(OWNER_EMAIL),
+                   report=payload)
 
 
 @app.get("/api/admin/orders")
