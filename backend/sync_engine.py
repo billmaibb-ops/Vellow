@@ -90,6 +90,7 @@ def run_hourly(cj: CJClient, catalog: dict) -> dict:
     threshold = store.get("safety_stock_threshold", 5)
 
     updated = 0
+    failures = 0
     for p in catalog["products"]:
         vid = p.get("cj_vid")
         if not vid:
@@ -97,14 +98,25 @@ def run_hourly(cj: CJClient, catalog: dict) -> dict:
         try:
             stock = cj.get_variant_stock(vid)
         except CJError as e:
-            # On a poll failure, be conservative: mark out of stock, don't crash.
-            print(f"[warn] stock poll failed for {p['id']} ({vid}): {e}", file=sys.stderr)
-            p["in_stock"] = False
+            # Poll failure != out of stock. Keep the last-known value, mark it
+            # stale, and only flip to out-of-stock after 3 consecutive failures
+            # (a single CJ 429 storm must not blank 78% of the catalog again).
+            failures += 1
+            n = p.get("stock_poll_failures", 0) + 1
+            p["stock_poll_failures"] = n
+            p["stock_stale_at"] = now_iso()
+            print(f"[warn] stock poll failed for {p['id']} ({vid}) "
+                  f"[{n} consecutive]: {e}", file=sys.stderr)
+            if n >= 3:
+                p["in_stock"] = False
             continue
 
         eff, in_stock = safe_stock(stock["us_quantity"], stock["quantity"], threshold)
         p["stock"] = eff
         p["in_stock"] = in_stock
+        p["stock_poll_failures"] = 0
+        p.pop("stock_stale_at", None)
+        time.sleep(0.35)  # be gentle: CJ rate-limits stock polls too
 
         # Re-price only if CJ moved the cost (cost is refreshed on deep sync,
         # but some pollers also return sellPrice — recompute defensively).
@@ -115,7 +127,12 @@ def run_hourly(cj: CJClient, catalog: dict) -> dict:
         updated += 1
 
     store["last_price_sync"] = now_iso()
-    print(f"[hourly] repriced/re-stocked {updated} products")
+    print(f"[hourly] repriced/re-stocked {updated} products, {failures} poll failures")
+    polled = updated + failures
+    if polled and failures / polled > 0.10:
+        print(f"[ALERT] hourly sync failure ratio {failures}/{polled} exceeds 10% — "
+              f"CJ is throttling or down. Stock flags were preserved, not blanked.",
+              file=sys.stderr)
     return catalog
 
 

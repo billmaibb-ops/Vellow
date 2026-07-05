@@ -30,6 +30,8 @@ import re
 import time
 from pathlib import Path
 
+import requests
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -147,6 +149,8 @@ CJ_AUTO_PAY = os.environ.get("CJ_AUTO_PAY", "").strip().lower() in ("1", "true",
 # ---------------------------------------------------------------------------
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 EMAIL_FROM = os.environ.get("EMAIL_FROM", "Vellow <onboarding@resend.dev>")
+# Owner alert address — new-order / CJ-failure notifications. Set OWNER_EMAIL on Render.
+OWNER_EMAIL = os.environ.get("OWNER_EMAIL", "")
 STORE_URL = os.environ.get("STOREFRONT_ORIGIN", "https://vellow-five.vercel.app")
 
 # CJ order page the owner dashboard links to when paying an order (report only;
@@ -172,6 +176,14 @@ def send_email(to: str, subject: str, html: str) -> bool:
     except Exception as e:  # noqa: BLE001 — email must never break the order
         print(f"[email] error: {e}")
         return False
+
+
+def send_owner_alert(subject: str, html: str) -> bool:
+    """Notify the store owner (manual-pay workflow: owner must know fast)."""
+    if not OWNER_EMAIL:
+        print(f"[owner-alert] skipped (OWNER_EMAIL not set): {subject}")
+        return False
+    return send_email(OWNER_EMAIL, subject, _email_shell(html))
 
 
 def _email_shell(inner: str) -> str:
@@ -559,6 +571,11 @@ def verify_and_capture():
         # retry + alert. The order shows in the admin dashboard as "failed to CJ".
         print(f"[cj-order-failed] {e}")  # surface CJ's reason in the logs
         # Shows on the owner dashboard as "CJ failed" — needs manual placement.
+        send_owner_alert(f"ACTION NEEDED: CJ order FAILED for {pi_id}",
+                         f"<p>Payment captured but the CJ order could not be created.</p>"
+                         f"<p><b>PI:</b> {pi_id} · <b>Total:</b> ${order_total:.2f} · "
+                         f"<b>Customer:</b> {base['customer']} ({base['email']})</p>"
+                         f"<p>Reason: {e}</p><p>Retry from the admin dashboard.</p>")
         log_order({**base, "status": "paid_cj_failed", "reason": str(e),
                    "supplier_cost": prod_cost})
         return jsonify(ok=True, captured=True, fulfilled=False,
@@ -586,6 +603,13 @@ def verify_and_capture():
     # Orders left unpaid surface on the OWNER's admin dashboard as an "awaiting
     # payment" report (status "order_placed") — the owner is notified there, not
     # by email. Customer emails (confirmation + tracking) are separate.
+    if pay_status == "order_placed":
+        send_owner_alert(f"New order {pi_id} — PAY CJ to ship (${order_total:.2f})",
+                         f"<p>A customer paid. The CJ order is created but <b>unpaid</b> — "
+                         f"it will not ship until you pay it in the CJ dashboard.</p>"
+                         f"<p><b>CJ order:</b> {cj_result.get('orderId','?')} · "
+                         f"<b>Cost:</b> ${prod_cost:.2f} · <b>Est. profit:</b> ${est_profit:.2f}</p>"
+                         f"<p><b>Customer:</b> {base['customer']} → {base['dest']}</p>")
     log_order({**base, "status": pay_status,        # awaiting tracking from CJ
                "cj_order_id": cj_order_id,
                "supplier_cost": prod_cost,          # shown in the pay report
