@@ -444,7 +444,9 @@ function cartItems(){
     return {k, e, p};
   }).filter(x=>x.p);
 }
-function lineUnit(x){ return x.e.price || x.p.retail_price; }
+/* Unit price shown in the cart. During the sitewide sale, prices are reduced
+   automatically (matching the product cards and the server-side quote). */
+function lineUnit(x){ const base = x.e.price || x.p.retail_price; return saleOn() ? +(base*(1-SALE.pct)).toFixed(2) : base; }
 function cartTotal(){ return cartItems().reduce((s,x)=>s+lineUnit(x)*x.e.qty,0); }
 
 function updateCartUI(){
@@ -585,15 +587,9 @@ function openCheckout(){
   document.getElementById('overlay').classList.remove('hidden');
   document.getElementById('checkout').classList.remove('translate-x-full');
   autofill();
-  // During the launch sale, auto-apply the sale code so the checkout total
-  // matches the sale prices shown on the products (unless the shopper already
-  // entered a code, e.g. a signup WELCOME15).
-  if(saleOn() && !couponCode){
-    couponCode = SALE.code;
-    const ci = document.getElementById('couponInput'); if(ci) ci.value = SALE.code;
-  }
-  // Re-run the quote every time the drawer opens so shipping/tax/total always
-  // reflect the current cart + saved address (instead of a stale prior quote).
+  // The sitewide sale is baked into prices automatically — no code needed. The
+  // promo box stays free for real coupons (e.g. WELCOME15). Re-run the quote so
+  // shipping/tax/total reflect the current cart + saved address.
   scheduleQuote();
 }
 function closeCheckout(){
