@@ -6,21 +6,19 @@ Used by both the sync engine (to write products.json) and the server
 and nowhere else so the storefront, the sync job, and the checkout can
 never disagree about what a product costs.
 
-RISK-ADJUSTED MODEL ("profitable in aggregate"):
+TRANSPARENT PRICE BUILD (sticker):
 
-    retail = max(
-        # percentage path — profit target + pre-funded loss provision,
-        # grossed up so the gateway fee (taken on the FINAL price) is covered
-        cost * (1 + profit_target + loss_provision_rate) / (1 - gateway_fee_rate),
+    sticker = cost
+              × (1 + base_margin)     # your target profit over cost      (e.g. +20%)
+              × (1 + coupon_buffer)   # headroom so a coupon doesn't       (e.g. +15%)
+                                      #   eat into your margin
+              × (1 + markup)          # extra markup the launch promo      (e.g. ×2 = +100%)
+                                      #   is designed to cancel
 
-        # absolute floor — guarantees a DOLLAR cushion even on near-free items
-        (cost + min_profit_per_unit + expected_chargeback_rate * chargeback_fee)
-            / (1 - gateway_fee_rate)
-    )
-
-This makes the STORE profitable across all orders. It does NOT make any
-single chargeback impossible to lose on — nothing can. Keep chargeback_rate
-low with fraud screening and fast/tracked shipping.
+The LAUNCH PROMO (a separate sitewide discount, handled in server.py) then
+knocks a percentage off this sticker at display + checkout. So with the
+defaults, a 50% promo brings the price back to cost × 1.20 × 1.15 = 1.38×
+cost, and a 15% coupon on top uses up the coupon buffer.
 """
 
 from dataclasses import dataclass
@@ -29,34 +27,27 @@ import math
 
 @dataclass
 class PricingConfig:
-    gateway_fee_rate: float = 0.03
-    profit_target: float = 0.15
-    loss_provision_rate: float = 0.08
-    min_profit_per_unit: float = 7.00
-    expected_return_rate: float = 0.06        # informational / reporting
-    expected_chargeback_rate: float = 0.01
-    chargeback_fee: float = 20.00
+    base_margin: float = 0.20        # target profit over cost
+    coupon_buffer: float = 0.15      # headroom for a coupon to consume
+    markup: float = 1.00             # extra markup the launch promo cancels (100%)
+    gateway_fee_rate: float = 0.03   # used to gross up pass-through shipping
 
     @classmethod
     def from_store(cls, store: dict) -> "PricingConfig":
         return cls(
+            # `profit_target` kept as a fallback so older configs still load.
+            base_margin=store.get("base_margin", store.get("profit_target", 0.20)),
+            coupon_buffer=store.get("coupon_buffer", 0.15),
+            markup=store.get("markup", 1.00),
             gateway_fee_rate=store.get("gateway_fee_rate", 0.03),
-            profit_target=store.get("profit_target", 0.15),
-            loss_provision_rate=store.get("loss_provision_rate", 0.08),
-            min_profit_per_unit=store.get("min_profit_per_unit", 7.00),
-            expected_return_rate=store.get("expected_return_rate", 0.06),
-            expected_chargeback_rate=store.get("expected_chargeback_rate", 0.01),
-            chargeback_fee=store.get("chargeback_fee", 20.00),
         )
 
 
 def retail_price(cost: float, cfg: PricingConfig) -> float:
-    """Risk-adjusted retail price for a given supplier cost."""
-    pct = cost * (1 + cfg.profit_target + cfg.loss_provision_rate) / (1 - cfg.gateway_fee_rate)
-    floor = (cost + cfg.min_profit_per_unit
-             + cfg.expected_chargeback_rate * cfg.chargeback_fee) / (1 - cfg.gateway_fee_rate)
-    # ceil to the cent so rounding never dips below the floor
-    return math.ceil(max(pct, floor) * 100) / 100
+    """Sticker price = cost + profit margin + coupon buffer, then marked up.
+    The launch promo (applied in the quote) discounts this at checkout."""
+    sticker = cost * (1 + cfg.base_margin) * (1 + cfg.coupon_buffer) * (1 + cfg.markup)
+    return math.ceil(sticker * 100) / 100   # ceil to the cent
 
 
 def gross_up(amount: float, gateway_fee_rate: float = 0.03) -> float:
@@ -67,6 +58,9 @@ def gross_up(amount: float, gateway_fee_rate: float = 0.03) -> float:
 
 if __name__ == "__main__":
     cfg = PricingConfig()
-    for c in (1.20, 12.40, 15.75, 22.00, 38.50):
+    for c in (1.20, 9.78, 15.75, 31.20):
         r = retail_price(c, cfg)
-        print(f"cost ${c:>6.2f} -> retail ${r:>6.2f}  (gross cushion ${r - c:>5.2f})")
+        promo = round(r * 0.5, 2)              # after a 50% launch promo
+        coup = round(promo * 0.85, 2)          # after a 15% coupon on top
+        print(f"cost ${c:>6.2f} -> sticker ${r:>7.2f} | promo ${promo:>6.2f} "
+              f"| +coupon ${coup:>6.2f} ({round((coup-c)/c*100)}% over cost)")
