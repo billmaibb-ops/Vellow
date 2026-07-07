@@ -30,8 +30,6 @@ import re
 import time
 from pathlib import Path
 
-import requests
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -142,6 +140,48 @@ SHIPPING_MARKUP = float(os.environ.get("SHIPPING_MARKUP", "1.20"))  # +20%
 CJ_AUTO_PAY = os.environ.get("CJ_AUTO_PAY", "").strip().lower() in ("1", "true", "yes", "on")
 
 # ---------------------------------------------------------------------------
+# Coupons — a code grants a percentage off the product subtotal (not tax or
+# shipping). Applied server-side in the quote + hold so a customer can't fake a
+# discount. Configure codes via env COUPONS_JSON (a JSON object) to add/change
+# them in Render without a redeploy; otherwise these defaults apply. A % off a
+# GENUINE listed price is a legitimate promotion — keep any deep "sale" code
+# time-limited (set "expires") and never advertise a permanent sitewide sale.
+# ---------------------------------------------------------------------------
+def _load_coupons() -> dict:
+    raw = os.environ.get("COUPONS_JSON", "").strip()
+    if raw:
+        try:
+            return {str(k).upper(): v for k, v in json.loads(raw).items()}
+        except Exception as e:  # noqa: BLE001
+            print(f"[coupons] bad COUPONS_JSON, using defaults: {e}")
+    return {
+        "WELCOME15": {"pct": 0.15},   # email-signup, first-order discount
+        "SALE50":    {"pct": 0.50},   # for GENUINE, time-limited sales only
+    }
+COUPONS = _load_coupons()
+WELCOME_CODE = os.environ.get("WELCOME_CODE", "WELCOME15")
+SIGNUPS_LOG = Path(os.environ.get("SIGNUPS_LOG", str(HERE / "signups.jsonl")))
+
+def resolve_coupon(code):
+    """Return {'code','pct'} for a valid coupon, else None. Honors an optional
+    'expires' (YYYY-MM-DD) and hard-caps any single discount at 90% for safety."""
+    if not code:
+        return None
+    c = COUPONS.get(str(code).strip().upper())
+    if not isinstance(c, dict):
+        return None
+    exp = c.get("expires")
+    if exp and time.strftime("%Y-%m-%d", time.gmtime()) > str(exp):
+        return None
+    try:
+        pct = max(0.0, min(float(c.get("pct", 0)), 0.90))
+    except (TypeError, ValueError):
+        return None
+    if pct <= 0:
+        return None
+    return {"code": str(code).strip().upper(), "pct": pct}
+
+# ---------------------------------------------------------------------------
 # Transactional email (Resend). Set RESEND_API_KEY in the Render env to enable.
 # EMAIL_FROM should be a verified sender once you have a domain; until then the
 # Resend onboarding address works for testing (deliverability is limited).
@@ -149,8 +189,6 @@ CJ_AUTO_PAY = os.environ.get("CJ_AUTO_PAY", "").strip().lower() in ("1", "true",
 # ---------------------------------------------------------------------------
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 EMAIL_FROM = os.environ.get("EMAIL_FROM", "Vellow <onboarding@resend.dev>")
-# Owner alert address — new-order / CJ-failure notifications. Set OWNER_EMAIL on Render.
-OWNER_EMAIL = os.environ.get("OWNER_EMAIL", "")
 STORE_URL = os.environ.get("STOREFRONT_ORIGIN", "https://vellow-five.vercel.app")
 
 # CJ order page the owner dashboard links to when paying an order (report only;
@@ -176,14 +214,6 @@ def send_email(to: str, subject: str, html: str) -> bool:
     except Exception as e:  # noqa: BLE001 — email must never break the order
         print(f"[email] error: {e}")
         return False
-
-
-def send_owner_alert(subject: str, html: str) -> bool:
-    """Notify the store owner (manual-pay workflow: owner must know fast)."""
-    if not OWNER_EMAIL:
-        print(f"[owner-alert] skipped (OWNER_EMAIL not set): {subject}")
-        return False
-    return send_email(OWNER_EMAIL, subject, _email_shell(html))
 
 
 def _email_shell(inner: str) -> str:
@@ -312,7 +342,7 @@ def live_unit_price(cj_client, p: dict, vid: str | None, cfg) -> float:
     return retail_price(cost, cfg) if cost else line_price(p, vid)
 
 
-def build_quote(catalog: dict, items: list, shipping: dict) -> dict:
+def build_quote(catalog: dict, items: list, shipping: dict, coupon_code=None) -> dict:
     """The authoritative purchase-time check. For every line, hit CJ live for
     current price + stock, then get the real CJ shipping cost to the address,
     and add destination tax. Returns the full breakdown the customer pays:
@@ -390,11 +420,20 @@ def build_quote(catalog: dict, items: list, shipping: dict) -> dict:
         ship_name = "Standard shipping (estimate)"
 
     rate = tax_rate_for(state, store)
-    tax = round(subtotal * rate, 2)
-    total = round(subtotal + tax + shipping_cost, 2)
+    # Coupon: percentage off the product subtotal only (not tax/shipping).
+    # Tax is then computed on what the customer actually pays after the discount.
+    coupon = resolve_coupon(coupon_code)
+    discount = round(subtotal * coupon["pct"], 2) if coupon else 0.0
+    disc_subtotal = round(subtotal - discount, 2)
+    tax = round(disc_subtotal * rate, 2)
+    total = round(disc_subtotal + tax + shipping_cost, 2)
     return {
         "lines": lines, "problems": problems,
         "subtotal": round(subtotal, 2),
+        "discount": discount,
+        "coupon": coupon["code"] if coupon else None,
+        "coupon_pct": coupon["pct"] if coupon else 0,
+        "coupon_invalid": bool(coupon_code) and coupon is None,
         "tax": tax, "tax_rate": rate,
         "shipping": round(shipping_cost, 2),
         "shipping_name": ship_name, "shipping_days": ship_days,
@@ -410,7 +449,8 @@ def quote():
     if cj is None:
         return jsonify(ok=False, reason="Live pricing not configured (CJ_API_KEY missing)."), 503
     body = request.get_json(force=True)
-    q = build_quote(load_catalog(), body.get("items", []), body.get("shipping", {}))
+    q = build_quote(load_catalog(), body.get("items", []), body.get("shipping", {}),
+                    body.get("coupon"))
     return jsonify(ok=not q["problems"], **q)
 
 
@@ -427,11 +467,12 @@ def create_hold():
     body = request.get_json(force=True)
     catalog = load_catalog()
 
-    q = build_quote(catalog, body.get("items", []), body.get("shipping", {}))
+    q = build_quote(catalog, body.get("items", []), body.get("shipping", {}),
+                    body.get("coupon"))
     if q["problems"]:
         return jsonify(ok=False, reason="; ".join(q["problems"])), 409
 
-    amount = round(q["total"] * 100)  # Stripe uses integer cents
+    amount = round(q["total"] * 100)  # Stripe uses integer cents (discount included)
     intent = stripe.PaymentIntent.create(
         amount=amount,
         currency=catalog["store"].get("currency", "usd").lower(),
@@ -443,8 +484,27 @@ def create_hold():
     )
     return jsonify(ok=True, client_secret=intent.client_secret,
                    payment_intent=intent.id, amount=amount / 100,
-                   subtotal=q["subtotal"], tax=q["tax"],
-                   shipping=q["shipping"], total=q["total"])
+                   subtotal=q["subtotal"], discount=q["discount"], coupon=q["coupon"],
+                   tax=q["tax"], shipping=q["shipping"], total=q["total"])
+
+
+# ---------------------------------------------------------------------------
+@app.post("/api/signup")
+def signup():
+    """Email capture in exchange for the welcome discount code. Stores the email
+    with an opt-in timestamp and returns the code. Legitimate lead capture:
+    a real discount for a real email, with consent to be contacted."""
+    body = request.get_json(force=True)
+    email = (body.get("email") or "").strip().lower()
+    if "@" not in email or "." not in email.split("@")[-1]:
+        return jsonify(ok=False, reason="Please enter a valid email address."), 400
+    try:
+        with open(SIGNUPS_LOG, "a") as f:
+            f.write(json.dumps({"email": email, "opt_in": True,
+                                "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}) + "\n")
+    except Exception as e:  # noqa: BLE001 — capture must never 500
+        print(f"[signup] could not record {email}: {e}")
+    return jsonify(ok=True, code=WELCOME_CODE)
 
 
 # ---------------------------------------------------------------------------
@@ -571,11 +631,6 @@ def verify_and_capture():
         # retry + alert. The order shows in the admin dashboard as "failed to CJ".
         print(f"[cj-order-failed] {e}")  # surface CJ's reason in the logs
         # Shows on the owner dashboard as "CJ failed" — needs manual placement.
-        send_owner_alert(f"ACTION NEEDED: CJ order FAILED for {pi_id}",
-                         f"<p>Payment captured but the CJ order could not be created.</p>"
-                         f"<p><b>PI:</b> {pi_id} · <b>Total:</b> ${order_total:.2f} · "
-                         f"<b>Customer:</b> {base['customer']} ({base['email']})</p>"
-                         f"<p>Reason: {e}</p><p>Retry from the admin dashboard.</p>")
         log_order({**base, "status": "paid_cj_failed", "reason": str(e),
                    "supplier_cost": prod_cost})
         return jsonify(ok=True, captured=True, fulfilled=False,
@@ -603,13 +658,6 @@ def verify_and_capture():
     # Orders left unpaid surface on the OWNER's admin dashboard as an "awaiting
     # payment" report (status "order_placed") — the owner is notified there, not
     # by email. Customer emails (confirmation + tracking) are separate.
-    if pay_status == "order_placed":
-        send_owner_alert(f"New order {pi_id} — PAY CJ to ship (${order_total:.2f})",
-                         f"<p>A customer paid. The CJ order is created but <b>unpaid</b> — "
-                         f"it will not ship until you pay it in the CJ dashboard.</p>"
-                         f"<p><b>CJ order:</b> {cj_result.get('orderId','?')} · "
-                         f"<b>Cost:</b> ${prod_cost:.2f} · <b>Est. profit:</b> ${est_profit:.2f}</p>"
-                         f"<p><b>Customer:</b> {base['customer']} → {base['dest']}</p>")
     log_order({**base, "status": pay_status,        # awaiting tracking from CJ
                "cj_order_id": cj_order_id,
                "supplier_cost": prod_cost,          # shown in the pay report
@@ -754,8 +802,12 @@ def _order_ts(o: dict) -> float:
         return 0.0
 
 
-def _build_summary_payload():
-    """Compute the full owner snapshot (orders, money, Stripe, CJ, catalog)."""
+@app.get("/api/admin/summary")
+def admin_summary():
+    """Everything the owner dashboard needs in one call."""
+    if not admin_ok():
+        return jsonify(ok=False, reason="unauthorized"), 401
+
     catalog = load_catalog()
     store = catalog["store"]
     products = catalog["products"]
@@ -855,7 +907,7 @@ def _build_summary_payload():
     if out_of_stock > len(products) * 0.3:
         alerts.append({"level": "warning", "msg": f"{out_of_stock} products out of stock ({round(out_of_stock/max(1,len(products))*100)}% of catalog)"})
 
-    return dict(
+    return jsonify(
         ok=True,
         generated_at=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         store={"name": store.get("name"), "url": os.environ.get("STOREFRONT_ORIGIN", "")},
@@ -889,91 +941,6 @@ def _build_summary_payload():
                          for p in low_stock[:25]],
         alerts=alerts,
     )
-
-
-@app.get("/api/admin/summary")
-def admin_summary():
-    """Everything the owner dashboard needs in one call."""
-    if not admin_ok():
-        return jsonify(ok=False, reason="unauthorized"), 401
-    return jsonify(_build_summary_payload())
-
-
-def render_daily_report_html(p: dict) -> str:
-    """Render the summary payload as an owner-facing HTML email."""
-    prof = p.get("profit", {})
-    t, w, m = prof.get("today", {}), prof.get("7d", {}), prof.get("30d", {})
-    o = p.get("orders", {})
-    cat = p.get("catalog", {})
-    st = p.get("stripe", {})
-    cj_b = p.get("cj", {})
-    alerts = p.get("alerts", [])
-
-    def money(x): return f"${float(x or 0):,.2f}"
-
-    alert_html = ""
-    if alerts:
-        rows = "".join(
-            f'<div style="padding:8px 12px;margin:4px 0;border-radius:6px;'
-            f'background:{"#fde8e8" if a.get("level")=="danger" else "#fef6e0"};'
-            f'color:{"#a12020" if a.get("level")=="danger" else "#8a6d0f"}">'
-            f'{"&#9888; " if a.get("level")=="danger" else "&#9888; "}{a.get("msg","")}</div>'
-            for a in alerts)
-        alert_html = f'<h3 style="margin:18px 0 6px">Needs your attention</h3>{rows}'
-    else:
-        alert_html = '<p style="color:#3fb96a;font-weight:600">&#10003; No action items today.</p>'
-
-    unpaid = o.get("sent_to_cj", 0)  # order_placed = created in CJ, awaiting your manual pay
-    manual = (f'<div style="padding:10px 12px;margin:8px 0;border-radius:6px;background:#eef3fb;'
-              f'color:#1c3a63"><b>{unpaid}</b> order(s) placed in CJ and awaiting your manual '
-              f'wallet payment to ship. Pay them in the CJ dashboard.</div>') if unpaid else ""
-
-    return (
-        f'<h2 style="margin:0 0 4px">Vellow — Daily Report</h2>'
-        f'<p style="color:#888;margin:0 0 16px">{p.get("generated_at","")} · '
-        f'{p.get("store",{}).get("name","Vellow")}</p>'
-        f'{alert_html}{manual}'
-        f'<h3 style="margin:18px 0 6px">Money (captured orders)</h3>'
-        f'<table style="width:100%;border-collapse:collapse;font-size:14px">'
-        f'<tr style="color:#888;text-align:left"><th>Window</th><th>Orders</th>'
-        f'<th>Revenue</th><th>Profit</th></tr>'
-        f'<tr><td>Today</td><td>{t.get("orders",0)}</td><td>{money(t.get("revenue"))}</td>'
-        f'<td>{money(t.get("profit"))}</td></tr>'
-        f'<tr><td>7 days</td><td>{w.get("orders",0)}</td><td>{money(w.get("revenue"))}</td>'
-        f'<td>{money(w.get("profit"))}</td></tr>'
-        f'<tr><td>30 days</td><td>{m.get("orders",0)}</td><td>{money(m.get("revenue"))}</td>'
-        f'<td>{money(m.get("profit"))}</td></tr></table>'
-        f'<h3 style="margin:18px 0 6px">Order pipeline</h3>'
-        f'<p style="font-size:14px">Placed by buyers: <b>{o.get("placed_by_buyers",0)}</b> · '
-        f'Sent to CJ: <b>{o.get("sent_to_cj",0)}</b> · '
-        f'Tracking emailed: <b>{o.get("tracking_emailed",0)}</b> · '
-        f'Failed to CJ: <b style="color:#a12020">{o.get("failed_to_cj",0)}</b></p>'
-        f'<h3 style="margin:18px 0 6px">Payments &amp; wallet</h3>'
-        f'<p style="font-size:14px">Stripe available: <b>{money(st.get("balance_available"))}</b> · '
-        f'Pending: {money(st.get("balance_pending"))} · '
-        f'Open disputes: <b>{st.get("dispute_open",0)}</b> · '
-        f'Refunds: {st.get("refund_count",0)} ({money(st.get("refund_total"))})<br>'
-        f'CJ wallet: <b>{money(cj_b.get("wallet")) if cj_b.get("wallet") is not None else "n/a"}</b></p>'
-        f'<h3 style="margin:18px 0 6px">Catalog health</h3>'
-        f'<p style="font-size:14px">In stock: <b>{cat.get("in_stock",0)}</b> / '
-        f'{cat.get("total",0)} · Out of stock: {cat.get("out_of_stock",0)} · '
-        f'Low stock: {cat.get("low_stock",0)} · Avg margin: {cat.get("avg_margin_pct",0)}%<br>'
-        f'Last price sync: {cat.get("last_price_sync","?")}</p>'
-    )
-
-
-@app.post("/api/admin/daily-report")
-def admin_daily_report():
-    """Build the owner snapshot, email it to OWNER_EMAIL, and return it.
-    Meant to be hit once a day by a scheduled GitHub Action."""
-    if not admin_ok():
-        return jsonify(ok=False, reason="unauthorized"), 401
-    payload = _build_summary_payload()
-    html = render_daily_report_html(payload)
-    subject = f"Vellow Daily Report — {time.strftime('%b %d', time.gmtime())}"
-    emailed = send_email(OWNER_EMAIL, subject, _email_shell(html)) if OWNER_EMAIL else False
-    return jsonify(ok=True, emailed=emailed, owner_email_set=bool(OWNER_EMAIL),
-                   report=payload)
 
 
 @app.get("/api/admin/orders")
