@@ -6,29 +6,27 @@ Used by both the sync engine (to write products.json) and the server
 and nowhere else so the storefront, the sync job, and the checkout can
 never disagree about what a product costs.
 
-GUARANTEED-MARGIN PRICE BUILD (the MSRP works BACKWARDS from the floor):
+HONEST-PRICE BUILD (no fictitious "was" price):
 
-    Instead of marking a cost up and hoping the promos don't eat the profit,
-    the sticker (MSRP) is *derived* from the profit you must keep and the
-    deepest discount a customer could ever stack:
+    The listed price IS the price. There is no inflated MSRP shown as a
+    struck-through "regular price" — that would be a fictitious former price
+    (FTC 16 CFR 233 / California Bus & Prof Code §17501) and reads as a scam.
 
-        floor   = cost * (1 + min_margin)          # what you must still net
-        worst   = (1 - max_sale_pct) * (1 - max_coupon_pct)   # deepest stack
-        sticker = ceil( floor / worst )
+    The only discount is a genuine, per-customer coupon (e.g. WELCOME15, 15%
+    off a first order). The sticker is sized so that even after that coupon
+    you still net `min_margin` over cost:
 
-    Because the sticker is divided by the worst-case discount, ANY promotion
-    up to that worst case leaves you at or above `min_margin`. A shallower
-    promo (or no coupon) only makes your margin bigger — never smaller.
+        floor   = cost * (1 + min_margin)        # profit you must keep
+        sticker = ceil( floor / (1 - max_coupon_pct) )
 
-    Example (min_margin 10%, max_sale 50%, max_coupon 15%):
-        worst   = 0.50 * 0.85 = 0.425
-        sticker = cost * 1.10 / 0.425 = cost * 2.588
-        - full price, no promo ....... +159% over cost
-        - 50% launch promo, no coupon . +29% over cost
-        - 50% promo + 15% coupon ...... +10% over cost   <- the floor, exactly
+    Example (min_margin 10%, max_coupon 15%):
+        sticker = cost * 1.10 / 0.85 = cost * 1.294
+        - list price ............... +29% over cost
+        - after 15% WELCOME coupon .. +10% over cost   <- the floor, exactly
 
-    To run a DEEPER promo later (say 60% off), just raise `max_sale_pct` to
-    0.60 and every sticker automatically climbs so the 10% floor still holds.
+    NOTE: `max_sale_pct` is retained in the config for reporting only and is
+    NOT applied to the sticker. Run real, time-boxed sales off this honest
+    list price if you want urgency — never a permanent sitewide markdown.
 """
 
 from dataclasses import dataclass
@@ -37,9 +35,9 @@ import math
 
 @dataclass
 class PricingConfig:
-    min_margin: float = 0.10        # profit floor guaranteed AFTER the deepest promo stack
-    max_sale_pct: float = 0.50      # deepest sitewide promo you would ever run
-    max_coupon_pct: float = 0.15    # deepest coupon you would ever issue
+    min_margin: float = 0.10        # profit floor guaranteed after the coupon
+    max_coupon_pct: float = 0.15    # deepest coupon you would ever issue (e.g. WELCOME15)
+    max_sale_pct: float = 0.0       # reporting only — NOT applied to the sticker
     gateway_fee_rate: float = 0.03  # used to gross up pass-through shipping
 
     @classmethod
@@ -47,21 +45,16 @@ class PricingConfig:
         return cls(
             # `base_margin` kept as a fallback so older configs still load.
             min_margin=store.get("min_margin", store.get("base_margin", 0.10)),
-            max_sale_pct=store.get("max_sale_pct", 0.50),
             max_coupon_pct=store.get("max_coupon_pct", 0.15),
+            max_sale_pct=store.get("max_sale_pct", 0.0),
             gateway_fee_rate=store.get("gateway_fee_rate", 0.03),
         )
 
 
-def worst_case_discount(cfg: PricingConfig) -> float:
-    """The deepest multiplier a customer can reach: promo AND coupon stacked."""
-    return (1 - cfg.max_sale_pct) * (1 - cfg.max_coupon_pct)
-
-
 def retail_price(cost: float, cfg: PricingConfig) -> float:
-    """MSRP sized so the deepest promo + coupon stack still nets `min_margin`."""
+    """Honest list price, sized so the WELCOME coupon still nets `min_margin`."""
     floor = cost * (1 + cfg.min_margin)          # profit we must keep
-    sticker = floor / worst_case_discount(cfg)   # divide out the worst-case discount
+    sticker = floor / (1 - cfg.max_coupon_pct)   # so a max coupon lands on the floor
     return math.ceil(sticker * 100) / 100        # ceil to the cent (rounds in your favor)
 
 
@@ -73,10 +66,8 @@ def gross_up(amount: float, gateway_fee_rate: float = 0.03) -> float:
 
 if __name__ == "__main__":
     cfg = PricingConfig()
-    worst = worst_case_discount(cfg)
     for c in (1.20, 9.78, 15.75, 31.20):
         r = retail_price(c, cfg)
-        promo = round(r * (1 - cfg.max_sale_pct), 2)          # after the deepest promo
-        both = round(promo * (1 - cfg.max_coupon_pct), 2)     # promo + coupon stacked
-        print(f"cost ${c:>6.2f} -> MSRP ${r:>7.2f} | promo ${promo:>6.2f} "
-              f"| +coupon ${both:>6.2f}  (floor {round((both-c)/c*100)}% over cost)")
+        coup = round(r * (1 - cfg.max_coupon_pct), 2)     # after the WELCOME coupon
+        print(f"cost ${c:>6.2f} -> list ${r:>7.2f} | after coupon ${coup:>6.2f}  "
+              f"(floor {round((coup-c)/c*100)}% over cost)")

@@ -196,15 +196,15 @@ def mark_coupon_redeemed(code, email):
         print(f"[redeem] could not record {key}: {e}")
 
 # ---------------------------------------------------------------------------
-# Sitewide SALE — a promotion, NOT a coupon. When active, every product's price
-# is reduced by SALE_PCT automatically (baked into the quoted unit price); no
-# code is required. Coupons (e.g. WELCOME15) then apply on top. Keep it dated:
-# after SALE_ENDS it switches off, so the everyday price is never a fiction.
-# Configure in Render env: SALE_ACTIVE, SALE_PCT, SALE_ENDS (YYYY-MM-DD).
+# Sitewide SALE — OFF by default. Prices in products.json are the real everyday
+# prices; the only discount is the genuine WELCOME15 first-order coupon. Do not
+# turn this on as a permanent markdown — an always-on "sale" makes the listed
+# price a fiction (FTC / CA B&P §17501). Only enable for a REAL, dated event,
+# and set SALE_ENDS so it switches itself off. Configure in Render env.
 # ---------------------------------------------------------------------------
-SALE_ACTIVE = os.environ.get("SALE_ACTIVE", "1").strip().lower() in ("1", "true", "yes", "on")
-SALE_PCT = float(os.environ.get("SALE_PCT", "0.50"))
-SALE_ENDS = os.environ.get("SALE_ENDS", "2026-07-20").strip()
+SALE_ACTIVE = os.environ.get("SALE_ACTIVE", "0").strip().lower() in ("1", "true", "yes", "on")
+SALE_PCT = float(os.environ.get("SALE_PCT", "0.0"))
+SALE_ENDS = os.environ.get("SALE_ENDS", "").strip()
 
 def sale_on() -> bool:
     if not SALE_ACTIVE:
