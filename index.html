@@ -39,7 +39,7 @@
 
 <!-- ============ PROMO BAR ============ -->
 <div id="promoBar" class="bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide">
-  Secure, encrypted checkout — your payment information is protected
+  New here? Take 15% off your first order with code <span class="font-bold">WELCOME15</span>
 </div>
 
 <!-- ============ HEADER ============ -->
@@ -121,13 +121,6 @@
     </button>
   </div>
 
-  <!-- optional ad slot (hidden unless enabled in config) -->
-  <div id="adSlot" class="hidden mt-10">
-    <div class="text-[10px] uppercase tracking-wide text-gray-400 mb-1 text-center">Advertisement</div>
-    <div id="adUnit" class="w-full min-h-[90px] bg-gray-100 rounded flex items-center justify-center text-gray-400 text-sm">
-      Ad unit (728×90) — configure slot in products.json → store.ads
-    </div>
-  </div>
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -361,31 +354,21 @@ async function load(){
   renderPills();
   updateCartUI();
   if (new URLSearchParams(location.search).get('cart') === '1') openCheckout();
-  // Show the footer ad slot only if ads are enabled in config.
-  if(data.store.ads && data.store.ads.enabled){
-    document.getElementById('adSlot').classList.remove('hidden');
-    // TODO: inject your real ad-network script here using data.store.ads.slot_id
-  }
   render();
 }
 
 function money(n){ return '$' + n.toFixed(2); }
 
-/* Launch sale — a GENUINE, dated promotion. While active the store shows the
-   sale price and auto-applies the code at checkout; after endsISO it turns off
-   on its own (the server-side coupon expires the same day). Do NOT make this
-   permanent — an always-on "sale" turns the sticker into a fictitious price. */
-const SALE = { active:true, code:'SALE50', pct:0.50, endsISO:'2026-07-20', endsLabel:'July 20' };
-function saleOn(){ return SALE.active && new Date().toISOString().slice(0,10) <= SALE.endsISO; }
+/* No sitewide "sale". Prices shown are the real, everyday prices. The only
+   discount is the genuine WELCOME15 first-order coupon (applied at checkout).
+   Never show a struck-through "was" price that was never actually charged —
+   that is a fictitious former price (FTC / CA B&P §17501). */
+const SALE = { active:false, code:'', pct:0, endsISO:'', endsLabel:'' };
+function saleOn(){ return false; }
 function updateSaleBanner(){
   const bar = document.getElementById('promoBar'); if(!bar) return;
-  if(saleOn()){
-    bar.className = 'bg-urgency text-white text-[11px] sm:text-xs font-bold text-center py-2 px-4 tracking-wide';
-    bar.textContent = 'LAUNCH SALE — ' + Math.round(SALE.pct*100) + '% OFF EVERYTHING · ends ' + SALE.endsLabel + ' · discount applied at checkout';
-  } else {
-    bar.className = 'bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide';
-    bar.textContent = 'Secure, encrypted checkout — your payment information is protected';
-  }
+  bar.className = 'bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide';
+  bar.innerHTML = 'New here? Take 15% off your first order with code <span class="font-bold">WELCOME15</span>';
 }
 
 function renderPills(){

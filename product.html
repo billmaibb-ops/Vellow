@@ -26,7 +26,7 @@
 
 <!-- ============ PROMO BAR ============ -->
 <div id="promoBar" class="bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide">
-  Secure, encrypted checkout — your payment information is protected
+  New here? Take 15% off your first order with code <span class="font-bold">WELCOME15</span>
 </div>
 
 <!-- ============ HEADER ============ -->
@@ -176,25 +176,19 @@ function refreshCount(){ $('cartCount').textContent = cartCount(); }
 
 let product = null, detail = null, selVid = '', selName = '', selPrice = 0, qty = 1;
 
-/* Sitewide launch sale — must match index.html so the listing and product
-   page show the same price. Prices are automatically reduced while active. */
-const SALE = { active:true, pct:0.50, endsISO:'2026-07-20', endsLabel:'July 20' };
-function saleOn(){ return SALE.active && new Date().toISOString().slice(0,10) <= SALE.endsISO; }
+/* No sitewide sale — the listed price is the real everyday price (must match
+   index.html). The only discount is the genuine WELCOME15 first-order coupon. */
+const SALE = { active:false, pct:0, endsISO:'', endsLabel:'' };
+function saleOn(){ return false; }
 
-/* Price build — must match backend/pricing.py. The MSRP is derived from the
-   guaranteed margin floor and the deepest promo+coupon stack, so any promotion
-   leaves at least min_margin. Computed from cost so variant prices stay correct
-   even if a cached detail file was written with old config. */
-let PCFG = { min:0.10, maxSale:0.50, maxCoupon:0.15 };
+/* Price build — must match backend/pricing.py. Honest list price sized so the
+   WELCOME coupon still nets min_margin. Computed from cost so variant prices
+   stay correct even if a cached detail file was written with old config. */
+let PCFG = { min:0.10, maxCoupon:0.15 };
 function priceFromCost(c){
   if (!c) return 0;
-  const worst = (1-PCFG.maxSale) * (1-PCFG.maxCoupon);
-  return Math.ceil(c * (1+PCFG.min) / worst * 100) / 100;
+  return Math.ceil(c * (1+PCFG.min) / (1-PCFG.maxCoupon) * 100) / 100;
 }
-(function(){ const bar=document.getElementById('promoBar'); if(bar && saleOn()){
-  bar.className='bg-urgency text-white text-[11px] sm:text-xs font-bold text-center py-2 px-4 tracking-wide';
-  bar.textContent='LAUNCH SALE — '+Math.round(SALE.pct*100)+'% OFF EVERYTHING · ends '+SALE.endsLabel;
-}})();
 
 function toast(msg){
   const t = $('toast'); t.textContent = msg; t.classList.remove('hidden');
@@ -296,7 +290,7 @@ async function init(){
   const res = await fetch('products.json?_=' + Date.now());
   const data = await res.json();
   const s = data.store || {};
-  PCFG = { min: s.min_margin ?? s.base_margin ?? 0.10, maxSale: s.max_sale_pct ?? 0.50, maxCoupon: s.max_coupon_pct ?? 0.15 };
+  PCFG = { min: s.min_margin ?? s.base_margin ?? 0.10, maxCoupon: s.max_coupon_pct ?? 0.15 };
   product = data.products.find(p => p.id === id);
   if (!product){ $('notFound').classList.remove('hidden'); return; }
 

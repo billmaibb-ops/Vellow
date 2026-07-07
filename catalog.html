@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vellow — CJ Catalog Browser</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .spin{animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+</style>
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased">
+
+<!-- ============ HEADER ============ -->
+<div class="bg-[#0C2340] text-white text-xs font-semibold text-center py-1.5 tracking-wide">Internal catalog browser — not a customer-facing page</div>
+<header class="bg-[#0C2340] text-white sticky top-0 z-40 shadow">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4 flex-wrap">
+    <a href="index.html" class="text-2xl font-black tracking-tight">VEL<span class="text-[#FF4500]">LOW</span></a>
+    <span class="text-xs bg-gray-700 rounded px-2 py-0.5 uppercase tracking-wide">CJ Catalog</span>
+    <div class="flex-1 min-w-[200px]">
+      <input id="search" type="text" placeholder="Search the entire CJ catalog… (empty = browse everything)"
+        class="w-full rounded-md px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#FF4500] bg-white" />
+    </div>
+    <select id="category" class="rounded-md px-3 py-2 text-gray-900 text-sm max-w-[220px]">
+      <option value="">All categories</option>
+    </select>
+    <label class="flex items-center gap-1.5 text-sm cursor-pointer select-none">
+      <input id="usOnly" type="checkbox" class="accent-[#FF4500]" /> US warehouse
+    </label>
+    <a href="index.html" class="bg-[#FF4500] hover:bg-[#e63e00] text-white font-semibold px-4 py-2 rounded-md text-sm">← Storefront</a>
+  </div>
+  <div class="bg-[#081a30] text-xs text-blue-200">
+    <div class="max-w-7xl mx-auto px-4 py-1.5 flex flex-wrap gap-x-6 gap-y-1">
+      <span id="totalStamp">Loading catalog…</span>
+      <span>Prices shown are YOUR retail (risk-adjusted markup applied server-side)</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ BANNER (demo / error) ============ -->
+<div id="banner" class="hidden max-w-7xl mx-auto px-4 pt-4">
+  <div class="bg-amber-100 border border-amber-300 text-amber-900 text-sm rounded-md px-4 py-3">
+    <b>Demo mode.</b> The order backend isn't reachable at <code id="apiShown"></code>.
+    Start it with <code>python backend/server.py</code> (needs <code>CJ_API_KEY</code> in env)
+    to browse the live CJ catalog. Showing sample data so you can see the layout.
+  </div>
+</div>
+
+<!-- ============ GRID ============ -->
+<main class="max-w-7xl mx-auto px-4 py-6">
+  <div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+  <p id="emptyState" class="hidden text-center text-gray-500 py-16">No products match.</p>
+  <div id="sentinel" class="h-10"></div>
+  <div id="loader" class="hidden flex justify-center py-8">
+    <div class="spin h-8 w-8 border-4 border-gray-300 border-t-[#FF4500] rounded-full"></div>
+  </div>
+</main>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm px-4 py-2 rounded-md shadow-lg z-50"></div>
+
+<script>
+/* ------------------------------------------------------------------ config */
+// Backend base URL. Override without redeploying: ?api=https://your-backend
+const _apiParam = new URLSearchParams(location.search).get('api');
+if (_apiParam) localStorage.setItem('tv_api', _apiParam);
+const API = _apiParam || localStorage.getItem('tv_api') || 'http://localhost:8000';
+const PAGE_SIZE = 40;
+
+/* ------------------------------------------------------------------ state */
+let page = 1, total = 0, loading = false, done = false, demo = false;
+let q = '', category = '', usOnly = false;
+let seq = 0;                       // guards against out-of-order responses
+
+const $ = id => document.getElementById(id);
+const fmt = n => n == null ? '—' : '$' + Number(n).toFixed(2);
+
+/* ------------------------------------------------------------------ fetch */
+async function fetchPage() {
+  if (loading || done) return;
+  loading = true; $('loader').classList.remove('hidden');
+  const mySeq = ++seq;
+  try {
+    const u = new URL(API + '/api/catalog');
+    u.searchParams.set('page', page); u.searchParams.set('size', PAGE_SIZE);
+    if (q) u.searchParams.set('q', q);
+    if (category) u.searchParams.set('category', category);
+    if (usOnly) u.searchParams.set('us', '1');
+    const r = await fetch(u); const body = await r.json();
+    if (mySeq !== seq) return;                 // stale response, drop it
+    if (!body.ok) throw new Error(body.reason || 'catalog error');
+    total = body.total;
+    render(body.items);
+    if (page * PAGE_SIZE >= total || body.items.length === 0) done = true;
+    page++;
+    $('totalStamp').textContent =
+      total.toLocaleString() + ' products in CJ catalog' + (q || category ? ' (filtered)' : '');
+  } catch (e) {
+    if (mySeq !== seq) return;
+    enterDemoMode();
+  } finally {
+    if (mySeq === seq) { loading = false; $('loader').classList.add('hidden'); }
+  }
+}
+
+/* ------------------------------------------------------------------ demo */
+function enterDemoMode() {
+  if (demo) { done = true; return; }
+  demo = true; done = true;
+  $('banner').classList.remove('hidden');
+  $('apiShown').textContent = API;
+  $('totalStamp').textContent = 'Demo data — backend offline';
+  const cats = ['Electronics','Home','Office','Beauty','Pets','Outdoors','Toys','Kitchen'];
+  const items = Array.from({length: 20}, (_, i) => ({
+    pid: 'DEMO-' + (1000 + i),
+    title: ['Wireless Earbuds','LED Strip Lights','Laptop Stand','Phone Ring Holder',
+            'Mini Projector','Pet Grooming Brush','Insulated Tumbler','Desk Organizer',
+            'Car Phone Mount','Resistance Bands'][i % 10] + ' — demo item ' + (i + 1),
+    image: 'https://placehold.co/400x400/1f2937/ffffff?text=CJ+' + (i + 1),
+    category: cats[i % cats.length],
+    source_cost: +(2 + i * 1.7).toFixed(2),
+    retail_price: +((2 + i * 1.7) * 1.3 + 7.5).toFixed(2),
+    listed_num: 5000 - i * 180,
+    warehouses: i % 3 === 0 ? 'US' : 'CN',
+  }));
+  render(items);
+}
+
+/* ------------------------------------------------------------------ render */
+function render(items) {
+  const grid = $('grid');
+  for (const p of items) {
+    const card = document.createElement('div');
+    card.className = 'bg-white rounded-lg border border-gray-200 hover:shadow-md transition overflow-hidden flex flex-col';
+    card.innerHTML = `
+      <div class="aspect-square bg-gray-200">
+        <img loading="lazy" class="w-full h-full object-cover" alt="">
+      </div>
+      <div class="p-3 flex flex-col gap-1 flex-1">
+        <div class="text-sm font-medium line-clamp-2 min-h-[2.5rem]" data-t></div>
+        <div class="text-xs text-gray-500" data-c></div>
+        <div class="mt-auto pt-1 flex items-baseline justify-between">
+          <span class="font-bold text-base text-[#0C2340]" data-r></span>
+          <span class="text-xs text-gray-400" data-s></span>
+        </div>
+        <div class="text-[11px] text-gray-400" data-m></div>
+        <button data-add class="mt-1 w-full bg-[#FF4500] hover:bg-[#e63e00] text-white text-xs font-bold py-1.5 rounded">
+          + Add to my store
+        </button>
+      </div>`;
+    card.querySelector('img').src = p.image || 'https://placehold.co/400x400/e5e7eb/9ca3af?text=No+image';
+    card.querySelector('[data-t]').textContent = p.title;
+    card.querySelector('[data-c]').textContent = p.category || '';
+    card.querySelector('[data-r]').textContent = fmt(p.retail_price);
+    card.querySelector('[data-s]').textContent = p.source_cost ? 'cost ' + fmt(p.source_cost) : '';
+    card.querySelector('[data-m]').textContent =
+      (p.listed_num ? p.listed_num.toLocaleString() + ' sellers listed' : '') +
+      (p.warehouses ? ' · ' + p.warehouses : '');
+    card.querySelector('[data-add]').onclick = () => addToStore(p, card.querySelector('[data-add]'));
+    grid.appendChild(card);
+  }
+  $('emptyState').classList.toggle('hidden', grid.children.length > 0);
+}
+
+/* ------------------------------------------------------------------ watchlist */
+async function addToStore(p, btn) {
+  btn.disabled = true; btn.textContent = 'Adding…';
+  try {
+    if (demo) throw new Error('demo');
+    const r = await fetch(API + '/api/watchlist/add', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({pid: p.pid, title: p.title, category: p.category}),
+    });
+    const body = await r.json();
+    if (!body.ok) throw new Error(body.reason);
+    btn.textContent = body.added ? '✓ On watchlist' : 'Already listed';
+    btn.className = btn.className.replace('bg-[#FF4500] hover:bg-[#e63e00]', 'bg-green-600');
+    toast(body.added
+      ? 'Added. Run sync_engine.py --mode daily to publish it to the storefront.'
+      : 'Already on your watchlist.');
+  } catch (e) {
+    btn.disabled = false; btn.textContent = '+ Add to my store';
+    toast(demo ? 'Demo mode — start the backend to add items.' : 'Failed: ' + e.message);
+  }
+}
+
+function toast(msg) {
+  const t = $('toast'); t.textContent = msg; t.classList.remove('hidden');
+  clearTimeout(t._h); t._h = setTimeout(() => t.classList.add('hidden'), 3500);
+}
+
+/* ------------------------------------------------------------------ categories */
+async function loadCategories() {
+  try {
+    const r = await fetch(API + '/api/catalog/categories');
+    const body = await r.json();
+    if (!body.ok) return;
+    const sel = $('category');
+    // CJ returns a 3-level tree; flatten the first two levels.
+    for (const l1 of body.categories || []) {
+      const og = document.createElement('optgroup');
+      og.label = l1.categoryFirstNameEn || l1.categoryFirstName || 'Category';
+      for (const l2 of l1.categoryFirstList || []) {
+        const o = document.createElement('option');
+        o.value = l2.categorySecondId || l2.categoryId || '';
+        o.textContent = l2.categorySecondNameEn || l2.categorySecondName || '';
+        if (o.value) og.appendChild(o);
+      }
+      if (og.children.length) sel.appendChild(og);
+    }
+  } catch (_) { /* demo mode handles the banner */ }
+}
+
+/* ------------------------------------------------------------------ reset + events */
+function reset() {
+  page = 1; total = 0; done = false; demo = false; seq++;
+  $('grid').innerHTML = ''; $('banner').classList.add('hidden');
+  fetchPage();
+}
+
+let debounce;
+$('search').addEventListener('input', e => {
+  clearTimeout(debounce);
+  debounce = setTimeout(() => { q = e.target.value.trim(); reset(); }, 400);
+});
+$('category').addEventListener('change', e => { category = e.target.value; reset(); });
+$('usOnly').addEventListener('change', e => { usOnly = e.target.checked; reset(); });
+
+new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) fetchPage();
+}, {rootMargin: '600px'}).observe($('sentinel'));
+
+/* ------------------------------------------------------------------ go */
+loadCategories();
+fetchPage();
+</script>
+</body>
+</html>
