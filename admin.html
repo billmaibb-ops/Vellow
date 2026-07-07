@@ -208,9 +208,9 @@ function render(j){
   // pricing config
   const pr = j.pricing;
   $('pricingBlock').innerHTML =
-    card('Base margin', pr.base_margin_pct+'%','profit over cost') +
-    card('Coupon buffer', pr.coupon_buffer_pct+'%','headroom') +
-    card('Markup', pr.markup_pct+'%','promo cancels this') +
+    card('Margin floor', pr.min_margin_pct+'%','guaranteed after promos') +
+    card('Max promo', pr.max_sale_pct+'%','deepest sitewide sale') +
+    card('Max coupon', pr.max_coupon_pct+'%','deepest coupon') +
     card('Launch sale', (pr.launch_sale_pct? pr.launch_sale_pct+'% off':'off'),'sitewide') +
     card('Shipping markup', pr.shipping_markup_pct+'%','') +
     card('Stock buffer', num(pr.safety_stock_buffer),'units');
