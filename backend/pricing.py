@@ -27,7 +27,7 @@ import math
 
 @dataclass
 class PricingConfig:
-    base_margin: float = 0.20        # target profit over cost
+    base_margin: float = 0.10        # target profit over cost
     coupon_buffer: float = 0.15      # headroom for a coupon to consume
     markup: float = 1.00             # extra markup the launch promo cancels (100%)
     gateway_fee_rate: float = 0.03   # used to gross up pass-through shipping
@@ -36,7 +36,7 @@ class PricingConfig:
     def from_store(cls, store: dict) -> "PricingConfig":
         return cls(
             # `profit_target` kept as a fallback so older configs still load.
-            base_margin=store.get("base_margin", store.get("profit_target", 0.20)),
+            base_margin=store.get("base_margin", store.get("profit_target", 0.10)),
             coupon_buffer=store.get("coupon_buffer", 0.15),
             markup=store.get("markup", 1.00),
             gateway_fee_rate=store.get("gateway_fee_rate", 0.03),
