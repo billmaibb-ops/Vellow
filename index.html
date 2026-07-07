@@ -100,8 +100,15 @@
 <!-- ============ PRODUCT GRID ============ -->
 <main class="max-w-7xl mx-auto px-4 py-8">
   <div class="flex items-baseline justify-between flex-wrap gap-2 mb-4">
-    <h2 class="text-lg font-bold text-ink">Trending now</h2>
-    <span id="resultCount" class="text-sm text-gray-500"></span>
+    <h2 id="collTitle" class="text-lg font-bold text-ink">Trending now</h2>
+    <div class="flex items-center gap-3">
+      <span id="resultCount" class="text-sm text-gray-500"></span>
+      <select id="sortSel" class="text-xs font-medium text-gray-700 border border-gray-300 rounded-full px-3 py-1.5 bg-white focus:outline-none focus:border-ink cursor-pointer">
+        <option value="rec">Recommended</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </div>
   </div>
   <div id="catPills" class="flex flex-wrap gap-2 mb-6"></div>
   <div id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
@@ -320,8 +327,29 @@ async function api(path, body){
   return r.json();
 }
 
-const state = { store:null, products:[], cart:{}, filter:"", category:"All", shown:60 };
+const state = { store:null, products:[], cart:{}, filter:"", category:"All", sort:"rec", shown:60 };
 const PAGE = 60;
+
+/* Curated storefront collections. A product can belong to several — keyword
+   collections match on the title; the "Under" collections match on the
+   displayed (sale) price. "All" shows everything. */
+const COLLECTIONS = [
+  { name:'All' },
+  { name:'Tech Finds', kw:['speaker','bluetooth','wireless','charger','usb','earbud','earphone','headphone','headset','microphone','karaoke','projector','gadget','power bank','powerbank','cable','rgb','gaming','keyboard','mouse','audio','sound','electric','digital','smart watch','smartwatch','camera','fan'] },
+  { name:'Home Goods', kw:['lamp','light','decor','kitchen','mug','cup','bottle','organizer','storage','blanket','pillow','candle','vase','rug','towel','holder','mat','bowl','plate','desk','wall','clock','humidifier','diffuser','ornament','night light'] },
+  { name:'Gifts for Her', kw:['rose','flower','floral','jewelry','necklace','earring','bracelet','ring','beauty','makeup','skincare','cosmetic','scarf','hair','nail','perfume','heart','pendant','pearl'] },
+  { name:'Gifts for Him', kw:['watch','wallet','beard','grooming','shaver','razor','tool','car','gaming','knife','tactical','fishing','bbq','flask','headphone','speaker','gadget'] },
+  { name:'Under $50', max:50 },
+  { name:'Under $20', max:20 },
+];
+function dispPrice(p){ return saleOn() ? +(p.retail_price*(1-SALE.pct)).toFixed(2) : p.retail_price; }
+function collByName(n){ return COLLECTIONS.find(c=>c.name===n) || COLLECTIONS[0]; }
+function inColl(p, c){
+  if (c.name==='All') return true;
+  if (c.max!=null) return dispPrice(p) <= c.max;
+  const t = (p.title||'').toLowerCase();
+  return (c.kw||[]).some(k=>t.includes(k));
+}
 state.cart = (function(){ try { return JSON.parse(localStorage.getItem('vellow_cart')||'{}'); } catch(_) { return {}; } })();
 
 async function load(){
@@ -360,25 +388,27 @@ function updateSaleBanner(){
   }
 }
 
-function categories(){
-  return ['All', ...new Set(state.products.map(p=>p.category))].filter(Boolean);
-}
-
 function renderPills(){
   const active = 'bg-ink text-white border border-ink';
   const idle   = 'bg-white text-gray-600 border border-gray-300 hover:border-ink';
-  document.getElementById('catPills').innerHTML = categories().map(c=>`
-    <button data-cat="${c}" class="text-xs font-medium px-3.5 py-1.5 rounded-full ${c===state.category?active:idle}">
-      ${c}</button>`).join('');
+  document.getElementById('catPills').innerHTML = COLLECTIONS.map(c=>`
+    <button data-cat="${c.name}" class="text-xs font-medium px-3.5 py-1.5 rounded-full ${c.name===state.category?active:idle}">
+      ${c.name}</button>`).join('');
+  const title = document.getElementById('collTitle');
+  if (title) title.textContent = state.category==='All' ? 'Trending now' : state.category;
 }
 
 function filtered(){
   const q = state.filter.toLowerCase();
-  return state.products.filter(p =>
-    (state.category==='All' || p.category===state.category) &&
-    p.title.toLowerCase().includes(q))
-    // Keep in-stock items first; push out-of-stock to the bottom.
-    .sort((a,b) => (a.in_stock === b.in_stock) ? 0 : (a.in_stock ? -1 : 1));
+  const c = collByName(state.category);
+  const list = state.products.filter(p =>
+    inColl(p, c) && (p.title||'').toLowerCase().includes(q));
+  // Price sorts first (stable), then float in-stock items to the top so the
+  // chosen price order is preserved within the in-stock group.
+  if (state.sort === 'low')  list.sort((a,b)=>dispPrice(a)-dispPrice(b));
+  else if (state.sort === 'high') list.sort((a,b)=>dispPrice(b)-dispPrice(a));
+  list.sort((a,b) => (a.in_stock === b.in_stock) ? 0 : (a.in_stock ? -1 : 1));
+  return list;
 }
 
 function render(){
@@ -714,6 +744,7 @@ document.getElementById('catPills').addEventListener('click', e=>{
   const b=e.target.closest('[data-cat]');
   if(b){ state.category=b.dataset.cat; state.shown=PAGE; renderPills(); render(); }
 });
+document.getElementById('sortSel').addEventListener('change', e=>{ state.sort=e.target.value; state.shown=PAGE; render(); });
 document.getElementById('loadMore').addEventListener('click', ()=>{ state.shown+=PAGE; render(); });
 document.getElementById('cartBtn').addEventListener('click', openCheckout);
 document.getElementById('closeCheckout').addEventListener('click', closeCheckout);
