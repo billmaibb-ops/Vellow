@@ -1009,9 +1009,9 @@ def admin_summary():
             "last_full_sync": store.get("last_full_sync"),
         },
         pricing={
-            "base_margin_pct": round(cfg.base_margin * 100),
-            "coupon_buffer_pct": round(cfg.coupon_buffer * 100),
-            "markup_pct": round(cfg.markup * 100),
+            "min_margin_pct": round(cfg.min_margin * 100),
+            "max_sale_pct": round(cfg.max_sale_pct * 100),
+            "max_coupon_pct": round(cfg.max_coupon_pct * 100),
             "launch_sale_pct": round(SALE_PCT * 100) if sale_on() else 0,
             "shipping_markup_pct": round((SHIPPING_MARKUP - 1) * 100),
             "safety_stock_buffer": threshold,
