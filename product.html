@@ -25,7 +25,7 @@
 <body class="bg-white text-[#0B2545] antialiased">
 
 <!-- ============ PROMO BAR ============ -->
-<div class="bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide">
+<div id="promoBar" class="bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide">
   Secure, encrypted checkout — your payment information is protected
 </div>
 
@@ -176,6 +176,15 @@ function refreshCount(){ $('cartCount').textContent = cartCount(); }
 
 let product = null, detail = null, selVid = '', selName = '', selPrice = 0, qty = 1;
 
+/* Sitewide launch sale — must match index.html so the listing and product
+   page show the same price. Prices are automatically reduced while active. */
+const SALE = { active:true, pct:0.50, endsISO:'2026-07-20', endsLabel:'July 20' };
+function saleOn(){ return SALE.active && new Date().toISOString().slice(0,10) <= SALE.endsISO; }
+(function(){ const bar=document.getElementById('promoBar'); if(bar && saleOn()){
+  bar.className='bg-urgency text-white text-[11px] sm:text-xs font-bold text-center py-2 px-4 tracking-wide';
+  bar.textContent='LAUNCH SALE — '+Math.round(SALE.pct*100)+'% OFF EVERYTHING · ends '+SALE.endsLabel;
+}})();
+
 function toast(msg){
   const t = $('toast'); t.textContent = msg; t.classList.remove('hidden');
   clearTimeout(t._h); t._h = setTimeout(() => t.classList.add('hidden'), 2800);
@@ -197,7 +206,17 @@ function renderGallery(images){
   });
 }
 
-function renderPrice(){ $('pPrice').textContent = money(selPrice); }
+function renderPrice(){
+  const el = $('pPrice');
+  if(saleOn()){
+    const sale = +(selPrice*(1-SALE.pct)).toFixed(2);
+    el.innerHTML = '<span class="text-urgency">'+money(sale)+'</span> '
+      + '<span class="line-through text-gray-400 text-xl font-bold">'+money(selPrice)+'</span> '
+      + '<span class="align-middle inline-block bg-urgency text-white text-xs font-bold px-2 py-1 rounded-md">-'+Math.round(SALE.pct*100)+'%</span>';
+  } else {
+    el.textContent = money(selPrice);
+  }
+}
 
 function renderVariants(){
   const vs = (detail && detail.variants) || [];
@@ -252,7 +271,9 @@ function renderRelated(all){
       <div class="aspect-square bg-gray-50 overflow-hidden"><img src="${esc(p.image)}" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" alt=""></div>
       <div class="p-3">
         <div class="text-sm text-gray-800 line-clamp-2 group-hover:text-brandblue">${esc(p.title)}</div>
-        <div class="font-extrabold text-ink mt-1">${money(p.retail_price)}</div>
+        <div class="mt-1">${saleOn()
+          ? `<span class="font-extrabold text-urgency">${money(p.retail_price*0.5)}</span> <span class="text-gray-400 line-through text-sm">${money(p.retail_price)}</span>`
+          : `<span class="font-extrabold text-ink">${money(p.retail_price)}</span>`}</div>
       </div>
     </a>`).join('');
 }
