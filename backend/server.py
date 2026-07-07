@@ -155,11 +155,45 @@ def _load_coupons() -> dict:
         except Exception as e:  # noqa: BLE001
             print(f"[coupons] bad COUPONS_JSON, using defaults: {e}")
     return {
-        "WELCOME15": {"pct": 0.15},   # email-signup, first-order discount (a code)
+        # First-order signup coupon: one redemption per customer (by email),
+        # no expiry, unlimited total customers. Stacks on top of the sitewide sale.
+        "WELCOME15": {"pct": 0.15, "once_per_customer": True},
     }
 COUPONS = _load_coupons()
 WELCOME_CODE = os.environ.get("WELCOME_CODE", "WELCOME15")
 SIGNUPS_LOG = Path(os.environ.get("SIGNUPS_LOG", str(HERE / "signups.jsonl")))
+
+# One-time-per-customer coupon redemptions, keyed by (CODE, email). Persisted to
+# a small log. NOTE: on Render's free tier this file resets on redeploy, so the
+# "once per customer" guard is best-effort until you add a database.
+REDEEMED_LOG = Path(os.environ.get("REDEEMED_LOG", str(HERE / "welcome_redeemed.jsonl")))
+def _load_redeemed() -> set:
+    s = set()
+    try:
+        for line in open(REDEEMED_LOG):
+            try:
+                r = json.loads(line); s.add((str(r.get("code","")).upper(), str(r.get("email","")).lower()))
+            except Exception:
+                pass
+    except FileNotFoundError:
+        pass
+    return s
+_REDEEMED = _load_redeemed()
+def coupon_redeemed(code, email) -> bool:
+    return bool(email) and (str(code).upper(), str(email).lower()) in _REDEEMED
+def mark_coupon_redeemed(code, email):
+    if not (code and email):
+        return
+    key = (str(code).upper(), str(email).lower())
+    if key in _REDEEMED:
+        return
+    _REDEEMED.add(key)
+    try:
+        with open(REDEEMED_LOG, "a") as f:
+            f.write(json.dumps({"code": key[0], "email": key[1],
+                                "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}) + "\n")
+    except Exception as e:  # noqa: BLE001
+        print(f"[redeem] could not record {key}: {e}")
 
 # ---------------------------------------------------------------------------
 # Sitewide SALE — a promotion, NOT a coupon. When active, every product's price
@@ -180,16 +214,21 @@ def sale_on() -> bool:
 def sale_factor() -> float:
     return (1 - SALE_PCT) if sale_on() else 1.0
 
-def resolve_coupon(code):
-    """Return {'code','pct'} for a valid coupon, else None. Honors an optional
-    'expires' (YYYY-MM-DD) and hard-caps any single discount at 90% for safety."""
+def resolve_coupon(code, email=None):
+    """Return {'code','pct','once'} for a valid coupon, else None. Honors an
+    optional 'expires' (YYYY-MM-DD), one-time-per-customer redemption (by email),
+    and hard-caps any single discount at 90% for safety."""
     if not code:
         return None
-    c = COUPONS.get(str(code).strip().upper())
+    up = str(code).strip().upper()
+    c = COUPONS.get(up)
     if not isinstance(c, dict):
         return None
     exp = c.get("expires")
     if exp and time.strftime("%Y-%m-%d", time.gmtime()) > str(exp):
+        return None
+    once = bool(c.get("once_per_customer"))
+    if once and coupon_redeemed(up, email):   # this customer already used it
         return None
     try:
         pct = max(0.0, min(float(c.get("pct", 0)), 0.90))
@@ -197,7 +236,14 @@ def resolve_coupon(code):
         return None
     if pct <= 0:
         return None
-    return {"code": str(code).strip().upper(), "pct": pct}
+    return {"code": up, "pct": pct, "once": once}
+
+def coupon_already_used(code, email) -> bool:
+    """True only when the code is a real one-time coupon the customer has spent."""
+    if not code:
+        return False
+    c = COUPONS.get(str(code).strip().upper())
+    return isinstance(c, dict) and bool(c.get("once_per_customer")) and coupon_redeemed(code, email)
 
 # ---------------------------------------------------------------------------
 # Transactional email (Resend). Set RESEND_API_KEY in the Render env to enable.
@@ -441,9 +487,12 @@ def build_quote(catalog: dict, items: list, shipping: dict, coupon_code=None) ->
         ship_name = "Standard shipping (estimate)"
 
     rate = tax_rate_for(state, store)
-    # Coupon: percentage off the product subtotal only (not tax/shipping).
-    # Tax is then computed on what the customer actually pays after the discount.
-    coupon = resolve_coupon(coupon_code)
+    # Coupon: percentage off the product subtotal only (not tax/shipping), and
+    # it stacks on top of the sitewide sale already reflected in `subtotal`.
+    # One-time coupons are validated against this customer's email.
+    email = (shipping or {}).get("email")
+    coupon = resolve_coupon(coupon_code, email)
+    used = coupon is None and coupon_already_used(coupon_code, email)
     discount = round(subtotal * coupon["pct"], 2) if coupon else 0.0
     disc_subtotal = round(subtotal - discount, 2)
     tax = round(disc_subtotal * rate, 2)
@@ -456,7 +505,8 @@ def build_quote(catalog: dict, items: list, shipping: dict, coupon_code=None) ->
         "discount": discount,
         "coupon": coupon["code"] if coupon else None,
         "coupon_pct": coupon["pct"] if coupon else 0,
-        "coupon_invalid": bool(coupon_code) and coupon is None,
+        "coupon_invalid": bool(coupon_code) and coupon is None and not used,
+        "coupon_used": used,
         "tax": tax, "tax_rate": rate,
         "shipping": round(shipping_cost, 2),
         "shipping_name": ship_name, "shipping_days": ship_days,
@@ -503,7 +553,8 @@ def create_hold():
         automatic_payment_methods={"enabled": True},
         metadata={"cart": json.dumps([{"id": i["id"], "qty": i["qty"],
                                        "vid": i.get("vid", "")}
-                                      for i in body.get("items", [])])},
+                                      for i in body.get("items", [])]),
+                  "coupon": q["coupon"] or ""},
     )
     return jsonify(ok=True, client_secret=intent.client_secret,
                    payment_intent=intent.id, amount=amount / 100,
@@ -599,6 +650,10 @@ def verify_and_capture():
         return jsonify(ok=False, captured=False, reason=f"Capture failed: {e.user_message}"), 402
 
     order_total = float(intent.amount) / 100
+    # A one-time coupon (e.g. WELCOME15) is now spent for this customer's email.
+    used_coupon = (getattr(intent, "metadata", None) or {}).get("coupon") or ""
+    if used_coupon:
+        mark_coupon_redeemed(used_coupon, body.get("shipping", {}).get("email"))
     # Est. Stripe fee (2.9% + $0.30) and est. profit for the dashboard.
     stripe_fee = round(order_total * 0.029 + 0.30, 2)
     est_profit = round(order_total - prod_cost - stripe_fee, 2)
