@@ -485,7 +485,10 @@ function applyDiscountUI(r){
     msg.className = 'text-xs min-h-[16px] -mt-1 text-buy';
   } else {
     row.classList.add('hidden'); row.classList.remove('flex');
-    if(couponCode && r && r.coupon_invalid){
+    if(couponCode && r && r.coupon_used){
+      msg.textContent = 'You’ve already used this code.';
+      msg.className = 'text-xs min-h-[16px] -mt-1 text-red-600';
+    } else if(couponCode && r && r.coupon_invalid){
       msg.textContent = 'That code isn’t valid or has expired.';
       msg.className = 'text-xs min-h-[16px] -mt-1 text-red-600';
     } else {
