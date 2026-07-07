@@ -180,6 +180,14 @@ let product = null, detail = null, selVid = '', selName = '', selPrice = 0, qty 
    page show the same price. Prices are automatically reduced while active. */
 const SALE = { active:true, pct:0.50, endsISO:'2026-07-20', endsLabel:'July 20' };
 function saleOn(){ return SALE.active && new Date().toISOString().slice(0,10) <= SALE.endsISO; }
+
+/* Price build — must match backend/pricing.py. Computed from cost so variant
+   prices stay correct even if a cached detail file was written with old config. */
+let PCFG = { base:0.20, buffer:0.15, markup:1.00 };
+function priceFromCost(c){
+  if (!c) return 0;
+  return Math.ceil(c * (1+PCFG.base) * (1+PCFG.buffer) * (1+PCFG.markup) * 100) / 100;
+}
 (function(){ const bar=document.getElementById('promoBar'); if(bar && saleOn()){
   bar.className='bg-urgency text-white text-[11px] sm:text-xs font-bold text-center py-2 px-4 tracking-wide';
   bar.textContent='LAUNCH SALE — '+Math.round(SALE.pct*100)+'% OFF EVERYTHING · ends '+SALE.endsLabel;
@@ -230,7 +238,7 @@ function renderVariants(){
     b.className = i === 0 ? sel : idle;
     b.textContent = v.name || ('Option ' + (i + 1));
     b.onclick = () => {
-      selVid = v.vid || ''; selName = v.name || ''; selPrice = v.retail_price || product.retail_price;
+      selVid = v.vid || ''; selName = v.name || ''; selPrice = priceFromCost(v.source_cost) || v.retail_price || product.retail_price;
       $('variantChoice').textContent = '— ' + selName;
       renderPrice();
       if (v.image) setMain(v.image);
@@ -284,6 +292,8 @@ async function init(){
   const id = new URLSearchParams(location.search).get('id');
   const res = await fetch('products.json?_=' + Date.now());
   const data = await res.json();
+  const s = data.store || {};
+  PCFG = { base: s.base_margin ?? s.profit_target ?? 0.20, buffer: s.coupon_buffer ?? 0.15, markup: s.markup ?? 1.00 };
   product = data.products.find(p => p.id === id);
   if (!product){ $('notFound').classList.remove('hidden'); return; }
 
