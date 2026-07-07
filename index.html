@@ -160,6 +160,30 @@
   </div>
 </footer>
 
+<!-- ============ EMAIL SIGNUP POPUP (15% off for a real email) ============ -->
+<div id="signupOverlay" class="fixed inset-0 bg-black/50 z-[60] hidden items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 relative">
+    <button id="signupClose" class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2 mb-2"><span class="text-xl font-extrabold text-ink">Vellow</span><span class="w-2 h-2 rounded-full bg-buy mt-1"></span></div>
+      <h3 class="text-xl font-extrabold text-ink">Get 15% off your first order</h3>
+      <p class="text-sm text-gray-500 mt-1 mb-4">Drop your email and we'll send your code. Unsubscribe anytime.</p>
+    </div>
+    <div id="signupForm" class="space-y-2">
+      <input id="signupEmail" type="email" placeholder="you@email.com" class="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brandblue" />
+      <button id="signupBtn" class="w-full bg-buy hover:bg-buydark text-white font-semibold py-2.5 rounded-lg transition">Get my code</button>
+      <p id="signupErr" class="text-xs text-red-600 min-h-[16px]"></p>
+    </div>
+    <div id="signupDone" class="hidden text-center">
+      <p class="text-sm text-gray-600">Here's your code:</p>
+      <div class="my-2 text-2xl font-extrabold tracking-wide text-buy" id="signupCode">WELCOME15</div>
+      <p class="text-xs text-gray-500">Enter it in the promo box at checkout.</p>
+      <button id="signupShop" class="mt-3 w-full border border-ink text-ink font-semibold py-2.5 rounded-lg hover:bg-ink hover:text-white transition">Start shopping</button>
+    </div>
+    <p class="text-[10px] text-gray-400 text-center mt-3">By signing up you agree to receive marketing emails. See our <a href="privacy.html" class="underline">Privacy Policy</a>.</p>
+  </div>
+</div>
+
 <!-- ============ CHECKOUT DRAWER ============ -->
 <div id="overlay" class="fixed inset-0 bg-black/50 z-50 hidden"></div>
 <aside id="checkout" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl translate-x-full transition-transform duration-300 flex flex-col">
@@ -196,9 +220,17 @@
       </div>
     </div>
 
+    <!-- Promo code -->
+    <div class="flex gap-2">
+      <input id="couponInput" class="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm uppercase placeholder:normal-case placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brandblue" placeholder="Promo code" />
+      <button id="applyCoupon" class="px-4 py-2 rounded-lg border border-ink text-ink text-sm font-semibold hover:bg-ink hover:text-white transition">Apply</button>
+    </div>
+    <div id="couponMsg" class="text-xs min-h-[16px] -mt-1"></div>
+
     <!-- Order total: subtotal + tax + shipping to this address -->
     <div class="border border-gray-200 rounded-xl p-3 text-sm space-y-1 bg-gray-50">
       <div class="flex justify-between"><span>Subtotal</span><span id="sumSubtotal">$0.00</span></div>
+      <div id="discountRow" class="hidden justify-between text-buy font-medium"><span>Discount <span id="couponTag" class="text-xs font-normal"></span></span><span id="sumDiscount">—</span></div>
       <div class="flex justify-between text-gray-600"><span>Tax <span id="taxNote" class="text-gray-400"></span></span><span id="sumTax">—</span></div>
       <div class="flex justify-between text-gray-600"><span>Shipping <span id="shipNote" class="text-gray-400 text-xs"></span></span><span id="sumShipping">—</span></div>
       <div class="flex justify-between font-bold text-base pt-1 border-t border-gray-200 mt-1"><span>Total</span><span id="sumTotal" class="text-ink">$0.00</span></div>
@@ -413,6 +445,29 @@ function updateCartUI(){
 
 /* ---------- order quote: price + address shipping + tax ---------- */
 let quote = null, quoteTimer = null;
+let couponCode = '';
+
+/* Reflect the server's coupon result in the summary. The server is the source
+   of truth for the discount — the browser only displays what it returns. */
+function applyDiscountUI(r){
+  const row = document.getElementById('discountRow');
+  const msg = document.getElementById('couponMsg');
+  if(r && r.discount > 0 && r.coupon){
+    row.classList.remove('hidden'); row.classList.add('flex');
+    document.getElementById('sumDiscount').textContent = '−' + money(r.discount);
+    document.getElementById('couponTag').textContent = '(' + r.coupon + ')';
+    msg.textContent = r.coupon_pct ? (Math.round(r.coupon_pct*100) + '% off applied') : 'Discount applied';
+    msg.className = 'text-xs min-h-[16px] -mt-1 text-buy';
+  } else {
+    row.classList.add('hidden'); row.classList.remove('flex');
+    if(couponCode && r && r.coupon_invalid){
+      msg.textContent = 'That code isn’t valid or has expired.';
+      msg.className = 'text-xs min-h-[16px] -mt-1 text-red-600';
+    } else {
+      msg.textContent = ''; msg.className = 'text-xs min-h-[16px] -mt-1';
+    }
+  }
+}
 
 /* Destination sales-tax rates — mirrors the backend table so tax can show
    INSTANTLY the moment a state is entered, before any server call. This is an
@@ -476,9 +531,10 @@ async function runQuote(){
   const items = cartItems().map(x=>({id:x.e.id, qty:x.e.qty, vid:x.e.vid||undefined}));
   quoteSpin(true,'Calculating shipping & total for your address…');
   try{
-    const r = await api('/api/quote', { items, shipping:a });
+    const r = await api('/api/quote', { items, shipping:a, coupon: couponCode || undefined });
     quote = r;
     document.getElementById('sumSubtotal').textContent = money(r.subtotal);
+    applyDiscountUI(r);
     document.getElementById('sumTax').textContent = money(r.tax);
     document.getElementById('taxNote').textContent = r.tax_rate ? '('+(r.tax_rate*100).toFixed(2)+'%)' : '';
     document.getElementById('sumShipping').textContent = money(r.shipping);
@@ -567,7 +623,7 @@ async function placeOrder(){
 
     // 1) authorization-only hold for the quoted total (server re-quotes to confirm)
     setLabel('Authorizing…'); setStatus('Placing temporary authorization hold…','gray');
-    const hold = await api('/api/create-hold', { items, shipping });
+    const hold = await api('/api/create-hold', { items, shipping, coupon: couponCode || undefined });
     if(!hold.ok) throw new Error(hold.reason || 'Could not start checkout.');
 
     // 2) authorize the card (manual capture => status becomes requires_capture)
@@ -623,7 +679,42 @@ document.getElementById('cartBtn').addEventListener('click', openCheckout);
 document.getElementById('closeCheckout').addEventListener('click', closeCheckout);
 document.getElementById('overlay').addEventListener('click', closeCheckout);
 document.getElementById('placeOrder').addEventListener('click', placeOrder);
+document.getElementById('applyCoupon').addEventListener('click', ()=>{
+  couponCode = document.getElementById('couponInput').value.trim().toUpperCase();
+  const msg = document.getElementById('couponMsg');
+  if(cartItems().length===0){ msg.textContent='Add an item to your cart first.'; msg.className='text-xs min-h-[16px] -mt-1 text-gray-500'; return; }
+  if(!couponCode){ applyDiscountUI(null); invalidateQuote(); return; }
+  if(addrReady(shippingAddr())){ runQuote(); }
+  else { msg.textContent='Code added — your total updates once you enter your address.'; msg.className='text-xs min-h-[16px] -mt-1 text-gray-500'; }
+});
+document.getElementById('couponInput').addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); document.getElementById('applyCoupon').click(); } });
 document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- email-signup popup (legitimate lead capture) ---------- */
+const SIGNUP_SEEN = 'vellow_signup_seen';
+function showSignup(){
+  if(localStorage.getItem(SIGNUP_SEEN)) return;
+  const o=document.getElementById('signupOverlay'); o.classList.remove('hidden'); o.classList.add('flex');
+}
+function hideSignup(){ const o=document.getElementById('signupOverlay'); o.classList.add('hidden'); o.classList.remove('flex'); localStorage.setItem(SIGNUP_SEEN,'1'); }
+function revealCode(code){
+  document.getElementById('signupCode').textContent = code || 'WELCOME15';
+  document.getElementById('signupForm').classList.add('hidden');
+  document.getElementById('signupDone').classList.remove('hidden');
+  localStorage.setItem(SIGNUP_SEEN,'1');
+}
+document.getElementById('signupClose').addEventListener('click', hideSignup);
+document.getElementById('signupShop').addEventListener('click', hideSignup);
+document.getElementById('signupBtn').addEventListener('click', async ()=>{
+  const email=document.getElementById('signupEmail').value.trim();
+  const err=document.getElementById('signupErr');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ err.textContent='Please enter a valid email.'; return; }
+  err.textContent=''; document.getElementById('signupBtn').textContent='…';
+  try{ const r=await api('/api/signup', { email }); revealCode(r && r.code); }
+  catch(e){ revealCode('WELCOME15'); }   // still give the code if backend is waking
+});
+document.getElementById('signupEmail').addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); document.getElementById('signupBtn').click(); } });
+setTimeout(showSignup, 6000);   // gentle delay so it doesn't hit on first paint
 
 initStripe();
 load();
