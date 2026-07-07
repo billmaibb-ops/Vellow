@@ -155,12 +155,30 @@ def _load_coupons() -> dict:
         except Exception as e:  # noqa: BLE001
             print(f"[coupons] bad COUPONS_JSON, using defaults: {e}")
     return {
-        "WELCOME15": {"pct": 0.15},   # email-signup, first-order discount
-        "SALE50":    {"pct": 0.50, "expires": "2026-07-20"},  # dated launch sale
+        "WELCOME15": {"pct": 0.15},   # email-signup, first-order discount (a code)
     }
 COUPONS = _load_coupons()
 WELCOME_CODE = os.environ.get("WELCOME_CODE", "WELCOME15")
 SIGNUPS_LOG = Path(os.environ.get("SIGNUPS_LOG", str(HERE / "signups.jsonl")))
+
+# ---------------------------------------------------------------------------
+# Sitewide SALE — a promotion, NOT a coupon. When active, every product's price
+# is reduced by SALE_PCT automatically (baked into the quoted unit price); no
+# code is required. Coupons (e.g. WELCOME15) then apply on top. Keep it dated:
+# after SALE_ENDS it switches off, so the everyday price is never a fiction.
+# Configure in Render env: SALE_ACTIVE, SALE_PCT, SALE_ENDS (YYYY-MM-DD).
+# ---------------------------------------------------------------------------
+SALE_ACTIVE = os.environ.get("SALE_ACTIVE", "1").strip().lower() in ("1", "true", "yes", "on")
+SALE_PCT = float(os.environ.get("SALE_PCT", "0.50"))
+SALE_ENDS = os.environ.get("SALE_ENDS", "2026-07-20").strip()
+
+def sale_on() -> bool:
+    if not SALE_ACTIVE:
+        return False
+    return (not SALE_ENDS) or (time.strftime("%Y-%m-%d", time.gmtime()) <= SALE_ENDS)
+
+def sale_factor() -> float:
+    return (1 - SALE_PCT) if sale_on() else 1.0
 
 def resolve_coupon(code):
     """Return {'code','pct'} for a valid coupon, else None. Honors an optional
@@ -395,6 +413,9 @@ def build_quote(catalog: dict, items: list, shipping: dict, coupon_code=None) ->
         if eff < threshold or eff < qty:
             problems.append(f"{p['title']} is out of stock")
 
+        # Sitewide SALE (a promotion, not a coupon): reduce the unit price
+        # automatically while the sale is active. Coupons apply on top of this.
+        unit = round(unit * sale_factor(), 2)
         subtotal += unit * qty
         lines.append({"id": p["id"], "title": p["title"], "qty": qty,
                       "unit_price": round(unit, 2),
@@ -429,7 +450,9 @@ def build_quote(catalog: dict, items: list, shipping: dict, coupon_code=None) ->
     total = round(disc_subtotal + tax + shipping_cost, 2)
     return {
         "lines": lines, "problems": problems,
-        "subtotal": round(subtotal, 2),
+        "subtotal": round(subtotal, 2),          # already reflects the sitewide sale
+        "sale_active": sale_on(),
+        "sale_pct": SALE_PCT if sale_on() else 0,
         "discount": discount,
         "coupon": coupon["code"] if coupon else None,
         "coupon_pct": coupon["pct"] if coupon else 0,
