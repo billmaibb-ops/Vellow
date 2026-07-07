@@ -38,7 +38,7 @@
 <body class="bg-white text-[#0B2545] antialiased">
 
 <!-- ============ PROMO BAR ============ -->
-<div class="bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide">
+<div id="promoBar" class="bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide">
   Secure, encrypted checkout — your payment information is protected
 </div>
 
@@ -318,6 +318,7 @@ async function load(){
   const data = await res.json();
   state.store = data.store;
   state.products = data.products;
+  updateSaleBanner();
   renderPills();
   updateCartUI();
   if (new URLSearchParams(location.search).get('cart') === '1') openCheckout();
@@ -330,6 +331,23 @@ async function load(){
 }
 
 function money(n){ return '$' + n.toFixed(2); }
+
+/* Launch sale — a GENUINE, dated promotion. While active the store shows the
+   sale price and auto-applies the code at checkout; after endsISO it turns off
+   on its own (the server-side coupon expires the same day). Do NOT make this
+   permanent — an always-on "sale" turns the sticker into a fictitious price. */
+const SALE = { active:true, code:'SALE50', pct:0.50, endsISO:'2026-07-20', endsLabel:'July 20' };
+function saleOn(){ return SALE.active && new Date().toISOString().slice(0,10) <= SALE.endsISO; }
+function updateSaleBanner(){
+  const bar = document.getElementById('promoBar'); if(!bar) return;
+  if(saleOn()){
+    bar.className = 'bg-urgency text-white text-[11px] sm:text-xs font-bold text-center py-2 px-4 tracking-wide';
+    bar.textContent = 'LAUNCH SALE — ' + Math.round(SALE.pct*100) + '% OFF EVERYTHING · ends ' + SALE.endsLabel + ' · discount applied at checkout';
+  } else {
+    bar.className = 'bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide';
+    bar.textContent = 'Secure, encrypted checkout — your payment information is protected';
+  }
+}
 
 function categories(){
   return ['All', ...new Set(state.products.map(p=>p.category))].filter(Boolean);
@@ -370,11 +388,15 @@ function cardHTML(p){
   const compare = p.compare_at_price && p.compare_at_price > p.retail_price;
   const pct = compare ? Math.round((1 - p.retail_price / p.compare_at_price) * 100) : 0;
   const url = 'product.html?id=' + encodeURIComponent(p.id);
+  const onSale = saleOn() && !oos;
+  const salePrice = onSale ? +(p.retail_price*(1-SALE.pct)).toFixed(2) : p.retail_price;
+  const salePct = Math.round(SALE.pct*100);
   return `
   <div class="group bg-white rounded-xl border border-gray-200 hover:shadow-card hover:border-gray-300 transition overflow-hidden flex flex-col">
     <a href="${url}" class="aspect-square bg-gray-50 relative block overflow-hidden">
       <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300 ${oos?'opacity-40':''}" />
-      ${compare ? `<span class="absolute top-2 left-2 bg-urgency text-white text-[11px] font-bold px-2 py-1 rounded-md">-${pct}%</span>` : ''}
+      ${compare ? `<span class="absolute top-2 left-2 bg-urgency text-white text-[11px] font-bold px-2 py-1 rounded-md">-${pct}%</span>`
+        : onSale ? `<span class="absolute top-2 left-2 bg-urgency text-white text-[11px] font-bold px-2 py-1 rounded-md">-${salePct}%</span>` : ''}
       ${oos ? '<span class="absolute top-2 right-2 bg-gray-900/90 text-white text-[11px] px-2 py-1 rounded-md">Out of stock</span>'
         : lowStock ? `<span class="absolute bottom-2 left-2 bg-urgency text-white text-[11px] font-semibold px-2 py-1 rounded-md">Only ${p.stock} left</span>`
         : p.trending_score>0.85 ? '<span class="absolute bottom-2 left-2 bg-ink text-white text-[11px] font-semibold px-2 py-1 rounded-md">Selling fast</span>' : ''}
@@ -387,8 +409,9 @@ function cardHTML(p){
         <span class="font-semibold text-gray-700">${p.rating}</span> <span class="text-gray-400">(${(p.review_count||0).toLocaleString()})</span>
       </div>` : ''}
       <div class="mt-2 flex items-baseline gap-1.5">
-        <span class="text-lg font-extrabold ${compare?'text-urgency':'text-ink'}">${money(p.retail_price)}</span>
-        ${compare ? `<span class="text-sm text-gray-400 line-through">${money(p.compare_at_price)}</span>` : ''}
+        <span class="text-lg font-extrabold ${onSale||compare?'text-urgency':'text-ink'}">${money(salePrice)}</span>
+        ${onSale ? `<span class="text-sm text-gray-400 line-through">${money(p.retail_price)}</span>`
+          : compare ? `<span class="text-sm text-gray-400 line-through">${money(p.compare_at_price)}</span>` : ''}
       </div>
       <button ${oos?'disabled':''} data-add="${p.id}"
         class="mt-2.5 w-full text-sm font-semibold py-2.5 rounded-lg transition flex items-center justify-center gap-1.5 ${oos
@@ -562,6 +585,13 @@ function openCheckout(){
   document.getElementById('overlay').classList.remove('hidden');
   document.getElementById('checkout').classList.remove('translate-x-full');
   autofill();
+  // During the launch sale, auto-apply the sale code so the checkout total
+  // matches the sale prices shown on the products (unless the shopper already
+  // entered a code, e.g. a signup WELCOME15).
+  if(saleOn() && !couponCode){
+    couponCode = SALE.code;
+    const ci = document.getElementById('couponInput'); if(ci) ci.value = SALE.code;
+  }
   // Re-run the quote every time the drawer opens so shipping/tax/total always
   // reflect the current cart + saved address (instead of a stale prior quote).
   scheduleQuote();
