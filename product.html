@@ -4,22 +4,43 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Vellow — Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { ink:'#0B2545', ink2:'#08203f', brandblue:'#1E6FE0', buy:'#0E9F6E', buydark:'#0B8457', urgency:'#D97706' },
+    fontFamily: { sans: ['Inter','system-ui','-apple-system','Segoe UI','sans-serif'] },
+    boxShadow: { card: '0 1px 2px rgba(11,37,69,.06), 0 8px 24px rgba(11,37,69,.06)' },
+  }}}
+</script>
 <style>
+  body{font-family:'Inter',system-ui,sans-serif}
   .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   #desc img{max-width:100%;height:auto;border-radius:8px;margin:0.5rem 0}
   #desc table{max-width:100%}
 </style>
 </head>
-<body class="bg-white text-[#1A1A1A] antialiased">
+<body class="bg-white text-[#0B2545] antialiased">
 
-<div class="bg-[#FF4500] text-white text-xs font-semibold text-center py-1.5 tracking-wide">NEW DROPS WEEKLY · SHIPS FROM PARTNER WAREHOUSES · TIMELINE CONFIRMED BEFORE CHARGE</div>
-<header class="bg-[#0C2340] text-white sticky top-0 z-40 shadow">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
-    <a href="index.html" class="text-2xl font-black tracking-tight">VEL<span class="text-[#FF4500]">LOW</span></a>
+<!-- ============ PROMO BAR ============ -->
+<div class="bg-ink text-white text-[11px] sm:text-xs font-medium text-center py-2 px-4 tracking-wide">
+  Secure, encrypted checkout — your payment information is protected
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="bg-white sticky top-0 z-40 border-b border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3 sm:gap-5">
+    <a href="index.html" class="flex items-center gap-2 shrink-0">
+      <span class="text-2xl font-extrabold tracking-tight text-ink">Vellow</span>
+      <span class="w-2 h-2 rounded-full bg-buy mt-1.5"></span>
+    </a>
     <div class="flex-1"></div>
-    <a href="index.html?cart=1" class="relative flex items-center gap-2 bg-[#FF4500] hover:bg-[#e63e00] text-white font-semibold px-4 py-2 rounded-md">
-      Cart <span id="cartCount" class="bg-white text-[#0C2340] text-xs font-bold rounded-full px-2 py-0.5">0</span>
+    <a href="index.html?cart=1" class="relative flex items-center gap-2 text-ink font-semibold px-3 sm:px-4 py-2.5 rounded-lg border border-gray-300 hover:border-ink hover:bg-gray-50 transition">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="hidden sm:inline">Cart</span>
+      <span id="cartCount" class="bg-buy text-white text-xs font-bold rounded-full min-w-[20px] h-5 px-1.5 flex items-center justify-center">0</span>
     </a>
   </div>
 </header>
@@ -28,13 +49,13 @@
   <nav id="crumbs" class="text-xs text-gray-500 mb-4"><a href="index.html" class="hover:underline">Home</a></nav>
 
   <div id="notFound" class="hidden text-center py-24 text-gray-500">
-    Product not found. <a href="index.html" class="text-[#FF4500] underline">Back to the store</a>
+    Product not found. <a href="index.html" class="text-brandblue underline">Back to the store</a>
   </div>
 
   <div id="page" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8">
     <!-- gallery -->
     <div>
-      <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
+      <div class="aspect-square bg-gray-50 rounded-xl overflow-hidden border border-gray-200">
         <img id="mainImg" class="w-full h-full object-contain" alt="" />
       </div>
       <div id="thumbs" class="flex gap-2 mt-3 flex-wrap"></div>
@@ -42,55 +63,104 @@
 
     <!-- info -->
     <div>
-      <div id="pCategory" class="text-xs uppercase tracking-wide text-gray-500 mb-1"></div>
-      <h1 id="pTitle" class="text-2xl font-bold leading-snug mb-3"></h1>
+      <div id="pCategory" class="text-xs uppercase tracking-wide text-gray-400 mb-1"></div>
+      <h1 id="pTitle" class="text-2xl font-bold leading-snug text-ink mb-3"></h1>
       <div class="flex items-baseline gap-3 mb-1">
-        <span id="pPrice" class="text-3xl font-black text-[#0C2340]"></span>
+        <span id="pPrice" class="text-3xl font-extrabold text-ink"></span>
       </div>
       <div id="pStock" class="text-xs text-gray-500 mb-4"></div>
 
       <div id="variantWrap" class="hidden mb-5">
-        <div class="text-sm font-semibold mb-2">Options <span id="variantChoice" class="font-normal text-gray-500"></span></div>
+        <div class="text-sm font-semibold mb-2 text-ink">Options <span id="variantChoice" class="font-normal text-gray-500"></span></div>
         <div id="variants" class="flex flex-wrap gap-2"></div>
       </div>
 
-      <div class="flex items-center gap-3 mb-4">
-        <div class="flex items-center border border-gray-300 rounded-md">
-          <button id="qMinus" class="px-3 py-2 text-lg leading-none">−</button>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex items-center border border-gray-300 rounded-lg">
+          <button id="qMinus" class="px-3 py-2 text-lg leading-none text-ink">−</button>
           <span id="qty" class="px-3 text-sm font-semibold">1</span>
-          <button id="qPlus" class="px-3 py-2 text-lg leading-none">+</button>
+          <button id="qPlus" class="px-3 py-2 text-lg leading-none text-ink">+</button>
         </div>
-        <button id="addBtn" class="flex-1 bg-[#FF4500] hover:bg-[#e63e00] text-white font-bold py-3 rounded-md">ADD TO CART</button>
+        <button id="addBtn" class="flex-1 bg-buy hover:bg-buydark text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Add to cart
+        </button>
       </div>
-      <button id="buyBtn" class="w-full bg-[#0C2340] hover:bg-[#183a63] text-white font-semibold py-3 rounded-md mb-5">BUY NOW</button>
+      <button id="buyBtn" class="w-full bg-ink hover:bg-ink2 text-white font-semibold py-3 rounded-lg mb-5 transition">Buy now</button>
 
-      <div class="flex justify-center gap-5 text-[11px] text-gray-500 border-t border-b border-gray-100 py-2.5 mb-5">
-        <span><span class="text-[#185FA5]">🔒</span> Secure checkout</span>
-        <span><span class="text-[#3B6D11]">✓</span> Returns per our <a href="terms.html" class="underline">Return Policy</a></span>
-        <span><span class="text-[#185FA5]">🚚</span> Timeline confirmed before charge</span>
+      <div class="flex justify-center gap-6 text-[11px] text-gray-500 border-t border-b border-gray-100 py-3 mb-5">
+        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-buy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Secure checkout</span>
+        <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-buy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> Major cards accepted</span>
       </div>
 
       <div class="text-xs text-gray-500">
-        Secure checkout. By ordering you agree to our
-        <a href="terms.html" target="_blank" class="text-[#FF4500] underline">Terms &amp; Conditions</a>.
+        By placing an order you agree to our
+        <a href="terms.html" target="_blank" class="text-brandblue underline">Terms &amp; Conditions</a>.
       </div>
     </div>
   </div>
 
   <!-- description -->
   <section id="descWrap" class="hidden mt-10">
-    <h2 class="text-lg font-bold mb-3 border-b border-gray-200 pb-2">Product details</h2>
+    <h2 class="text-lg font-bold text-ink mb-3 border-b border-gray-200 pb-2">Product details</h2>
     <div id="desc" class="text-sm text-gray-700 leading-relaxed max-w-3xl"></div>
   </section>
 
   <!-- related -->
   <section id="relatedWrap" class="hidden mt-12">
-    <h2 class="text-lg font-bold mb-4">You may also like</h2>
-    <div id="related" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+    <h2 class="text-lg font-bold text-ink mb-4">You may also like</h2>
+    <div id="related" class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5"></div>
   </section>
 </main>
 
-<div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm px-4 py-2 rounded-md shadow-lg z-50"></div>
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-white mt-12">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="col-span-2 md:col-span-1">
+      <div class="flex items-center gap-2">
+        <span class="text-xl font-extrabold">Vellow</span>
+        <span class="w-2 h-2 rounded-full bg-buy mt-1"></span>
+      </div>
+      <p class="mt-3 text-sm text-blue-100/70 leading-relaxed">Quality products at fair prices, with secure checkout and responsive support.</p>
+    </div>
+    <div>
+      <div class="text-xs font-semibold uppercase tracking-wide text-blue-200/60 mb-3">Shop</div>
+      <ul class="space-y-2 text-sm text-blue-100/80">
+        <li><a href="index.html" class="hover:text-white">All products</a></li>
+        <li><a href="index.html?cart=1" class="hover:text-white">Your cart</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-xs font-semibold uppercase tracking-wide text-blue-200/60 mb-3">Support</div>
+      <ul class="space-y-2 text-sm text-blue-100/80">
+        <li><a href="terms.html" class="hover:text-white">Terms &amp; Conditions</a></li>
+        <li><a href="terms.html" class="hover:text-white">Shipping &amp; Returns</a></li>
+        <li><a href="mailto:support@vellow.store" class="hover:text-white">Contact us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-xs font-semibold uppercase tracking-wide text-blue-200/60 mb-3">Payments secured by</div>
+      <div class="flex items-center gap-2 mb-3 text-ink">
+        <span class="bg-white rounded px-2 py-1 text-[11px] font-bold tracking-wide">VISA</span>
+        <span class="bg-white rounded px-2 py-1 text-[11px] font-bold tracking-wide">MC</span>
+        <span class="bg-white rounded px-2 py-1 text-[11px] font-bold tracking-wide">AMEX</span>
+        <span class="bg-white rounded px-2 py-1 text-[11px] font-bold tracking-wide">DISC</span>
+      </div>
+      <div class="flex items-center gap-1.5 text-xs text-blue-100/70">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Powered by Stripe
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-2 text-xs text-blue-100/60">
+      <span>© <span id="yr"></span> Vellow. All rights reserved.</span>
+      <span>Secure, encrypted checkout.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-ink text-white text-sm px-4 py-2 rounded-lg shadow-lg z-50"></div>
 
 <script>
 const $ = id => document.getElementById(id);
@@ -117,9 +187,9 @@ function renderGallery(images){
   setMain(uniq[0] || '');
   const wrap = $('thumbs'); wrap.innerHTML = '';
   if (uniq.length < 2) return;
-  uniq.forEach(src => {          // show every photo the product has, like the source page
+  uniq.forEach(src => {          // show every photo the product has
     const b = document.createElement('button');
-    b.className = 'w-16 h-16 rounded-md overflow-hidden border border-gray-200 hover:border-[#FF4500]';
+    b.className = 'w-16 h-16 rounded-lg overflow-hidden border border-gray-200 hover:border-ink';
     b.innerHTML = `<img src="${esc(src)}" class="w-full h-full object-cover" alt="">`;
     b.onclick = () => setMain(src);
     wrap.appendChild(b);
@@ -133,19 +203,19 @@ function renderVariants(){
   if (!vs.length) return;
   $('variantWrap').classList.remove('hidden');
   const wrap = $('variants'); wrap.innerHTML = '';
+  const sel = 'px-3 py-1.5 text-sm rounded-lg border border-brandblue bg-blue-50 text-ink font-semibold';
+  const idle = 'px-3 py-1.5 text-sm rounded-lg border border-gray-300 text-gray-700 hover:border-ink';
   vs.forEach((v, i) => {
     const b = document.createElement('button');
-    b.className = 'px-3 py-1.5 text-sm rounded-md border ' + (i === 0
-      ? 'border-[#FF4500] bg-orange-50 text-[#0C2340] font-semibold'
-      : 'border-gray-300 text-gray-700 hover:border-[#0C2340]');
+    b.className = i === 0 ? sel : idle;
     b.textContent = v.name || ('Option ' + (i + 1));
     b.onclick = () => {
       selVid = v.vid || ''; selName = v.name || ''; selPrice = v.retail_price || product.retail_price;
       $('variantChoice').textContent = '— ' + selName;
       renderPrice();
       if (v.image) setMain(v.image);
-      [...wrap.children].forEach(c => c.className = 'px-3 py-1.5 text-sm rounded-md border border-gray-300 text-gray-700 hover:border-[#0C2340]');
-      b.className = 'px-3 py-1.5 text-sm rounded-md border border-[#FF4500] bg-orange-50 text-[#0C2340] font-semibold';
+      [...wrap.children].forEach(c => c.className = idle);
+      b.className = sel;
     };
     wrap.appendChild(b);
   });
@@ -169,7 +239,7 @@ function addToCart(goCheckout){
   e.qty += qty; e.price = selPrice; e.variant = selName;
   c[k] = e; saveCart(c); refreshCount();
   if (goCheckout) location.href = 'index.html?cart=1';
-  else toast('Added to cart ✓');
+  else toast('Added to cart');
 }
 
 function renderRelated(all){
@@ -177,17 +247,18 @@ function renderRelated(all){
   if (!rel.length) return;
   $('relatedWrap').classList.remove('hidden');
   $('related').innerHTML = rel.map(p => `
-    <a href="product.html?id=${encodeURIComponent(p.id)}" class="bg-white rounded-lg border border-gray-200 hover:shadow-md transition overflow-hidden flex flex-col">
-      <div class="aspect-square bg-gray-50"><img src="${esc(p.image)}" loading="lazy" class="w-full h-full object-cover" alt=""></div>
+    <a href="product.html?id=${encodeURIComponent(p.id)}" class="group bg-white rounded-xl border border-gray-200 hover:shadow-card hover:border-gray-300 transition overflow-hidden flex flex-col">
+      <div class="aspect-square bg-gray-50 overflow-hidden"><img src="${esc(p.image)}" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" alt=""></div>
       <div class="p-3">
-        <div class="text-sm line-clamp-2">${esc(p.title)}</div>
-        <div class="font-bold text-[#0C2340] mt-1">${money(p.retail_price)}</div>
+        <div class="text-sm text-gray-800 line-clamp-2 group-hover:text-brandblue">${esc(p.title)}</div>
+        <div class="font-extrabold text-ink mt-1">${money(p.retail_price)}</div>
       </div>
     </a>`).join('');
 }
 
 async function init(){
   refreshCount();
+  $('yr').textContent = new Date().getFullYear();
   const id = new URLSearchParams(location.search).get('id');
   const res = await fetch('products.json?_=' + Date.now());
   const data = await res.json();
@@ -200,8 +271,8 @@ async function init(){
   $('pTitle').textContent = product.title;
   selPrice = product.retail_price;
   renderPrice();
-  if (product.stock && product.in_stock) $('pStock').textContent = product.stock + ' in stock (verified with supplier)';
-  else if (!product.in_stock) { $('pStock').textContent = 'Currently out of stock'; $('addBtn').disabled = true; $('buyBtn').disabled = true; $('addBtn').classList.add('opacity-50'); $('buyBtn').classList.add('opacity-50'); }
+  if (product.in_stock) $('pStock').textContent = (product.stock && product.stock <= 20) ? ('Only ' + product.stock + ' left') : 'In stock';
+  else { $('pStock').textContent = 'Currently out of stock'; $('addBtn').disabled = true; $('buyBtn').disabled = true; $('addBtn').classList.add('opacity-50','cursor-not-allowed'); $('buyBtn').classList.add('opacity-50','cursor-not-allowed'); }
   renderGallery(product.images && product.images.length ? product.images : [product.image]);
   $('page').classList.remove('hidden');
 
