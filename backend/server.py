@@ -156,7 +156,7 @@ def _load_coupons() -> dict:
             print(f"[coupons] bad COUPONS_JSON, using defaults: {e}")
     return {
         "WELCOME15": {"pct": 0.15},   # email-signup, first-order discount
-        "SALE50":    {"pct": 0.50},   # for GENUINE, time-limited sales only
+        "SALE50":    {"pct": 0.50, "expires": "2026-07-20"},  # dated launch sale
     }
 COUPONS = _load_coupons()
 WELCOME_CODE = os.environ.get("WELCOME_CODE", "WELCOME15")
