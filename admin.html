@@ -208,8 +208,8 @@ function render(j){
   // pricing config
   const pr = j.pricing;
   $('pricingBlock').innerHTML =
-    card('Margin floor', pr.min_margin_pct+'%','guaranteed after promos') +
-    card('Max promo', pr.max_sale_pct+'%','deepest sitewide sale') +
+    card('Margin floor', pr.min_margin_pct+'%','after coupon') +
+    card('Min profit/order', '$'+pr.min_net_profit,'after coupon + fee') +
     card('Max coupon', pr.max_coupon_pct+'%','deepest coupon') +
     card('Launch sale', (pr.launch_sale_pct? pr.launch_sale_pct+'% off':'off'),'sitewide') +
     card('Shipping markup', pr.shipping_markup_pct+'%','') +
