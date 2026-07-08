@@ -1010,7 +1010,7 @@ def admin_summary():
         },
         pricing={
             "min_margin_pct": round(cfg.min_margin * 100),
-            "max_sale_pct": round(cfg.max_sale_pct * 100),
+            "min_net_profit": round(cfg.min_net_profit, 2),
             "max_coupon_pct": round(cfg.max_coupon_pct * 100),
             "launch_sale_pct": round(SALE_PCT * 100) if sale_on() else 0,
             "shipping_markup_pct": round((SHIPPING_MARKUP - 1) * 100),
