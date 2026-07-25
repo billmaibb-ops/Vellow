@@ -13,8 +13,8 @@
       "slot_id": "REPLACE_WITH_YOUR_AD_SLOT",
       "placement": "footer"
     },
-    "last_full_sync": "2026-07-24T06:08:54Z",
-    "last_price_sync": "2026-07-25T05:34:09Z",
+    "last_full_sync": "2026-07-25T06:02:04Z",
+    "last_price_sync": "2026-07-25T06:02:04Z",
     "order_policy": {
       "auto_order_minutes": 5,
       "cancellable": false,
